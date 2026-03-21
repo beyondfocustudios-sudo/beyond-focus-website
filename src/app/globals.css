@@ -1,0 +1,40 @@
+@import "tailwindcss";
+
+:root {
+  /* Beyond Focus Brand Colors */
+  --color-cream: #FAF9F7;
+  --color-bg-light: #F5F5F5;
+  --color-bg-alt: #eceef4;
+  --color-petrol: #0E3A45;
+  --color-petrol-deep: #070f13;
+  --color-orange: #FA8334;
+
+  /* Semantic */
+  --background: #FAF9F7;
+  --foreground: #0E3A45;
+
+  /* Typography */
+  --font-display: 'DM Serif Display', serif;
+  --font-body: 'DM Sans', sans-serif;
+  --font-mono: 'JetBrains Mono', monospace;
+}
+
+@theme inline {
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --color-cream: var(--color-cream);
+  --color-bg-light: var(--color-bg-light);
+  --color-bg-alt: var(--color-bg-alt);
+  --color-petrol: var(--color-petrol);
+  --color-petrol-deep: var(--color-petrol-deep);
+  --color-orange: var(--color-orange);
+  --font-display: var(--font-display);
+  --font-body: var(--font-body);
+  --font-mono: var(--font-mono);
+}
+
+body {
+  background: var(--background);
+  color: var(--foreground);
+  font-family: var(--font-body);
+}
