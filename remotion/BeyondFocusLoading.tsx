@@ -52,33 +52,33 @@ function easeInOutCubic(t: number): number {
     : 1 - Math.pow(-2 * t + 2, 3) / 2;
 }
 
-// ── Timeline (seconds) ──────────────────────────────────────────────
-// Blob:          0.0  → 0.4   (frames  0-12)
-// Split:         0.4  → 0.6   (frames 12-18)
-// Spin+Expand:   0.6  → 2.33  (frames 18-70)
-// Morph begins:  1.83         (frame  55)  ← OVERLAP with spin
-// Spin ends:     2.67         (frame  80)
-// Morph ends:    3.2          (frame  96)
-// Hold:          3.2  → 3.6   (frames 96-108)
-// Fade:          3.6  → 4.5   (frames 108-135)
+// ── Timeline (seconds) — 3.5s total = 105 frames @ 30fps ───────────
+// Blob:          0.0  → 0.2   (frames  0-6)   tiny dot, instant
+// Split:         0.2  → 0.33  (frames  6-10)  blob → 4 circles
+// Spin ramp up:  0.33 → 0.83  (frames 10-25)  accelerating
+// Spin fast:     0.83 → 1.33  (frames 25-40)  peak speed
+// Spin slow+morph: 1.17→1.83  (frames 35-55)  OVERLAP
+// Morph complete: 1.83→2.17   (frames 55-65)
+// Hold:          2.17 → 2.67  (frames 65-80)
+// Fade:          2.67 → 3.5   (frames 80-105)
 
-const BLOB_END = 0.4;
-const SPIN_START = 0.4;
-const SPIN_END = 2.67;       // rotation fully stops here
-const SPREAD_PEAK = 1.6;     // circles reach max spread
-const MORPH_START = 1.83;    // morph begins DURING spin
-const MORPH_END = 3.2;       // morph fully complete
-const HOLD_END = 3.6;
-const FADE_END = 4.5;
+const BLOB_END = 0.2;
+const SPIN_START = 0.2;
+const SPIN_END = 1.83;       // rotation fully stops
+const SPREAD_PEAK = 0.7;     // circles reach max spread fast
+const MORPH_START = 0.8;     // morph begins very early — 50% into spin
+const MORPH_END = 2.0;       // morph fully complete
+const HOLD_END = 2.5;
+const FADE_END = 3.5;
 
-// ~2 full turns (less than before = more elegant)
+// ~2 full turns
 const TOTAL_ROTATION = Math.PI * 4;
 
-// Much larger orbit radius so circles are clearly separated
-const MAX_SPREAD = 55;
+// Compact orbit — circles overlap slightly (spread < circle radius)
+const MAX_SPREAD = 10;
 
-// Circle dimensions
-const CIRCLE_R = 14;
+// Bigger circles
+const CIRCLE_R = 22;
 const CIRCLE_RY = CIRCLE_R * 0.82;
 
 export const BeyondFocusLoading: React.FC = () => {
@@ -103,19 +103,19 @@ export const BeyondFocusLoading: React.FC = () => {
     ? interpolate(t, [HOLD_END, FADE_END], [1, 1.05], { extrapolateRight: "clamp" })
     : 1;
 
-  // ── Phase 1: Blob (stronger presence) ──
+  // ── Phase 1: Blob (small, discrete, fast) ──
   const blobProgress = interpolate(t, [0, BLOB_END], [0, 1], {
     extrapolateLeft: "clamp",
     extrapolateRight: "clamp",
   });
   const blobOpacity = easeOutQuart(blobProgress);
-  const blobRadius = 5 + 14 * easeOutQuart(blobProgress);
-  const blobBlur = interpolate(blobProgress, [0, 1], [6, 3]); // less blur = more solid
-  const blobGlowRadius = 45 * easeOutQuart(blobProgress);
-  const blobGlowOpacity = blobOpacity * 0.4; // stronger glow
+  const blobRadius = 4 + 8 * easeOutQuart(blobProgress);
+  const blobBlur = interpolate(blobProgress, [0, 1], [3, 1]);
+  const blobGlowRadius = 18 * easeOutQuart(blobProgress);
+  const blobGlowOpacity = blobOpacity * 0.2;
 
-  // Split: blob fades as circles appear
-  const splitProgress = interpolate(t, [BLOB_END, BLOB_END + 0.2], [0, 1], {
+  // Split: blob fades as circles appear (fast)
+  const splitProgress = interpolate(t, [BLOB_END, BLOB_END + 0.13], [0, 1], {
     extrapolateLeft: "clamp",
     extrapolateRight: "clamp",
   });
@@ -143,12 +143,12 @@ export const BeyondFocusLoading: React.FC = () => {
   const spreadContract = easeInOutCubic(spreadContractProgress);
   const spread = spreadExpand * (1 - spreadContract);
 
-  // ── Circle blur: starts blurry, clears up ──
-  const formProgress = interpolate(t, [BLOB_END, BLOB_END + 0.4], [0, 1], {
+  // ── Circle blur: starts blurry, clears up fast ──
+  const formProgress = interpolate(t, [BLOB_END, BLOB_END + 0.25], [0, 1], {
     extrapolateLeft: "clamp",
     extrapolateRight: "clamp",
   });
-  const circleBlur = interpolate(easeOutQuart(formProgress), [0, 1], [6, 0]);
+  const circleBlur = interpolate(easeOutQuart(formProgress), [0, 1], [4, 0]);
 
   // ── Phase 3: Morph (overlaps with spin!) ──
   const morphProgress = interpolate(t, [MORPH_START, MORPH_END], [0, 1], {
