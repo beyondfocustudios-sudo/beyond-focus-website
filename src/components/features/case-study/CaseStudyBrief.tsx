@@ -5,7 +5,7 @@ import type { Project } from "@/lib/portfolio-data";
 
 export function CaseStudyBrief({ project }: { project: Project }) {
   return (
-    <section className="mx-auto mt-[100px] max-w-[1440px] px-6 md:px-10 lg:px-[60px]">
+    <section className="mx-auto mt-[100px] max-w-[1800px] px-6 md:px-10 lg:px-[60px]">
       <div className="grid grid-cols-1 gap-10 lg:grid-cols-[7fr_3fr_2fr] lg:gap-0">
         {/* Left — Brief text */}
         <motion.div

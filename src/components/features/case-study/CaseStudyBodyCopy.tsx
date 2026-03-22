@@ -9,7 +9,7 @@ interface CaseStudyBodyCopyProps {
 
 export function CaseStudyBodyCopy({ title, text }: CaseStudyBodyCopyProps) {
   return (
-    <section className="mx-auto mt-[60px] max-w-[1440px] px-6 md:px-10 lg:px-[60px]">
+    <section className="mx-auto mt-[60px] max-w-[1800px] px-6 md:px-10 lg:px-[60px]">
       <div className="max-w-[50%] max-lg:max-w-full">
         <motion.h2
           initial={{ opacity: 0, y: 20 }}

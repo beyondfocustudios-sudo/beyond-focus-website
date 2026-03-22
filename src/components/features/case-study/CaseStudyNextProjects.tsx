@@ -6,7 +6,7 @@ import type { Project } from "@/lib/portfolio-data";
 
 export function CaseStudyNextProjects({ projects }: { projects: Project[] }) {
   return (
-    <section className="mx-auto mt-[250px] max-w-[1440px] px-6 pb-20 md:px-10 lg:px-[60px] max-lg:mt-[100px]">
+    <section className="mx-auto mt-[250px] max-w-[1800px] px-6 pb-20 md:px-10 lg:px-[60px] max-lg:mt-[100px]">
       {/* Header row */}
       <div className="mb-8 flex items-baseline justify-between">
         <h3 className="text-[clamp(24px,3vw,40px)] font-bold text-petrol">

@@ -7,7 +7,7 @@ export function CaseStudyHero({ project }: { project: Project }) {
   return (
     <section className="bg-white pt-[200px]">
       {/* Client + Title */}
-      <div className="mx-auto max-w-[1440px] px-6 md:px-10 lg:pl-[60px]">
+      <div className="mx-auto max-w-[1800px] px-6 md:px-10 lg:pl-[60px]">
         <motion.p
           initial={{ opacity: 0, y: 15 }}
           animate={{ opacity: 1, y: 0 }}
@@ -31,13 +31,15 @@ export function CaseStudyHero({ project }: { project: Project }) {
         initial={{ opacity: 0, y: 30 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.7, delay: 0.35 }}
-        className="mx-auto max-w-[1440px] px-6 md:px-10 lg:px-[60px]"
+        className="mx-auto max-w-[1800px] px-6 md:px-10 lg:px-[60px]"
       >
         {project.heroVideo ? (
           <div className="overflow-hidden rounded-xl" style={{ aspectRatio: "16/9" }}>
             <video
               src={project.heroVideo}
               controls
+              controlsList="nodownload noremoteplayback noplaybackrate"
+              disablePictureInPicture
               playsInline
               preload="metadata"
               className="h-full w-full object-cover"

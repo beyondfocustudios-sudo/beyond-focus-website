@@ -8,7 +8,7 @@ export function CaseStudyTwoColVideos({ project }: { project: Project }) {
 
   return (
     <section className="mt-[100px]">
-      <div className="mx-auto max-w-[1440px] px-6 md:px-10 lg:px-[60px]">
+      <div className="mx-auto max-w-[1800px] px-6 md:px-10 lg:px-[60px]">
         <div className="grid grid-cols-1 gap-3 lg:grid-cols-2 lg:gap-5">
           <motion.div
             initial={{ opacity: 0 }}

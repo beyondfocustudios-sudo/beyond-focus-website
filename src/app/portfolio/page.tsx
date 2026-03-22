@@ -9,7 +9,7 @@ export default function PortfolioPage() {
       <Navbar variant="light" />
       <main className="min-h-screen bg-bg-light">
         {/* Hero — Fortem style */}
-        <section className="mx-auto max-w-[1440px] px-6 pt-[160px] pb-10 md:px-10 lg:px-12">
+        <section className="mx-auto max-w-[1800px] px-6 pt-[160px] pb-10 md:px-10 lg:px-12">
           <h1 className="max-w-3xl text-[clamp(40px,5.5vw,72px)] font-bold leading-[1.05] tracking-tight text-petrol">
             O nosso trabalho fala por nós.
           </h1>
@@ -22,7 +22,7 @@ export default function PortfolioPage() {
         <PortfolioGrid />
 
         {/* CTA */}
-        <section className="mx-auto max-w-[1440px] px-6 py-28 text-center md:px-10 lg:px-12">
+        <section className="mx-auto max-w-[1800px] px-6 py-28 text-center md:px-10 lg:px-12">
           <h2 className="text-[clamp(28px,3vw,40px)] font-bold text-petrol">
             Tens um projecto em mente?
           </h2>
