@@ -1,6 +1,6 @@
 "use client";
 
-import { useState, useEffect } from "react";
+import { useState, useEffect, useRef } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import Link from "next/link";
 import Image from "next/image";
@@ -8,10 +8,22 @@ import { NAV_ITEMS } from "@/lib/constants";
 
 export function Navbar() {
   const [scrolled, setScrolled] = useState(false);
+  const [hidden, setHidden] = useState(false);
   const [mobileOpen, setMobileOpen] = useState(false);
+  const lastScrollY = useRef(0);
 
   useEffect(() => {
-    const onScroll = () => setScrolled(window.scrollY > 50);
+    const onScroll = () => {
+      const y = window.scrollY;
+      setScrolled(y > 50);
+      // Hide on scroll down, show on scroll up
+      if (y > 100) {
+        setHidden(y > lastScrollY.current && y - lastScrollY.current > 5);
+      } else {
+        setHidden(false);
+      }
+      lastScrollY.current = y;
+    };
     window.addEventListener("scroll", onScroll, { passive: true });
     return () => window.removeEventListener("scroll", onScroll);
   }, []);
@@ -20,6 +32,8 @@ export function Navbar() {
     <>
       <nav
         className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
+          hidden ? "-translate-y-full" : "translate-y-0"
+        } ${
           scrolled
             ? "bg-white/90 backdrop-blur-md shadow-sm"
             : "bg-transparent"
@@ -33,7 +47,7 @@ export function Navbar() {
               alt="Beyond Focus"
               width={30}
               height={30}
-              className={`h-[28px] w-auto transition-all duration-300 ${
+              className={`h-[36px] w-auto transition-all duration-300 ${
                 scrolled ? "brightness-0" : "brightness-0 invert"
               }`}
             />

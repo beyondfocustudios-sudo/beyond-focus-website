@@ -1,6 +1,6 @@
 "use client";
 
-import { useRef, useState } from "react";
+import { useRef, useState, useEffect } from "react";
 import { motion } from "framer-motion";
 import Image from "next/image";
 import Link from "next/link";
@@ -58,6 +58,17 @@ function PortfolioCard({
 }) {
   const videoRef = useRef<HTMLVideoElement>(null);
   const [isHovered, setIsHovered] = useState(false);
+  const [videoReady, setVideoReady] = useState(false);
+
+  // Preload video when component mounts
+  useEffect(() => {
+    if (!video || !videoRef.current) return;
+    const v = videoRef.current;
+    v.load();
+    const onCanPlay = () => setVideoReady(true);
+    v.addEventListener("canplaythrough", onCanPlay);
+    return () => v.removeEventListener("canplaythrough", onCanPlay);
+  }, [video]);
 
   const handleMouseEnter = () => {
     setIsHovered(true);
@@ -75,6 +86,8 @@ function PortfolioCard({
     }
   };
 
+  const showVideo = isHovered && video && videoReady;
+
   return (
     <motion.article
       variants={cardVariants}
@@ -84,30 +97,34 @@ function PortfolioCard({
       className="group relative min-w-[clamp(280px,40vw,520px)] flex-shrink-0 overflow-hidden rounded-xl md:min-w-[clamp(320px,35vw,480px)]"
       style={{ scrollSnapAlign: "start", aspectRatio: "3/4" }}
     >
-      {/* Thumbnail */}
+      {/* Thumbnail — always rendered as base layer */}
       <Image
         src={thumbnail}
         alt={title}
         fill
-        className={`object-cover transition-all duration-700 ${
-          isHovered ? (video ? "opacity-0 scale-105" : "scale-105") : "opacity-100 scale-100"
-        }`}
+        className={`object-cover transition-all duration-500 ${
+          showVideo ? "opacity-0" : "opacity-100"
+        } ${isHovered && !video ? "scale-105" : "scale-100"}`}
         sizes="(max-width: 768px) 85vw, 40vw"
       />
 
-      {/* Video (only if project has one) */}
+      {/* Video — preloaded, shown on hover with object-contain on dark bg */}
       {video && (
-        <video
-          ref={videoRef}
-          src={video}
-          muted
-          loop
-          playsInline
-          preload="metadata"
-          className={`absolute inset-0 h-full w-full object-cover transition-opacity duration-500 ${
-            isHovered ? "opacity-100" : "opacity-0"
+        <div
+          className={`absolute inset-0 flex items-center justify-center bg-black transition-opacity duration-500 ${
+            showVideo ? "opacity-100" : "opacity-0"
           }`}
-        />
+        >
+          <video
+            ref={videoRef}
+            src={video}
+            muted
+            loop
+            playsInline
+            preload="auto"
+            className="h-full w-full object-contain"
+          />
+        </div>
       )}
 
       {/* Dark overlay at bottom */}
