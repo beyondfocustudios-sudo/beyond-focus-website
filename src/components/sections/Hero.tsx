@@ -21,16 +21,6 @@ export function Hero() {
 
       <div className="relative z-10 mx-auto w-full max-w-[1400px] px-6 py-32 md:px-10 lg:px-12">
         <div className="max-w-3xl">
-          {/* Eyebrow */}
-          <motion.span
-            initial={{ opacity: 0, y: 15 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6, delay: 0.2 }}
-            className="mb-6 inline-block font-mono text-[11px] font-medium tracking-[3px] uppercase text-orange"
-          >
-            Beyond Focus · Produção Audiovisual
-          </motion.span>
-
           {/* Headline */}
           <motion.h1
             initial={{ opacity: 0, y: 20 }}
