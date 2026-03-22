@@ -74,13 +74,10 @@ export function Testimonials() {
                 i === current ? "ring-2 ring-orange/30" : ""
               }`}
             >
-              {/* Score + Company pills */}
-              <div className="mb-5 flex flex-wrap gap-2">
+              {/* Score pill */}
+              <div className="mb-5">
                 <span className="rounded-full bg-petrol px-3 py-1 text-xs font-bold text-white">
                   {t.score}
-                </span>
-                <span className="rounded-full bg-petrol/5 px-3 py-1 text-xs font-medium text-petrol/60">
-                  {t.company}
                 </span>
               </div>
 
