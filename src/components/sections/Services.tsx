@@ -10,7 +10,7 @@ const services = [
   { num: "01", name: "Filmes Comerciais", tagline: "Spots que ninguém salta.", image: "/images/services/filmes-comerciais.jpg", gradient: "from-[#1a3a4a] to-[#0a2029]" },
   { num: "02", name: "Vídeos Institucionais", tagline: "A história da tua marca, contada a sério.", image: "/images/services/institucionais.jpg", gradient: "from-[#2a1a2a] to-[#1a0a1a]" },
   { num: "03", name: "Documentários", tagline: "Profundidade, não visibilidade.", image: "/images/services/documentarios.jpg", gradient: "from-[#1a2a1a] to-[#0a1a0a]" },
-  { num: "04", name: "Conteúdos de Redes Sociais", tagline: "Conteúdo que pára o scroll.", image: null, gradient: "from-[#2a2a1a] to-[#1a1a0a]" },
+  { num: "04", name: "Conteúdos de Redes Sociais", tagline: "Conteúdo que pára o scroll.", image: "/images/services/redes-sociais.jpg", gradient: "from-[#2a2a1a] to-[#1a1a0a]" },
   { num: "05", name: "Fotografia", tagline: "Cada frame é uma decisão.", image: "/images/services/fotografia.jpg", gradient: "from-[#1a1a2a] to-[#0a0a1a]" },
   { num: "06", name: "Eventos", tagline: "Um dia. Meses de conteúdo.", image: "/images/services/videos-eventos.jpg", gradient: "from-[#2a1a1a] to-[#1a0a0a]" },
   { num: "07", name: "Estratégia", tagline: "A direcção certa antes do primeiro plano.", image: null, gradient: "from-[#0a1a2a] to-[#1a2a3a]" },
