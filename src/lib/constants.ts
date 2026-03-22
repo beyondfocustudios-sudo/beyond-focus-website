@@ -40,13 +40,13 @@ export const TESTIMONIALS = [
     score: "10/10",
     company: "Once Upon a House",
     quote: "A Beyond Focus interpretou o briefing com precisão. O trabalho em equipa funcionou na perfeição.",
-    type: "Conteúdo Imobiliário",
+    type: "Filme Comercial",
   },
   {
     score: "10/10",
     company: "Amoretti Lux",
     quote: "A Beyond superou expectativas: pessoas incríveis, dedicadas e com respeito pela nossa ambição.",
-    type: "Filme Comercial",
+    type: "Fotografia",
   },
 ] as const;
 
