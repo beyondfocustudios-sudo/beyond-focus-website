@@ -81,10 +81,10 @@ export function Hero() {
             transition={{ duration: 1.5, repeat: Infinity, ease: "easeInOut" }}
             className="flex flex-col items-center gap-2"
           >
-            <span className="text-[11px] font-medium tracking-[2px] uppercase text-white/50">
-              Scroll
+            <span className="text-[11px] font-medium tracking-[3px] uppercase text-white/50">
+              Desliza para descobrir
             </span>
-            <div className="h-6 w-[1px] bg-gradient-to-b from-white/40 to-transparent" />
+            <span className="text-lg text-white/50">↓</span>
           </motion.div>
         </motion.div>
       </div>
