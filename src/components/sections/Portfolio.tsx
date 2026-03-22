@@ -7,18 +7,28 @@ import { Eyebrow } from "@/components/shared/Eyebrow";
 import { SectionHeading } from "@/components/shared/SectionHeading";
 
 const PORTFOLIO_ITEMS = [
-  { category: "FILME COMERCIAL", title: "Projecto Alpha", gradient: "from-petrol-deep/80 to-petrol/60" },
-  { category: "VÍDEO INSTITUCIONAL", title: "Projecto Bravo", gradient: "from-petrol/70 to-petrol-deep/80" },
-  { category: "DOCUMENTÁRIO", title: "Projecto Charlie", gradient: "from-petrol-deep/70 to-petrol/50" },
-  { category: "EVENTOS", title: "Projecto Delta", gradient: "from-petrol/60 to-petrol-deep/70" },
+  { category: "FILME COMERCIAL", title: "Projecto Alpha", gradient: "from-[#0a2029] to-[#1a3a4a]" },
+  { category: "VÍDEO INSTITUCIONAL", title: "Projecto Bravo", gradient: "from-[#1a2a3a] to-[#0a1520]" },
+  { category: "DOCUMENTÁRIO", title: "Projecto Charlie", gradient: "from-[#15201a] to-[#0a1510]" },
+  { category: "EVENTOS", title: "Projecto Delta", gradient: "from-[#1a1520] to-[#0a0a15]" },
 ];
+
+const containerVariants = {
+  hidden: { opacity: 0 },
+  show: { opacity: 1, transition: { staggerChildren: 0.1 } },
+};
+
+const cardVariants = {
+  hidden: { opacity: 0, y: 30 },
+  show: { opacity: 1, y: 0, transition: { duration: 0.5 } },
+};
 
 export function Portfolio() {
   const scrollRef = useRef<HTMLDivElement>(null);
 
   return (
     <section className="bg-petrol py-20 lg:py-28">
-      <div className="mx-auto max-w-[1400px] px-6 lg:px-10">
+      <div className="mx-auto max-w-[1400px] px-6 md:px-10 lg:px-12">
         {/* Header */}
         <div className="mb-10 flex items-end justify-between">
           <div>
@@ -36,26 +46,24 @@ export function Portfolio() {
         </div>
       </div>
 
-      {/* Horizontal Scroll Cards */}
-      <div
+      {/* Horizontal Scroll — exactly 4 cards */}
+      <motion.div
         ref={scrollRef}
-        className="scrollbar-hide flex gap-5 overflow-x-auto px-6 pb-4 lg:px-10"
+        variants={containerVariants}
+        initial="hidden"
+        whileInView="show"
+        viewport={{ once: true }}
+        className="scrollbar-hide flex gap-5 overflow-x-auto px-6 pb-4 md:px-10 lg:px-12"
         style={{ cursor: "grab", scrollSnapType: "x mandatory" }}
       >
-        {PORTFOLIO_ITEMS.map((item, i) => (
+        {PORTFOLIO_ITEMS.map((item) => (
           <motion.article
             key={item.title}
-            initial={{ opacity: 0, y: 30 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            transition={{ duration: 0.5, delay: i * 0.1 }}
-            className="group relative min-w-[clamp(340px,40vw,520px)] flex-shrink-0 overflow-hidden rounded-xl"
+            variants={cardVariants}
+            className="group relative min-w-[clamp(280px,40vw,520px)] flex-shrink-0 overflow-hidden rounded-xl md:min-w-[clamp(320px,35vw,480px)]"
             style={{ scrollSnapAlign: "start", aspectRatio: "3/4" }}
           >
-            {/* Placeholder background */}
-            <div className={`absolute inset-0 bg-gradient-to-br ${item.gradient}`} />
-
-            {/* Hover scale effect area */}
+            {/* Hover scale effect */}
             <div className="absolute inset-0 transition-transform duration-500 group-hover:scale-105">
               <div className={`h-full w-full bg-gradient-to-br ${item.gradient}`} />
             </div>
@@ -74,7 +82,7 @@ export function Portfolio() {
             </div>
           </motion.article>
         ))}
-      </div>
+      </motion.div>
 
       {/* Mobile "Ver tudo" */}
       <div className="mt-6 px-6 sm:hidden">

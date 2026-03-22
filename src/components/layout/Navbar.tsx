@@ -20,13 +20,18 @@ export function Navbar() {
       <nav
         className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
           scrolled
-            ? "bg-white/80 backdrop-blur-xl border-b border-petrol/5 shadow-sm"
+            ? "bg-[#0E3A45]/80 backdrop-blur-md shadow-lg"
             : "bg-transparent"
         }`}
       >
-        <div className="mx-auto flex max-w-[1400px] items-center justify-between px-6 py-4 lg:px-10">
+        <div className="mx-auto flex max-w-[1400px] items-center justify-between px-6 py-4 md:px-10 lg:px-12">
           {/* Logo */}
-          <Link href="/" className="text-lg font-bold text-petrol tracking-tight">
+          <Link
+            href="/"
+            className={`text-lg font-bold tracking-tight transition-colors duration-300 ${
+              scrolled ? "text-white" : "text-white"
+            }`}
+          >
             Beyond Focus
           </Link>
 
@@ -36,7 +41,11 @@ export function Navbar() {
               <Link
                 key={item.href}
                 href={item.href}
-                className="group relative text-sm font-medium text-petrol/70 transition-colors hover:text-petrol"
+                className={`group relative text-sm font-medium transition-colors ${
+                  scrolled
+                    ? "text-white/70 hover:text-white"
+                    : "text-white/70 hover:text-white"
+                }`}
               >
                 {item.label}
                 <span className="absolute -bottom-1 left-0 h-[1.5px] w-0 bg-orange transition-all duration-300 group-hover:w-full" />
@@ -44,7 +53,7 @@ export function Navbar() {
             ))}
             <Link
               href="/contacto"
-              className="rounded-full bg-orange px-5 py-2.5 text-sm font-semibold text-white transition-all duration-200 hover:bg-orange/90 hover:scale-[1.03]"
+              className="rounded-full border border-white/30 bg-white/10 px-5 py-2.5 text-sm font-semibold text-white backdrop-blur-sm transition-all duration-200 hover:bg-white hover:text-petrol hover:scale-[1.03]"
             >
               Fala Connosco
             </Link>
@@ -58,15 +67,15 @@ export function Navbar() {
           >
             <motion.span
               animate={mobileOpen ? { rotate: 45, y: 6 } : { rotate: 0, y: 0 }}
-              className="block h-[2px] w-6 bg-petrol"
+              className="block h-[2px] w-6 bg-white"
             />
             <motion.span
               animate={mobileOpen ? { opacity: 0 } : { opacity: 1 }}
-              className="block h-[2px] w-6 bg-petrol"
+              className="block h-[2px] w-6 bg-white"
             />
             <motion.span
               animate={mobileOpen ? { rotate: -45, y: -6 } : { rotate: 0, y: 0 }}
-              className="block h-[2px] w-6 bg-petrol"
+              className="block h-[2px] w-6 bg-white"
             />
           </button>
         </div>
@@ -80,7 +89,7 @@ export function Navbar() {
             animate={{ opacity: 1, y: 0 }}
             exit={{ opacity: 0, y: -20 }}
             transition={{ duration: 0.2 }}
-            className="fixed inset-0 z-40 bg-white pt-20 lg:hidden"
+            className="fixed inset-0 z-40 bg-petrol pt-20 lg:hidden"
           >
             <div className="flex flex-col items-center gap-6 py-10">
               {NAV_ITEMS.map((item) => (
@@ -88,7 +97,7 @@ export function Navbar() {
                   key={item.href}
                   href={item.href}
                   onClick={() => setMobileOpen(false)}
-                  className="text-xl font-medium text-petrol"
+                  className="text-xl font-medium text-white"
                 >
                   {item.label}
                 </Link>
@@ -96,7 +105,7 @@ export function Navbar() {
               <Link
                 href="/contacto"
                 onClick={() => setMobileOpen(false)}
-                className="mt-4 rounded-full bg-orange px-8 py-3 text-base font-semibold text-white"
+                className="mt-4 rounded-full border border-white/30 px-8 py-3 text-base font-semibold text-white"
               >
                 Fala Connosco
               </Link>

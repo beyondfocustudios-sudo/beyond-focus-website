@@ -9,16 +9,15 @@ export function CTAFinal() {
       {/* Video background placeholder — replace with real showreel */}
       <div className="absolute inset-0">
         <div className="absolute inset-0 bg-gradient-to-br from-petrol-deep via-petrol to-petrol-deep" />
-        {/* Cinematic grain overlay */}
         <div className="absolute inset-0 bg-black/65" />
       </div>
 
-      <div className="relative z-10 px-6 text-center">
+      <div className="relative z-10 px-6 text-center md:px-10">
         <motion.h2
           initial={{ opacity: 0, y: 25 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
-          transition={{ duration: 0.7 }}
+          transition={{ duration: 0.7, ease: [0.22, 1, 0.36, 1] }}
           className="mx-auto max-w-3xl text-[clamp(36px,5vw,64px)] font-bold leading-[1.08] tracking-[-0.02em] text-white"
         >
           Vamos criar algo que faça a diferença.

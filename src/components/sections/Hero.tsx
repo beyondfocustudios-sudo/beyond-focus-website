@@ -12,7 +12,7 @@ export function Hero() {
         <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_30%_50%,rgba(14,58,69,0.6),transparent_70%)]" />
       </div>
 
-      <div className="relative z-10 mx-auto w-full max-w-[1400px] px-6 py-32 lg:px-10">
+      <div className="relative z-10 mx-auto w-full max-w-[1400px] px-6 py-32 md:px-10 lg:px-12">
         <div className="max-w-3xl">
           {/* Eyebrow */}
           <motion.span
@@ -32,7 +32,7 @@ export function Hero() {
             className="text-[clamp(36px,5.5vw,72px)] font-bold leading-[1.05] tracking-[-0.03em] text-white"
           >
             A tua marca merece mais do que um{" "}
-            <em className="text-orange/90 not-italic font-bold italic">vídeo bonito.</em>
+            <em className="italic text-white/80">vídeo bonito.</em>
           </motion.h1>
 
           {/* Subtitle */}
@@ -45,7 +45,7 @@ export function Hero() {
             Estratégia, direcção criativa e produção audiovisual para marcas que querem resultados.
           </motion.p>
 
-          {/* CTA */}
+          {/* CTA — White pill, NOT orange */}
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
@@ -54,7 +54,7 @@ export function Hero() {
           >
             <Link
               href="/contacto"
-              className="inline-flex items-center gap-2 rounded-full bg-orange px-8 py-4 text-base font-semibold text-white transition-all duration-200 hover:bg-orange/90 hover:scale-[1.03]"
+              className="inline-flex items-center gap-2 rounded-full bg-white px-8 py-4 text-base font-semibold text-petrol transition-all duration-200 hover:bg-white/90 hover:scale-[1.03]"
             >
               Fala Connosco
               <span className="text-lg">→</span>
@@ -62,7 +62,7 @@ export function Hero() {
           </motion.div>
         </div>
 
-        {/* Scroll indicator */}
+        {/* Scroll indicator — animated bounce */}
         <motion.div
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
@@ -71,11 +71,13 @@ export function Hero() {
         >
           <motion.div
             animate={{ y: [0, 8, 0] }}
-            transition={{ duration: 2, repeat: Infinity, ease: "easeInOut" }}
+            transition={{ duration: 1.5, repeat: Infinity, ease: "easeInOut" }}
             className="flex flex-col items-center gap-2"
           >
-            <span className="text-[10px] font-medium tracking-[2px] uppercase text-white/30">Scroll</span>
-            <div className="h-8 w-[1px] bg-gradient-to-b from-white/30 to-transparent" />
+            <span className="text-[11px] font-medium tracking-[2px] uppercase text-white/50">
+              Scroll
+            </span>
+            <div className="h-6 w-[1px] bg-gradient-to-b from-white/40 to-transparent" />
           </motion.div>
         </motion.div>
       </div>

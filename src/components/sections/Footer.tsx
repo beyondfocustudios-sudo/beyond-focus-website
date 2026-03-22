@@ -18,10 +18,39 @@ const SERVICE_LINKS = [
   "Eventos",
 ];
 
+/* Inline SVG icons — no extra dependency needed */
+function InstagramIcon() {
+  return (
+    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+      <rect x="2" y="2" width="20" height="20" rx="5" ry="5" />
+      <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z" />
+      <line x1="17.5" y1="6.5" x2="17.51" y2="6.5" />
+    </svg>
+  );
+}
+
+function VimeoIcon() {
+  return (
+    <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor">
+      <path d="M23.977 6.416c-.105 2.338-1.739 5.543-4.894 9.609-3.268 4.247-6.026 6.37-8.29 6.37-1.409 0-2.578-1.294-3.553-3.881L5.322 11.4C4.603 8.816 3.834 7.522 3.01 7.522c-.179 0-.806.378-1.881 1.132L0 7.197a315 315 0 0 0 3.501-3.123C5.08 2.701 6.266 1.984 7.055 1.91c1.867-.18 3.016 1.1 3.447 3.838.465 2.953.789 4.789.971 5.507.539 2.45 1.131 3.674 1.776 3.674.502 0 1.256-.796 2.265-2.385 1.004-1.589 1.54-2.797 1.612-3.628.144-1.371-.395-2.061-1.614-2.061-.574 0-1.167.121-1.777.391 1.186-3.868 3.434-5.757 6.762-5.637 2.473.06 3.628 1.664 3.48 4.807z" />
+    </svg>
+  );
+}
+
+function LinkedInIcon() {
+  return (
+    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+      <path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z" />
+      <rect x="2" y="9" width="4" height="12" />
+      <circle cx="4" cy="4" r="2" />
+    </svg>
+  );
+}
+
 export function Footer() {
   return (
     <footer className="bg-black text-white">
-      <div className="mx-auto max-w-[1400px] px-6 py-16 lg:px-10 lg:py-20">
+      <div className="mx-auto max-w-[1400px] px-6 py-16 md:px-10 lg:px-12 lg:py-20">
         <div className="grid grid-cols-1 gap-10 sm:grid-cols-2 lg:grid-cols-4 lg:gap-16">
           {/* Col 1 — Brand */}
           <div>
@@ -34,25 +63,28 @@ export function Footer() {
                 href="https://instagram.com/beyondfocus.pt"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="text-sm text-white/40 transition-colors hover:text-orange"
+                className="text-white/25 transition-colors hover:text-white"
+                aria-label="Instagram"
               >
-                Instagram
+                <InstagramIcon />
               </a>
               <a
                 href="https://vimeo.com/beyondfocus"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="text-sm text-white/40 transition-colors hover:text-orange"
+                className="text-white/25 transition-colors hover:text-white"
+                aria-label="Vimeo"
               >
-                Vimeo
+                <VimeoIcon />
               </a>
               <a
                 href="https://linkedin.com/company/beyondfocus"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="text-sm text-white/40 transition-colors hover:text-orange"
+                className="text-white/25 transition-colors hover:text-white"
+                aria-label="LinkedIn"
               >
-                LinkedIn
+                <LinkedInIcon />
               </a>
             </div>
           </div>

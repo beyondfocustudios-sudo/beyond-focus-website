@@ -19,7 +19,13 @@ function AccordionItem({
   onToggle: () => void;
 }) {
   return (
-    <div className="border-b border-petrol/10">
+    <motion.div
+      initial={{ opacity: 0, y: 15 }}
+      whileInView={{ opacity: 1, y: 0 }}
+      viewport={{ once: true }}
+      transition={{ duration: 0.4 }}
+      className="border-b border-petrol/10"
+    >
       <button
         onClick={onToggle}
         className="flex w-full items-center justify-between py-5 text-left"
@@ -46,7 +52,7 @@ function AccordionItem({
           </motion.div>
         )}
       </AnimatePresence>
-    </div>
+    </motion.div>
   );
 }
 
@@ -55,9 +61,9 @@ export function FAQ() {
 
   return (
     <section className="bg-bg-light py-20 lg:py-28">
-      <div className="mx-auto grid max-w-[1200px] grid-cols-1 gap-10 px-6 lg:grid-cols-2 lg:gap-20 lg:px-10">
+      <div className="mx-auto grid max-w-[1200px] grid-cols-1 gap-10 px-6 md:grid-cols-2 md:gap-16 md:px-10 lg:gap-20 lg:px-10">
         {/* Left — Sticky */}
-        <div className="lg:sticky lg:top-32 lg:self-start">
+        <div className="md:sticky md:top-28 md:self-start">
           <Eyebrow>PERGUNTAS FREQUENTES</Eyebrow>
           <SectionHeading className="mt-3">
             Tudo o que precisas de saber.
