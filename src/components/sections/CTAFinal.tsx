@@ -6,9 +6,16 @@ import Link from "next/link";
 export function CTAFinal() {
   return (
     <section className="relative flex min-h-[80vh] items-center justify-center overflow-hidden">
-      {/* Video background placeholder — replace with real showreel */}
+      {/* Showreel video background */}
       <div className="absolute inset-0">
-        <div className="absolute inset-0 bg-gradient-to-br from-petrol-deep via-petrol to-petrol-deep" />
+        <video
+          src="/videos/showreel.mp4"
+          autoPlay
+          muted
+          loop
+          playsInline
+          className="absolute inset-0 h-full w-full object-cover"
+        />
         <div className="absolute inset-0 bg-black/65" />
       </div>
 

@@ -6,10 +6,17 @@ import Link from "next/link";
 export function Hero() {
   return (
     <section className="relative flex min-h-screen items-center overflow-hidden bg-petrol-deep">
-      {/* Background gradient simulating cinematic lens */}
+      {/* Showreel video background */}
       <div className="absolute inset-0">
-        <div className="absolute inset-0 bg-gradient-to-br from-petrol-deep via-petrol to-petrol-deep" />
-        <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_30%_50%,rgba(14,58,69,0.6),transparent_70%)]" />
+        <video
+          src="/videos/showreel.mp4"
+          autoPlay
+          muted
+          loop
+          playsInline
+          className="absolute inset-0 h-full w-full object-cover"
+        />
+        <div className="absolute inset-0 bg-black/60" />
       </div>
 
       <div className="relative z-10 mx-auto w-full max-w-[1400px] px-6 py-32 md:px-10 lg:px-12">
