@@ -1,0 +1,7 @@
+public/videos/portfolio/*.mp4 filter=lfs diff=lfs merge=lfs -text
+public/images/portfolio/*.jpg filter=lfs diff=lfs merge=lfs -text
+public/images/portfolio/*.png filter=lfs diff=lfs merge=lfs -text
+public/images/services/*.jpg filter=lfs diff=lfs merge=lfs -text
+public/images/services/*.png filter=lfs diff=lfs merge=lfs -text
+public/images/services/*.JPG filter=lfs diff=lfs merge=lfs -text
+public/videos/showreel.mp4 filter=lfs diff=lfs merge=lfs -text

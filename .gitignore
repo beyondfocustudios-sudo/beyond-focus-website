@@ -40,5 +40,4 @@ yarn-error.log*
 *.tsbuildinfo
 next-env.d.ts
 
-# portfolio videos (79-330MB each, over GitHub limit)
-public/videos/portfolio/*.mp4
+# portfolio videos tracked via Git LFS (see .gitattributes)
