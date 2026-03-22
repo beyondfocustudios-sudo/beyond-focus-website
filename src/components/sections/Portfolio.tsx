@@ -21,16 +21,16 @@ const PORTFOLIO_ITEMS = [
     video: "/videos/portfolio/zeiss-bts.mp4",
   },
   {
-    title: "Amoretti Lux",
-    category: "FOTOGRAFIA",
-    thumbnail: "/images/portfolio/amoretti-thumb.jpg",
-    video: null,
-  },
-  {
     title: "Highgate",
     category: "EVENTOS",
     thumbnail: "/images/portfolio/highgate-thumb.jpg",
     video: "/videos/portfolio/highgate-sesimbra.mp4",
+  },
+  {
+    title: "Amoretti Lux",
+    category: "FOTOGRAFIA",
+    thumbnail: "/images/portfolio/amoretti-thumb.jpg",
+    video: null,
   },
 ];
 
