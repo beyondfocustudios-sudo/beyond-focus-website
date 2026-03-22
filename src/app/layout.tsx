@@ -39,6 +39,9 @@ export default function RootLayout({
       lang="pt"
       className={`${dmSans.variable} ${jetbrainsMono.variable} antialiased`}
     >
+      <head>
+        <link rel="preload" href="/videos/loading.mp4" as="video" type="video/mp4" />
+      </head>
       <body className="min-h-screen font-body">
         <LoadingScreen />
         <CustomCursor />

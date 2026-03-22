@@ -18,12 +18,23 @@ export function LoadingScreen() {
     }
 
     // Safety timeout — max 4s
-    const timeout = setTimeout(() => {
+    const safetyTimeout = setTimeout(() => {
       setShow(false);
       sessionStorage.setItem("bf-loaded", "true");
     }, 4000);
 
-    return () => clearTimeout(timeout);
+    // Video load check — if not playing after 2s, skip
+    const videoCheck = setTimeout(() => {
+      if (videoRef.current && videoRef.current.readyState < 2) {
+        setShow(false);
+        sessionStorage.setItem("bf-loaded", "true");
+      }
+    }, 2000);
+
+    return () => {
+      clearTimeout(safetyTimeout);
+      clearTimeout(videoCheck);
+    };
   }, []);
 
   const handleVideoEnd = () => {
@@ -34,16 +45,13 @@ export function LoadingScreen() {
   // Don't render anything on server
   if (!mounted) return null;
 
-  // Already loaded this session
-  if (!show && !mounted) return null;
-
   return (
     <AnimatePresence>
       {show && (
         <motion.div
           className="fixed inset-0 z-[99999] flex items-center justify-center bg-[#FAF9F7]"
           exit={{ opacity: 0 }}
-          transition={{ duration: 0.6, ease: "easeInOut" }}
+          transition={{ duration: 0.3, ease: "easeOut" }}
         >
           <video
             ref={videoRef}
@@ -52,7 +60,7 @@ export function LoadingScreen() {
             muted
             playsInline
             onEnded={handleVideoEnd}
-            className="h-auto w-auto max-h-[200px] max-w-[200px]"
+            className="w-[20vw] max-w-[320px] min-w-[180px]"
           />
         </motion.div>
       )}

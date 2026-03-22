@@ -18,9 +18,9 @@ export function CustomCursor() {
   const mouseX = useMotionValue(0);
   const mouseY = useMotionValue(0);
 
-  // Spring config — smooth LERP similar to Fortem
-  const springX = useSpring(mouseX, { stiffness: 150, damping: 20, mass: 0.5 });
-  const springY = useSpring(mouseY, { stiffness: 150, damping: 20, mass: 0.5 });
+  // Responsive spring — near-instant with slight ease
+  const springX = useSpring(mouseX, { stiffness: 500, damping: 30, mass: 0.2 });
+  const springY = useSpring(mouseY, { stiffness: 500, damping: 30, mass: 0.2 });
 
   const handleMouseOver = useCallback((e: MouseEvent) => {
     const target = e.target as HTMLElement;
@@ -34,6 +34,16 @@ export function CustomCursor() {
     ) {
       setState("link");
     } else {
+      setState("default");
+    }
+  }, []);
+
+  const handleMouseOut = useCallback((e: MouseEvent) => {
+    const relatedTarget = e.relatedTarget as HTMLElement | null;
+    if (
+      !relatedTarget ||
+      !relatedTarget.closest("a, button, input, select, textarea, [role=\"button\"], [data-cursor]")
+    ) {
       setState("default");
     }
   }, []);
@@ -54,17 +64,19 @@ export function CustomCursor() {
 
     window.addEventListener("mousemove", onMouseMove, { passive: true });
     window.addEventListener("mouseover", handleMouseOver);
+    window.addEventListener("mouseout", handleMouseOut);
     document.addEventListener("mouseleave", onMouseLeave);
     document.addEventListener("mouseenter", onMouseEnter);
 
     return () => {
       window.removeEventListener("mousemove", onMouseMove);
       window.removeEventListener("mouseover", handleMouseOver);
+      window.removeEventListener("mouseout", handleMouseOut);
       document.removeEventListener("mouseleave", onMouseLeave);
       document.removeEventListener("mouseenter", onMouseEnter);
       window.removeEventListener("resize", checkDesktop);
     };
-  }, [mouseX, mouseY, handleMouseOver]);
+  }, [mouseX, mouseY, handleMouseOver, handleMouseOut]);
 
   if (!isDesktop) return null;
 
@@ -85,15 +97,14 @@ export function CustomCursor() {
         opacity: isVisible ? 1 : 0,
       }}
       transition={{
-        width: { duration: 0.4, ease: "easeInOut" },
-        height: { duration: 0.4, ease: "easeInOut" },
-        opacity: { duration: 0.15 },
+        width: { duration: 0.3, ease: "easeInOut" },
+        height: { duration: 0.3, ease: "easeInOut" },
+        opacity: { duration: 0.1 },
       }}
       className={`fixed top-0 left-0 rounded-full pointer-events-none z-[9999] flex items-center justify-center mix-blend-difference ${
         showBg ? "bg-white" : "border border-white"
       }`}
     >
-      {/* Arrow icon — hover-link state */}
       <AnimatePresence>
         {state === "hover-link" && (
           <motion.span
@@ -101,7 +112,7 @@ export function CustomCursor() {
             initial={{ opacity: 0, scale: 0.5 }}
             animate={{ opacity: 1, scale: 1 }}
             exit={{ opacity: 0, scale: 0.5 }}
-            transition={{ duration: 0.2 }}
+            transition={{ duration: 0.15 }}
             className="text-[#0E3A45] text-sm font-bold"
           >
             ↗
@@ -109,7 +120,6 @@ export function CustomCursor() {
         )}
       </AnimatePresence>
 
-      {/* Drag icon — gallery state */}
       <AnimatePresence>
         {state === "gallery" && (
           <motion.span
@@ -117,7 +127,7 @@ export function CustomCursor() {
             initial={{ opacity: 0, scale: 0.5 }}
             animate={{ opacity: 1, scale: 1 }}
             exit={{ opacity: 0, scale: 0.5 }}
-            transition={{ duration: 0.2 }}
+            transition={{ duration: 0.15 }}
             className="text-[#0E3A45] text-sm font-bold"
           >
             ↔

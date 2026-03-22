@@ -20,8 +20,8 @@ const containerVariants = {
 };
 
 const itemVariants = {
-  hidden: { opacity: 0, y: 15 },
-  show: { opacity: 1, y: 0, transition: { duration: 0.4 } },
+  hidden: { y: 15 },
+  show: { y: 0, transition: { duration: 0.4 } },
 };
 
 export function Services() {
@@ -49,9 +49,10 @@ export function Services() {
                 variants={itemVariants}
                 onClick={() => setActive(i)}
                 onMouseEnter={() => setActive(i)}
-                className={`group flex w-full items-start gap-4 border-b border-petrol/10 py-5 text-left transition-opacity duration-300 ${
-                  active === i ? "opacity-100" : "opacity-40 hover:opacity-60"
-                }`}
+                animate={{ opacity: active === i ? 1 : 0.4 }}
+                whileHover={{ opacity: active === i ? 1 : 0.6 }}
+                transition={{ duration: 0.3 }}
+                className="group flex w-full items-start gap-4 border-b border-petrol/10 py-5 text-left"
               >
                 {/* Orange bar — 3px wide, left side */}
                 <div
