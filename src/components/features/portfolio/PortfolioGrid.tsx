@@ -28,47 +28,50 @@ function PortfolioCard({ project }: { project: (typeof PROJECTS)[0] }) {
           videoRef.current.currentTime = 0;
         }
       }}
-      className="group relative block overflow-hidden rounded-xl"
-      style={{ aspectRatio: "4/3" }}
+      className="group block"
     >
-      <Image
-        src={project.thumbnail}
-        alt={project.title}
-        fill
-        className={`object-cover transition-all duration-500 ${
-          hovered && project.video ? "opacity-0" : "opacity-100"
-        } ${hovered ? "scale-105" : "scale-100"}`}
-        sizes="(max-width: 768px) 100vw, (max-width: 1024px) 50vw, 33vw"
-      />
-
-      {project.video && (
-        <video
-          ref={videoRef}
-          src={project.video}
-          muted
-          loop
-          playsInline
-          preload="metadata"
-          className={`absolute inset-0 h-full w-full object-cover transition-opacity duration-500 ${
-            hovered ? "opacity-100" : "opacity-0"
-          }`}
+      {/* Media */}
+      <div className="relative overflow-hidden rounded-xl" style={{ aspectRatio: "16/10" }}>
+        <Image
+          src={project.thumbnail}
+          alt={project.title}
+          fill
+          className={`object-cover transition-all duration-700 ${
+            hovered && project.video ? "opacity-0" : "opacity-100"
+          } ${hovered ? "scale-[1.03]" : "scale-100"}`}
+          sizes="(max-width: 768px) 100vw, 50vw"
         />
-      )}
 
-      <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent" />
+        {project.video && (
+          <video
+            ref={videoRef}
+            src={project.video}
+            muted
+            loop
+            playsInline
+            preload="metadata"
+            className={`absolute inset-0 h-full w-full object-cover transition-opacity duration-500 ${
+              hovered ? "opacity-100" : "opacity-0"
+            }`}
+          />
+        )}
+      </div>
 
-      <div className="absolute inset-x-0 bottom-0 p-5 md:p-6">
-        <span className="mb-1.5 inline-block font-mono text-[10px] tracking-[2px] uppercase text-orange">
+      {/* Info below card — Fortem style */}
+      <div className="mt-4 flex items-baseline justify-between">
+        <div>
+          <h3
+            className={`text-lg font-semibold text-petrol transition-colors duration-300 lg:text-xl ${
+              hovered ? "text-orange" : ""
+            }`}
+          >
+            {project.title}
+          </h3>
+          <p className="mt-0.5 text-sm text-petrol/40">{project.client}</p>
+        </div>
+        <span className="font-mono text-[11px] uppercase tracking-[2px] text-petrol/25">
           {project.category}
         </span>
-        <h3
-          className={`text-lg font-bold text-white transition-transform duration-300 md:text-xl ${
-            hovered ? "-translate-y-1" : ""
-          }`}
-        >
-          {project.title}
-        </h3>
-        <p className="mt-0.5 text-xs text-white/50">{project.client}</p>
       </div>
     </Link>
   );
@@ -84,37 +87,39 @@ export function PortfolioGrid() {
 
   return (
     <>
-      {/* Filters */}
-      <div className="mx-auto mt-10 flex max-w-[1200px] flex-wrap gap-6 px-6 md:gap-8 md:px-10 lg:px-12">
-        {CATEGORIES.map((cat) => (
-          <button
-            key={cat}
-            onClick={() => setFilter(cat)}
-            className={`text-sm transition-colors duration-200 ${
-              filter === cat
-                ? "font-medium text-petrol"
-                : "text-petrol/35 hover:text-petrol/70"
-            }`}
-          >
-            {cat}
-          </button>
-        ))}
+      {/* Filters — horizontal text, Fortem style */}
+      <div className="mx-auto max-w-[1200px] border-b border-petrol/8 px-6 pb-4 md:px-10 lg:px-12">
+        <div className="flex flex-wrap gap-x-8 gap-y-2">
+          {CATEGORIES.map((cat) => (
+            <button
+              key={cat}
+              onClick={() => setFilter(cat)}
+              className={`text-[14px] transition-colors duration-200 ${
+                filter === cat
+                  ? "font-medium text-petrol"
+                  : "text-petrol/30 hover:text-petrol/60"
+              }`}
+            >
+              {cat}
+            </button>
+          ))}
+        </div>
       </div>
 
-      {/* Grid */}
+      {/* Grid — 2 columns desktop, Fortem style */}
       <motion.div
         layout
-        className="mx-auto mt-10 grid max-w-[1200px] grid-cols-1 gap-5 px-6 md:grid-cols-2 md:px-10 lg:grid-cols-3 lg:px-12"
+        className="mx-auto mt-10 grid max-w-[1200px] grid-cols-1 gap-x-6 gap-y-14 px-6 md:grid-cols-2 md:px-10 lg:px-12"
       >
         <AnimatePresence mode="popLayout">
           {filtered.map((project) => (
             <motion.div
               key={project.slug}
               layout
-              initial={{ opacity: 0, scale: 0.95 }}
-              animate={{ opacity: 1, scale: 1 }}
-              exit={{ opacity: 0, scale: 0.95 }}
-              transition={{ duration: 0.3 }}
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              exit={{ opacity: 0, y: -10 }}
+              transition={{ duration: 0.35 }}
             >
               <PortfolioCard project={project} />
             </motion.div>

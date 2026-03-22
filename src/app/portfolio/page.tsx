@@ -7,32 +7,15 @@ export default function PortfolioPage() {
   return (
     <>
       <Navbar variant="light" />
-      <main className="bg-bg-light min-h-screen">
-        {/* Hero */}
-        <section className="mx-auto max-w-[1200px] px-6 pt-[160px] pb-16 md:px-10 lg:px-12">
-          <div className="grid items-end gap-10 lg:grid-cols-[1.5fr_1fr] lg:gap-20">
-            {/* Left — Title */}
-            <div>
-              <p className="text-[11px] font-medium uppercase tracking-[3px] text-orange">
-                PORTFOLIO
-              </p>
-              <h1 className="mt-3 text-[clamp(36px,5vw,64px)] font-bold leading-[1.1] tracking-tight text-petrol">
-                O trabalho que fazemos é a nossa melhor apresentação.
-              </h1>
-            </div>
-            {/* Right — Paragraph */}
-            <div>
-              <p className="text-base leading-relaxed text-petrol/50">
-                De filmes comerciais a cobertura de eventos, cada projecto é pensado para criar impacto e contar uma história que ressoa com a audiência.
-              </p>
-              <Link
-                href="/contacto"
-                className="mt-4 inline-block text-sm font-medium text-petrol underline underline-offset-4 transition-colors hover:text-orange"
-              >
-                Fala connosco ↗
-              </Link>
-            </div>
-          </div>
+      <main className="min-h-screen bg-bg-light">
+        {/* Hero — Fortem style */}
+        <section className="mx-auto max-w-[1200px] px-6 pt-[160px] pb-10 md:px-10 lg:px-12">
+          <h1 className="max-w-3xl text-[clamp(40px,5.5vw,72px)] font-bold leading-[1.05] tracking-tight text-petrol">
+            O nosso trabalho fala por nós.
+          </h1>
+          <p className="mt-6 max-w-xl text-lg leading-relaxed text-petrol/45">
+            De filmes comerciais a cobertura de eventos, cada projecto é pensado para criar impacto e contar uma história que ressoa com a audiência.
+          </p>
         </section>
 
         {/* Grid + Filters */}
