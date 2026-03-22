@@ -46,9 +46,13 @@ export function CaseStudyNextProjects({ projects }: { projects: Project[] }) {
               <div className="flex items-baseline justify-between">
                 <div>
                   <p className="text-lg font-semibold text-petrol">{project.title}</p>
-                  <p className="mt-0.5 font-mono text-[11px] uppercase tracking-[2px] text-orange">
+                  <Link
+                    href={`/portfolio?filter=${encodeURIComponent(project.category)}`}
+                    className="mt-0.5 inline-block font-mono text-[11px] uppercase tracking-[2px] text-orange transition-opacity hover:opacity-70"
+                    onClick={(e) => e.stopPropagation()}
+                  >
                     {project.category}
-                  </p>
+                  </Link>
                 </div>
                 <p className="text-sm text-petrol/40">{project.client}</p>
               </div>

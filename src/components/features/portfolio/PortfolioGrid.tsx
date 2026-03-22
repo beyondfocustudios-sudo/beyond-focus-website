@@ -1,6 +1,7 @@
 "use client";
 
-import { useState, useRef } from "react";
+import { useState, useRef, useEffect } from "react";
+import { useSearchParams } from "next/navigation";
 import { motion, AnimatePresence } from "framer-motion";
 import Image from "next/image";
 import Link from "next/link";
@@ -11,74 +12,91 @@ function PortfolioCard({ project }: { project: (typeof PROJECTS)[0] }) {
   const [hovered, setHovered] = useState(false);
 
   return (
-    <Link
-      href={`/portfolio/${project.slug}`}
-      data-cursor="hover-link"
-      onMouseEnter={() => {
-        setHovered(true);
-        if (videoRef.current && project.video) {
-          videoRef.current.currentTime = 0;
-          videoRef.current.play().catch(() => {});
-        }
-      }}
-      onMouseLeave={() => {
-        setHovered(false);
-        if (videoRef.current) {
-          videoRef.current.pause();
-          videoRef.current.currentTime = 0;
-        }
-      }}
-      className="group block"
-    >
-      {/* Media */}
-      <div className="relative overflow-hidden rounded-xl" style={{ aspectRatio: "4/3" }}>
-        <Image
-          src={project.thumbnail}
-          alt={project.title}
-          fill
-          className={`object-cover transition-all duration-700 ${
-            hovered && project.video ? "opacity-0" : "opacity-100"
-          } ${hovered ? "scale-[1.03]" : "scale-100"}`}
-          sizes="(max-width: 768px) 100vw, (max-width: 1024px) 50vw, 33vw"
-        />
-
-        {project.video && (
-          <video
-            ref={videoRef}
-            src={project.video}
-            muted
-            loop
-            playsInline
-            preload="metadata"
-            className={`absolute inset-0 h-full w-full object-cover transition-opacity duration-500 ${
-              hovered ? "opacity-100" : "opacity-0"
-            }`}
+    <div className="group">
+      <Link
+        href={`/portfolio/${project.slug}`}
+        data-cursor="hover-link"
+        onMouseEnter={() => {
+          setHovered(true);
+          if (videoRef.current && project.video) {
+            videoRef.current.currentTime = 0;
+            videoRef.current.play().catch(() => {});
+          }
+        }}
+        onMouseLeave={() => {
+          setHovered(false);
+          if (videoRef.current) {
+            videoRef.current.pause();
+            videoRef.current.currentTime = 0;
+          }
+        }}
+        className="block"
+      >
+        {/* Media */}
+        <div className="relative overflow-hidden rounded-xl" style={{ aspectRatio: "4/3" }}>
+          <Image
+            src={project.thumbnail}
+            alt={project.title}
+            fill
+            className={`object-cover transition-all duration-700 ${
+              hovered && project.video ? "opacity-0" : "opacity-100"
+            } ${hovered ? "scale-[1.03]" : "scale-100"}`}
+            sizes="(max-width: 768px) 100vw, (max-width: 1024px) 50vw, 33vw"
           />
-        )}
-      </div>
 
-      {/* Info below card — Fortem style */}
+          {project.video && (
+            <video
+              ref={videoRef}
+              src={project.video}
+              muted
+              loop
+              playsInline
+              preload="metadata"
+              className={`absolute inset-0 h-full w-full object-cover transition-opacity duration-500 ${
+                hovered ? "opacity-100" : "opacity-0"
+              }`}
+            />
+          )}
+        </div>
+      </Link>
+
+      {/* Info below card */}
       <div className="mt-4 flex items-baseline justify-between">
         <div>
-          <h3
-            className={`text-lg font-semibold text-petrol transition-colors duration-300 lg:text-xl ${
-              hovered ? "text-orange" : ""
-            }`}
-          >
-            {project.title}
-          </h3>
+          <Link href={`/portfolio/${project.slug}`}>
+            <h3
+              className={`text-lg font-semibold text-petrol transition-colors duration-300 lg:text-xl ${
+                hovered ? "text-orange" : ""
+              }`}
+            >
+              {project.title}
+            </h3>
+          </Link>
           <p className="mt-0.5 text-sm text-petrol/40">{project.client}</p>
         </div>
-        <span className="font-mono text-[11px] uppercase tracking-[2px] text-petrol/25">
+        <Link
+          href={`/portfolio?filter=${encodeURIComponent(project.category)}`}
+          className="font-mono text-[11px] uppercase tracking-[2px] text-petrol/25 transition-colors hover:text-orange"
+        >
           {project.category}
-        </span>
+        </Link>
       </div>
-    </Link>
+    </div>
   );
 }
 
 export function PortfolioGrid() {
-  const [filter, setFilter] = useState("Todos os projectos");
+  const searchParams = useSearchParams();
+  const initialFilter = searchParams.get("filter") || "Todos os projectos";
+  const [filter, setFilter] = useState(initialFilter);
+
+  // Sync with URL params
+  useEffect(() => {
+    const urlFilter = searchParams.get("filter");
+    if (urlFilter && CATEGORIES.includes(urlFilter)) {
+      setFilter(urlFilter);
+    }
+  }, [searchParams]);
 
   const filtered =
     filter === "Todos os projectos"
@@ -87,7 +105,7 @@ export function PortfolioGrid() {
 
   return (
     <>
-      {/* Filters — horizontal text, Fortem style */}
+      {/* Filters */}
       <div className="mx-auto max-w-[1800px] border-b border-petrol/8 px-6 pb-4 md:px-10 lg:px-12">
         <div className="flex flex-wrap gap-x-8 gap-y-2">
           {CATEGORIES.map((cat) => (
@@ -106,7 +124,7 @@ export function PortfolioGrid() {
         </div>
       </div>
 
-      {/* Grid — 2 columns desktop, Fortem style */}
+      {/* Grid */}
       <motion.div
         layout
         className="mx-auto mt-10 grid max-w-[1800px] grid-cols-1 gap-x-5 gap-y-12 px-6 md:grid-cols-2 md:px-10 lg:grid-cols-3 lg:px-12"

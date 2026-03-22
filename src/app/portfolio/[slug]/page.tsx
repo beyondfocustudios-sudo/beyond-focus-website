@@ -5,7 +5,6 @@ import { Footer } from "@/components/sections/Footer";
 import { CaseStudyHero } from "@/components/features/case-study/CaseStudyHero";
 import { CaseStudyBrief } from "@/components/features/case-study/CaseStudyBrief";
 import { CaseStudyBodyCopy } from "@/components/features/case-study/CaseStudyBodyCopy";
-import { CaseStudyTwoColVideos } from "@/components/features/case-study/CaseStudyTwoColVideos";
 import { CaseStudyHorizontalGallery } from "@/components/features/case-study/CaseStudyHorizontalGallery";
 import { CaseStudyNextProjects } from "@/components/features/case-study/CaseStudyNextProjects";
 import { getProject, getNextProjects, PROJECTS } from "@/lib/portfolio-data";
@@ -27,15 +26,13 @@ export default async function CaseStudyPage({
 
   return (
     <>
-      <Navbar />
+      <Navbar variant="light" />
       <main className="bg-white">
         <CaseStudyHero project={project} />
         <CaseStudyBrief project={project} />
-        <CaseStudyTwoColVideos project={project} />
         <CaseStudyBodyCopy title={project.bodyCopy1Title} text={project.bodyCopy1Text} />
         <CaseStudyHorizontalGallery project={project} />
         <CaseStudyBodyCopy title={project.bodyCopy2Title} text={project.bodyCopy2Text} />
-        <CaseStudyTwoColVideos project={project} />
 
         {/* CTA */}
         <section className="py-[200px] text-center max-md:py-[100px]">

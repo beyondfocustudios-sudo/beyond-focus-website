@@ -1,3 +1,4 @@
+import { Suspense } from "react";
 import Link from "next/link";
 import { Navbar } from "@/components/layout/Navbar";
 import { Footer } from "@/components/sections/Footer";
@@ -8,7 +9,7 @@ export default function PortfolioPage() {
     <>
       <Navbar variant="light" />
       <main className="min-h-screen bg-bg-light">
-        {/* Hero — Fortem style */}
+        {/* Hero */}
         <section className="mx-auto max-w-[1800px] px-6 pt-[160px] pb-10 md:px-10 lg:px-12">
           <h1 className="max-w-3xl text-[clamp(40px,5.5vw,72px)] font-bold leading-[1.05] tracking-tight text-petrol">
             O nosso trabalho fala por nós.
@@ -18,8 +19,10 @@ export default function PortfolioPage() {
           </p>
         </section>
 
-        {/* Grid + Filters */}
-        <PortfolioGrid />
+        {/* Grid + Filters — Suspense required for useSearchParams */}
+        <Suspense>
+          <PortfolioGrid />
+        </Suspense>
 
         {/* CTA */}
         <section className="mx-auto max-w-[1800px] px-6 py-28 text-center md:px-10 lg:px-12">

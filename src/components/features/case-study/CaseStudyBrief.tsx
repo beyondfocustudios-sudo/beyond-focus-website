@@ -1,6 +1,7 @@
 "use client";
 
 import { motion } from "framer-motion";
+import Link from "next/link";
 import type { Project } from "@/lib/portfolio-data";
 
 export function CaseStudyBrief({ project }: { project: Project }) {
@@ -39,7 +40,12 @@ export function CaseStudyBrief({ project }: { project: Project }) {
             </div>
             <div>
               <h5 className="mb-1 font-mono text-[11px] uppercase tracking-[2px] text-petrol/30">Categoria</h5>
-              <p className="text-[15px] font-medium text-petrol">{project.category}</p>
+              <Link
+                href={`/portfolio?filter=${encodeURIComponent(project.category)}`}
+                className="text-[15px] font-medium text-petrol transition-colors hover:text-orange"
+              >
+                {project.category}
+              </Link>
             </div>
             <div>
               <h5 className="mb-1 font-mono text-[11px] uppercase tracking-[2px] text-petrol/30">Serviços</h5>
