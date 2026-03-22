@@ -40,9 +40,5 @@ yarn-error.log*
 *.tsbuildinfo
 next-env.d.ts
 
-# large portfolio videos (too big for git, deploy separately)
+# portfolio videos (79-330MB each, over GitHub limit)
 public/videos/portfolio/*.mp4
-
-# large portfolio images (>5MB originals)
-public/images/portfolio/*.jpg
-public/images/portfolio/*.png

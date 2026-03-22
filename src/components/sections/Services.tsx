@@ -2,16 +2,17 @@
 
 import { useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
+import Image from "next/image";
 import { Eyebrow } from "@/components/shared/Eyebrow";
 import { SectionHeading } from "@/components/shared/SectionHeading";
 
 const services = [
-  { num: "01", name: "Filmes Comerciais", tagline: "Spots que ninguém salta.", gradient: "from-[#1a3a4a] to-[#0a2029]" },
-  { num: "02", name: "Vídeos Institucionais", tagline: "A história da tua marca, contada a sério.", gradient: "from-[#2a1a2a] to-[#1a0a1a]" },
-  { num: "03", name: "Documentários", tagline: "Profundidade, não visibilidade.", gradient: "from-[#1a2a1a] to-[#0a1a0a]" },
-  { num: "04", name: "Conteúdos de Redes Sociais", tagline: "Conteúdo que pára o scroll.", gradient: "from-[#2a2a1a] to-[#1a1a0a]" },
-  { num: "05", name: "Fotografia", tagline: "Cada frame é uma decisão.", gradient: "from-[#1a1a2a] to-[#0a0a1a]" },
-  { num: "06", name: "Eventos", tagline: "Um dia. Meses de conteúdo.", gradient: "from-[#2a1a1a] to-[#1a0a0a]" },
+  { num: "01", name: "Filmes Comerciais", tagline: "Spots que ninguém salta.", image: "/images/services/filmes-comerciais.jpg", gradient: "from-[#1a3a4a] to-[#0a2029]" },
+  { num: "02", name: "Vídeos Institucionais", tagline: "A história da tua marca, contada a sério.", image: "/images/services/institucionais.jpg", gradient: "from-[#2a1a2a] to-[#1a0a1a]" },
+  { num: "03", name: "Documentários", tagline: "Profundidade, não visibilidade.", image: null, gradient: "from-[#1a2a1a] to-[#0a1a0a]" },
+  { num: "04", name: "Conteúdos de Redes Sociais", tagline: "Conteúdo que pára o scroll.", image: "/images/services/videos-eventos.png", gradient: "from-[#2a2a1a] to-[#1a1a0a]" },
+  { num: "05", name: "Fotografia", tagline: "Cada frame é uma decisão.", image: "/images/services/fotografia.jpg", gradient: "from-[#1a1a2a] to-[#0a0a1a]" },
+  { num: "06", name: "Eventos", tagline: "Um dia. Meses de conteúdo.", image: null, gradient: "from-[#2a1a1a] to-[#1a0a0a]" },
 ];
 
 const containerVariants = {
@@ -54,13 +55,12 @@ export function Services() {
                 transition={{ duration: 0.3 }}
                 className="group flex w-full items-start gap-4 border-b border-petrol/10 py-5 text-left"
               >
-                {/* Orange bar — 3px wide, left side */}
+                {/* Orange bar */}
                 <div
                   className={`mt-1.5 h-10 w-[3px] rounded-full transition-all duration-300 ${
                     active === i ? "bg-orange" : "bg-transparent"
                   }`}
                 />
-
                 <div className="flex-1">
                   <div className="flex items-baseline gap-3">
                     <span className="font-mono text-xs text-petrol/40">{service.num}</span>
@@ -84,50 +84,64 @@ export function Services() {
             ))}
           </motion.div>
 
-          {/* Right — Image with crossfade + number watermark */}
-          <motion.div
-            initial={{ opacity: 0, y: 30 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            transition={{ duration: 0.6, delay: 0.2 }}
-            className="relative overflow-hidden rounded-2xl"
-            style={{ aspectRatio: "4/5" }}
-          >
-            <AnimatePresence mode="wait">
-              <motion.div
-                key={active}
-                initial={{ opacity: 0, scale: 1.05 }}
-                animate={{ opacity: 1, scale: 1 }}
-                exit={{ opacity: 0 }}
-                transition={{ duration: 0.5 }}
-                className={`absolute inset-0 bg-gradient-to-br ${services[active].gradient}`}
-              />
-            </AnimatePresence>
-
-            {/* Big watermark number */}
-            <div className="absolute inset-0 flex items-center justify-center">
+          {/* Right — Image centered with list */}
+          <div className="flex items-center justify-center">
+            <motion.div
+              initial={{ opacity: 0, y: 30 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.6, delay: 0.2 }}
+              className="relative w-full overflow-hidden rounded-2xl"
+              style={{ aspectRatio: "4/5" }}
+            >
               <AnimatePresence mode="wait">
-                <motion.span
+                <motion.div
                   key={active}
-                  initial={{ opacity: 0, scale: 0.8 }}
+                  initial={{ opacity: 0, scale: 1.05 }}
                   animate={{ opacity: 1, scale: 1 }}
                   exit={{ opacity: 0 }}
-                  transition={{ duration: 0.4 }}
-                  className="text-[120px] font-bold text-white/[0.05] select-none md:text-[160px]"
+                  transition={{ duration: 0.5 }}
+                  className="absolute inset-0"
                 >
-                  {services[active].num}
-                </motion.span>
+                  {services[active].image ? (
+                    <Image
+                      src={services[active].image}
+                      alt={services[active].name}
+                      fill
+                      className="object-cover"
+                      sizes="(max-width: 1024px) 100vw, 50vw"
+                    />
+                  ) : (
+                    <div className={`h-full w-full bg-gradient-to-br ${services[active].gradient}`} />
+                  )}
+                </motion.div>
               </AnimatePresence>
-            </div>
 
-            {/* Bottom label */}
-            <div className="absolute inset-x-0 bottom-0 bg-gradient-to-t from-black/50 to-transparent p-6 md:p-8">
-              <span className="font-mono text-[10px] tracking-[2px] uppercase text-orange">
-                {services[active].num}
-              </span>
-              <p className="mt-1 text-lg font-semibold text-white">{services[active].name}</p>
-            </div>
-          </motion.div>
+              {/* Watermark number */}
+              <div className="absolute inset-0 flex items-center justify-center">
+                <AnimatePresence mode="wait">
+                  <motion.span
+                    key={active}
+                    initial={{ opacity: 0, scale: 0.8 }}
+                    animate={{ opacity: 1, scale: 1 }}
+                    exit={{ opacity: 0 }}
+                    transition={{ duration: 0.4 }}
+                    className="text-[120px] font-bold text-white/[0.08] select-none md:text-[160px]"
+                  >
+                    {services[active].num}
+                  </motion.span>
+                </AnimatePresence>
+              </div>
+
+              {/* Bottom label */}
+              <div className="absolute inset-x-0 bottom-0 bg-gradient-to-t from-black/60 to-transparent p-6 md:p-8">
+                <span className="font-mono text-[10px] tracking-[2px] uppercase text-orange">
+                  {services[active].num}
+                </span>
+                <p className="mt-1 text-lg font-semibold text-white">{services[active].name}</p>
+              </div>
+            </motion.div>
+          </div>
         </div>
       </div>
     </section>
