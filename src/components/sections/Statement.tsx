@@ -1,17 +1,18 @@
 "use client";
 
 import { motion } from "framer-motion";
+import Image from "next/image";
 
 const PARTNERS = [
-  "Carl Zeiss",
-  "Highgate",
-  "Joplins",
-  "Once Upon a House",
-  "Amoretti Lux",
-  "Hotel Cristal",
-  "Hotel Casa Palmela",
-  "Sóçe",
-  "ifoffice",
+  { name: "Carl Zeiss", logo: "/images/partners/carl-zeiss.png" },
+  { name: "Highgate", logo: "/images/partners/highgate.png" },
+  { name: "Joplins", logo: "/images/partners/joplins.avif" },
+  { name: "Once Upon a House", logo: "/images/partners/once-upon-a-house.jpeg" },
+  { name: "Amoretti Lux", logo: "/images/partners/amoretti-lux.webp" },
+  { name: "Hotel Cristal", logo: "/images/partners/hotel-cristal.png" },
+  { name: "Hotel Casa Palmela", logo: "/images/partners/hotel-casa-palmela.png" },
+  { name: "Sóçe", logo: "/images/partners/soce.png" },
+  { name: "ifoffice", logo: "/images/partners/ifoffice.png" },
 ];
 
 export function Statement() {
@@ -58,14 +59,20 @@ export function Statement() {
           Marcas que confiam em nós
         </p>
         <div className="overflow-hidden">
-          <div className="animate-marquee flex whitespace-nowrap">
+          <div className="animate-marquee flex items-center whitespace-nowrap">
             {[...PARTNERS, ...PARTNERS].map((partner, i) => (
-              <span
-                key={`${partner}-${i}`}
-                className="mx-8 flex-shrink-0 text-[13px] font-semibold uppercase tracking-[2px] text-petrol/20"
+              <div
+                key={`${partner.name}-${i}`}
+                className="mx-8 flex-shrink-0 opacity-30 grayscale transition-opacity duration-300 hover:opacity-50"
               >
-                {partner}
-              </span>
+                <Image
+                  src={partner.logo}
+                  alt={partner.name}
+                  width={120}
+                  height={28}
+                  className="h-[24px] w-auto object-contain"
+                />
+              </div>
             ))}
           </div>
         </div>

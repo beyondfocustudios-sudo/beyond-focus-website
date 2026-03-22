@@ -2,6 +2,7 @@
 
 import { useState } from "react";
 import { motion } from "framer-motion";
+import Image from "next/image";
 import { Eyebrow } from "@/components/shared/Eyebrow";
 import { SectionHeading } from "@/components/shared/SectionHeading";
 import { TESTIMONIALS, PARTNERS } from "@/lib/constants";
@@ -121,14 +122,20 @@ export function Testimonials() {
             Parceiros
           </p>
           <div className="relative overflow-hidden">
-            <div className="animate-marquee flex whitespace-nowrap">
+            <div className="animate-marquee flex items-center whitespace-nowrap">
               {[...PARTNERS, ...PARTNERS].map((partner, i) => (
-                <span
-                  key={`${partner}-${i}`}
-                  className="mx-6 inline-block text-sm font-medium text-white/30 lg:mx-10 lg:text-base"
+                <div
+                  key={`${partner.name}-${i}`}
+                  className="mx-6 flex-shrink-0 opacity-30 grayscale invert transition-opacity duration-300 hover:opacity-50 lg:mx-10"
                 >
-                  {partner}
-                </span>
+                  <Image
+                    src={partner.logo}
+                    alt={partner.name}
+                    width={120}
+                    height={28}
+                    className="h-[24px] w-auto object-contain"
+                  />
+                </div>
               ))}
             </div>
           </div>

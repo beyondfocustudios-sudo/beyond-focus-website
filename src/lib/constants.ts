@@ -51,15 +51,15 @@ export const TESTIMONIALS = [
 ] as const;
 
 export const PARTNERS = [
-  "Carl Zeiss",
-  "Highgate",
-  "Joplins",
-  "Once Upon a House",
-  "Amoretti Lux",
-  "Hotel Cristal",
-  "Hotel Casa Palmela",
-  "Sóçe",
-  "ifoffice",
+  { name: "Carl Zeiss", logo: "/images/partners/carl-zeiss.png" },
+  { name: "Highgate", logo: "/images/partners/highgate.png" },
+  { name: "Joplins", logo: "/images/partners/joplins.avif" },
+  { name: "Once Upon a House", logo: "/images/partners/once-upon-a-house.jpeg" },
+  { name: "Amoretti Lux", logo: "/images/partners/amoretti-lux.webp" },
+  { name: "Hotel Cristal", logo: "/images/partners/hotel-cristal.png" },
+  { name: "Hotel Casa Palmela", logo: "/images/partners/hotel-casa-palmela.png" },
+  { name: "Sóçe", logo: "/images/partners/soce.png" },
+  { name: "ifoffice", logo: "/images/partners/ifoffice.png" },
 ] as const;
 
 export const PROCESS_STEPS = [
