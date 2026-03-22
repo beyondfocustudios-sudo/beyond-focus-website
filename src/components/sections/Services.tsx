@@ -95,13 +95,13 @@ export function Services() {
               className="relative w-full overflow-hidden rounded-2xl"
               style={{ aspectRatio: "4/5" }}
             >
-              <AnimatePresence mode="wait">
+              <AnimatePresence initial={false}>
                 <motion.div
                   key={active}
-                  initial={{ opacity: 0, scale: 1.05 }}
-                  animate={{ opacity: 1, scale: 1 }}
+                  initial={{ opacity: 0 }}
+                  animate={{ opacity: 1 }}
                   exit={{ opacity: 0 }}
-                  transition={{ duration: 0.5 }}
+                  transition={{ duration: 0.6, ease: "easeInOut" }}
                   className="absolute inset-0"
                 >
                   {services[active].image ? (
