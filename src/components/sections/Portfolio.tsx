@@ -108,23 +108,19 @@ function PortfolioCard({
         sizes="(max-width: 768px) 85vw, 40vw"
       />
 
-      {/* Video — preloaded, shown on hover with object-contain on dark bg */}
+      {/* Video — preloaded, fills card with crop */}
       {video && (
-        <div
-          className={`absolute inset-0 flex items-center justify-center bg-black transition-opacity duration-500 ${
+        <video
+          ref={videoRef}
+          src={video}
+          muted
+          loop
+          playsInline
+          preload="auto"
+          className={`absolute inset-0 h-full w-full object-cover transition-opacity duration-500 ${
             showVideo ? "opacity-100" : "opacity-0"
           }`}
-        >
-          <video
-            ref={videoRef}
-            src={video}
-            muted
-            loop
-            playsInline
-            preload="auto"
-            className="h-full w-full object-contain"
-          />
-        </div>
+        />
       )}
 
       {/* Dark overlay at bottom */}
