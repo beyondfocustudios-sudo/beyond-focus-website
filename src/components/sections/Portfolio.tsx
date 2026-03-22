@@ -1,6 +1,6 @@
 "use client";
 
-import { useRef, useEffect } from "react";
+import { useRef, useState } from "react";
 import { motion } from "framer-motion";
 import Link from "next/link";
 import { Eyebrow } from "@/components/shared/Eyebrow";
@@ -25,21 +25,26 @@ const cardVariants = {
 
 export function Portfolio() {
   const scrollRef = useRef<HTMLDivElement>(null);
+  const [isDragging, setIsDragging] = useState(false);
+  const [startX, setStartX] = useState(0);
+  const [scrollLeft, setScrollLeft] = useState(0);
 
-  useEffect(() => {
-    const container = scrollRef.current;
-    if (!container) return;
+  const handleMouseDown = (e: React.MouseEvent) => {
+    setIsDragging(true);
+    setStartX(e.pageX - (scrollRef.current?.offsetLeft || 0));
+    setScrollLeft(scrollRef.current?.scrollLeft || 0);
+  };
 
-    const handleWheel = (e: WheelEvent) => {
-      if (Math.abs(e.deltaY) > Math.abs(e.deltaX)) {
-        e.preventDefault();
-        container.scrollLeft += e.deltaY;
-      }
-    };
+  const handleMouseMove = (e: React.MouseEvent) => {
+    if (!isDragging || !scrollRef.current) return;
+    e.preventDefault();
+    const x = e.pageX - scrollRef.current.offsetLeft;
+    const walk = (x - startX) * 1.5;
+    scrollRef.current.scrollLeft = scrollLeft - walk;
+  };
 
-    container.addEventListener("wheel", handleWheel, { passive: false });
-    return () => container.removeEventListener("wheel", handleWheel);
-  }, []);
+  const handleMouseUp = () => setIsDragging(false);
+  const handleMouseLeave = () => setIsDragging(false);
 
   return (
     <section className="bg-petrol py-20 lg:py-28">
@@ -62,7 +67,7 @@ export function Portfolio() {
         </div>
       </div>
 
-      {/* Horizontal Scroll — exactly 4 cards */}
+      {/* Horizontal Scroll — drag to navigate, wheel scrolls page normally */}
       <motion.div
         ref={scrollRef}
         variants={containerVariants}
@@ -70,8 +75,14 @@ export function Portfolio() {
         whileInView="show"
         viewport={{ once: true }}
         data-cursor="gallery"
-        className="scrollbar-hide flex gap-5 overflow-x-auto scroll-smooth px-6 pb-4 md:px-10 lg:px-12"
-        style={{ scrollSnapType: "x mandatory" }}
+        onMouseDown={handleMouseDown}
+        onMouseMove={handleMouseMove}
+        onMouseUp={handleMouseUp}
+        onMouseLeave={handleMouseLeave}
+        className={`scrollbar-hide flex gap-5 overflow-x-auto px-6 pb-4 md:px-10 lg:px-12 ${
+          isDragging ? "cursor-grabbing select-none" : "cursor-grab"
+        }`}
+        style={{ scrollSnapType: isDragging ? "none" : "x mandatory" }}
       >
         {PORTFOLIO_ITEMS.map((item) => (
           <motion.article
