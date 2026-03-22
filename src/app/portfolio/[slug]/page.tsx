@@ -27,7 +27,7 @@ export default async function CaseStudyPage({
 
   return (
     <>
-      <Navbar />
+      <Navbar variant="light" />
       <main className="bg-bg-light">
         <CaseStudyHero project={project} />
         <CaseStudyBrief project={project} />

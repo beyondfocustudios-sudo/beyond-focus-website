@@ -6,7 +6,7 @@ import { PortfolioGrid } from "@/components/features/portfolio/PortfolioGrid";
 export default function PortfolioPage() {
   return (
     <>
-      <Navbar />
+      <Navbar variant="light" />
       <main className="bg-bg-light min-h-screen">
         {/* Hero */}
         <section className="mx-auto max-w-[1200px] px-6 pt-[160px] pb-16 md:px-10 lg:px-12">

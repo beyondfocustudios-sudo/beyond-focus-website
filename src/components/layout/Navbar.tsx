@@ -6,8 +6,9 @@ import Link from "next/link";
 import Image from "next/image";
 import { NAV_ITEMS } from "@/lib/constants";
 
-export function Navbar() {
-  const [scrolled, setScrolled] = useState(false);
+export function Navbar({ variant = "dark" }: { variant?: "dark" | "light" }) {
+  const isLight = variant === "light";
+  const [scrolled, setScrolled] = useState(isLight);
   const [hidden, setHidden] = useState(false);
   const [mobileOpen, setMobileOpen] = useState(false);
   const lastScrollY = useRef(0);
@@ -15,7 +16,7 @@ export function Navbar() {
   useEffect(() => {
     const onScroll = () => {
       const y = window.scrollY;
-      setScrolled(y > 50);
+      setScrolled(isLight || y > 50);
       // Hide on scroll down, show on scroll up
       if (y > 100) {
         setHidden(y > lastScrollY.current && y - lastScrollY.current > 5);
