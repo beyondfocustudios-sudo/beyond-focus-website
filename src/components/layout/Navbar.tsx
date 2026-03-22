@@ -20,7 +20,7 @@ export function Navbar() {
       <nav
         className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
           scrolled
-            ? "bg-[#0E3A45]/80 backdrop-blur-md shadow-lg"
+            ? "bg-white/90 backdrop-blur-md shadow-sm"
             : "bg-transparent"
         }`}
       >
@@ -29,7 +29,7 @@ export function Navbar() {
           <Link
             href="/"
             className={`text-lg font-bold tracking-tight transition-colors duration-300 ${
-              scrolled ? "text-white" : "text-white"
+              scrolled ? "text-[#0E3A45]" : "text-white"
             }`}
           >
             Beyond Focus
@@ -41,9 +41,9 @@ export function Navbar() {
               <Link
                 key={item.href}
                 href={item.href}
-                className={`group relative text-sm font-medium transition-colors ${
+                className={`group relative text-sm font-medium transition-colors duration-300 ${
                   scrolled
-                    ? "text-white/70 hover:text-white"
+                    ? "text-[#0E3A45]/70 hover:text-[#0E3A45]"
                     : "text-white/70 hover:text-white"
                 }`}
               >
@@ -53,7 +53,11 @@ export function Navbar() {
             ))}
             <Link
               href="/contacto"
-              className="rounded-full border border-white/30 bg-white/10 px-5 py-2.5 text-sm font-semibold text-white backdrop-blur-sm transition-all duration-200 hover:bg-white hover:text-petrol hover:scale-[1.03]"
+              className={`rounded-full px-5 py-2.5 text-sm font-semibold transition-all duration-300 hover:scale-[1.03] ${
+                scrolled
+                  ? "bg-[#0E3A45] text-white hover:bg-[#0E3A45]/90"
+                  : "bg-white text-[#0E3A45] hover:bg-white/90"
+              }`}
             >
               Fala Connosco
             </Link>
@@ -67,15 +71,15 @@ export function Navbar() {
           >
             <motion.span
               animate={mobileOpen ? { rotate: 45, y: 6 } : { rotate: 0, y: 0 }}
-              className="block h-[2px] w-6 bg-white"
+              className={`block h-[2px] w-6 transition-colors duration-300 ${scrolled ? "bg-[#0E3A45]" : "bg-white"}`}
             />
             <motion.span
               animate={mobileOpen ? { opacity: 0 } : { opacity: 1 }}
-              className="block h-[2px] w-6 bg-white"
+              className={`block h-[2px] w-6 transition-colors duration-300 ${scrolled ? "bg-[#0E3A45]" : "bg-white"}`}
             />
             <motion.span
               animate={mobileOpen ? { rotate: -45, y: -6 } : { rotate: 0, y: 0 }}
-              className="block h-[2px] w-6 bg-white"
+              className={`block h-[2px] w-6 transition-colors duration-300 ${scrolled ? "bg-[#0E3A45]" : "bg-white"}`}
             />
           </button>
         </div>
@@ -89,7 +93,7 @@ export function Navbar() {
             animate={{ opacity: 1, y: 0 }}
             exit={{ opacity: 0, y: -20 }}
             transition={{ duration: 0.2 }}
-            className="fixed inset-0 z-40 bg-petrol pt-20 lg:hidden"
+            className="fixed inset-0 z-40 bg-white pt-20 lg:hidden"
           >
             <div className="flex flex-col items-center gap-6 py-10">
               {NAV_ITEMS.map((item) => (
@@ -97,7 +101,7 @@ export function Navbar() {
                   key={item.href}
                   href={item.href}
                   onClick={() => setMobileOpen(false)}
-                  className="text-xl font-medium text-white"
+                  className="text-xl font-medium text-[#0E3A45]"
                 >
                   {item.label}
                 </Link>
@@ -105,7 +109,7 @@ export function Navbar() {
               <Link
                 href="/contacto"
                 onClick={() => setMobileOpen(false)}
-                className="mt-4 rounded-full border border-white/30 px-8 py-3 text-base font-semibold text-white"
+                className="mt-4 rounded-full bg-[#0E3A45] px-8 py-3 text-base font-semibold text-white"
               >
                 Fala Connosco
               </Link>
