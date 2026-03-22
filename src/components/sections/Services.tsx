@@ -49,8 +49,8 @@ export function Services() {
                 variants={itemVariants}
                 onClick={() => setActive(i)}
                 onMouseEnter={() => setActive(i)}
-                className={`group flex w-full items-start gap-4 border-b border-petrol/10 py-5 text-left transition-all duration-300 ${
-                  active === i ? "opacity-100" : "opacity-25 hover:opacity-60"
+                className={`group flex w-full items-start gap-4 border-b border-petrol/10 py-5 text-left transition-opacity duration-300 ${
+                  active === i ? "opacity-100" : "opacity-40 hover:opacity-60"
                 }`}
               >
                 {/* Orange bar — 3px wide, left side */}
