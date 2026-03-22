@@ -88,7 +88,7 @@ export function PortfolioGrid() {
   return (
     <>
       {/* Filters — horizontal text, Fortem style */}
-      <div className="mx-auto max-w-[1200px] border-b border-petrol/8 px-6 pb-4 md:px-10 lg:px-12">
+      <div className="mx-auto max-w-[1440px] border-b border-petrol/8 px-6 pb-4 md:px-10 lg:px-12">
         <div className="flex flex-wrap gap-x-8 gap-y-2">
           {CATEGORIES.map((cat) => (
             <button
@@ -109,7 +109,7 @@ export function PortfolioGrid() {
       {/* Grid — 2 columns desktop, Fortem style */}
       <motion.div
         layout
-        className="mx-auto mt-10 grid max-w-[1200px] grid-cols-1 gap-x-5 gap-y-12 px-6 md:grid-cols-2 md:px-10 lg:grid-cols-3 lg:px-12"
+        className="mx-auto mt-10 grid max-w-[1440px] grid-cols-1 gap-x-5 gap-y-12 px-6 md:grid-cols-2 md:px-10 lg:grid-cols-3 lg:px-12"
       >
         <AnimatePresence mode="popLayout">
           {filtered.map((project) => (
