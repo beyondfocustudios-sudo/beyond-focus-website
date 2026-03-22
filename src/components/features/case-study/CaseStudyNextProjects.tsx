@@ -9,13 +9,13 @@ export function CaseStudyNextProjects({ projects }: { projects: Project[] }) {
     <section className="mx-auto mt-[250px] max-w-[1440px] px-6 pb-20 md:px-10 lg:px-[60px] max-lg:mt-[100px]">
       {/* Header row */}
       <div className="mb-8 flex items-baseline justify-between">
-        <h3 className="text-[40px] font-medium text-white max-md:text-[28px]">
-          Other projects to check out
+        <h3 className="text-[clamp(24px,3vw,40px)] font-bold text-petrol">
+          Outros projectos
         </h3>
         <Link
           href="/portfolio"
           data-cursor="hover-link"
-          className="font-mono text-[15px] uppercase text-white underline underline-offset-4 max-md:hidden"
+          className="font-mono text-[13px] uppercase tracking-[2px] text-orange underline underline-offset-4 max-md:hidden"
         >
           Ver todos
         </Link>
@@ -36,7 +36,7 @@ export function CaseStudyNextProjects({ projects }: { projects: Project[] }) {
               data-cursor="hover-link"
               className="group block"
             >
-              <div className="mb-3 overflow-hidden" style={{ aspectRatio: "16/9" }}>
+              <div className="mb-4 overflow-hidden rounded-xl" style={{ aspectRatio: "16/9" }}>
                 <img
                   src={project.thumbnail}
                   alt={project.title}
@@ -44,8 +44,13 @@ export function CaseStudyNextProjects({ projects }: { projects: Project[] }) {
                 />
               </div>
               <div className="flex items-baseline justify-between">
-                <p className="text-[17px] font-medium text-white">{project.title}</p>
-                <p className="text-[17px] font-light text-white/50">{project.client}</p>
+                <div>
+                  <p className="text-lg font-semibold text-petrol">{project.title}</p>
+                  <p className="mt-0.5 font-mono text-[11px] uppercase tracking-[2px] text-orange">
+                    {project.category}
+                  </p>
+                </div>
+                <p className="text-sm text-petrol/40">{project.client}</p>
               </div>
             </Link>
           </motion.div>

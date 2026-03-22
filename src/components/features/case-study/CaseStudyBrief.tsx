@@ -13,12 +13,11 @@ export function CaseStudyBrief({ project }: { project: Project }) {
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.6 }}
-          className="lg:col-span-1"
         >
-          <h2 className="mb-5 text-[40px] font-medium leading-[1.2] text-white">
-            The brief.
+          <h2 className="mb-5 text-[clamp(28px,3vw,40px)] font-bold leading-[1.2] text-petrol">
+            O briefing.
           </h2>
-          <p className="text-[20px] font-light leading-[30px] text-white">
+          <p className="text-[clamp(16px,1.4vw,20px)] leading-[1.6] text-petrol/60">
             {project.briefText}
           </p>
         </motion.div>
@@ -26,7 +25,7 @@ export function CaseStudyBrief({ project }: { project: Project }) {
         {/* Spacer */}
         <div className="hidden lg:block" />
 
-        {/* Right — Project info (Fortem style, monospace) */}
+        {/* Right — Project info */}
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
@@ -35,17 +34,17 @@ export function CaseStudyBrief({ project }: { project: Project }) {
         >
           <div className="space-y-6">
             <div>
-              <h5 className="mb-1 text-[17px] font-medium text-white">Cliente</h5>
-              <p className="font-mono text-[17px] text-white">{project.client}</p>
+              <h5 className="mb-1 font-mono text-[11px] uppercase tracking-[2px] text-petrol/30">Cliente</h5>
+              <p className="text-[15px] font-medium text-petrol">{project.client}</p>
             </div>
             <div>
-              <h5 className="mb-1 text-[17px] font-medium text-white">Categoria</h5>
-              <p className="font-mono text-[17px] text-white">{project.category}</p>
+              <h5 className="mb-1 font-mono text-[11px] uppercase tracking-[2px] text-petrol/30">Categoria</h5>
+              <p className="text-[15px] font-medium text-petrol">{project.category}</p>
             </div>
             <div>
-              <h5 className="mb-1 text-[17px] font-medium text-white">Serviços</h5>
+              <h5 className="mb-1 font-mono text-[11px] uppercase tracking-[2px] text-petrol/30">Serviços</h5>
               {project.services.map((s) => (
-                <p key={s} className="font-mono text-[17px] text-white">{s}</p>
+                <p key={s} className="text-[15px] text-petrol/70">{s}</p>
               ))}
             </div>
           </div>

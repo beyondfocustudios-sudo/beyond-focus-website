@@ -16,7 +16,7 @@ export function CaseStudyBodyCopy({ title, text }: CaseStudyBodyCopyProps) {
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.6 }}
-          className="text-[40px] font-medium leading-[48px] text-white"
+          className="text-[clamp(28px,3vw,40px)] font-bold leading-[1.2] text-petrol"
         >
           {title}
         </motion.h2>
@@ -25,7 +25,7 @@ export function CaseStudyBodyCopy({ title, text }: CaseStudyBodyCopyProps) {
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.5, delay: 0.1 }}
-          className="mt-5 text-[20px] font-light leading-[30px] text-white"
+          className="mt-5 text-[clamp(16px,1.4vw,20px)] leading-[1.6] text-petrol/60"
         >
           {text}
         </motion.p>

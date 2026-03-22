@@ -28,7 +28,7 @@ export default async function CaseStudyPage({
   return (
     <>
       <Navbar />
-      <main className="bg-black">
+      <main className="bg-white">
         <CaseStudyHero project={project} />
         <CaseStudyBrief project={project} />
         <CaseStudyTwoColVideos project={project} />
@@ -37,17 +37,20 @@ export default async function CaseStudyPage({
         <CaseStudyBodyCopy title={project.bodyCopy2Title} text={project.bodyCopy2Text} />
         <CaseStudyTwoColVideos project={project} />
 
-        {/* CTA — Fortem style */}
+        {/* CTA */}
         <section className="py-[200px] text-center max-md:py-[100px]">
-          <h2 className="mx-auto max-w-2xl px-6 text-[40px] font-medium italic leading-[1.2] text-white max-md:text-[28px]">
-            Vamos fazer algo diferente...
+          <h2 className="mx-auto max-w-2xl px-6 text-[clamp(28px,3.5vw,48px)] font-bold leading-[1.15] text-petrol max-md:text-[28px]">
+            Vamos criar algo que faça a diferença.
           </h2>
+          <p className="mt-4 text-base text-petrol/40">
+            A primeira conversa é por nossa conta.
+          </p>
           <Link
             href="/contacto"
             data-cursor="hover-link"
-            className="mt-6 inline-block font-mono text-[15px] uppercase text-white underline underline-offset-4 transition-colors hover:text-orange"
+            className="mt-8 inline-flex items-center gap-2 rounded-full bg-petrol px-8 py-4 text-base font-semibold text-white transition-all duration-200 hover:bg-petrol/90 hover:scale-[1.03]"
           >
-            Fala Connosco
+            Fala Connosco <span>→</span>
           </Link>
         </section>
 
