@@ -123,7 +123,7 @@ export function Testimonials() {
           </p>
           <div className="relative overflow-hidden">
             <div className="animate-marquee flex items-center whitespace-nowrap">
-              {[...PARTNERS, ...PARTNERS].map((partner, i) => (
+              {[...PARTNERS, ...PARTNERS, ...PARTNERS].map((partner, i) => (
                 <div
                   key={`${partner.name}-${i}`}
                   className="mx-6 flex-shrink-0 opacity-70 invert transition-opacity duration-300 hover:opacity-100 lg:mx-10"

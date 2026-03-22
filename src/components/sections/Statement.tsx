@@ -3,17 +3,7 @@
 import { motion } from "framer-motion";
 import Image from "next/image";
 
-const PARTNERS = [
-  { name: "Carl Zeiss", logo: "/images/partners/carl-zeiss.png" },
-  { name: "Highgate", logo: "/images/partners/highgate.png" },
-  { name: "Joplins", logo: "/images/partners/joplins.avif" },
-  { name: "Once Upon a House", logo: "/images/partners/once-upon-a-house.jpeg" },
-  { name: "Amoretti Lux", logo: "/images/partners/amoretti-lux.webp" },
-  { name: "Hotel Cristal", logo: "/images/partners/hotel-cristal.png" },
-  { name: "Hotel Casa Palmela", logo: "/images/partners/hotel-casa-palmela.png" },
-  { name: "Sóçe", logo: "/images/partners/soce.png" },
-  { name: "ifoffice", logo: "/images/partners/ifoffice.png" },
-];
+import { PARTNERS } from "@/lib/constants";
 
 export function Statement() {
   return (
@@ -60,7 +50,7 @@ export function Statement() {
         </p>
         <div className="overflow-hidden">
           <div className="animate-marquee flex items-center whitespace-nowrap">
-            {[...PARTNERS, ...PARTNERS].map((partner, i) => (
+            {[...PARTNERS, ...PARTNERS, ...PARTNERS].map((partner, i) => (
               <div
                 key={`${partner.name}-${i}`}
                 className="mx-8 flex-shrink-0 opacity-70 transition-opacity duration-300 hover:opacity-100"

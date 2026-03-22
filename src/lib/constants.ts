@@ -53,9 +53,9 @@ export const TESTIMONIALS = [
 export const PARTNERS = [
   { name: "Carl Zeiss", logo: "/images/partners/carl-zeiss.png" },
   { name: "Highgate", logo: "/images/partners/highgate.png" },
-  { name: "Joplins", logo: "/images/partners/joplins.avif" },
-  { name: "Once Upon a House", logo: "/images/partners/once-upon-a-house.jpeg" },
-  { name: "Amoretti Lux", logo: "/images/partners/amoretti-lux.webp" },
+  { name: "Joplins", logo: "/images/partners/joplins.png" },
+  { name: "Once Upon a House", logo: "/images/partners/once-upon-a-house.png" },
+  { name: "Amoretti Lux", logo: "/images/partners/amoretti-lux.png" },
   { name: "Hotel Cristal", logo: "/images/partners/hotel-cristal.png" },
   { name: "Hotel Casa Palmela", logo: "/images/partners/hotel-casa-palmela.png" },
   { name: "Sóçe", logo: "/images/partners/soce.png" },
