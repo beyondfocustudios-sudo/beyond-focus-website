@@ -17,7 +17,7 @@ const PORTFOLIO_ITEMS = [
   {
     title: "Carl Zeiss Portugal",
     category: "VÍDEO INSTITUCIONAL",
-    thumbnail: "/images/portfolio/zeiss-thumb.png",
+    thumbnail: "/images/portfolio/zeiss-thumb.jpg",
     video: "/videos/portfolio/zeiss-bts.mp4",
   },
   {
