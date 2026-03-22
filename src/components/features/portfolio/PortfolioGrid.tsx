@@ -31,7 +31,7 @@ function PortfolioCard({ project }: { project: (typeof PROJECTS)[0] }) {
       className="group block"
     >
       {/* Media */}
-      <div className="relative overflow-hidden rounded-xl" style={{ aspectRatio: "16/10" }}>
+      <div className="relative overflow-hidden rounded-xl" style={{ aspectRatio: "4/3" }}>
         <Image
           src={project.thumbnail}
           alt={project.title}
@@ -39,7 +39,7 @@ function PortfolioCard({ project }: { project: (typeof PROJECTS)[0] }) {
           className={`object-cover transition-all duration-700 ${
             hovered && project.video ? "opacity-0" : "opacity-100"
           } ${hovered ? "scale-[1.03]" : "scale-100"}`}
-          sizes="(max-width: 768px) 100vw, 50vw"
+          sizes="(max-width: 768px) 100vw, (max-width: 1024px) 50vw, 33vw"
         />
 
         {project.video && (
@@ -109,7 +109,7 @@ export function PortfolioGrid() {
       {/* Grid — 2 columns desktop, Fortem style */}
       <motion.div
         layout
-        className="mx-auto mt-10 grid max-w-[1200px] grid-cols-1 gap-x-6 gap-y-14 px-6 md:grid-cols-2 md:px-10 lg:px-12"
+        className="mx-auto mt-10 grid max-w-[1200px] grid-cols-1 gap-x-5 gap-y-12 px-6 md:grid-cols-2 md:px-10 lg:grid-cols-3 lg:px-12"
       >
         <AnimatePresence mode="popLayout">
           {filtered.map((project) => (
