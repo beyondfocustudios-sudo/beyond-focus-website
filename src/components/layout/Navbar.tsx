@@ -3,6 +3,7 @@
 import { useState, useEffect } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import Link from "next/link";
+import Image from "next/image";
 import { NAV_ITEMS } from "@/lib/constants";
 
 export function Navbar() {
@@ -26,13 +27,23 @@ export function Navbar() {
       >
         <div className="mx-auto flex max-w-[1400px] items-center justify-between px-6 py-4 md:px-10 lg:px-12">
           {/* Logo */}
-          <Link
-            href="/"
-            className={`text-lg font-bold tracking-tight transition-colors duration-300 ${
-              scrolled ? "text-[#0E3A45]" : "text-white"
-            }`}
-          >
-            Beyond Focus
+          <Link href="/" className="flex items-center gap-2.5">
+            <Image
+              src="/images/logo-symbol.png"
+              alt="Beyond Focus"
+              width={30}
+              height={30}
+              className={`h-[28px] w-auto transition-all duration-300 ${
+                scrolled ? "brightness-0" : "brightness-0 invert"
+              }`}
+            />
+            <span
+              className={`text-base font-bold tracking-tight transition-colors duration-300 ${
+                scrolled ? "text-[#0E3A45]" : "text-white"
+              }`}
+            >
+              Beyond Focus
+            </span>
           </Link>
 
           {/* Desktop Nav */}

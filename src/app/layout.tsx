@@ -21,6 +21,10 @@ export const metadata: Metadata = {
   title: "Beyond Focus — Produtora Audiovisual",
   description:
     "O teu Departamento Criativo Externo. Produtora audiovisual baseada em Setúbal, Portugal. Vamos além do expectável.",
+  icons: {
+    icon: "/favicon.ico",
+    apple: "/apple-touch-icon.png",
+  },
   openGraph: {
     title: "Beyond Focus — Produtora Audiovisual",
     description: "Estratégia, direcção criativa e produção audiovisual para marcas que querem resultados.",
