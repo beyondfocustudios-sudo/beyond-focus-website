@@ -40,19 +40,15 @@ export function CaseStudyHorizontalGallery({ project }: { project: Project }) {
     return () => { if (trigger) trigger.kill(); };
   }, []);
 
-  // Gallery items — mix of portrait and landscape
-  const items = [
-    { aspect: "portrait" as const, position: "center" },
-    { aspect: "landscape" as const, position: "center 30%" },
-    { aspect: "portrait" as const, position: "center 60%" },
-    { aspect: "landscape" as const, position: "center" },
-    { aspect: "portrait" as const, position: "center 40%" },
-  ];
+  // Use real gallery images, alternate portrait/landscape
+  const images = project.gallery.length > 0 ? project.gallery : [project.thumbnail];
+
+  if (images.length < 2) return null;
 
   return (
     <section
       ref={sectionRef}
-      className="mt-[60px] overflow-hidden bg-white"
+      className="mt-[60px] overflow-hidden bg-bg-light"
       data-cursor="gallery"
     >
       <div
@@ -60,20 +56,32 @@ export function CaseStudyHorizontalGallery({ project }: { project: Project }) {
         className="flex items-center gap-5 p-5 lg:p-[60px]"
         style={{ width: "fit-content" }}
       >
-        {items.map((item, i) => (
+        {/* Title card */}
+        <div className="flex h-[500px] w-[350px] flex-shrink-0 items-end p-10 lg:h-[600px] lg:w-[400px]">
+          <div>
+            <p className="font-mono text-[11px] uppercase tracking-[3px] text-orange">
+              Galeria
+            </p>
+            <h3 className="mt-2 text-[clamp(28px,3vw,40px)] font-bold leading-tight text-petrol">
+              {project.title}
+            </h3>
+          </div>
+        </div>
+
+        {/* Gallery images */}
+        {images.map((src, i) => (
           <div
             key={i}
-            className={`relative flex-shrink-0 overflow-hidden ${
-              item.aspect === "portrait"
-                ? "h-[500px] w-[340px] lg:h-[738px] lg:w-[512px]"
-                : "h-[500px] w-[700px] lg:h-[738px] lg:w-[1332px]"
+            className={`relative flex-shrink-0 overflow-hidden rounded-xl ${
+              i % 3 === 1
+                ? "h-[500px] w-[700px] lg:h-[600px] lg:w-[900px]"
+                : "h-[500px] w-[350px] lg:h-[600px] lg:w-[420px]"
             }`}
           >
             <img
-              src={project.thumbnail}
+              src={src}
               alt={`${project.title} — ${i + 1}`}
               className="h-full w-full object-cover"
-              style={{ objectPosition: item.position }}
             />
           </div>
         ))}

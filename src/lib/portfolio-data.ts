@@ -12,6 +12,7 @@ export interface Project {
   bodyCopy2Title: string;
   bodyCopy2Text: string;
   heroVideo: string | null;
+  gallery: string[];
 }
 
 export const PROJECTS: Project[] = [
@@ -32,6 +33,10 @@ export const PROJECTS: Project[] = [
     bodyCopy2Text:
       "Na Beyond Focus, não fazemos apenas vídeos — criamos narrativas visuais que transformam a percepção de uma marca. O resultado é uma peça que convida a descobrir.",
     heroVideo: "/videos/portfolio/hcp-final.mp4",
+    gallery: [
+      "/images/portfolio/gallery/hotel-casa-palmela/hcp-vdm-stills-06.jpg",
+      "/images/portfolio/gallery/hotel-casa-palmela/hcp-vdm-stills-07.jpg",
+    ],
   },
   {
     slug: "carl-zeiss-portugal",
@@ -50,6 +55,24 @@ export const PROJECTS: Project[] = [
     bodyCopy2Text:
       "O resultado é um behind the scenes que funciona tanto como conteúdo institucional quanto como peça de storytelling para as redes sociais da marca.",
     heroVideo: "/videos/portfolio/zeiss-bts.mp4",
+    gallery: [
+      "/images/portfolio/gallery/carl-zeiss/zeiss-bts-002.jpg",
+      "/images/portfolio/gallery/carl-zeiss/zeiss-bts-016.jpg",
+      "/images/portfolio/gallery/carl-zeiss/zeiss-bts-023.jpg",
+      "/images/portfolio/gallery/carl-zeiss/zeiss-bts-034.jpg",
+      "/images/portfolio/gallery/carl-zeiss/zeiss-bts-037.jpg",
+      "/images/portfolio/gallery/carl-zeiss/zeiss-bts-038.jpg",
+      "/images/portfolio/gallery/carl-zeiss/zeiss-bts-43.jpg",
+      "/images/portfolio/gallery/carl-zeiss/zeiss-bts-49.jpg",
+      "/images/portfolio/gallery/carl-zeiss/zeiss-bts-51.jpg",
+      "/images/portfolio/gallery/carl-zeiss/zeiss-bts-60.jpg",
+      "/images/portfolio/gallery/carl-zeiss/zeiss-bts-70.jpg",
+      "/images/portfolio/gallery/carl-zeiss/zeiss-bts-71.jpg",
+      "/images/portfolio/gallery/carl-zeiss/zeiss-bts-73.jpg",
+      "/images/portfolio/gallery/carl-zeiss/zeiss-bts-83.jpg",
+      "/images/portfolio/gallery/carl-zeiss/zeiss-bts-91.jpg",
+      "/images/portfolio/gallery/carl-zeiss/zeiss-bts.jpg",
+    ],
   },
   {
     slug: "highgate",
@@ -68,6 +91,26 @@ export const PROJECTS: Project[] = [
     bodyCopy2Text:
       "De um único evento, produzimos conteúdo para redes sociais, comunicação interna e memória institucional — maximizando o retorno do investimento.",
     heroVideo: "/videos/portfolio/highgate-sesimbra.mp4",
+    gallery: [
+      "/images/portfolio/gallery/highgate/highgate-natal-005.jpg",
+      "/images/portfolio/gallery/highgate/highgate-natal-02.jpg",
+      "/images/portfolio/gallery/highgate/highgate-natal-03.jpg",
+      "/images/portfolio/gallery/highgate/highgate-natal-04.jpg",
+      "/images/portfolio/gallery/highgate/highgate-natal-05.jpg",
+      "/images/portfolio/gallery/highgate/highgate-natal-07.jpg",
+      "/images/portfolio/gallery/highgate/highgate-natal-072.jpg",
+      "/images/portfolio/gallery/highgate/highgate-natal-076.jpg",
+      "/images/portfolio/gallery/highgate/highgate-natal-08.jpg",
+      "/images/portfolio/gallery/highgate/highgate-natal-081.jpg",
+      "/images/portfolio/gallery/highgate/highgate-natal-09.jpg",
+      "/images/portfolio/gallery/highgate/highgate-natal-10.jpg",
+      "/images/portfolio/gallery/highgate/highgate-natal-11.jpg",
+      "/images/portfolio/gallery/highgate/highgate-natal-12.jpg",
+      "/images/portfolio/gallery/highgate/highgate-natal-13.jpg",
+      "/images/portfolio/gallery/highgate/highgate-natal-16.jpg",
+      "/images/portfolio/gallery/highgate/highgate-natal-17.jpg",
+      "/images/portfolio/gallery/highgate/highgate-natal-18.jpg",
+    ],
   },
   {
     slug: "amoretti-lux",
@@ -86,6 +129,71 @@ export const PROJECTS: Project[] = [
     bodyCopy2Text:
       "O resultado final é um conjunto de imagens que elevam a presença digital da marca e funcionam em múltiplos formatos — do social media à impressão.",
     heroVideo: null,
+    gallery: [],
+  },
+  {
+    slug: "soce-mauro-loureiro",
+    title: "Sóçe by Mauro Loureiro",
+    client: "Sóçe",
+    category: "Filmes Comerciais",
+    thumbnail: "/images/portfolio/gallery/soce/soce-fotos-02.jpg",
+    video: "/videos/portfolio/soce-mauro.mp4",
+    services: ["Direcção criativa", "Produção", "Fotografia"],
+    briefText:
+      "O restaurante Sóçe, do chef Mauro Loureiro, precisava de uma peça audiovisual que capturasse a essência da experiência gastronómica — desde o ingrediente ao prato, da cozinha à mesa.",
+    bodyCopy1Title: "A cozinha como palco.",
+    bodyCopy1Text:
+      "Cada movimento do chef é uma coreografia de precisão e paixão. Capturámos o ritmo frenético da cozinha e a serenidade do resultado final — dois mundos que coexistem no mesmo espaço.",
+    bodyCopy2Title: "Do ingrediente ao prato.",
+    bodyCopy2Text:
+      "O vídeo e a fotografia trabalham em conjunto para contar a história completa — a textura, a cor, o aroma que a imagem sugere. Conteúdo que convida a reservar.",
+    heroVideo: "/videos/portfolio/soce-mauro.mp4",
+    gallery: [
+      "/images/portfolio/gallery/soce/soce-fotos-02.jpg",
+      "/images/portfolio/gallery/soce/soce-fotos-02b.jpg",
+      "/images/portfolio/gallery/soce/soce-fotos-10.jpg",
+      "/images/portfolio/gallery/soce/soce-fotos-11.jpg",
+      "/images/portfolio/gallery/soce/soce-fotos-12.jpg",
+      "/images/portfolio/gallery/soce/soce-fotos-19.jpg",
+      "/images/portfolio/gallery/soce/soce-fotos-41.jpg",
+      "/images/portfolio/gallery/soce/soce-fotos-45.jpg",
+      "/images/portfolio/gallery/soce/soce-fotos-47.jpg",
+    ],
+  },
+  {
+    slug: "once-upon-a-house",
+    title: "Once Upon Lisboa",
+    client: "Once Upon a House",
+    category: "Filmes Comerciais",
+    thumbnail: "/images/portfolio/gallery/once-upon-a-house/oul-sessao2-01.jpg",
+    video: null,
+    services: ["Produção", "Fotografia", "Pós-produção"],
+    briefText:
+      "A Once Upon a House precisava de conteúdo visual que comunicasse a qualidade e o estilo de vida dos seus empreendimentos imobiliários em Lisboa.",
+    bodyCopy1Title: "Mostrar o espaço como experiência.",
+    bodyCopy1Text:
+      "Mais do que fotografar imóveis, criámos imagens que transmitem a sensação de habitar cada espaço — a luz que entra, os materiais, a relação com a cidade.",
+    bodyCopy2Title: "Conteúdo que vende.",
+    bodyCopy2Text:
+      "Cada imagem foi pensada para funcionar em múltiplas plataformas — do website à brochura, das redes sociais aos portais imobiliários internacionais.",
+    heroVideo: null,
+    gallery: [
+      "/images/portfolio/gallery/once-upon-a-house/oul-sessao2-01.jpg",
+      "/images/portfolio/gallery/once-upon-a-house/oul-sessao2-02.jpg",
+      "/images/portfolio/gallery/once-upon-a-house/oul-sessao2-03.jpg",
+      "/images/portfolio/gallery/once-upon-a-house/oul-sessao2-04.jpg",
+      "/images/portfolio/gallery/once-upon-a-house/oul-sessao2-05.jpg",
+      "/images/portfolio/gallery/once-upon-a-house/oul-sessao2-06.jpg",
+      "/images/portfolio/gallery/once-upon-a-house/oul-sessao2-07.jpg",
+      "/images/portfolio/gallery/once-upon-a-house/oul-sessao2-08.jpg",
+      "/images/portfolio/gallery/once-upon-a-house/oul-sessao2-09.jpg",
+      "/images/portfolio/gallery/once-upon-a-house/oul-sessao2-46.jpg",
+      "/images/portfolio/gallery/once-upon-a-house/oul-sessao2-50.jpg",
+      "/images/portfolio/gallery/once-upon-a-house/oul-sessao2-57.jpg",
+      "/images/portfolio/gallery/once-upon-a-house/oul-sessao2-60.jpg",
+      "/images/portfolio/gallery/once-upon-a-house/oul-v3-010.jpg",
+      "/images/portfolio/gallery/once-upon-a-house/oul-v3-010b.jpg",
+    ],
   },
 ];
 
