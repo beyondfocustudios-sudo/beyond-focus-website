@@ -126,14 +126,14 @@ export function Testimonials() {
               {[...PARTNERS, ...PARTNERS].map((partner, i) => (
                 <div
                   key={`${partner.name}-${i}`}
-                  className="mx-6 flex-shrink-0 opacity-30 grayscale invert transition-opacity duration-300 hover:opacity-50 lg:mx-10"
+                  className="mx-6 flex-shrink-0 opacity-70 invert transition-opacity duration-300 hover:opacity-100 lg:mx-10"
                 >
                   <Image
                     src={partner.logo}
                     alt={partner.name}
                     width={120}
                     height={28}
-                    className="h-[24px] w-auto object-contain"
+                    className="h-[40px] w-auto object-contain"
                   />
                 </div>
               ))}

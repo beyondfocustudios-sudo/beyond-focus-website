@@ -63,14 +63,14 @@ export function Statement() {
             {[...PARTNERS, ...PARTNERS].map((partner, i) => (
               <div
                 key={`${partner.name}-${i}`}
-                className="mx-8 flex-shrink-0 opacity-30 grayscale transition-opacity duration-300 hover:opacity-50"
+                className="mx-8 flex-shrink-0 opacity-70 transition-opacity duration-300 hover:opacity-100"
               >
                 <Image
                   src={partner.logo}
                   alt={partner.name}
                   width={120}
                   height={28}
-                  className="h-[24px] w-auto object-contain"
+                  className="h-[40px] w-auto object-contain"
                 />
               </div>
             ))}
