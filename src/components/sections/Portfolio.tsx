@@ -39,6 +39,7 @@ export function Portfolio() {
           </div>
           <Link
             href="/portfolio"
+            data-cursor="hover-link"
             className="hidden text-sm font-medium text-white/60 transition-colors hover:text-orange sm:block"
           >
             Ver tudo →
@@ -53,13 +54,15 @@ export function Portfolio() {
         initial="hidden"
         whileInView="show"
         viewport={{ once: true }}
+        data-cursor="gallery"
         className="scrollbar-hide flex gap-5 overflow-x-auto px-6 pb-4 md:px-10 lg:px-12"
-        style={{ cursor: "grab", scrollSnapType: "x mandatory" }}
+        style={{ scrollSnapType: "x mandatory" }}
       >
         {PORTFOLIO_ITEMS.map((item) => (
           <motion.article
             key={item.title}
             variants={cardVariants}
+            data-cursor="hover-link"
             className="group relative min-w-[clamp(280px,40vw,520px)] flex-shrink-0 overflow-hidden rounded-xl md:min-w-[clamp(320px,35vw,480px)]"
             style={{ scrollSnapAlign: "start", aspectRatio: "3/4" }}
           >

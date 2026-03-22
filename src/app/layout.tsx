@@ -1,5 +1,7 @@
 import type { Metadata } from "next";
 import { DM_Sans, JetBrains_Mono } from "next/font/google";
+import { LoadingScreen } from "@/components/layout/LoadingScreen";
+import { CustomCursor } from "@/components/ui/CustomCursor";
 import "./globals.css";
 
 const dmSans = DM_Sans({
@@ -37,7 +39,11 @@ export default function RootLayout({
       lang="pt"
       className={`${dmSans.variable} ${jetbrainsMono.variable} antialiased`}
     >
-      <body className="min-h-screen font-body">{children}</body>
+      <body className="min-h-screen font-body">
+        <LoadingScreen />
+        <CustomCursor />
+        {children}
+      </body>
     </html>
   );
 }

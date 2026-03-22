@@ -53,3 +53,10 @@ body {
 .animate-marquee {
   animation: marquee 25s linear infinite;
 }
+
+/* Custom cursor — hide native on desktop */
+@media (min-width: 1024px) {
+  * {
+    cursor: none !important;
+  }
+}
