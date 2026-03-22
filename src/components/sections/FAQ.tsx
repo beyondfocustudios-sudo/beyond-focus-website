@@ -86,9 +86,9 @@ export function FAQ() {
           >
             <Link
               href="/contacto"
-              className="text-sm font-semibold text-petrol underline decoration-orange/40 underline-offset-4 transition-colors hover:text-orange hover:decoration-orange"
+              className="inline-flex items-center gap-2 rounded-full bg-orange px-6 py-3 text-sm font-semibold text-white transition-all duration-200 hover:bg-orange/90 hover:scale-[1.03]"
             >
-              Fala connosco →
+              Fala Connosco <span>→</span>
             </Link>
           </motion.div>
         </div>
