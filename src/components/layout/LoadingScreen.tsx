@@ -48,8 +48,8 @@ export function LoadingScreen() {
       {show && (
         <motion.div
           className="fixed inset-0 z-[99999] flex items-center justify-center bg-[#FAF9F7]"
-          exit={{ opacity: 0 }}
-          transition={{ duration: 0.15, ease: "easeOut" }}
+          exit={{ opacity: 0, filter: "blur(20px)", scale: 1.05 }}
+          transition={{ duration: 0.4, ease: [0.22, 1, 0.36, 1] }}
         >
           <video
             ref={videoRef}
