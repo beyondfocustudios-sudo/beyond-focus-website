@@ -1,6 +1,6 @@
 "use client";
 
-import { useRef } from "react";
+import { useRef, useEffect } from "react";
 import { motion } from "framer-motion";
 import Link from "next/link";
 import { Eyebrow } from "@/components/shared/Eyebrow";
@@ -25,6 +25,21 @@ const cardVariants = {
 
 export function Portfolio() {
   const scrollRef = useRef<HTMLDivElement>(null);
+
+  useEffect(() => {
+    const container = scrollRef.current;
+    if (!container) return;
+
+    const handleWheel = (e: WheelEvent) => {
+      if (Math.abs(e.deltaY) > Math.abs(e.deltaX)) {
+        e.preventDefault();
+        container.scrollLeft += e.deltaY;
+      }
+    };
+
+    container.addEventListener("wheel", handleWheel, { passive: false });
+    return () => container.removeEventListener("wheel", handleWheel);
+  }, []);
 
   return (
     <section className="bg-petrol py-20 lg:py-28">
@@ -55,7 +70,7 @@ export function Portfolio() {
         whileInView="show"
         viewport={{ once: true }}
         data-cursor="gallery"
-        className="scrollbar-hide flex gap-5 overflow-x-auto px-6 pb-4 md:px-10 lg:px-12"
+        className="scrollbar-hide flex gap-5 overflow-x-auto scroll-smooth px-6 pb-4 md:px-10 lg:px-12"
         style={{ scrollSnapType: "x mandatory" }}
       >
         {PORTFOLIO_ITEMS.map((item) => (
