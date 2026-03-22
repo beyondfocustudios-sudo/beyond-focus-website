@@ -5,7 +5,13 @@ import { motion } from "framer-motion";
 import Image from "next/image";
 import { Eyebrow } from "@/components/shared/Eyebrow";
 import { SectionHeading } from "@/components/shared/SectionHeading";
-import { TESTIMONIALS, PARTNERS } from "@/lib/constants";
+import { TESTIMONIALS } from "@/lib/constants";
+
+const COMPANY_LOGOS: Record<string, string> = {
+  "Carl Zeiss Portugal": "/images/partners/carl-zeiss.png",
+  "Once Upon a House": "/images/partners/once-upon-a-house.png",
+  "Amoretti Lux": "/images/partners/amoretti-lux.png",
+};
 
 const containerVariants = {
   hidden: { opacity: 0 },
@@ -91,6 +97,15 @@ export function Testimonials() {
               {/* Footer */}
               <div className="mt-6 flex items-center gap-3 border-t border-petrol/8 pt-4">
                 <div className="h-8 w-[3px] rounded-full bg-orange" />
+                {COMPANY_LOGOS[t.company] && (
+                  <Image
+                    src={COMPANY_LOGOS[t.company]}
+                    alt={t.company}
+                    width={80}
+                    height={24}
+                    className="h-[20px] w-auto object-contain"
+                  />
+                )}
                 <div>
                   <p className="text-xs font-semibold text-petrol">{t.company}</p>
                   <p className="text-[11px] text-petrol/40">{t.type}</p>
@@ -116,30 +131,6 @@ export function Testimonials() {
           </button>
         </div>
 
-        {/* Marquee — Animated, 9 partners */}
-        <div className="mt-14 overflow-hidden border-t border-white/10 pt-8">
-          <p className="mb-4 text-center font-mono text-[10px] tracking-[2px] uppercase text-white/30">
-            Parceiros
-          </p>
-          <div className="relative overflow-hidden">
-            <div className="animate-marquee flex items-center whitespace-nowrap">
-              {[...PARTNERS, ...PARTNERS, ...PARTNERS].map((partner, i) => (
-                <div
-                  key={`${partner.name}-${i}`}
-                  className="mx-6 flex-shrink-0 opacity-70 grayscale brightness-[10] transition-opacity duration-300 hover:opacity-100 lg:mx-10"
-                >
-                  <Image
-                    src={partner.logo}
-                    alt={partner.name}
-                    width={120}
-                    height={28}
-                    className="h-[40px] w-auto object-contain"
-                  />
-                </div>
-              ))}
-            </div>
-          </div>
-        </div>
       </div>
     </section>
   );
