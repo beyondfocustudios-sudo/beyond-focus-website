@@ -11,7 +11,6 @@ export function LoadingScreen() {
   useEffect(() => {
     setMounted(true);
 
-    // Skip if already shown this session
     if (typeof window !== "undefined" && sessionStorage.getItem("bf-loaded")) {
       setShow(false);
       return;
@@ -42,7 +41,6 @@ export function LoadingScreen() {
     sessionStorage.setItem("bf-loaded", "true");
   };
 
-  // Don't render anything on server
   if (!mounted) return null;
 
   return (
@@ -51,7 +49,7 @@ export function LoadingScreen() {
         <motion.div
           className="fixed inset-0 z-[99999] flex items-center justify-center bg-[#FAF9F7]"
           exit={{ opacity: 0 }}
-          transition={{ duration: 0.3, ease: "easeOut" }}
+          transition={{ duration: 0.15, ease: "easeOut" }}
         >
           <video
             ref={videoRef}
@@ -60,7 +58,7 @@ export function LoadingScreen() {
             muted
             playsInline
             onEnded={handleVideoEnd}
-            className="w-[20vw] max-w-[320px] min-w-[180px]"
+            className="h-[30vh] w-auto"
           />
         </motion.div>
       )}
