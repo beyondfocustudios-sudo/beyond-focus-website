@@ -39,3 +39,10 @@ yarn-error.log*
 # typescript
 *.tsbuildinfo
 next-env.d.ts
+
+# large portfolio videos (too big for git, deploy separately)
+public/videos/portfolio/*.mp4
+
+# large portfolio images (>5MB originals)
+public/images/portfolio/*.jpg
+public/images/portfolio/*.png
