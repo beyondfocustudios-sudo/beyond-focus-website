@@ -26,6 +26,7 @@ export const SERVICES = [
   { number: "04", title: "Conteúdos de Redes Sociais", tagline: "Conteúdo que pára o scroll." },
   { number: "05", title: "Fotografia", tagline: "Cada frame é uma decisão." },
   { number: "06", title: "Eventos", tagline: "Um dia. Meses de conteúdo." },
+  { number: "07", title: "Estratégia", tagline: "A direcção certa antes do primeiro plano." },
 ] as const;
 
 export const TESTIMONIALS = [

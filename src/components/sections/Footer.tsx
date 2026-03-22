@@ -16,6 +16,7 @@ const SERVICE_LINKS = [
   "Redes Sociais",
   "Fotografia",
   "Eventos",
+  "Estratégia",
 ];
 
 /* Inline SVG icons — no extra dependency needed */

@@ -72,10 +72,10 @@ function IconSend({ size = d }: { size?: number }) {
 }
 
 const FEATURES = [
-  { title: "Progresso em tempo real", description: "Sabe sempre em que fase está o teu projecto.", Icon: IconLayoutDashboard },
-  { title: "Aprovações com timecode", description: "Comenta ao segundo exacto. Aprova com um clique.", Icon: IconCheckCircle },
-  { title: "Mensagens directas", description: "Sem emails perdidos. Tudo num sítio.", Icon: IconMessageSquare },
-  { title: "Documentos e contratos", description: "Propostas, facturas e contratos sempre acessíveis.", Icon: IconFolder },
+  { title: "Progresso em tempo real", description: "Sabe sempre em que fase está o teu projecto.", Icon: IconLayoutDashboard, activeBg: "bg-blue-500/10", activeText: "text-blue-500" },
+  { title: "Aprovações com timecode", description: "Comenta ao segundo exacto. Aprova com um clique.", Icon: IconCheckCircle, activeBg: "bg-emerald-500/10", activeText: "text-emerald-500" },
+  { title: "Mensagens directas", description: "Sem emails perdidos. Tudo num sítio.", Icon: IconMessageSquare, activeBg: "bg-orange/10", activeText: "text-orange" },
+  { title: "Documentos e contratos", description: "Propostas, facturas e contratos sempre acessíveis.", Icon: IconFolder, activeBg: "bg-violet-500/10", activeText: "text-violet-500" },
 ];
 
 const containerVariants = {
@@ -549,7 +549,7 @@ export function Portal() {
               }`}
             >
               <div className={`mx-auto mb-3 flex h-10 w-10 items-center justify-center rounded-xl transition-colors duration-300 ${
-                activeView === i ? "bg-orange/10 text-orange" : "bg-petrol/5 text-petrol/30"
+                activeView === i ? `${feat.activeBg} ${feat.activeText}` : "bg-petrol/5 text-petrol/30"
               }`}>
                 <feat.Icon size={f} />
               </div>
