@@ -41,3 +41,4 @@ yarn-error.log*
 next-env.d.ts
 
 # portfolio videos tracked via Git LFS (see .gitattributes)
+.claude-seo-skill/

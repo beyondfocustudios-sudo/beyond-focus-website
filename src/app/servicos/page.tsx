@@ -5,11 +5,21 @@ import { Footer } from "@/components/sections/Footer";
 import { ServicesHero } from "@/components/features/services/ServicesHero";
 import { ServiceBlock } from "@/components/features/services/ServiceBlock";
 import { ServicesProcess } from "@/components/features/services/ServicesProcess";
+import { BreadcrumbSchema } from "@/components/seo/BreadcrumbSchema";
 
 export const metadata: Metadata = {
   title: "Serviços | Produtora Audiovisual",
   description:
     "Filmes comerciais, vídeos institucionais, documentários, fotografia, eventos e estratégia de conteúdo. Produção audiovisual em Portugal.",
+  openGraph: {
+    title: "Serviços — Beyond Focus",
+    description: "Filmes comerciais, vídeos institucionais, documentários, fotografia, eventos e estratégia de conteúdo.",
+    url: "https://beyondfocus.pt/servicos",
+    images: [{ url: "/og-image.jpg", width: 1200, height: 630, alt: "Beyond Focus Serviços" }],
+  },
+  alternates: {
+    canonical: "https://beyondfocus.pt/servicos",
+  },
 };
 
 const SERVICES = [
@@ -25,6 +35,12 @@ const SERVICES = [
 export default function ServicosPage() {
   return (
     <>
+      <BreadcrumbSchema
+        items={[
+          { name: "Inicio", href: "/" },
+          { name: "Serviços", href: "/servicos" },
+        ]}
+      />
       <Navbar variant="light" />
       <main className="bg-bg-light">
         <ServicesHero />
@@ -40,6 +56,12 @@ export default function ServicosPage() {
           <Link href="/contacto" className="mt-8 inline-flex items-center gap-2 rounded-full bg-petrol px-8 py-4 text-base font-semibold text-white transition-all duration-200 hover:bg-petrol/90 hover:scale-[1.03]">
             Fala Connosco <span>→</span>
           </Link>
+          <p className="mt-6 text-sm text-petrol/40">
+            Vê exemplos do nosso trabalho no{" "}
+            <Link href="/portfolio" className="text-orange underline underline-offset-2 hover:text-orange/80">
+              portfolio
+            </Link>
+          </p>
         </section>
       </main>
       <Footer />

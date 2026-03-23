@@ -4,15 +4,31 @@ import Image from "next/image";
 import { Navbar } from "@/components/layout/Navbar";
 import { Footer } from "@/components/sections/Footer";
 import { BLOG_POSTS } from "@/lib/blog-data";
+import { BreadcrumbSchema } from "@/components/seo/BreadcrumbSchema";
 
 export const metadata: Metadata = {
-  title: "Blog",
-  description: "Ideias, bastidores e reflexões sobre comunicação audiovisual e estratégia de conteúdo.",
+  title: "Blog | Produção Audiovisual e Estratégia",
+  description: "Ideias, bastidores e reflexões sobre comunicação audiovisual e estratégia de conteúdo para marcas em Portugal.",
+  openGraph: {
+    title: "Blog — Beyond Focus",
+    description: "Ideias, bastidores e reflexões sobre comunicação audiovisual e estratégia de conteúdo.",
+    url: "https://beyondfocus.pt/blog",
+    images: [{ url: "/og-image.jpg", width: 1200, height: 630, alt: "Beyond Focus Blog" }],
+  },
+  alternates: {
+    canonical: "https://beyondfocus.pt/blog",
+  },
 };
 
 export default function BlogPage() {
   return (
     <>
+      <BreadcrumbSchema
+        items={[
+          { name: "Inicio", href: "/" },
+          { name: "Blog", href: "/blog" },
+        ]}
+      />
       <Navbar variant="light" />
       <main className="min-h-screen bg-bg-light">
         {/* Hero */}

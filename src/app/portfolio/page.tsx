@@ -1,12 +1,36 @@
 import { Suspense } from "react";
+import type { Metadata } from "next";
 import Link from "next/link";
 import { Navbar } from "@/components/layout/Navbar";
 import { Footer } from "@/components/sections/Footer";
 import { PortfolioGrid } from "@/components/features/portfolio/PortfolioGrid";
+import { BreadcrumbSchema } from "@/components/seo/BreadcrumbSchema";
+
+export const metadata: Metadata = {
+  title: "Portfolio | Projectos de Produção Audiovisual",
+  description:
+    "Filmes comerciais, vídeos institucionais, documentários e fotografia. Vê os projectos que criámos para marcas em Portugal.",
+  openGraph: {
+    title: "Portfolio — Beyond Focus",
+    description:
+      "Filmes comerciais, vídeos institucionais, documentários e fotografia para marcas em Portugal.",
+    url: "https://beyondfocus.pt/portfolio",
+    images: [{ url: "/og-image.jpg", width: 1200, height: 630, alt: "Beyond Focus Portfolio" }],
+  },
+  alternates: {
+    canonical: "https://beyondfocus.pt/portfolio",
+  },
+};
 
 export default function PortfolioPage() {
   return (
     <>
+      <BreadcrumbSchema
+        items={[
+          { name: "Inicio", href: "/" },
+          { name: "Portfolio", href: "/portfolio" },
+        ]}
+      />
       <Navbar variant="light" />
       <main className="min-h-screen bg-bg-light">
         {/* Hero */}

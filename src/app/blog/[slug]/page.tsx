@@ -5,6 +5,7 @@ import Image from "next/image";
 import { Navbar } from "@/components/layout/Navbar";
 import { Footer } from "@/components/sections/Footer";
 import { getBlogPost, BLOG_POSTS } from "@/lib/blog-data";
+import { BreadcrumbSchema } from "@/components/seo/BreadcrumbSchema";
 
 export function generateStaticParams() {
   return BLOG_POSTS.map((p) => ({ slug: p.slug }));
@@ -21,6 +22,16 @@ export async function generateMetadata({
   return {
     title: post.title,
     description: post.excerpt,
+    openGraph: {
+      title: `${post.title} — Beyond Focus`,
+      description: post.excerpt,
+      url: `https://beyondfocus.pt/blog/${slug}`,
+      images: [{ url: post.thumbnail, width: 1200, height: 630, alt: post.title }],
+      type: "article",
+    },
+    alternates: {
+      canonical: `https://beyondfocus.pt/blog/${slug}`,
+    },
   };
 }
 
@@ -37,6 +48,13 @@ export default async function BlogPostPage({
 
   return (
     <>
+      <BreadcrumbSchema
+        items={[
+          { name: "Inicio", href: "/" },
+          { name: "Blog", href: "/blog" },
+          { name: post.title, href: `/blog/${slug}` },
+        ]}
+      />
       <Navbar variant="light" />
       <main className="bg-bg-light">
         {/* Hero */}
@@ -80,7 +98,7 @@ export default async function BlogPostPage({
           })}
         </article>
 
-        {/* CTA */}
+        {/* CTA + Service link */}
         <section className="bg-white py-16 text-center">
           <p className="text-base text-petrol/50">Gostaste deste artigo?</p>
           <Link
@@ -89,11 +107,17 @@ export default async function BlogPostPage({
           >
             Fala connosco <span>→</span>
           </Link>
+          <p className="mt-6 text-sm text-petrol/40">
+            Descobre os nossos{" "}
+            <Link href="/servicos" className="text-orange underline underline-offset-2 hover:text-orange/80">
+              serviços de produção audiovisual
+            </Link>
+          </p>
         </section>
 
         {/* Related posts */}
         <section className="mx-auto max-w-[1200px] px-6 py-16 md:px-10">
-          <h3 className="mb-8 text-xl font-bold text-petrol">Artigos relacionados</h3>
+          <h2 className="mb-8 text-xl font-bold text-petrol">Artigos relacionados</h2>
           <div className="grid grid-cols-1 gap-8 md:grid-cols-2">
             {otherPosts.map((p) => (
               <Link key={p.slug} href={`/blog/${p.slug}`} className="group block" data-cursor="hover-link">
@@ -102,7 +126,7 @@ export default async function BlogPostPage({
                 </div>
                 <div className="mt-3">
                   <span className="font-mono text-[10px] uppercase tracking-[2px] text-orange">{p.category}</span>
-                  <h4 className="mt-1 text-base font-semibold text-petrol group-hover:text-orange transition-colors">{p.title}</h4>
+                  <h3 className="mt-1 text-base font-semibold text-petrol group-hover:text-orange transition-colors">{p.title}</h3>
                 </div>
               </Link>
             ))}

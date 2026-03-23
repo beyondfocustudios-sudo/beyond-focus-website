@@ -9,10 +9,13 @@ import { FAQ } from "@/components/sections/FAQ";
 import { CTAFinal } from "@/components/sections/CTAFinal";
 import { Footer } from "@/components/sections/Footer";
 import { Navbar } from "@/components/layout/Navbar";
+import { FAQSchema } from "@/components/seo/FAQSchema";
+import { FAQ_ITEMS } from "@/lib/constants";
 
 export default function Home() {
   return (
     <>
+      <FAQSchema items={[...FAQ_ITEMS]} />
       <Navbar />
       <main>
         <Hero />

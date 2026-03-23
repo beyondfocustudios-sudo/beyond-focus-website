@@ -2,15 +2,31 @@ import type { Metadata } from "next";
 import { Navbar } from "@/components/layout/Navbar";
 import { Footer } from "@/components/sections/Footer";
 import { ContactForm } from "@/components/features/contact/ContactForm";
+import { BreadcrumbSchema } from "@/components/seo/BreadcrumbSchema";
 
 export const metadata: Metadata = {
-  title: "Contacto",
-  description: "Tens um projecto em mente? Fala connosco. Produção audiovisual em Portugal.",
+  title: "Contacto | Fala Connosco",
+  description: "Tens um projecto em mente? Fala connosco. Produção audiovisual em Lisboa e todo o Portugal.",
+  openGraph: {
+    title: "Contacto — Beyond Focus",
+    description: "Tens um projecto em mente? Fala connosco. Produção audiovisual em Lisboa e todo o Portugal.",
+    url: "https://beyondfocus.pt/contacto",
+    images: [{ url: "/og-image.jpg", width: 1200, height: 630, alt: "Beyond Focus — Contacto" }],
+  },
+  alternates: {
+    canonical: "https://beyondfocus.pt/contacto",
+  },
 };
 
 export default function ContactoPage() {
   return (
     <>
+      <BreadcrumbSchema
+        items={[
+          { name: "Inicio", href: "/" },
+          { name: "Contacto", href: "/contacto" },
+        ]}
+      />
       <Navbar variant="light" />
       <main className="bg-bg-light">
         <section className="mx-auto max-w-[1440px] px-6 pt-[200px] pb-20 md:px-10 lg:px-[60px]">
@@ -30,17 +46,17 @@ export default function ContactoPage() {
               {/* Contact details */}
               <div className="mt-12 space-y-6">
                 <div>
-                  <h4 className="font-mono text-[11px] uppercase tracking-[2px] text-petrol/30">Email</h4>
+                  <p className="font-mono text-[11px] uppercase tracking-[2px] text-petrol/30">Email</p>
                   <a href="mailto:geral@beyondfocus.pt" className="mt-1 block text-base font-medium text-petrol transition-colors hover:text-orange">
                     geral@beyondfocus.pt
                   </a>
                 </div>
                 <div>
-                  <h4 className="font-mono text-[11px] uppercase tracking-[2px] text-petrol/30">Localização</h4>
+                  <p className="font-mono text-[11px] uppercase tracking-[2px] text-petrol/30">Localização</p>
                   <p className="mt-1 text-base text-petrol">Lisboa, Portugal</p>
                 </div>
                 <div>
-                  <h4 className="font-mono text-[11px] uppercase tracking-[2px] text-petrol/30">Redes sociais</h4>
+                  <p className="font-mono text-[11px] uppercase tracking-[2px] text-petrol/30">Redes sociais</p>
                   <div className="mt-2 flex gap-4">
                     <a href="https://instagram.com/beyondfocus.pt" target="_blank" rel="noopener noreferrer" className="text-sm text-petrol/50 transition-colors hover:text-orange">Instagram</a>
                     <a href="https://vimeo.com/beyondfocus" target="_blank" rel="noopener noreferrer" className="text-sm text-petrol/50 transition-colors hover:text-orange">Vimeo</a>

@@ -26,7 +26,7 @@ export function AboutPortal() {
             href="/portal-cliente"
             className="mt-6 inline-block text-sm font-medium text-petrol underline underline-offset-4 transition-colors hover:text-orange"
           >
-            Ver na homepage →
+            Saber mais sobre o Portal →
           </Link>
         </motion.div>
 

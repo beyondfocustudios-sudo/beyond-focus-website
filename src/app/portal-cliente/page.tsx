@@ -6,16 +6,32 @@ import { PortalHero } from "@/components/features/portal-page/PortalHero";
 import { PortalFeatures } from "@/components/features/portal-page/PortalFeatures";
 import { PortalHowItWorks } from "@/components/features/portal-page/PortalHowItWorks";
 import { PortalComparison } from "@/components/features/portal-page/PortalComparison";
+import { BreadcrumbSchema } from "@/components/seo/BreadcrumbSchema";
 
 export const metadata: Metadata = {
-  title: "Portal do Cliente",
+  title: "Portal do Cliente | Acompanhamento de Projectos",
   description:
     "Uma plataforma exclusiva onde acompanhas cada fase do projecto, aprovas entregas com timecode, comunicas com a equipa e acedes a todos os documentos.",
+  openGraph: {
+    title: "Portal do Cliente — Beyond Focus",
+    description: "Plataforma exclusiva para acompanhar o teu projecto audiovisual em tempo real.",
+    url: "https://beyondfocus.pt/portal-cliente",
+    images: [{ url: "/og-image.jpg", width: 1200, height: 630, alt: "Beyond Focus Portal do Cliente" }],
+  },
+  alternates: {
+    canonical: "https://beyondfocus.pt/portal-cliente",
+  },
 };
 
 export default function PortalClientePage() {
   return (
     <>
+      <BreadcrumbSchema
+        items={[
+          { name: "Inicio", href: "/" },
+          { name: "Portal do Cliente", href: "/portal-cliente" },
+        ]}
+      />
       <Navbar variant="light" />
       <main className="bg-bg-light">
         <PortalHero />

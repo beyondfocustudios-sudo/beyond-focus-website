@@ -5,6 +5,8 @@ import { Footer } from "@/components/sections/Footer";
 import { ServicePageContent } from "@/components/features/services/ServicePageContent";
 import { getServicePage, SERVICE_PAGES } from "@/lib/services-data";
 import { PROJECTS } from "@/lib/portfolio-data";
+import { BreadcrumbSchema } from "@/components/seo/BreadcrumbSchema";
+import { ServiceSchema } from "@/components/seo/ServiceSchema";
 
 export function generateStaticParams() {
   return SERVICE_PAGES.map((s) => ({ slug: s.slug }));
@@ -21,6 +23,15 @@ export async function generateMetadata({
   return {
     title: service.metaTitle,
     description: service.metaDescription,
+    openGraph: {
+      title: service.metaTitle,
+      description: service.metaDescription,
+      url: `https://beyondfocus.pt/servicos/${slug}`,
+      images: [{ url: service.image, width: 1200, height: 630, alt: service.title }],
+    },
+    alternates: {
+      canonical: `https://beyondfocus.pt/servicos/${slug}`,
+    },
   };
 }
 
@@ -39,6 +50,19 @@ export default async function ServiceDetailPage({
 
   return (
     <>
+      <BreadcrumbSchema
+        items={[
+          { name: "Inicio", href: "/" },
+          { name: "Serviços", href: "/servicos" },
+          { name: service.title, href: `/servicos/${slug}` },
+        ]}
+      />
+      <ServiceSchema
+        name={service.title}
+        description={service.metaDescription}
+        slug={slug}
+        image={service.image}
+      />
       <Navbar />
       <main>
         <ServicePageContent service={service} relatedProjects={relatedProjects} />

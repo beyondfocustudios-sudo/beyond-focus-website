@@ -1,15 +1,25 @@
 import type { Metadata } from "next";
 import { Navbar } from "@/components/layout/Navbar";
 import { Footer } from "@/components/sections/Footer";
+import { BreadcrumbSchema } from "@/components/seo/BreadcrumbSchema";
 
 export const metadata: Metadata = {
   title: "Política de Privacidade",
   description: "Política de privacidade da Beyond Focus — produtora audiovisual em Lisboa.",
+  alternates: {
+    canonical: "https://beyondfocus.pt/privacidade",
+  },
 };
 
 export default function PrivacidadePage() {
   return (
     <>
+      <BreadcrumbSchema
+        items={[
+          { name: "Inicio", href: "/" },
+          { name: "Privacidade", href: "/privacidade" },
+        ]}
+      />
       <Navbar variant="light" />
       <main className="bg-bg-light pt-[140px] pb-20">
         <div className="mx-auto max-w-[800px] px-6 md:px-10">

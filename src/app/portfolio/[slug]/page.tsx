@@ -9,6 +9,7 @@ import { CaseStudyBodyCopy } from "@/components/features/case-study/CaseStudyBod
 import { CaseStudyHorizontalGallery } from "@/components/features/case-study/CaseStudyHorizontalGallery";
 import { CaseStudyNextProjects } from "@/components/features/case-study/CaseStudyNextProjects";
 import { getProject, getNextProjects, PROJECTS } from "@/lib/portfolio-data";
+import { BreadcrumbSchema } from "@/components/seo/BreadcrumbSchema";
 
 export function generateStaticParams() {
   return PROJECTS.map((p) => ({ slug: p.slug }));
@@ -24,7 +25,16 @@ export async function generateMetadata({
   if (!project) return {};
   return {
     title: `${project.title} — ${project.client}`,
-    description: project.briefText,
+    description: project.briefText.slice(0, 155) + "...",
+    openGraph: {
+      title: `${project.title} — Beyond Focus`,
+      description: project.briefText.slice(0, 155) + "...",
+      url: `https://beyondfocus.pt/portfolio/${slug}`,
+      images: [{ url: project.thumbnail, width: 1200, height: 630, alt: project.title }],
+    },
+    alternates: {
+      canonical: `https://beyondfocus.pt/portfolio/${slug}`,
+    },
   };
 }
 
@@ -41,6 +51,13 @@ export default async function CaseStudyPage({
 
   return (
     <>
+      <BreadcrumbSchema
+        items={[
+          { name: "Inicio", href: "/" },
+          { name: "Portfolio", href: "/portfolio" },
+          { name: project.title, href: `/portfolio/${slug}` },
+        ]}
+      />
       <Navbar variant="light" />
       <main className="bg-white">
         <CaseStudyHero project={project} />
