@@ -3,11 +3,52 @@
 import { useState } from "react";
 import { motion } from "framer-motion";
 
+/* SVG pain icons — no emojis */
+function PainMailIcon() {
+  return (
+    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round">
+      <path d="M22 10.5V6a2 2 0 00-2-2H4a2 2 0 00-2 2v12c0 1.1.9 2 2 2h12.5" />
+      <path d="m22 7-8.97 5.7a1.94 1.94 0 01-2.06 0L2 7" />
+      <path d="M20 14v4" /><path d="M20 22v.01" />
+    </svg>
+  );
+}
+function PainQuestionIcon() {
+  return (
+    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round">
+      <circle cx="12" cy="12" r="10" /><path d="M9.09 9a3 3 0 015.83 1c0 2-3 3-3 3" /><path d="M12 17h.01" />
+    </svg>
+  );
+}
+function PainConfusionIcon() {
+  return (
+    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round">
+      <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z" /><path d="M12 8v4" /><path d="M12 16h.01" />
+    </svg>
+  );
+}
+function PainFolderIcon() {
+  return (
+    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round">
+      <path d="M4 20h16a2 2 0 002-2V8a2 2 0 00-2-2h-7.93a2 2 0 01-1.66-.9l-.82-1.2A2 2 0 007.93 3H4a2 2 0 00-2 2v13a2 2 0 002 2z" />
+      <line x1="2" y1="10" x2="22" y2="10" />
+    </svg>
+  );
+}
+function PainRefreshIcon() {
+  return (
+    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round">
+      <path d="M21 2v6h-6" /><path d="M3 12a9 9 0 0115-6.7L21 8" />
+      <path d="M3 22v-6h6" /><path d="M21 12a9 9 0 01-15 6.7L3 16" />
+    </svg>
+  );
+}
+
 const PAIN_POINTS = [
   {
     pain: "Mandas um email com feedback e ninguém responde durante dias.",
     solution: "Mensagens directas organizadas por projecto. Resposta garantida.",
-    icon: "✉️",
+    painIcon: <PainMailIcon />,
     solveIcon: (
       <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round">
         <path d="M21 15a2 2 0 01-2 2H7l-4 4V5a2 2 0 012-2h14a2 2 0 012 2z" />
@@ -17,7 +58,7 @@ const PAIN_POINTS = [
   {
     pain: "\"Em que fase está o meu projecto?\" — perguntas sem resposta clara.",
     solution: "Dashboard em tempo real. Progresso, milestones e timeline sempre visíveis.",
-    icon: "❓",
+    painIcon: <PainQuestionIcon />,
     solveIcon: (
       <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round">
         <rect x="3" y="3" width="7" height="9" rx="1" /><rect x="14" y="3" width="7" height="5" rx="1" /><rect x="14" y="12" width="7" height="9" rx="1" /><rect x="3" y="16" width="7" height="5" rx="1" />
@@ -27,7 +68,7 @@ const PAIN_POINTS = [
   {
     pain: "Feedback num email de 500 palavras. O editor não sabe a que momento te referes.",
     solution: "Comentários ao segundo exacto no vídeo. Claro, visual, sem ambiguidade.",
-    icon: "😵",
+    painIcon: <PainConfusionIcon />,
     solveIcon: (
       <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round">
         <path d="M22 11.08V12a10 10 0 11-5.93-9.14" /><polyline points="22 4 12 14.01 9 11.01" />
@@ -37,7 +78,7 @@ const PAIN_POINTS = [
   {
     pain: "Ficheiros no WeTransfer, contratos no email, facturas no WhatsApp.",
     solution: "Tudo num só sítio. Documentos, entregas e contratos sempre acessíveis.",
-    icon: "📂",
+    painIcon: <PainFolderIcon />,
     solveIcon: (
       <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round">
         <path d="M4 20h16a2 2 0 002-2V8a2 2 0 00-2-2h-7.93a2 2 0 01-1.66-.9l-.82-1.2A2 2 0 007.93 3H4a2 2 0 00-2 2v13a2 2 0 002 2z" />
@@ -47,7 +88,7 @@ const PAIN_POINTS = [
   {
     pain: "\"Podes reenviar o vídeo? Não sei qual é a versão final.\"",
     solution: "Histórico de versões completo. A versão certa, sempre à mão.",
-    icon: "🔄",
+    painIcon: <PainRefreshIcon />,
     solveIcon: (
       <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round">
         <path d="M21 15v4a2 2 0 01-2 2H5a2 2 0 01-2-2v-4" /><polyline points="7 10 12 15 17 10" /><line x1="12" y1="15" x2="12" y2="3" />
@@ -108,7 +149,7 @@ export function PortalComparison() {
                 <div className={`flex items-start gap-4 p-6 transition-colors duration-300 lg:p-8 ${
                   isHovered ? "bg-petrol/[0.03]" : "bg-white"
                 }`}>
-                  <span className="mt-0.5 text-xl flex-shrink-0">{item.icon}</span>
+                  <span className="mt-0.5 flex-shrink-0 text-petrol/30">{item.painIcon}</span>
                   <div>
                     <span className="mb-1 inline-block font-mono text-[10px] uppercase tracking-[2px] text-red-400/60">O problema</span>
                     <p className={`text-[15px] leading-relaxed transition-colors duration-300 ${
