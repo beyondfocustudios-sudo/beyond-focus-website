@@ -7,6 +7,13 @@ import { Footer } from "@/components/sections/Footer";
 import { getBlogPost, BLOG_POSTS } from "@/lib/blog-data";
 import { BreadcrumbSchema } from "@/components/seo/BreadcrumbSchema";
 
+/** Render inline markdown: **bold**, [link](url) */
+function renderInline(text: string): string {
+  return text
+    .replace(/\*\*(.+?)\*\*/g, '<strong class="text-petrol font-semibold">$1</strong>')
+    .replace(/\[(.+?)\]\((.+?)\)/g, '<a href="$2" class="text-orange underline underline-offset-2 hover:text-orange/80">$1</a>');
+}
+
 export function generateStaticParams() {
   return BLOG_POSTS.map((p) => ({ slug: p.slug }));
 }
@@ -20,11 +27,12 @@ export async function generateMetadata({
   const post = getBlogPost(slug);
   if (!post) return { title: "Artigo não encontrado" };
   return {
-    title: post.title,
-    description: post.excerpt,
+    title: post.metaTitle || post.title,
+    description: post.metaDescription || post.excerpt,
+    keywords: post.keywords,
     openGraph: {
-      title: `${post.title} — Beyond Focus`,
-      description: post.excerpt,
+      title: `${post.metaTitle || post.title} — Beyond Focus`,
+      description: post.metaDescription || post.excerpt,
       url: `https://beyondfocus.pt/blog/${slug}`,
       images: [{ url: post.thumbnail, width: 1200, height: 630, alt: post.title }],
       type: "article",
@@ -46,8 +54,21 @@ export default async function BlogPostPage({
 
   const otherPosts = BLOG_POSTS.filter((p) => p.slug !== slug).slice(0, 2);
 
+  const articleSchema = {
+    "@context": "https://schema.org",
+    "@type": "Article",
+    headline: post.metaTitle || post.title,
+    description: post.metaDescription || post.excerpt,
+    image: `https://beyondfocus.pt${post.thumbnail}`,
+    datePublished: new Date(post.date.replace(/(\d+) (\w+) (\d+)/, "$1 $2 $3")).toISOString(),
+    author: { "@type": "Person", name: "Daniel Lopes", url: "https://beyondfocus.pt/sobre" },
+    publisher: { "@type": "Organization", name: "Beyond Focus", url: "https://beyondfocus.pt", logo: "https://beyondfocus.pt/images/logo-symbol.png" },
+    mainEntityOfPage: `https://beyondfocus.pt/blog/${slug}`,
+  };
+
   return (
     <>
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(articleSchema) }} />
       <BreadcrumbSchema
         items={[
           { name: "Inicio", href: "/" },
@@ -79,21 +100,29 @@ export default async function BlogPostPage({
         </div>
 
         {/* Content */}
-        <article className="mx-auto max-w-[720px] px-6 py-16 md:px-10">
-          {post.content.split("\n\n").map((paragraph, i) => {
-            // Lines that end with : or . and are short → render as H2
-            const isHeading = paragraph.length < 80 && !paragraph.startsWith("-") && (paragraph.endsWith(":") || paragraph.endsWith(".")) && i > 0 && i % 3 === 0;
-            if (isHeading) {
+        <article className="prose-bf mx-auto max-w-[720px] px-6 py-16 md:px-10">
+          {post.content.split("\n\n").map((block, i) => {
+            // ## Heading
+            if (block.startsWith("## ")) {
               return (
-                <h2 key={i} className="mb-4 mt-10 text-[24px] leading-tight text-petrol">
-                  {paragraph}
+                <h2 key={i} className="mb-4 mt-12 text-[clamp(22px,2.5vw,28px)] font-bold leading-tight text-petrol">
+                  {block.replace("## ", "")}
                 </h2>
               );
             }
+            // Bullet list (lines starting with -)
+            if (block.startsWith("- ")) {
+              return (
+                <ul key={i} className="mb-5 space-y-2 pl-5">
+                  {block.split("\n").filter(l => l.startsWith("- ")).map((li, j) => (
+                    <li key={j} className="text-[17px] leading-[1.8] text-petrol/70 list-disc" dangerouslySetInnerHTML={{ __html: renderInline(li.replace("- ", "")) }} />
+                  ))}
+                </ul>
+              );
+            }
+            // Regular paragraph
             return (
-              <p key={i} className="mb-5 text-[18px] leading-[1.8] text-petrol/70">
-                {paragraph}
-              </p>
+              <p key={i} className="mb-5 text-[18px] leading-[1.8] text-petrol/70" dangerouslySetInnerHTML={{ __html: renderInline(block) }} />
             );
           })}
         </article>
