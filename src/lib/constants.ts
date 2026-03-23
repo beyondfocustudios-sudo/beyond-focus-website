@@ -14,6 +14,7 @@ export const NAV_ITEMS = [
   { label: "Início", href: "/" },
   { label: "Portfolio", href: "/portfolio" },
   { label: "Serviços", href: "/servicos" },
+  { label: "Portal", href: "/portal-cliente" },
   { label: "Sobre", href: "/sobre" },
   { label: "Blog", href: "/blog" },
   { label: "Contacto", href: "/contacto" },

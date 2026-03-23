@@ -1,7 +1,60 @@
+import type { Metadata } from "next";
+import Link from "next/link";
+import { Navbar } from "@/components/layout/Navbar";
+import { Footer } from "@/components/sections/Footer";
+import { PortalHero } from "@/components/features/portal-page/PortalHero";
+import { PortalFeatures } from "@/components/features/portal-page/PortalFeatures";
+import { PortalHowItWorks } from "@/components/features/portal-page/PortalHowItWorks";
+import { PortalComparison } from "@/components/features/portal-page/PortalComparison";
+
+export const metadata: Metadata = {
+  title: "Portal do Cliente",
+  description:
+    "Uma plataforma exclusiva onde acompanhas cada fase do projecto, aprovas entregas com timecode, comunicas com a equipa e acedes a todos os documentos.",
+};
+
 export default function PortalClientePage() {
   return (
-    <main>
-      <h1 className="font-display text-4xl text-petrol">Portal do Cliente</h1>
-    </main>
+    <>
+      <Navbar variant="light" />
+      <main className="bg-bg-light">
+        <PortalHero />
+
+        {/* Statement */}
+        <section className="bg-white py-20 lg:py-28">
+          <div className="mx-auto max-w-[900px] px-6 text-center md:px-10">
+            <h2 className="text-[clamp(24px,3vw,36px)] leading-tight text-petrol">
+              Nenhuma outra produtora em Portugal te oferece isto.
+            </h2>
+            <p className="mx-auto mt-4 max-w-xl text-base leading-relaxed text-petrol/50">
+              O Beyond Focus Portal é o teu espaço dedicado. Sem emails perdidos, sem ficheiros espalhados, sem incertezas.
+            </p>
+          </div>
+        </section>
+
+        <PortalFeatures />
+        <PortalHowItWorks />
+        <PortalComparison />
+
+        {/* CTA Final */}
+        <section className="bg-petrol-deep py-28 text-center lg:py-36">
+          <div className="mx-auto max-w-2xl px-6">
+            <h2 className="text-[clamp(28px,3.5vw,44px)] leading-tight text-white">
+              Pronto para experimentar uma forma diferente de trabalhar?
+            </h2>
+            <p className="mx-auto mt-4 max-w-md text-base text-white/50">
+              O portal é incluído em todos os projectos da Beyond Focus. Sem custos extra.
+            </p>
+            <Link
+              href="/contacto"
+              className="mt-8 inline-flex items-center gap-2 rounded-full bg-white px-8 py-4 text-base font-semibold text-petrol transition-all duration-200 hover:bg-white/90 hover:scale-[1.03]"
+            >
+              Começa um projecto <span>→</span>
+            </Link>
+          </div>
+        </section>
+      </main>
+      <Footer />
+    </>
   );
 }
