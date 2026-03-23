@@ -157,26 +157,31 @@ function PortfolioCard({
 
 export function Portfolio() {
   const scrollRef = useRef<HTMLDivElement>(null);
-  const [isDragging, setIsDragging] = useState(false);
-  const [startX, setStartX] = useState(0);
-  const [scrollLeft, setScrollLeft] = useState(0);
+  const isDragging = useRef(false);
+  const startX = useRef(0);
+  const startScroll = useRef(0);
+  const [dragging, setDragging] = useState(false);
 
   const handleMouseDown = (e: React.MouseEvent) => {
-    setIsDragging(true);
-    setStartX(e.pageX - (scrollRef.current?.offsetLeft || 0));
-    setScrollLeft(scrollRef.current?.scrollLeft || 0);
+    isDragging.current = true;
+    setDragging(true);
+    startX.current = e.clientX;
+    startScroll.current = scrollRef.current?.scrollLeft || 0;
+    if (scrollRef.current) scrollRef.current.style.scrollBehavior = "auto";
   };
 
   const handleMouseMove = (e: React.MouseEvent) => {
-    if (!isDragging || !scrollRef.current) return;
+    if (!isDragging.current || !scrollRef.current) return;
     e.preventDefault();
-    const x = e.pageX - scrollRef.current.offsetLeft;
-    const walk = (x - startX) * 1.5;
-    scrollRef.current.scrollLeft = scrollLeft - walk;
+    const dx = e.clientX - startX.current;
+    scrollRef.current.scrollLeft = startScroll.current - dx;
   };
 
-  const handleMouseUp = () => setIsDragging(false);
-  const handleDragLeave = () => setIsDragging(false);
+  const handleMouseUp = () => {
+    isDragging.current = false;
+    setDragging(false);
+    if (scrollRef.current) scrollRef.current.style.scrollBehavior = "smooth";
+  };
 
   return (
     <section className="bg-petrol py-20 lg:py-28">
@@ -210,11 +215,11 @@ export function Portfolio() {
         onMouseDown={handleMouseDown}
         onMouseMove={handleMouseMove}
         onMouseUp={handleMouseUp}
-        onMouseLeave={handleDragLeave}
-        className={`scrollbar-hide flex gap-5 overflow-x-auto px-6 pb-4 md:px-10 lg:px-12 ${
-          isDragging ? "cursor-grabbing select-none" : "cursor-grab"
+        onMouseLeave={handleMouseUp}
+        className={`scrollbar-hide flex gap-5 overflow-x-auto px-6 pb-4 md:px-10 lg:px-12 scroll-smooth ${
+          dragging ? "cursor-grabbing select-none" : "cursor-grab"
         }`}
-        style={{ scrollSnapType: isDragging ? "none" : "x mandatory" }}
+        style={{ scrollSnapType: dragging ? "none" : "x mandatory" }}
       >
         {PORTFOLIO_ITEMS.map((item) => (
           <PortfolioCard
