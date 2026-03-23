@@ -59,7 +59,7 @@ export const PARTNERS = [
   { name: "Amoretti Lux", logo: "/images/partners/amoretti-lux.png" },
   { name: "Hotel Cristal", logo: "/images/partners/hotel-cristal.png" },
   { name: "Hotel Casa Palmela", logo: "/images/partners/hotel-casa-palmela.png" },
-  { name: "Sóçe", logo: "/images/partners/soce.png" },
+  { name: "Soce", logo: "/images/partners/soce.png" },
   { name: "ifoffice", logo: "/images/partners/ifoffice.png" },
 ] as const;
 

@@ -33,7 +33,7 @@ const PORTFOLIO_ITEMS = [
     video: null,
   },
   {
-    title: "Sóçe by Mauro Loureiro",
+    title: "Soce by Mauro Loureiro",
     category: "REDES SOCIAIS",
     thumbnail: "/images/portfolio/soce-mauro-thumb.jpg",
     video: "/videos/portfolio/soce-mauro.mp4",

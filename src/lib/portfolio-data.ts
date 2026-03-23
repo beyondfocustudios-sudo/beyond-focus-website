@@ -133,14 +133,14 @@ export const PROJECTS: Project[] = [
   },
   {
     slug: "soce-mauro-loureiro",
-    title: "Sóçe by Mauro Loureiro",
-    client: "Sóçe",
-    category: "Redes Sociais",
+    title: "Soce by Mauro Loureiro",
+    client: "Soce",
+    category: "Filmes Comerciais",
     thumbnail: "/images/portfolio/gallery/soce/soce-fotos-02.jpg",
     video: "/videos/portfolio/soce-mauro.mp4",
     services: ["Direcção criativa", "Produção", "Fotografia"],
     briefText:
-      "O restaurante Sóçe, do chef Mauro Loureiro, precisava de uma peça audiovisual que capturasse a essência da experiência gastronómica — desde o ingrediente ao prato, da cozinha à mesa.",
+      "O restaurante Soce, do chef Mauro Loureiro, precisava de uma peça audiovisual que capturasse a essência da experiência gastronómica — desde o ingrediente ao prato, da cozinha à mesa.",
     bodyCopy1Title: "A cozinha como palco.",
     bodyCopy1Text:
       "Cada movimento do chef é uma coreografia de precisão e paixão. Capturámos o ritmo frenético da cozinha e a serenidade do resultado final — dois mundos que coexistem no mesmo espaço.",
