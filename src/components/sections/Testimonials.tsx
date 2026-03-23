@@ -1,7 +1,7 @@
 "use client";
 
 import { useState } from "react";
-import { motion } from "framer-motion";
+import { motion, AnimatePresence } from "framer-motion";
 import Image from "next/image";
 import { Eyebrow } from "@/components/shared/Eyebrow";
 import { SectionHeading } from "@/components/shared/SectionHeading";
@@ -24,6 +24,51 @@ const cardVariants = {
   show: { opacity: 1, y: 0, transition: { duration: 0.5 } },
 };
 
+function TestimonialCard({ t, highlight }: { t: typeof TESTIMONIALS[number]; highlight?: boolean }) {
+  return (
+    <div
+      className={`rounded-2xl bg-white p-6 lg:p-8 transition-all duration-300 ${
+        highlight ? "ring-2 ring-orange/30" : ""
+      }`}
+    >
+      {/* Score pill */}
+      <div className="mb-5">
+        <span className="rounded-full bg-petrol px-3 py-1 text-xs font-bold text-white">
+          {t.score}
+        </span>
+      </div>
+
+      {/* Decorative quote */}
+      <span className="mb-3 block text-6xl font-serif leading-none text-orange/15">
+        &ldquo;
+      </span>
+
+      {/* Quote */}
+      <p className="text-[15px] leading-relaxed text-petrol/80">
+        {t.quote}
+      </p>
+
+      {/* Footer */}
+      <div className="mt-6 flex items-center gap-3 border-t border-petrol/8 pt-4">
+        <div className="h-8 w-[3px] rounded-full bg-orange" />
+        {COMPANY_LOGOS[t.company] && (
+          <Image
+            src={COMPANY_LOGOS[t.company]}
+            alt={t.company}
+            width={80}
+            height={24}
+            className="h-[20px] w-auto object-contain"
+          />
+        )}
+        <div>
+          <p className="text-xs font-semibold text-petrol">{t.company}</p>
+          <p className="text-[11px] text-petrol/40">{t.type}</p>
+        </div>
+      </div>
+    </div>
+  );
+}
+
 export function Testimonials() {
   const [current, setCurrent] = useState(0);
 
@@ -33,7 +78,7 @@ export function Testimonials() {
   return (
     <section className="bg-petrol py-20 lg:py-28">
       <div className="mx-auto max-w-[1200px] px-6 md:px-10 lg:px-10">
-        {/* Header with arrows */}
+        {/* Header with arrows (desktop) */}
         <div className="flex items-end justify-between">
           <div>
             <Eyebrow light>O QUE DIZEM DE NÓS</Eyebrow>
@@ -59,78 +104,67 @@ export function Testimonials() {
           </div>
         </div>
 
-        {/* Cards with stagger */}
+        {/* ── Desktop: grid of all cards ── */}
         <motion.div
           variants={containerVariants}
           initial="hidden"
           whileInView="show"
           viewport={{ once: true, margin: "-60px" }}
-          className="mt-10 grid grid-cols-1 gap-5 md:grid-cols-2"
+          className="mt-10 hidden gap-5 md:grid md:grid-cols-2"
         >
           {TESTIMONIALS.map((t, i) => (
-            <motion.div
-              key={t.company}
-              variants={cardVariants}
-              className={`rounded-2xl bg-white p-6 lg:p-8 transition-all duration-300 ${
-                i === current ? "ring-2 ring-orange/30" : ""
-              }`}
-            >
-              {/* Score pill */}
-              <div className="mb-5">
-                <span className="rounded-full bg-petrol px-3 py-1 text-xs font-bold text-white">
-                  {t.score}
-                </span>
-              </div>
-
-              {/* Decorative quote — BIG */}
-              <span className="mb-3 block text-6xl font-serif leading-none text-orange/15">
-                &ldquo;
-              </span>
-
-              {/* Quote */}
-              <p className="text-[15px] leading-relaxed text-petrol/80">
-                {t.quote}
-              </p>
-
-              {/* Footer */}
-              <div className="mt-6 flex items-center gap-3 border-t border-petrol/8 pt-4">
-                <div className="h-8 w-[3px] rounded-full bg-orange" />
-                {COMPANY_LOGOS[t.company] && (
-                  <Image
-                    src={COMPANY_LOGOS[t.company]}
-                    alt={t.company}
-                    width={80}
-                    height={24}
-                    className="h-[20px] w-auto object-contain"
-                  />
-                )}
-                <div>
-                  <p className="text-xs font-semibold text-petrol">{t.company}</p>
-                  <p className="text-[11px] text-petrol/40">{t.type}</p>
-                </div>
-              </div>
+            <motion.div key={t.company} variants={cardVariants}>
+              <TestimonialCard t={t} highlight={i === current} />
             </motion.div>
           ))}
         </motion.div>
 
-        {/* Mobile arrows */}
-        <div className="mt-6 flex justify-center gap-3 sm:hidden">
-          <button
-            onClick={prev}
-            aria-label="Anterior"
-            className="flex h-10 w-10 items-center justify-center rounded-full border border-white/20 text-white"
-          >
-            ←
-          </button>
-          <button
-            onClick={next}
-            aria-label="Seguinte"
-            className="flex h-10 w-10 items-center justify-center rounded-full border border-white/20 text-white"
-          >
-            →
-          </button>
-        </div>
+        {/* ── Mobile: single card + arrows ── */}
+        <div className="mt-10 md:hidden">
+          <div className="relative overflow-hidden">
+            <AnimatePresence mode="wait">
+              <motion.div
+                key={current}
+                initial={{ opacity: 0, x: 40 }}
+                animate={{ opacity: 1, x: 0 }}
+                exit={{ opacity: 0, x: -40 }}
+                transition={{ duration: 0.3 }}
+              >
+                <TestimonialCard t={TESTIMONIALS[current]} />
+              </motion.div>
+            </AnimatePresence>
+          </div>
 
+          {/* Arrows + dots */}
+          <div className="mt-5 flex items-center justify-center gap-4">
+            <button
+              onClick={prev}
+              aria-label="Anterior"
+              className="flex h-10 w-10 items-center justify-center rounded-full border border-white/20 text-white transition-colors active:border-orange active:text-orange"
+            >
+              ←
+            </button>
+            <div className="flex gap-2">
+              {TESTIMONIALS.map((_, i) => (
+                <button
+                  key={i}
+                  onClick={() => setCurrent(i)}
+                  className={`h-1.5 rounded-full transition-all duration-300 ${
+                    current === i ? "w-6 bg-orange" : "w-1.5 bg-white/20"
+                  }`}
+                  aria-label={`Testemunho ${i + 1}`}
+                />
+              ))}
+            </div>
+            <button
+              onClick={next}
+              aria-label="Seguinte"
+              className="flex h-10 w-10 items-center justify-center rounded-full border border-white/20 text-white transition-colors active:border-orange active:text-orange"
+            >
+              →
+            </button>
+          </div>
+        </div>
       </div>
     </section>
   );
