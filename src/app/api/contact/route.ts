@@ -2,7 +2,7 @@ import { NextResponse } from "next/server";
 
 export async function POST(request: Request) {
   try {
-    const body = await request.json();
+    const body = awaitrequest.json();
     const { name, email, phone, company, website, services, message, budget, startDate } = body;
 
     // Validation
@@ -13,7 +13,7 @@ export async function POST(request: Request) {
       );
     }
 
-    const apiKey = process.env.RESEND_API_KEY;
+    const apiKey = process.env.RESEND_API_KEY
 
     if (!apiKey) {
       // Fallback: log to server if no API key configured
@@ -48,7 +48,7 @@ export async function POST(request: Request) {
     await resend.emails.send({
       from: "Beyond Focus Website <website@beyondfocus.pt>",
       to: ["geral@beyondfocus.pt"],
-      replyTo: email,
+      reply_to: email,
       subject: `Novo contacto: ${name}${company ? ` — ${company}` : ""}`,
       html: `
         <div style="font-family:'Helvetica Neue',Arial,sans-serif;max-width:600px;margin:0 auto;padding:40px 20px">
