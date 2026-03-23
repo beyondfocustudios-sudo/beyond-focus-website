@@ -28,7 +28,7 @@ export function AboutHero() {
           transition={{ duration: 0.5, delay: 0.35 }}
           className="mt-6 max-w-xl text-lg leading-relaxed text-white/50"
         >
-          Somos uma produtora audiovisual fundada em Setúbal em 2023. Trabalhamos com marcas que querem mais do que conteúdo — querem resultados que se sentem.
+          Somos uma produtora audiovisual fundada em 2023, baseada em Lisboa. Trabalhamos com marcas que querem mais do que conteúdo — querem resultados que se sentem.
         </motion.p>
       </div>
     </section>

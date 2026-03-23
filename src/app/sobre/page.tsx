@@ -10,10 +10,10 @@ import { BreadcrumbSchema } from "@/components/seo/BreadcrumbSchema";
 
 export const metadata: Metadata = {
   title: "Sobre | A Nossa História",
-  description: "Fundada em 2023 por Daniel Lopes em Setúbal. Produtora audiovisual para marcas que querem mais do que conteúdo — querem resultados.",
+  description: "Fundada em 2023 por Daniel Lopes. Produtora audiovisual em Lisboa para marcas que querem mais do que conteúdo — querem resultados.",
   openGraph: {
     title: "Sobre — Beyond Focus",
-    description: "Fundada em 2023 por Daniel Lopes em Setúbal. Produtora audiovisual para marcas que querem resultados.",
+    description: "Fundada em 2023 por Daniel Lopes. Produtora audiovisual em Lisboa para marcas que querem resultados.",
     url: "https://beyondfocus.pt/sobre",
     images: [{ url: "/og-image.jpg", width: 1200, height: 630, alt: "Beyond Focus — Sobre Nós" }],
   },
