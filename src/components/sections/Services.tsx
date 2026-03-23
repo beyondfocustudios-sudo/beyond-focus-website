@@ -201,33 +201,7 @@ export function Services() {
           </div>
         </div>
 
-        {/* ── Mobile: Service list below carousel ── */}
-        <div className="mt-8 lg:hidden">
-          {services.map((service, i) => (
-            <button
-              key={service.num}
-              onClick={() => { setActive(i); scrollToCard(i); }}
-              className={`flex w-full items-start gap-3 border-b border-petrol/10 py-4 text-left transition-opacity duration-300 ${
-                active === i ? "opacity-100" : "opacity-40"
-              }`}
-            >
-              <div
-                className={`mt-1.5 h-8 w-[3px] rounded-full transition-all duration-300 ${
-                  active === i ? "bg-orange" : "bg-transparent"
-                }`}
-              />
-              <div>
-                <div className="flex items-baseline gap-2">
-                  <span className="font-mono text-[11px] text-petrol/40">{service.num}</span>
-                  <span className="text-base font-semibold text-petrol">{service.name}</span>
-                </div>
-                {active === i && (
-                  <p className="mt-0.5 text-sm text-petrol/50">{service.tagline}</p>
-                )}
-              </div>
-            </button>
-          ))}
-        </div>
+        {/* Mobile list removed — carousel cards already show name + tagline */}
       </div>
     </section>
   );
