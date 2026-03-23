@@ -23,15 +23,15 @@ export const PROJECTS: Project[] = [
     category: "Filmes Comerciais",
     thumbnail: "/images/portfolio/hcp-thumb.jpg",
     video: "/videos/portfolio/hcp-final.mp4",
-    services: ["Direcção criativa", "Produção", "Pós-produção"],
+    services: ["Direcção criativa", "Produção", "Fotografia de produto", "Fotografia de hotel"],
     briefText:
-      "Situado no coração do Parque Natural da Arrábida, o Hotel Casa Palmela exigia uma narrativa visual que transmitisse a elegância intemporal e a serenidade aristocrática da propriedade.",
-    bodyCopy1Title: "A luz natural da Arrábida dita o ritmo.",
+      "Situado aos pés da Serra da Arrábida, o Hotel Casa Palmela é um cinco estrelas que faz parte do grupo Small Luxury Hotels. Com um público maioritariamente internacional, o hotel queria um filme que mostrasse a experiência completa de um hóspede — desde o despertar até ao final do dia — passando pelas diversas actividades e momentos que o espaço proporciona.\n\nEste projecto representou a entrada da Beyond Focus no mundo da hotelaria — um sector onde a imagem é tudo e onde a qualidade do conteúdo define a percepção do espaço.",
+    bodyCopy1Title: "Um dia no Casa Palmela, do amanhecer ao anoitecer.",
     bodyCopy1Text:
-      "Cada plano é uma decisão. Procurámos transportar o espectador para a experiência única de habitar este refúgio histórico, onde cada detalhe conta uma história de tradição e sofisticação.",
-    bodyCopy2Title: "Onde a arquitectura encontra a natureza.",
+      "O conceito era simples mas exigente: acompanhar o percurso natural de um hóspede ao longo de um dia inteiro. O despertar com a luz da Arrábida, o pequeno-almoço, as actividades, os detalhes do espaço, o final de tarde. Cada cena foi pensada para transmitir a serenidade e o luxo discreto que definem o Casa Palmela — um refúgio countryside a poucos quilómetros de Lisboa.",
+    bodyCopy2Title: "Quando o cliente é cinco estrelas, a produção também tem de ser.",
     bodyCopy2Text:
-      "Na Beyond Focus, não fazemos apenas vídeos — criamos narrativas visuais que transformam a percepção de uma marca. O resultado é uma peça que convida a descobrir.",
+      "Filmámos ao longo de dois momentos — uma manhã e uma tarde — num total de um dia de produção. Para além do filme comercial, produzimos fotografia de produto e fotografia do hotel que o cliente utiliza nas suas plataformas de booking e comunicação. O feedback foi directo e genuíno: um cliente que nos fez sentir que a hotelaria era onde devíamos estar.",
     heroVideo: "/videos/portfolio/hcp-final.mp4",
     gallery: [
       "/images/portfolio/gallery/hotel-casa-palmela/hcp-vdm-stills-06.jpg",
@@ -40,20 +40,20 @@ export const PROJECTS: Project[] = [
   },
   {
     slug: "carl-zeiss-portugal",
-    title: "Behind the Scenes",
+    title: "Carl Zeiss Portugal",
     client: "Carl Zeiss Portugal",
     category: "Vídeos Institucionais",
     thumbnail: "/images/portfolio/zeiss-thumb.jpg",
     video: "/videos/portfolio/zeiss-bts.mp4",
-    services: ["Captação", "Edição", "Colour grading"],
+    services: ["Produção", "Filmagem institucional", "Behind the Scenes"],
     briefText:
-      "A Carl Zeiss queria documentar o processo criativo por trás de uma sessão de teste de lentes cinematográficas em cenários reais na região de Lisboa.",
-    bodyCopy1Title: "Mostrar o processo é tão importante como o resultado.",
+      "A Carl Zeiss, um dos nomes mais reconhecidos da indústria óptica mundial, tem uma fábrica em Setúbal — literalmente na rua ao lado do nosso estúdio. Quando nos contactaram, o pedido era claro: criar um vídeo institucional que mostrasse as instalações, os processos de fabrico e a dimensão da operação portuguesa, para uso interno em reuniões de equipa e apresentações da empresa.\n\nEste foi o nosso primeiro vídeo institucional e um dos momentos mais entusiasmantes para a equipa. Ter uma marca com a dimensão da Zeiss a confiar em nós validou o caminho que estávamos a construir.",
+    bodyCopy1Title: "Por dentro de uma das fábricas mais avançadas do país.",
     bodyCopy1Text:
-      "Acompanhámos a equipa da Zeiss durante uma jornada completa de testes de campo, capturando cada momento de descoberta e precisão técnica com autenticidade.",
-    bodyCopy2Title: "Tecnologia e criatividade em harmonia.",
+      "A produção incluiu a filmagem completa de todas as áreas da fábrica — desde as linhas de montagem aos laboratórios de precisão. Cada processo, cada detalhe, capturado num vídeo de quase dez minutos que serve como cartão de visita interno da operação portuguesa da Zeiss. O BTS (behind the scenes) que publicamos dá uma ideia da escala da produção.",
+    bodyCopy2Title: "Um grande nome. Uma grande responsabilidade.",
     bodyCopy2Text:
-      "O resultado é um behind the scenes que funciona tanto como conteúdo institucional quanto como peça de storytelling para as redes sociais da marca.",
+      "Por razões de confidencialidade (NDA), apenas podemos mostrar o BTS da produção — o vídeo institucional final é de uso exclusivo interno da Zeiss. Mas o resultado fala por si: uma avaliação de 9.5 em 10 por parte do João, o responsável que acompanhou o projecto do lado da Zeiss. Para uma primeira incursão no mundo institucional, não podíamos ter pedido melhor.",
     heroVideo: "/videos/portfolio/zeiss-bts.mp4",
     gallery: [
       "/images/portfolio/gallery/carl-zeiss/zeiss-bts-002.jpg",
@@ -76,20 +76,20 @@ export const PROJECTS: Project[] = [
   },
   {
     slug: "highgate",
-    title: "Christmas Party",
+    title: "Highgate Portugal",
     client: "Highgate Portugal",
     category: "Eventos",
     thumbnail: "/images/portfolio/highgate-thumb.jpg",
     video: "/videos/portfolio/highgate-sesimbra.mp4",
-    services: ["Cobertura vídeo", "Fotografia", "Edição"],
+    services: ["Cobertura vídeo", "Fotografia de evento"],
     briefText:
-      "A Highgate confiou-nos a cobertura completa do seu evento anual de Natal, um momento de celebração que reuniu toda a equipa numa noite memorável.",
-    bodyCopy1Title: "Cada momento conta.",
+      "A Highgate é um grupo americano de gestão hoteleira com operações em Portugal. Para a festa de Natal corporativa da Highgate Portugal — um evento com mais de cem colaboradores — precisavam de uma equipa que capturasse o ambiente da noite: a celebração, os prémios, os momentos de equipa.",
+    bodyCopy1Title: "Uma noite. Uma equipa de três. Todo o conteúdo que precisavam.",
     bodyCopy1Text:
-      "Com múltiplas câmaras e uma equipa dedicada, capturámos a energia e a emoção de uma noite que reflecte os valores e a cultura da empresa.",
-    bodyCopy2Title: "Um dia. Meses de conteúdo.",
+      "Com uma equipa de três pessoas, cobrimos a totalidade do evento — fotografia e vídeo em simultâneo. O ambiente era íntimo e bem organizado, o que nos permitiu focar nos momentos que realmente importavam: os discursos, a entrega de prémios, as reacções genuínas. O tipo de produção onde menos é mais.",
+    bodyCopy2Title: "Conteúdo que vai além da noite.",
     bodyCopy2Text:
-      "De um único evento, produzimos conteúdo para redes sociais, comunicação interna e memória institucional — maximizando o retorno do investimento.",
+      "O resultado foi um pacote completo: fotografia do evento para comunicação interna, vídeo highlight para redes sociais e memória visual para a equipa. Uma noite de produção, meses de conteúdo utilizável. É exactamente para isto que existimos.",
     heroVideo: "/videos/portfolio/highgate-sesimbra.mp4",
     gallery: [
       "/images/portfolio/gallery/highgate/highgate-natal-005.jpg",
@@ -114,39 +114,39 @@ export const PROJECTS: Project[] = [
   },
   {
     slug: "amoretti-lux",
-    title: "Ferrari Editorial",
+    title: "Amoretti Lux",
     client: "Amoretti Lux",
     category: "Fotografia",
     thumbnail: "/images/portfolio/amoretti-thumb.jpg",
     video: null,
-    services: ["Direcção criativa", "Fotografia", "Retoque"],
+    services: ["Direcção de arte", "Sessão fotográfica"],
     briefText:
-      "A Amoretti Lux precisava de um editorial fotográfico de luxo que capturasse a essência da marca e dos automóveis que representa, com elegância e atenção ao detalhe.",
-    bodyCopy1Title: "Cada frame é uma decisão.",
+      "A Amoretti Lux é uma marca de roupa criada por três jovens empreendedores com uma visão clara: posicionar as suas peças em ambientes de luxo. O pedido era traduzir essa visão em imagens — colocar as t-shirts em cenários que comunicassem exclusividade e aspiração, sem que a marca precisasse de o dizer por palavras.",
+    bodyCopy1Title: "Luxo é contexto.",
     bodyCopy1Text:
-      "A fotografia de luxo exige paciência, precisão e uma compreensão profunda da luz. Cada imagem foi pensada para comunicar exclusividade e sofisticação.",
-    bodyCopy2Title: "O detalhe faz a diferença.",
+      "Realizámos duas sessões fotográficas para a Amoretti Lux. O conceito foi construído em torno da ideia de que o luxo não está no produto isolado, mas no mundo que o rodeia. Supercarros, cenários cuidados e uma direcção de arte que colocava cada peça de roupa no centro da narrativa visual. Tudo filmado em Setúbal, provando que não é preciso ir longe para criar imagens que parecem internacionais.",
+    bodyCopy2Title: "A primeira experiência com uma produtora. Nota máxima.",
     bodyCopy2Text:
-      "O resultado final é um conjunto de imagens que elevam a presença digital da marca e funcionam em múltiplos formatos — do social media à impressão.",
+      "Para a Amoretti Lux, esta foi a primeira colaboração com uma produtora audiovisual. O resultado: uma avaliação de 10 em 10. As imagens passaram a ser o rosto da marca nas redes sociais e na comunicação com parceiros — prova de que uma boa sessão fotográfica pode elevar uma marca inteira.",
     heroVideo: null,
     gallery: [],
   },
   {
     slug: "soce-mauro-loureiro",
-    title: "Soce by Mauro Loureiro",
-    client: "Soce",
+    title: "Sóçe by Mauro Loureiro",
+    client: "Sóçe — Restaurante do Chef Mauro Loureiro",
     category: "Filmes Comerciais",
     thumbnail: "/images/portfolio/gallery/soce/soce-fotos-02.jpg",
     video: "/videos/portfolio/soce-mauro.mp4",
-    services: ["Direcção criativa", "Produção", "Fotografia"],
+    services: ["Direcção criativa", "Produção", "Filmagem gastronómica"],
     briefText:
-      "O restaurante Soce, do chef Mauro Loureiro, precisava de uma peça audiovisual que capturasse a essência da experiência gastronómica — desde o ingrediente ao prato, da cozinha à mesa.",
-    bodyCopy1Title: "A cozinha como palco.",
+      "O Sóçe é o restaurante do Chef Mauro Loureiro em Setúbal — um nome cada vez mais presente na televisão e na gastronomia portuguesa. O pedido era criar um filme que mostrasse um prato específico de bacalhau, desde o conceito inicial até à apresentação final, passando por todo o processo criativo na cozinha.\n\nPara a Beyond Focus, este era o primeiro passo no mundo da restauração — um sector onde a imagem é tudo.",
+    bodyCopy1Title: "Do conceito ao prato. Cada etapa filmada.",
     bodyCopy1Text:
-      "Cada movimento do chef é uma coreografia de precisão e paixão. Capturámos o ritmo frenético da cozinha e a serenidade do resultado final — dois mundos que coexistem no mesmo espaço.",
-    bodyCopy2Title: "Do ingrediente ao prato.",
+      "O filme acompanha o processo completo: a ideia do chef, a preparação dos ingredientes, a técnica na cozinha, a montagem do prato. Não é apenas food porn — é storytelling gastronómico. O espectador vê o prato nascer e entende a intenção por trás de cada elemento. Ao mesmo tempo, captámos o ambiente do restaurante, o espaço, a identidade do Sóçe.",
+    bodyCopy2Title: "A nossa entrada no mundo da gastronomia.",
     bodyCopy2Text:
-      "O vídeo e a fotografia trabalham em conjunto para contar a história completa — a textura, a cor, o aroma que a imagem sugere. Conteúdo que convida a reservar.",
+      "Este projecto abriu-nos uma porta importante. A restauração em Portugal precisa cada vez mais de conteúdo audiovisual de qualidade — e nós provámos que sabemos contar histórias à mesa tão bem como em qualquer outro cenário.",
     heroVideo: "/videos/portfolio/soce-mauro.mp4",
     gallery: [
       "/images/portfolio/gallery/soce/soce-fotos-02.jpg",
@@ -163,19 +163,19 @@ export const PROJECTS: Project[] = [
   {
     slug: "once-upon-a-house",
     title: "Once Upon Lisboa",
-    client: "Once Upon a House",
+    client: "Once Upon Lisboa",
     category: "Fotografia",
     thumbnail: "/images/portfolio/gallery/once-upon-a-house/oul-sessao2-01.jpg",
     video: null,
-    services: ["Produção", "Fotografia", "Pós-produção"],
+    services: ["Fotografia de hotel", "Fotografia para redes sociais", "Fotografia para plataformas de booking"],
     briefText:
-      "A Once Upon a House precisava de conteúdo visual que comunicasse a qualidade e o estilo de vida dos seus empreendimentos imobiliários em Lisboa.",
-    bodyCopy1Title: "Mostrar o espaço como experiência.",
+      "O Once Upon Lisboa é um hotel em Lisboa que pertence ao mesmo grupo do Hotel Casa Palmela. Em Setembro de 2025, o hotel abriu portas e precisava de fotografia profissional para o lançamento — imagens para redes sociais, plataformas de booking e comunicação institucional. Confiaram em nós pela experiência positiva com o Casa Palmela.",
+    bodyCopy1Title: "Fotografar um hotel antes do mundo o ver.",
     bodyCopy1Text:
-      "Mais do que fotografar imóveis, criámos imagens que transmitem a sensação de habitar cada espaço — a luz que entra, os materiais, a relação com a cidade.",
-    bodyCopy2Title: "Conteúdo que vende.",
+      "Realizámos duas sessões fotográficas completas para o Once Upon Lisboa: a primeira para o lançamento inicial e a segunda para complementar o acervo visual. Quartos, áreas comuns, detalhes de decoração, vistas — tudo capturado com a mesma atenção ao detalhe que nos define.",
+    bodyCopy2Title: "Um erro assumido. Um cliente conquistado.",
     bodyCopy2Text:
-      "Cada imagem foi pensada para funcionar em múltiplas plataformas — do website à brochura, das redes sociais aos portais imobiliários internacionais.",
+      "Ser transparente é um dos nossos valores — e este projecto testou-o. Após a aprovação inicial das fotografias, o CEO do grupo decidiu que queria uma abordagem diferente. Podíamos ter cobrado uma nova sessão. Em vez disso, assumimos a responsabilidade — o briefing inicial podia ter sido mais aprofundado da nossa parte. Cobrimos os custos, contratámos uma equipa nova e entregámos exactamente o que era pretendido. O resultado? Um cliente que nos deu 10 em 10 e a confirmação de que a forma como se resolve um problema vale mais do que nunca ter problemas.",
     heroVideo: null,
     gallery: [
       "/images/portfolio/gallery/once-upon-a-house/oul-sessao2-01.jpg",
