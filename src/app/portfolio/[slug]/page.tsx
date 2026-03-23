@@ -11,6 +11,15 @@ import { CaseStudyNextProjects } from "@/components/features/case-study/CaseStud
 import { getProject, getNextProjects, PROJECTS } from "@/lib/portfolio-data";
 import { BreadcrumbSchema } from "@/components/seo/BreadcrumbSchema";
 
+const PROJECT_SERVICE_MAP: Record<string, { label: string; href: string }> = {
+  "hotel-casa-palmela": { label: "Filmes Comerciais", href: "/servicos/filmes-comerciais" },
+  "carl-zeiss-portugal": { label: "Vídeos Institucionais", href: "/servicos/videos-institucionais" },
+  "amoretti-lux": { label: "Fotografia", href: "/servicos/fotografia" },
+  "highgate": { label: "Eventos", href: "/servicos/eventos" },
+  "soce-mauro-loureiro": { label: "Filmes Comerciais", href: "/servicos/filmes-comerciais" },
+  "once-upon-a-house": { label: "Fotografia", href: "/servicos/fotografia" },
+};
+
 export function generateStaticParams() {
   return PROJECTS.map((p) => ({ slug: p.slug }));
 }
@@ -65,6 +74,21 @@ export default async function CaseStudyPage({
         <CaseStudyBodyCopy title={project.bodyCopy1Title} text={project.bodyCopy1Text} />
         <CaseStudyHorizontalGallery project={project} />
         <CaseStudyBodyCopy title={project.bodyCopy2Title} text={project.bodyCopy2Text} />
+
+        {/* Related Service */}
+        {PROJECT_SERVICE_MAP[slug] && (
+          <section className="mx-auto max-w-[1800px] px-6 py-10 text-center md:px-10 lg:px-[60px]">
+            <p className="text-sm text-petrol/40">
+              Este projecto enquadra-se no nosso serviço de{" "}
+              <Link
+                href={PROJECT_SERVICE_MAP[slug].href}
+                className="font-medium text-orange underline underline-offset-2 hover:text-orange/80"
+              >
+                {PROJECT_SERVICE_MAP[slug].label}
+              </Link>
+            </p>
+          </section>
+        )}
 
         {/* CTA */}
         <section className="py-[200px] text-center max-md:py-[100px]">

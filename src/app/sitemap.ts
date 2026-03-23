@@ -1,6 +1,7 @@
 import { MetadataRoute } from "next";
 import { PROJECTS } from "@/lib/portfolio-data";
 import { SERVICE_PAGES } from "@/lib/services-data";
+import { SECTOR_PAGES } from "@/lib/sectors-data";
 import { BLOG_POSTS } from "@/lib/blog-data";
 
 export default function sitemap(): MetadataRoute.Sitemap {
@@ -18,6 +19,12 @@ export default function sitemap(): MetadataRoute.Sitemap {
     priority: 0.7 as const,
   }));
 
+  const sectorUrls = SECTOR_PAGES.map((s) => ({
+    url: `${baseUrl}/servicos/sectores/${s.slug}`,
+    lastModified: new Date(),
+    priority: 0.7 as const,
+  }));
+
   const blogUrls = BLOG_POSTS.map((b) => ({
     url: `${baseUrl}/blog/${b.slug}`,
     lastModified: new Date(),
@@ -30,6 +37,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
     ...projectUrls,
     { url: `${baseUrl}/servicos`, lastModified: new Date(), changeFrequency: "monthly", priority: 0.8 },
     ...serviceUrls,
+    ...sectorUrls,
     { url: `${baseUrl}/portal-cliente`, lastModified: new Date(), changeFrequency: "monthly", priority: 0.7 },
     { url: `${baseUrl}/sobre`, lastModified: new Date(), changeFrequency: "monthly", priority: 0.7 },
     { url: `${baseUrl}/contacto`, lastModified: new Date(), changeFrequency: "monthly", priority: 0.8 },

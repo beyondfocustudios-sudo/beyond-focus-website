@@ -6,8 +6,20 @@ import Link from "next/link";
 import Image from "next/image";
 import { NAV_ITEMS } from "@/lib/constants";
 
-export function Navbar({ variant = "dark" }: { variant?: "dark" | "light" }) {
+const NAV_ITEMS_EN = [
+  { label: "Home", href: "/en" },
+  { label: "Portfolio", href: "/en/portfolio" },
+  { label: "Services", href: "/en/services" },
+  { label: "About", href: "/en/about" },
+  { label: "Contact", href: "/en/contact" },
+];
+
+export function Navbar({ variant = "dark", locale = "pt" }: { variant?: "dark" | "light"; locale?: "pt" | "en" }) {
   const isLight = variant === "light";
+  const navItems = locale === "en" ? NAV_ITEMS_EN : NAV_ITEMS;
+  const ctaText = locale === "en" ? "Let's Talk" : "Fala Connosco";
+  const ctaHref = locale === "en" ? "/en/contact" : "/contacto";
+  const langSwitch = locale === "en" ? { label: "PT", href: "/" } : { label: "EN", href: "/en" };
   const [scrolled, setScrolled] = useState(isLight);
   const [hidden, setHidden] = useState(false);
   const [mobileOpen, setMobileOpen] = useState(false);
@@ -68,7 +80,7 @@ export function Navbar({ variant = "dark" }: { variant?: "dark" | "light" }) {
 
           {/* Desktop Nav */}
           <div className="hidden items-center gap-8 lg:flex">
-            {NAV_ITEMS.map((item) => (
+            {navItems.map((item) => (
               <Link
                 key={item.href}
                 href={item.href}
@@ -83,14 +95,20 @@ export function Navbar({ variant = "dark" }: { variant?: "dark" | "light" }) {
               </Link>
             ))}
             <Link
-              href="/contacto"
+              href={langSwitch.href}
+              className={`text-xs font-medium transition-colors ${scrolled ? "text-petrol/40 hover:text-petrol" : "text-white/40 hover:text-white"}`}
+            >
+              {langSwitch.label}
+            </Link>
+            <Link
+              href={ctaHref}
               className={`rounded-full px-5 py-2.5 text-sm font-semibold transition-all duration-300 hover:scale-[1.03] ${
                 scrolled
                   ? "bg-[#0E3A45] text-white hover:bg-[#0E3A45]/90"
                   : "bg-white text-[#0E3A45] hover:bg-white/90"
               }`}
             >
-              Fala Connosco
+              {ctaText}
             </Link>
           </div>
 
@@ -127,7 +145,7 @@ export function Navbar({ variant = "dark" }: { variant?: "dark" | "light" }) {
             className="fixed inset-0 z-40 bg-white pt-20 lg:hidden"
           >
             <div className="flex flex-col items-center gap-6 py-10">
-              {NAV_ITEMS.map((item) => (
+              {navItems.map((item) => (
                 <Link
                   key={item.href}
                   href={item.href}
@@ -138,11 +156,18 @@ export function Navbar({ variant = "dark" }: { variant?: "dark" | "light" }) {
                 </Link>
               ))}
               <Link
-                href="/contacto"
+                href={langSwitch.href}
+                onClick={() => setMobileOpen(false)}
+                className="text-sm font-medium text-petrol/40"
+              >
+                {langSwitch.label}
+              </Link>
+              <Link
+                href={ctaHref}
                 onClick={() => setMobileOpen(false)}
                 className="mt-4 rounded-full bg-[#0E3A45] px-8 py-3 text-base font-semibold text-white"
               >
-                Fala Connosco
+                {ctaText}
               </Link>
             </div>
           </motion.div>

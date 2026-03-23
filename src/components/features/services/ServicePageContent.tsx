@@ -5,6 +5,17 @@ import Image from "next/image";
 import Link from "next/link";
 import type { ServicePage } from "@/lib/services-data";
 import type { Project } from "@/lib/portfolio-data";
+import { BLOG_POSTS } from "@/lib/blog-data";
+
+const SERVICE_BLOG_MAP: Record<string, string[]> = {
+  "filmes-comerciais": ["quanto-custa-video-institucional-portugal", "video-institucional-vs-filme-comercial", "como-preparar-empresa-filmagem"],
+  "videos-institucionais": ["quanto-custa-video-institucional-portugal", "video-institucional-vs-filme-comercial", "como-preparar-empresa-filmagem"],
+  "documentarios": ["porque-empresa-precisa-video-2026", "quanto-custa-video-institucional-portugal"],
+  "redes-sociais": ["porque-empresa-precisa-video-2026", "como-escolher-produtora-audiovisual"],
+  "fotografia": ["como-escolher-produtora-audiovisual", "como-preparar-empresa-filmagem"],
+  "eventos": ["como-preparar-empresa-filmagem", "porque-empresa-precisa-video-2026"],
+  "estrategia": ["como-escolher-produtora-audiovisual", "porque-empresa-precisa-video-2026"],
+};
 
 const stagger = {
   hidden: { opacity: 0 },
@@ -242,8 +253,64 @@ export function ServicePageContent({
         </section>
       )}
 
+      {/* ── ARTIGOS RELACIONADOS ── */}
+      {(() => {
+        const slugs = SERVICE_BLOG_MAP[service.slug] || [];
+        const articles = slugs.map(s => BLOG_POSTS.find(p => p.slug === s)).filter(Boolean);
+        if (articles.length === 0) return null;
+        return (
+          <section className="bg-white py-20 lg:py-28">
+            <div className="mx-auto max-w-[1400px] px-6 md:px-10 lg:px-[60px]">
+              <motion.div
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true }}
+                transition={{ duration: 0.5 }}
+                className="mb-10"
+              >
+                <span className="mb-3 inline-block font-mono text-[11px] font-medium uppercase tracking-[3px] text-orange">
+                  ARTIGOS
+                </span>
+                <h2 className="text-[clamp(28px,3vw,40px)] font-bold text-petrol">
+                  Lê mais sobre este tema.
+                </h2>
+              </motion.div>
+              <div className="grid grid-cols-1 gap-6 md:grid-cols-2 lg:grid-cols-3">
+                {articles.map((article) => {
+                  if (!article) return null;
+                  return (
+                    <motion.div
+                      key={article.slug}
+                      initial={{ opacity: 0, y: 25 }}
+                      whileInView={{ opacity: 1, y: 0 }}
+                      viewport={{ once: true }}
+                      transition={{ duration: 0.5 }}
+                    >
+                      <Link href={`/blog/${article.slug}`} className="group block">
+                        <div className="relative mb-3 overflow-hidden rounded-xl" style={{ aspectRatio: "16/9" }}>
+                          <Image
+                            src={article.thumbnail}
+                            alt={article.title}
+                            fill
+                            sizes="(max-width: 768px) 100vw, 33vw"
+                            className="object-cover transition-transform duration-500 group-hover:scale-[1.03]"
+                          />
+                        </div>
+                        <span className="font-mono text-[10px] uppercase tracking-[2px] text-orange">{article.category}</span>
+                        <h3 className="mt-1 text-base font-semibold text-petrol transition-colors group-hover:text-orange">{article.title}</h3>
+                        <p className="mt-1 text-xs text-petrol/40">{article.readTime} de leitura</p>
+                      </Link>
+                    </motion.div>
+                  );
+                })}
+              </div>
+            </div>
+          </section>
+        );
+      })()}
+
       {/* ── CTA ── */}
-      <section className="bg-white py-28 text-center">
+      <section className="bg-bg-light py-28 text-center">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
