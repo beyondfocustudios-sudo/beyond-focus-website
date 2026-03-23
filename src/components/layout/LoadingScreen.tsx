@@ -16,16 +16,13 @@ export function LoadingScreen() {
       return;
     }
 
-    // Speed up video 2x
-    if (videoRef.current) {
-      videoRef.current.playbackRate = 2;
-    }
+    // Video plays at normal speed (1x) so the logo is fully visible
 
-    // Safety timeout — max 2s
+    // Safety timeout — max 5s
     const safetyTimeout = setTimeout(() => {
       setShow(false);
       sessionStorage.setItem("bf-loaded", "true");
-    }, 2000);
+    }, 5000);
 
     // Video load check — if not playing after 1s, skip
     const videoCheck = setTimeout(() => {
@@ -53,19 +50,26 @@ export function LoadingScreen() {
       {show && (
         <motion.div
           className="fixed inset-0 z-[99999] flex items-center justify-center bg-[#FAF9F7]"
-          exit={{ opacity: 0, filter: "blur(20px)", scale: 1.05 }}
-          transition={{ duration: 0.4, ease: [0.22, 1, 0.36, 1] }}
+          initial={{ opacity: 1 }}
+          exit={{ opacity: 0, filter: "blur(12px)" }}
+          transition={{ duration: 0.15, ease: "easeOut" }}
         >
-          <video
-            ref={videoRef}
-            src="/videos/loading.mp4"
-            poster="/images/loading-poster.png"
-            autoPlay
-            muted
-            playsInline
-            onEnded={handleVideoEnd}
-            className="h-[30vh] w-auto"
-          />
+          <motion.div
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            transition={{ duration: 0.15, delay: 0 }}
+          >
+            <video
+              ref={videoRef}
+              src="/videos/loading.mp4"
+              poster="/images/loading-poster.png"
+              autoPlay
+              muted
+              playsInline
+              onEnded={handleVideoEnd}
+              className="h-[30vh] w-auto"
+            />
+          </motion.div>
         </motion.div>
       )}
     </AnimatePresence>
