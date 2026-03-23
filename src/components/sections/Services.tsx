@@ -1,6 +1,6 @@
 "use client";
 
-import { useState } from "react";
+import { useState, useRef, useEffect, useCallback } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import Image from "next/image";
 import { Eyebrow } from "@/components/shared/Eyebrow";
@@ -28,6 +28,34 @@ const itemVariants = {
 
 export function Services() {
   const [active, setActive] = useState(0);
+  const scrollRef = useRef<HTMLDivElement>(null);
+  const [isMobile, setIsMobile] = useState(false);
+
+  useEffect(() => {
+    const check = () => setIsMobile(window.innerWidth < 1024);
+    check();
+    window.addEventListener("resize", check);
+    return () => window.removeEventListener("resize", check);
+  }, []);
+
+  // Sync scroll position → active index on mobile
+  const handleScroll = useCallback(() => {
+    if (!scrollRef.current || !isMobile) return;
+    const container = scrollRef.current;
+    const scrollLeft = container.scrollLeft;
+    const cardWidth = container.scrollWidth / services.length;
+    const index = Math.round(scrollLeft / cardWidth);
+    if (index !== active && index >= 0 && index < services.length) {
+      setActive(index);
+    }
+  }, [active, isMobile]);
+
+  // Scroll to active card when tapping list on mobile
+  const scrollToCard = useCallback((index: number) => {
+    if (!scrollRef.current || !isMobile) return;
+    const cardWidth = scrollRef.current.scrollWidth / services.length;
+    scrollRef.current.scrollTo({ left: cardWidth * index, behavior: "smooth" });
+  }, [isMobile]);
 
   return (
     <section className="bg-bg-light py-20 lg:py-28">
@@ -37,7 +65,53 @@ export function Services() {
           Sete formas de ir mais longe.
         </SectionHeading>
 
-        <div className="mt-14 grid grid-cols-1 items-center gap-10 lg:grid-cols-2 lg:gap-16">
+        {/* ── Mobile: Image carousel FIRST ── */}
+        <div className="mt-10 lg:hidden">
+          <div
+            ref={scrollRef}
+            onScroll={handleScroll}
+            className="scrollbar-hide flex snap-x snap-mandatory gap-4 overflow-x-auto"
+          >
+            {services.map((service, i) => (
+              <div
+                key={service.num}
+                className="relative w-[85vw] flex-shrink-0 snap-center overflow-hidden rounded-2xl"
+                style={{ aspectRatio: "4/5" }}
+              >
+                <Image
+                  src={service.image}
+                  alt={service.name}
+                  fill
+                  className="object-cover"
+                  sizes="85vw"
+                />
+                <div className="absolute inset-x-0 bottom-0 bg-gradient-to-t from-black/60 to-transparent p-5">
+                  <span className="font-mono text-[10px] tracking-[2px] uppercase text-orange">
+                    {service.num}
+                  </span>
+                  <p className="mt-1 text-lg font-semibold text-white">{service.name}</p>
+                  <p className="mt-0.5 text-sm text-white/60">{service.tagline}</p>
+                </div>
+              </div>
+            ))}
+          </div>
+          {/* Dots */}
+          <div className="mt-4 flex justify-center gap-2">
+            {services.map((_, i) => (
+              <button
+                key={i}
+                onClick={() => { setActive(i); scrollToCard(i); }}
+                className={`h-1.5 rounded-full transition-all duration-300 ${
+                  active === i ? "w-6 bg-orange" : "w-1.5 bg-petrol/15"
+                }`}
+                aria-label={`Serviço ${i + 1}`}
+              />
+            ))}
+          </div>
+        </div>
+
+        {/* ── Desktop: 2-column layout ── */}
+        <div className="mt-14 hidden items-center gap-16 lg:grid lg:grid-cols-2">
           {/* Left — Service list */}
           <motion.div
             variants={containerVariants}
@@ -56,7 +130,6 @@ export function Services() {
                 transition={{ duration: 0.3 }}
                 className="group flex w-full items-start gap-4 border-b border-petrol/10 py-5 text-left"
               >
-                {/* Orange bar */}
                 <div
                   className={`mt-1.5 h-10 w-[3px] rounded-full transition-all duration-300 ${
                     active === i ? "bg-orange" : "bg-transparent"
@@ -85,7 +158,7 @@ export function Services() {
             ))}
           </motion.div>
 
-          {/* Right — Image centered with list */}
+          {/* Right — Image with crossfade */}
           <div className="flex items-center justify-center">
             <motion.div
               initial={{ opacity: 0, y: 30 }}
@@ -110,7 +183,7 @@ export function Services() {
                       alt={services[active].name}
                       fill
                       className="object-cover"
-                      sizes="(max-width: 1024px) 100vw, 50vw"
+                      sizes="50vw"
                     />
                   ) : (
                     <div className={`h-full w-full bg-gradient-to-br ${services[active].gradient}`} />
@@ -118,7 +191,6 @@ export function Services() {
                 </motion.div>
               </AnimatePresence>
 
-              {/* Bottom label */}
               <div className="absolute inset-x-0 bottom-0 bg-gradient-to-t from-black/60 to-transparent p-6 md:p-8">
                 <span className="font-mono text-[10px] tracking-[2px] uppercase text-orange">
                   {services[active].num}
@@ -127,6 +199,34 @@ export function Services() {
               </div>
             </motion.div>
           </div>
+        </div>
+
+        {/* ── Mobile: Service list below carousel ── */}
+        <div className="mt-8 lg:hidden">
+          {services.map((service, i) => (
+            <button
+              key={service.num}
+              onClick={() => { setActive(i); scrollToCard(i); }}
+              className={`flex w-full items-start gap-3 border-b border-petrol/10 py-4 text-left transition-opacity duration-300 ${
+                active === i ? "opacity-100" : "opacity-40"
+              }`}
+            >
+              <div
+                className={`mt-1.5 h-8 w-[3px] rounded-full transition-all duration-300 ${
+                  active === i ? "bg-orange" : "bg-transparent"
+                }`}
+              />
+              <div>
+                <div className="flex items-baseline gap-2">
+                  <span className="font-mono text-[11px] text-petrol/40">{service.num}</span>
+                  <span className="text-base font-semibold text-petrol">{service.name}</span>
+                </div>
+                {active === i && (
+                  <p className="mt-0.5 text-sm text-petrol/50">{service.tagline}</p>
+                )}
+              </div>
+            </button>
+          ))}
         </div>
       </div>
     </section>
