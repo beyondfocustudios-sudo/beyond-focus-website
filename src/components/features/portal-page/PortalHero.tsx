@@ -43,12 +43,15 @@ export function PortalHero() {
           >
             Fala Connosco <span>→</span>
           </Link>
-          <a
-            href="#features"
-            className="text-sm font-medium text-petrol/50 underline underline-offset-4 transition-colors hover:text-orange"
+          <button
+            onClick={() => {
+              const el = document.getElementById("features");
+              if (el) el.scrollIntoView({ behavior: "instant" });
+            }}
+            className="inline-flex items-center gap-2 rounded-full border-2 border-petrol/20 px-8 py-4 text-base font-semibold text-petrol transition-all duration-200 hover:border-petrol/40 hover:scale-[1.03]"
           >
-            Descobre como funciona ↓
-          </a>
+            Descobre como funciona <span>↓</span>
+          </button>
         </motion.div>
       </div>
 
