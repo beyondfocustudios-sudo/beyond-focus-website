@@ -2,6 +2,17 @@
 
 import { motion } from "framer-motion";
 import Image from "next/image";
+import Link from "next/link";
+
+const SLUG_MAP: Record<string, string> = {
+  "01": "filmes-comerciais",
+  "02": "videos-institucionais",
+  "03": "documentarios",
+  "04": "redes-sociais",
+  "05": "fotografia",
+  "06": "eventos",
+  "07": "estrategia",
+};
 
 interface ServiceBlockProps {
   service: {
@@ -33,6 +44,12 @@ export function ServiceBlock({ service, reversed }: ServiceBlockProps) {
         </h3>
         <p className="mt-2 text-base font-medium italic text-petrol/50">{service.tagline}</p>
         <p className="mt-4 text-base leading-relaxed text-petrol/60">{service.description}</p>
+        <Link
+          href={`/servicos/${SLUG_MAP[service.num] || ""}`}
+          className="mt-5 inline-block text-sm font-semibold text-petrol underline decoration-orange/40 underline-offset-4 transition-colors hover:text-orange hover:decoration-orange"
+        >
+          Saber mais →
+        </Link>
       </div>
 
       {/* Image */}

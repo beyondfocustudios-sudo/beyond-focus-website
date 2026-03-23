@@ -17,11 +17,16 @@ export function Navbar({ variant = "dark" }: { variant?: "dark" | "light" }) {
     const onScroll = () => {
       const y = window.scrollY;
       setScrolled(isLight || y > 50);
-      // Hide on scroll down, show on scroll up
-      if (y > 100) {
-        setHidden(y > lastScrollY.current && y - lastScrollY.current > 5);
+      // Hide on ANY scroll down, show on scroll up
+      if (y > 80) {
+        const delta = y - lastScrollY.current;
+        if (delta > 2) {
+          setHidden(true); // scrolling down — hide
+        } else if (delta < -2) {
+          setHidden(false); // scrolling up — show
+        }
       } else {
-        setHidden(false);
+        setHidden(false); // near top — always show
       }
       lastScrollY.current = y;
     };

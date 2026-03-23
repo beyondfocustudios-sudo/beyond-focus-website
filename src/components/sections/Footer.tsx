@@ -10,13 +10,13 @@ const NAV_LINKS = [
 ];
 
 const SERVICE_LINKS = [
-  "Filmes Comerciais",
-  "Vídeos Institucionais",
-  "Documentários",
-  "Redes Sociais",
-  "Fotografia",
-  "Eventos",
-  "Estratégia",
+  { label: "Filmes Comerciais", href: "/servicos/filmes-comerciais" },
+  { label: "Vídeos Institucionais", href: "/servicos/videos-institucionais" },
+  { label: "Documentários", href: "/servicos/documentarios" },
+  { label: "Redes Sociais", href: "/servicos/redes-sociais" },
+  { label: "Fotografia", href: "/servicos/fotografia" },
+  { label: "Eventos", href: "/servicos/eventos" },
+  { label: "Estratégia", href: "/servicos/estrategia" },
 ];
 
 /* Inline SVG icons — no extra dependency needed */
@@ -112,8 +112,13 @@ export function Footer() {
             <h4 className="mb-4 text-xs font-semibold tracking-[2px] uppercase text-white/25">Serviços</h4>
             <ul className="space-y-2.5">
               {SERVICE_LINKS.map((service) => (
-                <li key={service}>
-                  <span className="text-sm text-white/50">{service}</span>
+                <li key={service.href}>
+                  <Link
+                    href={service.href}
+                    className="text-sm text-white/50 transition-colors hover:text-white"
+                  >
+                    {service.label}
+                  </Link>
                 </li>
               ))}
             </ul>
