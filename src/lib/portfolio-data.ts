@@ -164,7 +164,7 @@ export const PROJECTS: Project[] = [
     slug: "once-upon-a-house",
     title: "Once Upon Lisboa",
     client: "Once Upon a House",
-    category: "Filmes Comerciais",
+    category: "Fotografia",
     thumbnail: "/images/portfolio/gallery/once-upon-a-house/oul-sessao2-01.jpg",
     video: null,
     services: ["Produção", "Fotografia", "Pós-produção"],
