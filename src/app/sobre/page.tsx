@@ -8,8 +8,8 @@ import { AboutFounder } from "@/components/features/about/AboutFounder";
 import { AboutPortal } from "@/components/features/about/AboutPortal";
 
 export const metadata: Metadata = {
-  title: "Sobre | Quem Somos",
-  description: "Produtora audiovisual em Lisboa. Conheça a equipa e a história por trás da Beyond Focus.",
+  title: "Sobre | A Nossa História",
+  description: "Fundada em 2023 por Daniel Lopes em Setúbal. Produtora audiovisual para marcas que querem mais do que conteúdo — querem resultados.",
 };
 
 export default function SobrePage() {
@@ -28,7 +28,7 @@ export default function SobrePage() {
             Queres conhecer-nos melhor?
           </h2>
           <p className="mx-auto mt-3 max-w-md text-base text-petrol/50">
-            Marca uma conversa. Sem compromisso, sem formalidades.
+            A primeira conversa é por nossa conta. Sem compromisso, sem pressão — só para perceber se faz sentido trabalharmos juntos.
           </p>
           <Link
             href="/contacto"

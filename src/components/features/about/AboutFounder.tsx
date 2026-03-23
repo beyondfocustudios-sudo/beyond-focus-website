@@ -43,17 +43,36 @@ export function AboutFounder() {
 
           <div className="mt-8 space-y-4 text-base leading-relaxed text-petrol/60">
             <p>
-              A Beyond Focus nasceu da convicção de que as marcas portuguesas merecem produção audiovisual ao nível das melhores do mundo — sem precisar de ir a Lisboa ou ao estrangeiro.
+              A paixão pelo audiovisual não começou numa sala de aula — começou numa sala de estar, a ver filmes. Enquanto a maioria via séries, eu passava horas a ver cinema. Quando a minha mãe me ofereceu a minha primeira câmara, o que era curiosidade passou a ser direcção.
             </p>
             <p>
-              Baseados em Lisboa, trabalhamos com marcas em todo o país e internacionalmente. Desde filmes comerciais a cobertura de eventos, o nosso foco é sempre o mesmo: contar histórias que geram resultados reais.
+              Estudei Multimédia no ISEC, em Lisboa. Aprendi o básico, mas o que realmente me formou foi o trabalho autónomo — horas a filmar, a editar, a errar e a repetir. Terminei a faculdade, fiz o estágio, e em 2023, com 20 anos, fundei a Beyond Focus.
             </p>
             <p>
-              Acreditamos que um bom vídeo não é apenas bonito — é estratégico. Cada projecto começa com um objectivo de negócio claro e termina com conteúdo que o cumpre.
+              Os primeiros dois anos não foram fáceis. Houve muitos altos, mas também muitos baixos. A diferença é que os baixos nunca nos pararam — serviram para nos lembrar porque é que começámos. Cada &ldquo;não&rdquo; que ouvimos foi um passo mais perto do &ldquo;sim&rdquo; que mudou tudo.
+            </p>
+            <p>
+              Hoje, o objectivo é claro: quando alguém em Portugal pensar em vídeo de alta qualidade com resultados reais, quero que pense na Beyond Focus. Não por sermos os maiores — mas por sermos os que tratam cada projecto como se fosse o único.
             </p>
           </div>
         </motion.div>
       </div>
+
+      {/* Philosophy block */}
+      <motion.div
+        initial={{ opacity: 0, y: 25 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        viewport={{ once: true }}
+        transition={{ duration: 0.6 }}
+        className="mt-20 rounded-2xl bg-petrol p-10 lg:p-16"
+      >
+        <h3 className="text-[clamp(24px,2.5vw,36px)] font-bold text-white">
+          99 nãos para chegar ao sim.
+        </h3>
+        <p className="mt-4 max-w-2xl text-base leading-relaxed text-white/60">
+          Se soubesses que precisavas de ouvir 99 &ldquo;nãos&rdquo; para chegar ao teu primeiro &ldquo;sim&rdquo; — não ias querer ouvir cada &ldquo;não&rdquo; o mais rápido possível? Esta forma de pensar define como encaramos cada desafio. Cada recusa é um passo. Cada obstáculo é progresso. E quando o &ldquo;sim&rdquo; chega, sabemos exactamente quanto vale.
+        </p>
+      </motion.div>
     </section>
   );
 }

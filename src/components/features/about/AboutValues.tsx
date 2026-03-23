@@ -3,10 +3,22 @@
 import { motion } from "framer-motion";
 
 const VALUES = [
-  { title: "Rigor", description: "Cada detalhe conta. Da preparação à entrega, não deixamos nada ao acaso." },
-  { title: "Proximidade", description: "Trabalhamos como extensão da tua equipa. Sem barreiras, sem formalidades." },
-  { title: "Resultados", description: "Bonito não chega. O nosso trabalho tem de mover, conectar e converter." },
-  { title: "Transparência", description: "Sem surpresas. Processos claros, comunicação directa, expectativas alinhadas." },
+  {
+    title: "Rigor",
+    description: "Cada detalhe conta. Da preparação à entrega, tratamos cada projecto com o melhor cuidado que podemos dar. Não há atalhos — há processo, atenção e respeito pelo trabalho.",
+  },
+  {
+    title: "Proximidade",
+    description: "Trabalhamos como extensão da tua equipa. Sem barreiras, sem formalidades desnecessárias. Quando trabalhas connosco, sentes que estamos do teu lado — porque estamos.",
+  },
+  {
+    title: "Resultados",
+    description: "Bonito não chega. Cada peça que criamos tem um propósito: mover, conectar e converter. Se o vídeo não gera resultados, não fizemos o nosso trabalho.",
+  },
+  {
+    title: "Transparência",
+    description: "Sem surpresas. Processos claros, comunicação directa, expectativas alinhadas desde o primeiro dia. Se erramos, assumimos — e resolvemos.",
+  },
 ];
 
 export function AboutValues() {
@@ -17,7 +29,7 @@ export function AboutValues() {
           Os nossos valores
         </p>
         <h2 className="mt-3 max-w-lg text-[clamp(28px,3vw,40px)] font-bold text-petrol">
-          No que acreditamos.
+          O que nos guia.
         </h2>
 
         <div className="mt-14 grid grid-cols-1 gap-6 md:grid-cols-2 md:gap-8 lg:grid-cols-4">
