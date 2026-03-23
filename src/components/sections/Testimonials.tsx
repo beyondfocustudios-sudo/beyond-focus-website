@@ -104,66 +104,22 @@ export function Testimonials() {
           </div>
         </div>
 
-        {/* ── Desktop: grid of all cards ── */}
-        <motion.div
-          variants={containerVariants}
-          initial="hidden"
-          whileInView="show"
-          viewport={{ once: true, margin: "-60px" }}
-          className="mt-10 hidden gap-5 md:grid md:grid-cols-2"
+        {/* ── Horizontal scroll — like portfolio ── */}
+        <div
+          className="scrollbar-hide mt-10 flex snap-x snap-mandatory gap-5 overflow-x-auto pb-4"
         >
-          {TESTIMONIALS.map((t, i) => (
-            <motion.div key={t.company} variants={cardVariants}>
-              <TestimonialCard t={t} highlight={i === current} />
+          {TESTIMONIALS.map((t) => (
+            <motion.div
+              key={t.company}
+              initial={{ opacity: 0, y: 25 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.5 }}
+              className="w-[85vw] flex-shrink-0 snap-center md:w-[45vw] lg:w-[400px]"
+            >
+              <TestimonialCard t={t} />
             </motion.div>
           ))}
-        </motion.div>
-
-        {/* ── Mobile: single card + arrows ── */}
-        <div className="mt-10 md:hidden">
-          <div className="relative overflow-hidden">
-            <AnimatePresence mode="wait">
-              <motion.div
-                key={current}
-                initial={{ opacity: 0, x: 40 }}
-                animate={{ opacity: 1, x: 0 }}
-                exit={{ opacity: 0, x: -40 }}
-                transition={{ duration: 0.3 }}
-              >
-                <TestimonialCard t={TESTIMONIALS[current]} />
-              </motion.div>
-            </AnimatePresence>
-          </div>
-
-          {/* Arrows + dots */}
-          <div className="mt-5 flex items-center justify-center gap-4">
-            <button
-              onClick={prev}
-              aria-label="Anterior"
-              className="flex h-10 w-10 items-center justify-center rounded-full border border-white/20 text-white transition-colors active:border-orange active:text-orange"
-            >
-              ←
-            </button>
-            <div className="flex gap-2">
-              {TESTIMONIALS.map((_, i) => (
-                <button
-                  key={i}
-                  onClick={() => setCurrent(i)}
-                  className={`h-1.5 rounded-full transition-all duration-300 ${
-                    current === i ? "w-6 bg-orange" : "w-1.5 bg-white/20"
-                  }`}
-                  aria-label={`Testemunho ${i + 1}`}
-                />
-              ))}
-            </div>
-            <button
-              onClick={next}
-              aria-label="Seguinte"
-              className="flex h-10 w-10 items-center justify-center rounded-full border border-white/20 text-white transition-colors active:border-orange active:text-orange"
-            >
-              →
-            </button>
-          </div>
         </div>
       </div>
     </section>
