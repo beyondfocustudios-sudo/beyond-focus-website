@@ -42,8 +42,7 @@ const PORTFOLIO_ITEMS = [
     title: "Lobsters",
     category: "REDES SOCIAIS · EVENTOS",
     thumbnail: "/images/portfolio/lobsters-thumb.jpg",
-    video: "/videos/portfolio/lobsters.mp4",
-    aspect: "16/9",
+    video: null,
   },
 ];
 
