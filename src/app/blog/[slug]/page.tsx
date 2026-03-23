@@ -34,7 +34,7 @@ export async function generateMetadata({
       title: `${post.metaTitle || post.title} — Beyond Focus`,
       description: post.metaDescription || post.excerpt,
       url: `https://beyondfocus.pt/blog/${slug}`,
-      images: [{ url: post.thumbnail, width: 1200, height: 630, alt: post.title }],
+      images: [{ url: "/og-image.jpg", width: 1200, height: 630, alt: post.title }],
       type: "article",
     },
     alternates: {
@@ -60,7 +60,11 @@ export default async function BlogPostPage({
     headline: post.metaTitle || post.title,
     description: post.metaDescription || post.excerpt,
     image: `https://beyondfocus.pt${post.thumbnail}`,
-    datePublished: new Date(post.date.replace(/(\d+) (\w+) (\d+)/, "$1 $2 $3")).toISOString(),
+    datePublished: (() => {
+      const months: Record<string, string> = { Jan: "Jan", Fev: "Feb", Mar: "Mar", Abr: "Apr", Mai: "May", Jun: "Jun", Jul: "Jul", Ago: "Aug", Set: "Sep", Out: "Oct", Nov: "Nov", Dez: "Dec" };
+      const [d, m, y] = post.date.split(" ");
+      return new Date(`${d} ${months[m] || m} ${y}`).toISOString();
+    })(),
     author: { "@type": "Person", name: "Daniel Lopes", url: "https://beyondfocus.pt/sobre" },
     publisher: { "@type": "Organization", name: "Beyond Focus", url: "https://beyondfocus.pt", logo: "https://beyondfocus.pt/images/logo-symbol.png" },
     mainEntityOfPage: `https://beyondfocus.pt/blog/${slug}`,
@@ -132,7 +136,7 @@ export default async function BlogPostPage({
           <p className="text-base text-petrol/50">Gostaste deste artigo?</p>
           <Link
             href="/contacto"
-            className="mt-4 inline-flex items-center gap-2 rounded-full bg-petrol px-6 py-3 text-sm font-semibold text-white transition-all hover:bg-petrol/90"
+            className="mt-4 inline-flex items-center gap-2 rounded-full bg-petrol px-6 py-3 text-sm font-semibold text-white transition-all hover:bg-petrol/90 active:scale-[0.97]"
           >
             Fala connosco <span>→</span>
           </Link>
@@ -149,7 +153,7 @@ export default async function BlogPostPage({
           <h2 className="mb-8 text-xl font-bold text-petrol">Artigos relacionados</h2>
           <div className="grid grid-cols-1 gap-8 md:grid-cols-2">
             {otherPosts.map((p) => (
-              <Link key={p.slug} href={`/blog/${p.slug}`} className="group block" data-cursor="hover-link">
+              <Link key={p.slug} href={`/blog/${p.slug}`} className="group block transition-all duration-300 hover:-translate-y-1 hover:shadow-lg rounded-xl" data-cursor="hover-link">
                 <div className="relative overflow-hidden rounded-xl" style={{ aspectRatio: "16/9" }}>
                   <Image src={p.thumbnail} alt={p.title} fill className="object-cover transition-transform duration-500 group-hover:scale-105" sizes="50vw" />
                 </div>

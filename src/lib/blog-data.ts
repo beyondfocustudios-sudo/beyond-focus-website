@@ -287,6 +287,447 @@ Depois de toda a preparação, o dia deve correr de forma natural. A produtora g
 
 Estás a planear um vídeo para a tua empresa? Vê os [nossos serviços](/servicos), descobre [quanto custa um vídeo institucional](/blog/quanto-custa-video-institucional-portugal) ou [como escolher a produtora certa](/blog/como-escolher-produtora-audiovisual). Quando estiveres pronto, [fala connosco](/contacto).`,
   },
+  // ══════════════════════════════════════
+  // MAIO 2026
+  // ══════════════════════════════════════
+  {
+    slug: "storytelling-visual-marca",
+    title: "O que é storytelling visual e como aplicar à tua marca",
+    excerpt: "Storytelling visual é a arte de contar a história da tua marca através de imagem. Descobre como aplicar ao teu negócio.",
+    category: "Estratégia",
+    date: "28 Abr 2026",
+    readTime: "7 min",
+    thumbnail: "/images/services/estrategia.jpg",
+    metaTitle: "O que é storytelling visual e como aplicar à tua marca",
+    metaDescription: "Storytelling visual é a arte de contar a história da tua marca através de imagem. Descobre como aplicar ao teu negócio.",
+    keywords: ["storytelling visual marca", "narrativa visual empresa", "storytelling vídeo"],
+    content: `Storytelling visual é a capacidade de contar uma história através de imagem — vídeo, fotografia, motion graphics — sem depender apenas de palavras. É o que transforma um vídeo institucional genérico numa peça que as pessoas querem ver até ao fim.
+
+Em 2026, as marcas que dominam o storytelling visual são as que ficam na memória. Não porque gastam mais em produção, mas porque cada imagem que criam tem intenção, narrativa e emoção.
+
+## O que separa storytelling visual de "fazer vídeos bonitos"
+
+A diferença é simples: propósito. Um vídeo bonito impressiona durante 5 segundos. Um vídeo com storytelling fica na memória durante meses. O primeiro mostra o produto. O segundo conta porque é que o produto existe.
+
+Quando filmámos o [Hotel Casa Palmela](/portfolio/hotel-casa-palmela), não fizemos apenas planos bonitos do hotel. Contámos a experiência de um hóspede ao longo de um dia — o despertar com a luz da Arrábida, o pequeno-almoço, o passeio, o final de tarde. O espectador vive a experiência antes de reservar.
+
+## Como aplicar storytelling visual à tua marca
+
+**Define a narrativa antes da câmara.** Qual é a história que queres contar? Quem é o protagonista — a marca, o cliente, o produto? Na Beyond Focus, apresentamos sempre um [tratamento criativo](/servicos/estrategia) completo antes de filmar.
+
+**Mostra, não digas.** Em vez de dizer "somos inovadores", mostra o processo de inovação. Em vez de dizer "temos qualidade", mostra os detalhes que provam essa qualidade.
+
+**Cria um arco emocional.** Mesmo num vídeo de 60 segundos, deve haver um início (contexto), um meio (tensão ou descoberta) e um fim (resolução ou call-to-action).
+
+**Sê consistente.** O storytelling visual não é um vídeo — é uma linguagem. Cada peça de conteúdo que a marca publica deve reforçar a mesma narrativa.
+
+## Exemplos práticos
+
+O institucional da [Carl Zeiss Portugal](/portfolio/carl-zeiss-portugal) não é sobre máquinas — é sobre precisão e as pessoas por trás dela. O filme do [Sóçe](/portfolio/soce-mauro-loureiro) não é sobre um prato — é sobre a criatividade do chef.
+
+Se queres aplicar storytelling visual à tua marca, o primeiro passo é definir que história queres contar. [Fala connosco](/contacto) — ajudamos a encontrá-la.`,
+  },
+  {
+    slug: "erros-comuns-primeiro-video-empresa",
+    title: "5 erros comuns ao filmar o primeiro vídeo da empresa",
+    excerpt: "Vai filmar o primeiro vídeo da tua empresa? Evita estes 5 erros que a maioria das marcas comete.",
+    category: "Produção",
+    date: "30 Abr 2026",
+    readTime: "6 min",
+    thumbnail: "/images/services/filmes-comerciais.jpg",
+    metaTitle: "5 erros comuns ao filmar o primeiro vídeo da empresa",
+    metaDescription: "Vai filmar o primeiro vídeo da tua empresa? Evita estes 5 erros que a maioria das marcas comete.",
+    keywords: ["erros vídeo empresa", "primeiro vídeo empresa", "erros produção vídeo"],
+    content: `O primeiro vídeo de uma empresa é o mais importante — e o mais propenso a erros. A boa notícia: a maioria dos erros são evitáveis com preparação. Aqui ficam os 5 mais comuns e como os evitar.
+
+## 1. Não definir o objectivo antes de filmar
+
+O erro nº1 é começar a filmar sem saber porquê. "Queremos um vídeo para o site" não é um objectivo — é um desejo. Um objectivo é: "Queremos um vídeo que explique o nosso processo a potenciais clientes e aumente os pedidos de orçamento em 20%."
+
+Na Beyond Focus, o primeiro passo de qualquer projecto é o [briefing estratégico](/servicos/estrategia). Antes de ligar a câmara, percebemos o objectivo, o público e a mensagem.
+
+## 2. Querer dizer tudo num só vídeo
+
+Um vídeo de 2 minutos não pode falar da história da empresa, dos produtos, da equipa, dos valores E ter um call-to-action eficaz. É melhor ter 3 vídeos focados do que 1 vídeo que tenta fazer tudo.
+
+## 3. Subestimar a pré-produção
+
+A magia não acontece no dia de filmagem — acontece antes. Guião, storyboard, planeamento de locais, casting, logística. Quanto mais preparação, menos imprevistos. Lê o nosso guia de [como preparar a empresa para um dia de filmagem](/blog/como-preparar-empresa-filmagem).
+
+## 4. Focar na imagem e esquecer o som
+
+O som é 50% do vídeo. Um vídeo com imagem excelente e som mau parece amador. Investe em microfones decentes, sound design e música licenciada.
+
+## 5. Não pensar na distribuição
+
+Filmaste um vídeo incrível. E agora? Se não tens um plano de distribuição — onde vai ser publicado, em que formatos, com que copy — o vídeo morre no YouTube com 50 visualizações.
+
+Na Beyond Focus, entregamos sempre [múltiplas versões](/servicos/filmes-comerciais) adaptadas a cada plataforma. Um filme comercial sai com versão completa, versão 60s, versão 30s e versão vertical para stories.
+
+Se estás a planear o primeiro vídeo da tua empresa, [fala connosco](/contacto). Tratamos de tudo — da estratégia à entrega.`,
+  },
+  {
+    slug: "cobertura-eventos-conteudo",
+    title: "Cobertura de eventos: como transformar um dia em meses de conteúdo",
+    excerpt: "Um evento de empresa dura horas. O conteúdo que produzimos dura meses. Descobre como maximizar o ROI.",
+    category: "Produção",
+    date: "2 Mai 2026",
+    readTime: "6 min",
+    thumbnail: "/images/services/videos-eventos.jpg",
+    metaTitle: "Cobertura de eventos: como transformar um dia em meses de conteúdo",
+    metaDescription: "Um evento de empresa dura horas. O conteúdo que produzimos dura meses. Descobre como maximizar o ROI.",
+    keywords: ["cobertura eventos empresa", "vídeo evento corporativo", "conteúdo eventos"],
+    content: `Um evento corporativo é uma mina de ouro de conteúdo — se for bem capturado. Os discursos, os prémios, as reacções, os bastidores. Tudo isto é matéria-prima para semanas de publicações nas redes sociais, newsletter e comunicação interna.
+
+O problema é que a maioria das empresas contrata um fotógrafo de última hora, recebe 200 fotos genéricas, e volta ao ponto zero na semana seguinte. A abordagem certa é diferente.
+
+## Planeamento antes do evento
+
+Uma boa cobertura começa semanas antes. Na pré-produção, definimos:
+
+- **Momentos-chave** a capturar (discursos, prémios, reacções)
+- **Tipo de conteúdo** pretendido (highlight reel, fotos, reels, stories)
+- **Equipa necessária** (câmara, fotógrafo, segunda câmara para detalhe)
+- **Timings** e posicionamento no espaço
+
+Quando cobrimos a [festa de Natal da Highgate Portugal](/portfolio/highgate), planeámos cada momento com antecedência. O resultado: conteúdo suficiente para meses de comunicação interna.
+
+## O que entregar após o evento
+
+Uma cobertura profissional deve incluir:
+
+- **Conteúdo rápido** (stories e fotos editadas no dia seguinte)
+- **Highlight reel** (vídeo resumo de 60-90 segundos, entregue em 5-7 dias)
+- **Pacote fotográfico** (selecção + tratamento completo, 7-10 dias)
+- **Aftermovie** (se pedido, versão mais longa e cinematográfica)
+
+## O ROI de uma boa cobertura
+
+Um único evento bem coberto pode gerar: 10-15 posts para redes sociais, 1 highlight reel para o website, conteúdo para newsletter, material para recrutamento, e memória visual para a equipa.
+
+Vê os nossos [serviços de cobertura de eventos](/servicos/eventos) ou [fala connosco](/contacto) sobre o teu próximo evento.`,
+  },
+  {
+    slug: "video-linkedin-leads-b2b",
+    title: "Vídeo para LinkedIn: o formato que gera mais leads B2B",
+    excerpt: "O LinkedIn é a plataforma B2B com maior taxa de conversão. Descobre como usar vídeo para gerar leads.",
+    category: "Estratégia",
+    date: "5 Mai 2026",
+    readTime: "6 min",
+    thumbnail: "/images/services/institucionais.jpg",
+    metaTitle: "Vídeo para LinkedIn: o formato que gera mais leads B2B",
+    metaDescription: "O LinkedIn é a plataforma B2B com maior taxa de conversão. Descobre como usar vídeo para gerar leads.",
+    keywords: ["vídeo linkedin B2B", "linkedin vídeo empresa", "leads B2B vídeo"],
+    content: `O LinkedIn é a rede social com maior taxa de conversão para B2B — e o vídeo é o formato que mais engagement gera na plataforma. Se a tua empresa vende a outras empresas, o vídeo no LinkedIn é a ferramenta mais subutilizada do teu arsenal de marketing.
+
+## Porquê vídeo no LinkedIn
+
+O algoritmo do LinkedIn favorece vídeo nativo. Um post com vídeo tem 5x mais engagement do que um post de texto. E ao contrário do Instagram, o LinkedIn é onde os decisores estão — CEOs, directores, responsáveis de compras.
+
+## Que tipo de vídeo funciona no LinkedIn
+
+**Vídeos curtos (30-90 segundos).** O LinkedIn não é o YouTube. Vai directo ao ponto.
+
+**Case studies visuais.** Mostra o antes e depois de um projecto. O resultado fala mais do que qualquer pitch.
+
+**Behind the scenes.** Os bastidores humanizam a marca e criam ligação. Um vídeo de 30 segundos do processo criativo gera mais confiança do que uma apresentação de 20 slides.
+
+**Testemunhos de clientes.** Um cliente a falar sobre a experiência com a tua empresa vale mais do que qualquer copy publicitário.
+
+## Formato técnico
+
+- **Formato:** quadrado (1:1) ou vertical (4:5) — ocupa mais espaço no feed
+- **Legendas:** obrigatórias — 80% dos vídeos no LinkedIn são vistos sem som
+- **Duração:** 30-90 segundos para posts orgânicos
+- **CTA:** claro no final (link no primeiro comentário, não no post)
+
+Na Beyond Focus, produzimos [conteúdo para redes sociais](/servicos/redes-sociais) optimizado por plataforma. Cada peça é pensada para o contexto onde vai ser publicada. [Fala connosco](/contacto) sobre a tua estratégia de vídeo para LinkedIn.`,
+  },
+  {
+    slug: "video-restaurante-portugal",
+    title: "Porquê investir em conteúdo de vídeo para restauração",
+    excerpt: "As redes sociais são o novo cartão de visita de um restaurante. Descobre como o vídeo pode trazer mais clientes.",
+    category: "Estratégia",
+    date: "7 Mai 2026",
+    readTime: "6 min",
+    thumbnail: "/images/services/redes-sociais.jpg",
+    metaTitle: "Porquê investir em conteúdo de vídeo para restauração",
+    metaDescription: "As redes sociais são o novo cartão de visita de um restaurante. Descobre como o vídeo pode trazer mais clientes.",
+    keywords: ["vídeo restaurante portugal", "conteúdo restaurante redes sociais", "filmagem gastronómica"],
+    content: `Um prato bem filmado faz mais do que abrir o apetite — faz o cliente reservar mesa. Em 2026, a presença digital de um restaurante é tão importante quanto a qualidade da comida. E o vídeo é o formato que mais impacto tem.
+
+## O problema da restauração em Portugal
+
+A maioria dos restaurantes em Portugal publica fotos tiradas com telemóvel, sem iluminação e sem direcção criativa. O resultado: conteúdo que não se distingue dos milhares de posts genéricos no Instagram. A qualidade do conteúdo deve reflectir a qualidade da comida.
+
+## O que filmamos para restaurantes
+
+Quando trabalhámos com o [Chef Mauro Loureiro no Sóçe](/portfolio/soce-mauro-loureiro), filmámos o processo completo de criação de um prato — desde o conceito à apresentação final. Não é apenas food porn — é storytelling gastronómico.
+
+O tipo de conteúdo que produzimos para restaurantes:
+
+- **Processo do prato** (da cozinha ao prato, com ritmo cinematográfico)
+- **Ambiente do restaurante** (espaço, decoração, atmosfera)
+- **Reels para Instagram** (conteúdo curto, optimizado para engagement)
+- **Fotografia de menu** (para website, plataformas de reserva, redes)
+
+## O investimento
+
+Um pacote de conteúdo para restaurante começa em €1.500 para redes sociais e vai até €5.000 para um vídeo de apresentação completo. Vê os nossos [serviços para restauração](/servicos/sectores/restauracao) ou [contacta-nos](/contacto).`,
+  },
+  {
+    slug: "video-imobiliario-vender-rapido",
+    title: "Como o vídeo ajuda a vender imóveis mais rápido",
+    excerpt: "Imóveis com vídeo profissional vendem mais rápido. Descobre porquê e que tipo de conteúdo funciona.",
+    category: "Estratégia",
+    date: "9 Mai 2026",
+    readTime: "5 min",
+    thumbnail: "/images/services/fotografia.jpg",
+    metaTitle: "Como o vídeo ajuda a vender imóveis mais rápido",
+    metaDescription: "Imóveis com vídeo profissional vendem mais rápido. Descobre porquê e que tipo de conteúdo funciona.",
+    keywords: ["vídeo imobiliário portugal", "vídeo vender imóveis", "produtora vídeo imobiliário"],
+    content: `Um imóvel com vídeo profissional vende mais rápido — é um facto comprovado pelo mercado. A qualidade da apresentação visual é o que diferencia um imóvel que atrai visitas de um que passa despercebido nos portais.
+
+## O problema do imobiliário em Portugal
+
+Fotografias tiradas com telemóvel, ângulos errados, iluminação pobre — a maioria dos imóveis em Portugal é apresentada de forma que não faz justiça ao espaço. Promotoras e agências que investem em conteúdo profissional fecham negócios mais rápido.
+
+## Que tipo de vídeo funciona
+
+**Walkthrough cinematográfico.** Um vídeo que leva o espectador numa visita guiada ao imóvel, com transições suaves entre divisões, iluminação natural e ritmo adequado.
+
+**Filmagem com drone.** Vistas aéreas do exterior, da envolvente e do bairro. Fundamental para propriedades com terreno ou vista.
+
+**Lifestyle video.** Mostrar o imóvel "vivido" — com pessoas, actividades, rotina. Ajuda o comprador a projectar-se no espaço.
+
+## O investimento
+
+Uma sessão fotográfica + vídeo curto começa em €800. Produções com drone e storytelling entre €2.000 e €5.000. Vê os nossos [serviços para imobiliário](/servicos/sectores/imobiliario) ou [fala connosco](/contacto).`,
+  },
+  {
+    slug: "primeira-vez-produtora",
+    title: "O que esperar quando contratas uma produtora pela primeira vez",
+    excerpt: "Nunca trabalhaste com uma produtora? Eis o que esperar do processo, do briefing à entrega final.",
+    category: "Estratégia",
+    date: "12 Mai 2026",
+    readTime: "7 min",
+    thumbnail: "/images/services/documentarios.jpg",
+    metaTitle: "O que esperar quando contratas uma produtora pela primeira vez",
+    metaDescription: "Nunca trabalhaste com uma produtora? Eis o que esperar do processo, do briefing à entrega final.",
+    keywords: ["primeira vez produtora", "contratar produtora vídeo", "processo produtora audiovisual"],
+    content: `Se nunca trabalhaste com uma produtora audiovisual, é normal ter dúvidas. Quanto tempo demora? Como funciona o processo? O que preciso de preparar? Este guia cobre tudo o que precisas de saber antes, durante e depois da produção.
+
+## Fase 1: A conversa inicial
+
+Tudo começa com uma conversa — sem compromisso. Na Beyond Focus, queremos perceber o teu objectivo, o teu público e a tua mensagem antes de propor qualquer coisa. Podes vir com uma ideia vaga ou com um briefing detalhado — adaptamos.
+
+## Fase 2: A proposta
+
+Após a conversa, recebes uma proposta detalhada com: âmbito do projecto, timeline, equipa envolvida, deliverables e preço. Sem letras pequenas. Vê o nosso [processo completo](/servicos/filmes-comerciais).
+
+## Fase 3: Pré-produção
+
+É aqui que o projecto ganha forma. Tratamento criativo, storyboard, planeamento de locais, casting (se necessário). Na Beyond Focus, os clientes acompanham tudo através do nosso [portal exclusivo](/portal-cliente).
+
+## Fase 4: O dia de filmagem
+
+O dia mais excitante — e o mais rápido. A equipa chega, monta equipamento, e filma durante 1-2 dias (tipicamente). O teu papel: ter o espaço preparado e a equipa disponível. Lê o nosso guia de [como preparar a empresa](/blog/como-preparar-empresa-filmagem).
+
+## Fase 5: Pós-produção
+
+A edição demora 2-4 semanas. Recebes versões para revisão (no nosso portal, com comentários ao segundo exacto), dás feedback, e recebemos a versão final.
+
+## Fase 6: Entrega
+
+Recebes todos os ficheiros em todos os formatos — website, redes sociais, apresentações. Tudo optimizado e pronto a usar.
+
+Se estás pronto para o primeiro projecto, [fala connosco](/contacto). A primeira conversa é por nossa conta.`,
+  },
+  {
+    slug: "formatos-video-redes-sociais-2026",
+    title: "Guia: formatos de vídeo para cada rede social em 2026",
+    excerpt: "Instagram, TikTok, LinkedIn, YouTube — cada plataforma tem regras diferentes. Eis o guia completo.",
+    category: "Produção",
+    date: "14 Mai 2026",
+    readTime: "7 min",
+    thumbnail: "/images/services/redes-sociais.jpg",
+    metaTitle: "Guia: formatos de vídeo para cada rede social em 2026",
+    metaDescription: "Instagram, TikTok, LinkedIn, YouTube — cada plataforma tem regras diferentes. Eis o guia completo de formatos.",
+    keywords: ["formatos vídeo redes sociais", "tamanho vídeo instagram", "formatos vídeo 2026"],
+    content: `Cada rede social tem regras diferentes para vídeo — formato, duração, estilo. Publicar o mesmo vídeo em todas as plataformas é como usar a mesma apresentação para investidores e para clientes. Funciona? Talvez. Óptimo? Nunca.
+
+## Instagram
+
+- **Reels:** 9:16 vertical, 15-90 segundos, legendas obrigatórias
+- **Feed:** 1:1 quadrado ou 4:5 vertical, até 60 segundos
+- **Stories:** 9:16 vertical, 15 segundos por story (múltiplos stories = narrativa)
+- **Dica:** os primeiros 3 segundos decidem se o utilizador pára ou desliza
+
+## TikTok
+
+- **Formato:** 9:16 vertical, obrigatoriamente
+- **Duração:** 15-60 segundos para máximo engagement (pode ir até 10 min)
+- **Estilo:** autêntico, directo, ritmo rápido. Não parecer "anúncio"
+- **Dica:** o hook nos primeiros 2 segundos é mais importante do que a qualidade de imagem
+
+## LinkedIn
+
+- **Formato:** 1:1 quadrado ou 4:5 vertical (mais área no feed)
+- **Duração:** 30-90 segundos para posts orgânicos
+- **Estilo:** profissional mas humano. Case studies, BTS, testemunhos
+- **Dica:** legendas obrigatórias — 80% vê sem som. Lê o nosso artigo sobre [vídeo para LinkedIn](/blog/video-linkedin-leads-b2b)
+
+## YouTube
+
+- **Formato:** 16:9 horizontal, sempre
+- **Duração:** 2-10 minutos para conteúdo orgânico
+- **Estilo:** informativo, com thumbnail forte e título claro
+- **Dica:** os primeiros 30 segundos determinam se o espectador fica
+
+Na Beyond Focus, produzimos [conteúdo optimizado por plataforma](/servicos/redes-sociais). Cada vídeo é entregue em todos os formatos necessários. [Fala connosco](/contacto).`,
+  },
+  {
+    slug: "colour-grading-video-profissional",
+    title: "Colour grading: o que é e porquê importa no vídeo profissional",
+    excerpt: "O colour grading é o que transforma um vídeo bom num vídeo cinematográfico. Descobre o que é e como funciona.",
+    category: "Produção",
+    date: "16 Mai 2026",
+    readTime: "5 min",
+    thumbnail: "/images/services/filmes-comerciais.jpg",
+    metaTitle: "Colour grading: o que é e porquê importa no vídeo profissional",
+    metaDescription: "O colour grading é o que transforma um vídeo bom num vídeo cinematográfico. Descobre o que é e como funciona.",
+    keywords: ["colour grading vídeo", "cor vídeo profissional", "grading cinematográfico"],
+    content: `Colour grading é o processo de ajustar e estilizar as cores de um vídeo na pós-produção. É o que dá ao vídeo aquele "look" cinematográfico — a diferença entre imagem de telemóvel e imagem de cinema. E é uma das etapas mais importantes (e subestimadas) da produção profissional.
+
+## Colour correction vs colour grading
+
+São coisas diferentes. **Colour correction** é técnico: corrigir exposição, balanço de brancos, contraste. Fazer o vídeo parecer "correcto". **Colour grading** é criativo: dar ao vídeo uma identidade visual, um mood, uma estética.
+
+## Porquê importa
+
+A cor conta uma história. Tons quentes transmitem conforto e nostalgia. Tons frios transmitem profissionalismo e modernidade. A paleta de cores de um vídeo influencia como o espectador se sente — mesmo que não se aperceba conscientemente.
+
+No filme do [Hotel Casa Palmela](/portfolio/hotel-casa-palmela), usámos tons quentes e dourados para transmitir a serenidade e o luxo do espaço. No BTS da [Carl Zeiss](/portfolio/carl-zeiss-portugal), mantivemos tons mais neutros e limpos para reflectir a precisão industrial.
+
+## O processo na Beyond Focus
+
+O colour grading faz parte de todos os nossos projectos de [filmes comerciais](/servicos/filmes-comerciais) e [vídeos institucionais](/servicos/videos-institucionais). Não é um extra — é incluído na pós-produção. Usamos software profissional (DaVinci Resolve) e dedicamos o tempo necessário para que cada frame tenha a cor certa.
+
+Queres saber mais sobre o nosso processo? [Fala connosco](/contacto).`,
+  },
+  {
+    slug: "briefing-eficaz-produtora-video",
+    title: "Como criar um briefing eficaz para uma produtora de vídeo",
+    excerpt: "Um bom briefing é metade do trabalho. Eis o que incluir para garantir que a produtora entende o teu projecto.",
+    category: "Produção",
+    date: "19 Mai 2026",
+    readTime: "6 min",
+    thumbnail: "/images/services/estrategia.jpg",
+    metaTitle: "Como criar um briefing eficaz para uma produtora de vídeo",
+    metaDescription: "Um bom briefing é metade do trabalho. Eis o que incluir para garantir que a produtora entende o teu projecto.",
+    keywords: ["briefing produtora vídeo", "como fazer briefing vídeo", "briefing vídeo institucional"],
+    content: `Um briefing claro poupa tempo, dinheiro e frustrações. Quanto mais informação a produtora tiver à partida, melhor será a proposta e mais alinhado ficará o resultado final. Aqui fica o que incluir.
+
+## 1. O objectivo
+
+A pergunta mais importante: porquê este vídeo? "Queremos um vídeo" não é um objectivo. "Queremos um vídeo que aumente as reservas no nosso hotel em 15%" é um objectivo. O objectivo define tudo — formato, duração, tom, estilo.
+
+## 2. O público-alvo
+
+Quem vai ver este vídeo? Clientes finais? Investidores? Novos colaboradores? Um vídeo para investidores é completamente diferente de um vídeo para redes sociais.
+
+## 3. Referências visuais
+
+Mostra vídeos que gostas — mesmo que sejam de outros sectores. "Quero algo com o tom deste vídeo da Apple" diz mais do que 500 palavras. Na Beyond Focus, os clientes podem enviar referências directamente pelo nosso [portal](/portal-cliente).
+
+## 4. Mensagens-chave
+
+O que DEVE ficar claro após ver o vídeo? Lista 3-5 mensagens prioritárias. A produtora vai trabalhá-las na narrativa.
+
+## 5. Orçamento e timeline
+
+Ser transparente sobre o budget ajuda a produtora a propor a melhor solução dentro do possível. O mesmo para o prazo — precisas do vídeo para uma feira daqui a 3 semanas ou tens 2 meses?
+
+## 6. Onde vai ser usado
+
+Website, redes sociais, apresentações, TV? Cada contexto tem requisitos técnicos diferentes. Saber onde o vídeo vai viver ajuda a produtora a planear formatos e durações.
+
+Não precisas de um briefing perfeito. Na Beyond Focus, o nosso [processo de estratégia](/servicos/estrategia) inclui sessões de briefing guiado — fazemos as perguntas certas para extrair a informação necessária. [Fala connosco](/contacto).`,
+  },
+  {
+    slug: "video-conversao-website",
+    title: "O impacto do vídeo na taxa de conversão do website",
+    excerpt: "Páginas com vídeo convertem significativamente mais. Descobre os dados e como aplicar ao teu site.",
+    category: "Tendências",
+    date: "21 Mai 2026",
+    readTime: "5 min",
+    thumbnail: "/images/services/institucionais.jpg",
+    metaTitle: "O impacto do vídeo na taxa de conversão do website",
+    metaDescription: "Páginas com vídeo convertem significativamente mais. Descobre os dados e como aplicar ao teu site.",
+    keywords: ["vídeo conversão website", "vídeo aumentar vendas", "vídeo landing page"],
+    content: `Páginas com vídeo têm uma taxa de conversão significativamente superior a páginas apenas com texto e imagem. Não é opinião — são dados. O vídeo reduz a incerteza do visitante, aumenta o tempo na página e cria confiança de forma que nenhum outro formato consegue.
+
+## Os números
+
+Estudos consistentes mostram que adicionar vídeo a uma landing page pode aumentar conversões em 80% ou mais. O tempo médio na página sobe. A taxa de rejeição desce. O visitante entende mais rápido o que a empresa faz — e confia mais para dar o próximo passo.
+
+## Onde colocar vídeo no website
+
+**Homepage — acima do fold.** O primeiro contacto visual. O [showreel](/portfolio) ou um vídeo curto que resuma o posicionamento da marca. Na Beyond Focus, o nosso próprio website usa o showreel como fundo do hero.
+
+**Página de serviço.** Um vídeo explicativo de 60-90 segundos vale mais do que 3 parágrafos de texto.
+
+**Testemunhos.** Um cliente a falar em vídeo é 10x mais convincente do que uma quote escrita.
+
+**Página de produto.** Demonstrações, unboxings, tutoriais — o vídeo reduz dúvidas e devoluções.
+
+## Que tipo de vídeo funciona
+
+Não precisa de ser Hollywood. Um [vídeo institucional](/servicos/videos-institucionais) bem produzido, com 2-3 minutos, resolve a maioria dos casos. O importante é que tenha narrativa, qualidade de imagem e som profissional.
+
+Se o teu website não tem vídeo, está a perder conversões. [Fala connosco](/contacto) e descobre [quanto custa](/blog/quanto-custa-video-institucional-portugal).`,
+  },
+  {
+    slug: "showreel-empresa-como-usar",
+    title: "Porquê ter um showreel e como o usar para vender mais",
+    excerpt: "Um showreel é o cartão de visita audiovisual da tua empresa. Descobre como criar e usar estrategicamente.",
+    category: "Estratégia",
+    date: "23 Mai 2026",
+    readTime: "5 min",
+    thumbnail: "/images/services/filmes-comerciais.jpg",
+    metaTitle: "Porquê ter um showreel e como o usar para vender mais",
+    metaDescription: "Um showreel é o cartão de visita audiovisual da tua empresa. Descobre como criar e usar estrategicamente.",
+    keywords: ["showreel empresa", "showreel vídeo", "como fazer showreel"],
+    content: `Um showreel é um vídeo curto (30-90 segundos) que mostra os melhores momentos do trabalho de uma empresa. Para uma produtora, é o portfolio em movimento. Para qualquer empresa, é a forma mais rápida de mostrar o que faz — sem que o visitante precise de ler uma única palavra.
+
+## Porquê ter um showreel
+
+**Primeira impressão em 30 segundos.** Um visitante decide em segundos se fica no teu site ou sai. Um showreel no hero do website é o gancho mais eficaz que existe.
+
+**Versátil.** Funciona no website, em apresentações comerciais, no LinkedIn, no email de prospecção, em feiras. Um único vídeo, múltiplos usos.
+
+**Mostra, não diz.** Em vez de listar competências, mostra o resultado. Um showreel com 5 projectos diferentes comunica mais do que uma página inteira de texto.
+
+## Como criar um bom showreel
+
+**Selecciona os melhores 3-5 projectos.** Qualidade > quantidade. Não incluas tudo — inclui apenas o melhor.
+
+**Ritmo rápido.** Cortes a cada 2-3 segundos. O showreel deve manter energia alta do início ao fim.
+
+**Música que funciona.** A música define o tom. Épica para marcas premium, energética para marcas jovens, minimal para marcas sofisticadas.
+
+**CTA no final.** Termina com o logo e um convite à acção — "Vamos criar algo juntos" ou simplesmente o URL do site.
+
+## Onde usar
+
+- Hero do website (como nós usamos em [beyondfocus.pt](https://beyondfocus.pt))
+- Assinatura de email (link)
+- LinkedIn (post fixado no perfil)
+- Apresentações comerciais (primeiro slide)
+- Feiras e eventos (projecção contínua)
+
+Na Beyond Focus, o showreel é actualizado a cada trimestre com os melhores projectos. Se queres criar o teu, vê os nossos [serviços de filmes comerciais](/servicos/filmes-comerciais) ou [fala connosco](/contacto).`,
+  },
 ];
 
 export const BLOG_CATEGORIES = ["Todos", "Estratégia", "Produção", "Tendências"];
