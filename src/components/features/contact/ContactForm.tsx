@@ -150,8 +150,9 @@ export function ContactForm() {
             <p className="text-sm text-petrol/40">Campos com * são obrigatórios.</p>
 
             <div>
-              <label className="mb-1 block font-mono text-[11px] uppercase tracking-[2px] text-petrol/40">Nome *</label>
+              <label htmlFor="name" className="mb-1 block font-mono text-[11px] uppercase tracking-[2px] text-petrol/40">Nome *</label>
               <input
+                id="name"
                 type="text"
                 value={form.name}
                 onChange={(e) => updateField("name", e.target.value)}
@@ -160,8 +161,9 @@ export function ContactForm() {
               />
             </div>
             <div>
-              <label className="mb-1 block font-mono text-[11px] uppercase tracking-[2px] text-petrol/40">Email *</label>
+              <label htmlFor="email" className="mb-1 block font-mono text-[11px] uppercase tracking-[2px] text-petrol/40">Email *</label>
               <input
+                id="email"
                 type="email"
                 value={form.email}
                 onChange={(e) => updateField("email", e.target.value)}
@@ -171,8 +173,9 @@ export function ContactForm() {
             </div>
             <div className="grid grid-cols-1 gap-5 md:grid-cols-2">
               <div>
-                <label className="mb-1 block font-mono text-[11px] uppercase tracking-[2px] text-petrol/40">Telefone *</label>
+                <label htmlFor="phone" className="mb-1 block font-mono text-[11px] uppercase tracking-[2px] text-petrol/40">Telefone *</label>
                 <input
+                  id="phone"
                   type="tel"
                   value={form.phone}
                   onChange={(e) => updateField("phone", e.target.value)}
@@ -181,8 +184,9 @@ export function ContactForm() {
                 />
               </div>
               <div>
-                <label className="mb-1 block font-mono text-[11px] uppercase tracking-[2px] text-petrol/40">Empresa</label>
+                <label htmlFor="company" className="mb-1 block font-mono text-[11px] uppercase tracking-[2px] text-petrol/40">Empresa</label>
                 <input
+                  id="company"
                   type="text"
                   value={form.company}
                   onChange={(e) => updateField("company", e.target.value)}
@@ -192,8 +196,9 @@ export function ContactForm() {
               </div>
             </div>
             <div>
-              <label className="mb-1 block font-mono text-[11px] uppercase tracking-[2px] text-petrol/40">Website / Redes sociais</label>
+              <label htmlFor="website" className="mb-1 block font-mono text-[11px] uppercase tracking-[2px] text-petrol/40">Website / Redes sociais</label>
               <input
+                id="website"
                 type="text"
                 value={form.website}
                 onChange={(e) => updateField("website", e.target.value)}
@@ -233,10 +238,11 @@ export function ContactForm() {
             </div>
 
             <div>
-              <label className="mb-1 block font-mono text-[11px] uppercase tracking-[2px] text-petrol/40">
+              <label htmlFor="message" className="mb-1 block font-mono text-[11px] uppercase tracking-[2px] text-petrol/40">
                 Conta-nos mais sobre o teu projecto
               </label>
               <textarea
+                id="message"
                 value={form.message}
                 onChange={(e) => updateField("message", e.target.value)}
                 rows={4}
@@ -280,10 +286,11 @@ export function ContactForm() {
             </div>
 
             <div>
-              <label className="mb-1 block font-mono text-[11px] uppercase tracking-[2px] text-petrol/40">
+              <label htmlFor="startDate" className="mb-1 block font-mono text-[11px] uppercase tracking-[2px] text-petrol/40">
                 Data ideal de início
               </label>
               <input
+                id="startDate"
                 name="startDate"
                 type="text"
                 value={form.startDate}

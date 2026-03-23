@@ -101,8 +101,8 @@ export function Services() {
               <button
                 key={i}
                 onClick={() => { setActive(i); scrollToCard(i); }}
-                className={`h-1.5 rounded-full transition-all duration-300 ${
-                  active === i ? "w-6 bg-orange" : "w-1.5 bg-petrol/15"
+                className={`h-3 rounded-full transition-all duration-300 ${
+                  active === i ? "w-8 bg-orange" : "w-3 bg-petrol/15"
                 }`}
                 aria-label={`Serviço ${i + 1}`}
               />

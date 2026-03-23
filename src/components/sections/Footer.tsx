@@ -56,7 +56,7 @@ export function Footer() {
           {/* Col 1 — Brand */}
           <div>
             <h3 className="text-lg font-bold tracking-tight">Beyond Focus</h3>
-            <p className="mt-3 text-sm leading-relaxed text-white/40">
+            <p className="mt-3 text-sm leading-relaxed text-white/60">
               Produtora audiovisual em Lisboa. Estratégia, direcção criativa e produção para marcas que querem resultados.
             </p>
             <div className="mt-5 flex gap-4">
@@ -64,7 +64,7 @@ export function Footer() {
                 href="https://instagram.com/beyondfocus.pt"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="text-white/25 transition-colors hover:text-white"
+                className="text-white/50 transition-colors hover:text-white"
                 aria-label="Instagram"
               >
                 <InstagramIcon />
@@ -73,7 +73,7 @@ export function Footer() {
                 href="https://vimeo.com/beyondfocus"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="text-white/25 transition-colors hover:text-white"
+                className="text-white/50 transition-colors hover:text-white"
                 aria-label="Vimeo"
               >
                 <VimeoIcon />
@@ -82,7 +82,7 @@ export function Footer() {
                 href="https://linkedin.com/company/beyondfocus"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="text-white/25 transition-colors hover:text-white"
+                className="text-white/50 transition-colors hover:text-white"
                 aria-label="LinkedIn"
               >
                 <LinkedInIcon />
@@ -92,7 +92,7 @@ export function Footer() {
 
           {/* Col 2 — Navigation */}
           <div>
-            <h4 className="mb-4 text-xs font-semibold tracking-[2px] uppercase text-white/25">Navegação</h4>
+            <h4 className="mb-4 text-xs font-semibold tracking-[2px] uppercase text-white/50">Navegação</h4>
             <ul className="space-y-2.5">
               {NAV_LINKS.map((link) => (
                 <li key={link.href}>
@@ -109,7 +109,7 @@ export function Footer() {
 
           {/* Col 3 — Services */}
           <div>
-            <h4 className="mb-4 text-xs font-semibold tracking-[2px] uppercase text-white/25">Serviços</h4>
+            <h4 className="mb-4 text-xs font-semibold tracking-[2px] uppercase text-white/50">Serviços</h4>
             <ul className="space-y-2.5">
               {SERVICE_LINKS.map((service) => (
                 <li key={service.href}>
@@ -126,7 +126,7 @@ export function Footer() {
 
           {/* Col 4 — Contact */}
           <div>
-            <h4 className="mb-4 text-xs font-semibold tracking-[2px] uppercase text-white/25">Contacto</h4>
+            <h4 className="mb-4 text-xs font-semibold tracking-[2px] uppercase text-white/50">Contacto</h4>
             <ul className="space-y-2.5">
               <li>
                 <a
@@ -153,14 +153,14 @@ export function Footer() {
 
         {/* Bottom bar */}
         <div className="mt-14 flex flex-col items-center justify-between gap-4 border-t border-white/10 pt-6 sm:flex-row">
-          <p className="text-xs text-white/25">
+          <p className="text-xs text-white/50">
             © 2026 Beyond Focus. Todos os direitos reservados.
           </p>
           <div className="flex gap-6">
-            <Link href="/privacidade" className="text-xs text-white/25 transition-colors hover:text-white/50">
+            <Link href="/privacidade" className="text-xs text-white/50 transition-colors hover:text-white/50">
               Política de Privacidade
             </Link>
-            <Link href="/termos" className="text-xs text-white/25 transition-colors hover:text-white/50">
+            <Link href="/termos" className="text-xs text-white/50 transition-colors hover:text-white/50">
               Termos
             </Link>
           </div>
