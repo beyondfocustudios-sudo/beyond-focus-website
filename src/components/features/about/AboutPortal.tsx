@@ -23,7 +23,7 @@ export function AboutPortal() {
             Não somos apenas uma produtora — oferecemos uma plataforma exclusiva onde os nossos clientes acompanham cada fase do projecto, aprovam entregas com comentários ao segundo exacto, comunicam com a equipa e acedem a todos os documentos. Tudo num só sítio.
           </p>
           <Link
-            href="/"
+            href="/portal-cliente"
             className="mt-6 inline-block text-sm font-medium text-petrol underline underline-offset-4 transition-colors hover:text-orange"
           >
             Ver na homepage →

@@ -191,7 +191,7 @@ export function Portfolio() {
         {/* Header */}
         <div className="mb-10 flex items-end justify-between">
           <div>
-            <Eyebrow light>TRABALHOS SELECCIONADOS</Eyebrow>
+            <Eyebrow>TRABALHOS SELECCIONADOS</Eyebrow>
             <SectionHeading light className="mt-3">
               O nosso trabalho fala por nós.
             </SectionHeading>

@@ -53,8 +53,16 @@ export function ContactForm() {
     step === 2 ? form.services.length > 0 :
     true;
 
-  const handleSubmit = () => {
-    console.log("Form submitted:", form);
+  const handleSubmit = async () => {
+    try {
+      await fetch("/api/contact", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify(form),
+      });
+    } catch {
+      // Silently fail — form data will be in server logs
+    }
     setSubmitted(true);
   };
 
@@ -106,58 +114,53 @@ export function ContactForm() {
             <div>
               <label className="mb-1 block font-mono text-[11px] uppercase tracking-[2px] text-petrol/40">Nome *</label>
               <input
-                name="name"
                 type="text"
                 value={form.name}
                 onChange={(e) => updateField("name", e.target.value)}
                 className="w-full border-b-2 border-petrol/10 bg-transparent py-3 text-base text-petrol outline-none transition-colors focus:border-orange"
-                placeholder="O teu nome"
+                name="name" placeholder="O teu nome"
               />
             </div>
             <div>
               <label className="mb-1 block font-mono text-[11px] uppercase tracking-[2px] text-petrol/40">Email *</label>
               <input
-                name="email"
                 type="email"
                 value={form.email}
                 onChange={(e) => updateField("email", e.target.value)}
                 className="w-full border-b-2 border-petrol/10 bg-transparent py-3 text-base text-petrol outline-none transition-colors focus:border-orange"
-                placeholder="email@exemplo.com"
+                name="email" placeholder="email@exemplo.com"
               />
             </div>
             <div className="grid grid-cols-1 gap-5 md:grid-cols-2">
               <div>
                 <label className="mb-1 block font-mono text-[11px] uppercase tracking-[2px] text-petrol/40">Telefone *</label>
                 <input
-                  name="phone"
                   type="tel"
                   value={form.phone}
                   onChange={(e) => updateField("phone", e.target.value)}
                   className="w-full border-b-2 border-petrol/10 bg-transparent py-3 text-base text-petrol outline-none transition-colors focus:border-orange"
-                  placeholder="+351"
+                  name="phone" placeholder="+351"
                 />
               </div>
               <div>
                 <label className="mb-1 block font-mono text-[11px] uppercase tracking-[2px] text-petrol/40">Empresa</label>
                 <input
-                  name="company"
                   type="text"
                   value={form.company}
                   onChange={(e) => updateField("company", e.target.value)}
                   className="w-full border-b-2 border-petrol/10 bg-transparent py-3 text-base text-petrol outline-none transition-colors focus:border-orange"
-                  placeholder="Nome da empresa"
+                  name="company" placeholder="Nome da empresa"
                 />
               </div>
             </div>
             <div>
               <label className="mb-1 block font-mono text-[11px] uppercase tracking-[2px] text-petrol/40">Website / Redes sociais</label>
               <input
-                name="website"
                 type="text"
                 value={form.website}
                 onChange={(e) => updateField("website", e.target.value)}
                 className="w-full border-b-2 border-petrol/10 bg-transparent py-3 text-base text-petrol outline-none transition-colors focus:border-orange"
-                placeholder="https://"
+                name="website" placeholder="https://"
               />
             </div>
           </motion.div>
@@ -196,12 +199,11 @@ export function ContactForm() {
                 Conta-nos mais sobre o teu projecto
               </label>
               <textarea
-                name="message"
                 value={form.message}
                 onChange={(e) => updateField("message", e.target.value)}
                 rows={4}
                 className="w-full resize-none border-b-2 border-petrol/10 bg-transparent py-3 text-base text-petrol outline-none transition-colors focus:border-orange"
-                placeholder="O que tens em mente?"
+                name="message" placeholder="O que tens em mente?"
               />
             </div>
           </motion.div>

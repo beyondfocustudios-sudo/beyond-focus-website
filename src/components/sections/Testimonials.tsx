@@ -81,7 +81,7 @@ export function Testimonials() {
         {/* Header with arrows (desktop) */}
         <div className="flex items-end justify-between">
           <div>
-            <Eyebrow light>O QUE DIZEM DE NÓS</Eyebrow>
+            <Eyebrow>O QUE DIZEM DE NÓS</Eyebrow>
             <SectionHeading light className="mt-3">
               Resultados que falam por si.
             </SectionHeading>
