@@ -117,12 +117,14 @@ export function Testimonials() {
         <div className="mt-6 flex justify-center gap-3 sm:hidden">
           <button
             onClick={prev}
+            aria-label="Anterior"
             className="flex h-10 w-10 items-center justify-center rounded-full border border-white/20 text-white"
           >
             ←
           </button>
           <button
             onClick={next}
+            aria-label="Seguinte"
             className="flex h-10 w-10 items-center justify-center rounded-full border border-white/20 text-white"
           >
             →

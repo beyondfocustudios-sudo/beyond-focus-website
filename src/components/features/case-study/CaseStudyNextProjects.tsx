@@ -2,6 +2,7 @@
 
 import { motion } from "framer-motion";
 import Link from "next/link";
+import Image from "next/image";
 import type { Project } from "@/lib/portfolio-data";
 
 export function CaseStudyNextProjects({ projects }: { projects: Project[] }) {
@@ -36,11 +37,13 @@ export function CaseStudyNextProjects({ projects }: { projects: Project[] }) {
               data-cursor="hover-link"
               className="group block"
             >
-              <div className="mb-4 overflow-hidden rounded-xl" style={{ aspectRatio: "16/9" }}>
-                <img
+              <div className="relative mb-4 overflow-hidden rounded-xl" style={{ aspectRatio: "16/9" }}>
+                <Image
                   src={project.thumbnail}
                   alt={project.title}
-                  className="h-full w-full object-cover transition-transform duration-500 group-hover:scale-[1.03]"
+                  fill
+                  sizes="(max-width: 768px) 100vw, 50vw"
+                  className="object-cover transition-transform duration-500 group-hover:scale-[1.03]"
                 />
               </div>
               <div className="flex items-baseline justify-between">

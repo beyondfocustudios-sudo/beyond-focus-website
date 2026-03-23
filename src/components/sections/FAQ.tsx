@@ -28,6 +28,7 @@ function AccordionItem({
     >
       <button
         onClick={onToggle}
+        aria-expanded={isOpen}
         className="flex w-full items-center justify-between py-5 text-left"
       >
         <span className="pr-4 text-base font-semibold text-petrol lg:text-lg">{question}</span>

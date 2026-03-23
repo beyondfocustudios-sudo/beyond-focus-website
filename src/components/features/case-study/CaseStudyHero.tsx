@@ -1,6 +1,7 @@
 "use client";
 
 import { motion } from "framer-motion";
+import Image from "next/image";
 import type { Project } from "@/lib/portfolio-data";
 
 export function CaseStudyHero({ project }: { project: Project }) {
@@ -46,11 +47,14 @@ export function CaseStudyHero({ project }: { project: Project }) {
             />
           </div>
         ) : (
-          <div className="overflow-hidden rounded-xl" style={{ aspectRatio: "16/9" }}>
-            <img
+          <div className="relative overflow-hidden rounded-xl" style={{ aspectRatio: "16/9" }}>
+            <Image
               src={project.thumbnail}
               alt={project.title}
-              className="h-full w-full object-cover"
+              fill
+              sizes="100vw"
+              className="object-cover"
+              priority
             />
           </div>
         )}

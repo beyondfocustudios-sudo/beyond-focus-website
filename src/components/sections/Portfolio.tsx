@@ -128,7 +128,7 @@ function PortfolioCard({
           muted
           loop
           playsInline
-          preload="auto"
+          preload="metadata"
           className={`absolute inset-0 h-full w-full object-cover transition-opacity duration-500 ${
             showVideo ? "opacity-100" : "opacity-0"
           }`}
