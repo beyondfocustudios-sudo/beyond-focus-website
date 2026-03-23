@@ -9,7 +9,7 @@ import { TESTIMONIALS } from "@/lib/constants";
 
 const COMPANY_LOGOS: Record<string, string> = {
   "Carl Zeiss Portugal": "/images/partners/carl-zeiss.png",
-  "Once Upon a House": "/images/partners/once-upon-a-house.png",
+  "Once Upon a House": "/images/partners/hotel-casa-palmela.png",
   "Amoretti Lux": "/images/partners/amoretti-lux.png",
   "Once Upon Lisboa": "/images/partners/once-upon-a-house.png",
 };
