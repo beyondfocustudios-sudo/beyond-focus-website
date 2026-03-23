@@ -5,6 +5,7 @@ import { Footer } from "@/components/sections/Footer";
 import { AboutHero } from "@/components/features/about/AboutHero";
 import { AboutValues } from "@/components/features/about/AboutValues";
 import { AboutFounder } from "@/components/features/about/AboutFounder";
+import { AboutPortal } from "@/components/features/about/AboutPortal";
 
 export const metadata: Metadata = {
   title: "Sobre | Quem Somos",
@@ -19,6 +20,7 @@ export default function SobrePage() {
         <AboutHero />
         <AboutFounder />
         <AboutValues />
+        <AboutPortal />
 
         {/* CTA */}
         <section className="bg-white py-28 text-center">

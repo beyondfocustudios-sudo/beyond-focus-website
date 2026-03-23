@@ -54,6 +54,7 @@ export function LoadingScreen() {
           <video
             ref={videoRef}
             src="/videos/loading.mp4"
+            poster="/images/loading-poster.png"
             autoPlay
             muted
             playsInline

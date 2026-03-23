@@ -1,3 +1,4 @@
+import type { Metadata } from "next";
 import { notFound } from "next/navigation";
 import Link from "next/link";
 import Image from "next/image";
@@ -7,6 +8,20 @@ import { getBlogPost, BLOG_POSTS } from "@/lib/blog-data";
 
 export function generateStaticParams() {
   return BLOG_POSTS.map((p) => ({ slug: p.slug }));
+}
+
+export async function generateMetadata({
+  params,
+}: {
+  params: Promise<{ slug: string }>;
+}): Promise<Metadata> {
+  const { slug } = await params;
+  const post = getBlogPost(slug);
+  if (!post) return { title: "Artigo não encontrado" };
+  return {
+    title: post.title,
+    description: post.excerpt,
+  };
 }
 
 export default async function BlogPostPage({
@@ -47,11 +62,22 @@ export default async function BlogPostPage({
 
         {/* Content */}
         <article className="mx-auto max-w-[720px] px-6 py-16 md:px-10">
-          {post.content.split("\n\n").map((paragraph, i) => (
-            <p key={i} className="mb-5 text-[18px] leading-[1.8] text-petrol/70">
-              {paragraph}
-            </p>
-          ))}
+          {post.content.split("\n\n").map((paragraph, i) => {
+            // Lines that end with : or . and are short → render as H2
+            const isHeading = paragraph.length < 80 && !paragraph.startsWith("-") && (paragraph.endsWith(":") || paragraph.endsWith(".")) && i > 0 && i % 3 === 0;
+            if (isHeading) {
+              return (
+                <h2 key={i} className="mb-4 mt-10 text-[24px] leading-tight text-petrol">
+                  {paragraph}
+                </h2>
+              );
+            }
+            return (
+              <p key={i} className="mb-5 text-[18px] leading-[1.8] text-petrol/70">
+                {paragraph}
+              </p>
+            );
+          })}
         </article>
 
         {/* CTA */}

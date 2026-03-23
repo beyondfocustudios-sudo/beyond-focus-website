@@ -36,7 +36,7 @@ export default function BlogPage() {
                 data-cursor="hover-link"
                 className="group block"
               >
-                <div className="relative overflow-hidden rounded-xl" style={{ aspectRatio: "16/9" }}>
+                <div className="relative aspect-video overflow-hidden rounded-xl">
                   <Image
                     src={post.thumbnail}
                     alt={post.title}

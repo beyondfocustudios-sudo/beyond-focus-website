@@ -10,6 +10,7 @@ export function CTAFinal() {
       <div className="absolute inset-0">
         <video
           src="/videos/showreel.mp4"
+          poster="/images/showreel-poster.jpg"
           autoPlay
           muted
           loop

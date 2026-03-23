@@ -15,10 +15,14 @@ export function AboutFounder() {
           className="relative overflow-hidden rounded-xl bg-petrol/5"
           style={{ aspectRatio: "3/4" }}
         >
-          <div className="absolute inset-0 flex items-end p-8">
-            <p className="font-mono text-[11px] uppercase tracking-[2px] text-petrol/20">
-              Foto do fundador — em breve
-            </p>
+          <div className="absolute inset-0 flex items-center justify-center">
+            <div className="text-center">
+              <div className="mx-auto flex h-20 w-20 items-center justify-center rounded-full bg-petrol/10">
+                <span className="text-2xl font-bold text-petrol/30">DL</span>
+              </div>
+              <p className="mt-4 text-sm font-medium text-petrol/30">Daniel Lopes</p>
+              <p className="text-xs text-petrol/20">Fundador & Director Criativo</p>
+            </div>
           </div>
         </motion.div>
 

@@ -24,7 +24,21 @@
   --color-petrol-deep: #070f13;
   --color-orange: #FA8334;
   --font-body: 'DM Sans', sans-serif;
+  --font-serif: var(--font-serif, 'DM Serif Display', serif);
   --font-mono: 'JetBrains Mono', monospace;
+}
+
+/* Headings use DM Serif Display */
+h1, h2 {
+  font-family: var(--font-serif);
+}
+
+/* Reduced motion */
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after {
+    animation-duration: 0.01ms !important;
+    transition-duration: 0.01ms !important;
+  }
 }
 
 /* Base */

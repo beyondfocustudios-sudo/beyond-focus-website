@@ -106,6 +106,7 @@ export function ContactForm() {
             <div>
               <label className="mb-1 block font-mono text-[11px] uppercase tracking-[2px] text-petrol/40">Nome *</label>
               <input
+                name="name"
                 type="text"
                 value={form.name}
                 onChange={(e) => updateField("name", e.target.value)}
@@ -116,6 +117,7 @@ export function ContactForm() {
             <div>
               <label className="mb-1 block font-mono text-[11px] uppercase tracking-[2px] text-petrol/40">Email *</label>
               <input
+                name="email"
                 type="email"
                 value={form.email}
                 onChange={(e) => updateField("email", e.target.value)}
@@ -127,6 +129,7 @@ export function ContactForm() {
               <div>
                 <label className="mb-1 block font-mono text-[11px] uppercase tracking-[2px] text-petrol/40">Telefone</label>
                 <input
+                  name="phone"
                   type="tel"
                   value={form.phone}
                   onChange={(e) => updateField("phone", e.target.value)}
@@ -137,6 +140,7 @@ export function ContactForm() {
               <div>
                 <label className="mb-1 block font-mono text-[11px] uppercase tracking-[2px] text-petrol/40">Empresa</label>
                 <input
+                  name="company"
                   type="text"
                   value={form.company}
                   onChange={(e) => updateField("company", e.target.value)}
@@ -148,6 +152,7 @@ export function ContactForm() {
             <div>
               <label className="mb-1 block font-mono text-[11px] uppercase tracking-[2px] text-petrol/40">Website / Redes sociais</label>
               <input
+                name="website"
                 type="text"
                 value={form.website}
                 onChange={(e) => updateField("website", e.target.value)}
@@ -191,6 +196,7 @@ export function ContactForm() {
                 Conta-nos mais sobre o teu projecto
               </label>
               <textarea
+                name="message"
                 value={form.message}
                 onChange={(e) => updateField("message", e.target.value)}
                 rows={4}
@@ -238,6 +244,7 @@ export function ContactForm() {
                 Data ideal de início
               </label>
               <input
+                name="startDate"
                 type="text"
                 value={form.startDate}
                 onChange={(e) => updateField("startDate", e.target.value)}

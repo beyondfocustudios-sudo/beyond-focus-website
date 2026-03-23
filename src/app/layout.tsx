@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import { DM_Sans, JetBrains_Mono } from "next/font/google";
+import { DM_Sans, DM_Serif_Display, JetBrains_Mono } from "next/font/google";
 import { LoadingScreen } from "@/components/layout/LoadingScreen";
 import { CustomCursor } from "@/components/ui/CustomCursor";
 import { SmoothScroll } from "@/components/layout/SmoothScroll";
@@ -12,6 +12,13 @@ const dmSans = DM_Sans({
   subsets: ["latin"],
   display: "swap",
   weight: ["400", "500", "600", "700"],
+});
+
+const dmSerif = DM_Serif_Display({
+  variable: "--font-serif",
+  weight: "400",
+  subsets: ["latin"],
+  display: "swap",
 });
 
 const jetbrainsMono = JetBrains_Mono({
@@ -67,7 +74,7 @@ export default function RootLayout({
   return (
     <html
       lang="pt"
-      className={`${dmSans.variable} ${jetbrainsMono.variable} antialiased`}
+      className={`${dmSans.variable} ${dmSerif.variable} ${jetbrainsMono.variable} antialiased`}
     >
       <head>
         <link rel="preload" href="/videos/loading.mp4" as="video" type="video/mp4" />
