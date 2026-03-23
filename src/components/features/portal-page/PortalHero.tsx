@@ -46,7 +46,7 @@ export function PortalHero() {
           <button
             onClick={() => {
               const el = document.getElementById("features");
-              if (el) el.scrollIntoView({ behavior: "instant" });
+              if (el) el.scrollIntoView({ behavior: "smooth" });
             }}
             className="inline-flex items-center gap-2 rounded-full border-2 border-petrol/20 px-8 py-4 text-base font-semibold text-petrol transition-all duration-200 hover:border-petrol/40 hover:scale-[1.03]"
           >
