@@ -2,7 +2,7 @@ import { NextResponse } from "next/server";
 
 export async function POST(request: Request) {
   try {
-    const body = awaitrequest.json();
+    const body = await request.json();
     const { name, email, phone, company, website, services, message, budget, startDate } = body;
 
     // Validation
@@ -13,7 +13,7 @@ export async function POST(request: Request) {
       );
     }
 
-    const apiKey = process.env.RESEND_API_KEY
+    const apiKey = process.env.RESEND_API_KEY;
 
     if (!apiKey) {
       // Fallback: log to server if no API key configured
