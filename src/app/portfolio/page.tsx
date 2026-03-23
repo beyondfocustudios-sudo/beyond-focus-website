@@ -19,6 +19,7 @@ export const metadata: Metadata = {
   },
   alternates: {
     canonical: "https://beyondfocus.pt/portfolio",
+    languages: { "pt-PT": "https://beyondfocus.pt/portfolio", en: "https://beyondfocus.pt/en/portfolio" },
   },
 };
 

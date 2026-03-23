@@ -73,7 +73,7 @@ export const metadata: Metadata = {
   },
   alternates: {
     canonical: "https://beyondfocus.pt",
-    languages: { "pt-PT": "https://beyondfocus.pt" },
+    languages: { "pt-PT": "https://beyondfocus.pt", en: "https://beyondfocus.pt/en" },
   },
   verification: {
     google: process.env.NEXT_PUBLIC_GSC_VERIFICATION || undefined,

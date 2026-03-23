@@ -19,6 +19,7 @@ export const metadata: Metadata = {
   },
   alternates: {
     canonical: "https://beyondfocus.pt/servicos",
+    languages: { "pt-PT": "https://beyondfocus.pt/servicos", en: "https://beyondfocus.pt/en/services" },
   },
 };
 

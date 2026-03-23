@@ -15,6 +15,7 @@ export const metadata: Metadata = {
   },
   alternates: {
     canonical: "https://beyondfocus.pt/contacto",
+    languages: { "pt-PT": "https://beyondfocus.pt/contacto", en: "https://beyondfocus.pt/en/contact" },
   },
 };
 
