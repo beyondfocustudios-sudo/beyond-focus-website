@@ -25,6 +25,8 @@ const BUDGETS = [
 export function ContactForm() {
   const [step, setStep] = useState(1);
   const [submitted, setSubmitted] = useState(false);
+  const [loading, setLoading] = useState(false);
+  const [error, setError] = useState("");
   const [form, setForm] = useState({
     name: "",
     email: "",
@@ -54,16 +56,25 @@ export function ContactForm() {
     true;
 
   const handleSubmit = async () => {
+    setLoading(true);
+    setError("");
     try {
-      await fetch("/api/contact", {
+      const response = await fetch("/api/contact", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify(form),
       });
+      if (response.ok) {
+        setSubmitted(true);
+      } else {
+        const data = await response.json().catch(() => ({}));
+        setError(data.error || "Ocorreu um erro. Tenta novamente.");
+      }
     } catch {
-      // Silently fail — form data will be in server logs
+      setError("Ocorreu um erro de ligação. Tenta novamente.");
+    } finally {
+      setLoading(false);
     }
-    setSubmitted(true);
   };
 
   if (submitted) {
@@ -73,13 +84,21 @@ export function ContactForm() {
         animate={{ opacity: 1, y: 0 }}
         className="py-20 text-center"
       >
-        <div className="mx-auto mb-6 flex h-16 w-16 items-center justify-center rounded-full bg-orange/10">
-          <span className="text-2xl">✓</span>
+        <div className="mx-auto mb-6 flex h-16 w-16 items-center justify-center rounded-full bg-petrol">
+          <svg className="h-8 w-8 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
+          </svg>
         </div>
-        <h3 className="text-2xl font-bold text-petrol">Mensagem enviada!</h3>
-        <p className="mt-3 text-base text-petrol/50">
-          Vamos responder dentro de 24 horas. Até já!
+        <h3 className="font-serif text-[clamp(28px,3vw,40px)] text-petrol">Mensagem enviada!</h3>
+        <p className="mx-auto mt-4 max-w-md text-base text-petrol/50">
+          Obrigado pelo teu contacto. Vamos responder nas próximas 24 horas.
         </p>
+        <a
+          href="/"
+          className="mt-8 inline-block text-sm font-medium text-petrol underline underline-offset-4 transition-colors hover:text-orange"
+        >
+          Voltar à homepage →
+        </a>
       </motion.div>
     );
   }
@@ -258,6 +277,17 @@ export function ContactForm() {
         )}
       </AnimatePresence>
 
+      {/* Error */}
+      {error && (
+        <motion.p
+          initial={{ opacity: 0, y: -5 }}
+          animate={{ opacity: 1, y: 0 }}
+          className="mt-4 text-sm text-red-500"
+        >
+          {error}
+        </motion.p>
+      )}
+
       {/* Navigation */}
       <div className="mt-10 flex items-center justify-between">
         {step > 1 ? (
@@ -285,9 +315,14 @@ export function ContactForm() {
         ) : (
           <button
             onClick={handleSubmit}
-            className="rounded-full bg-orange px-8 py-3 text-sm font-semibold text-white transition-all duration-200 hover:bg-orange/90 hover:scale-[1.03]"
+            disabled={loading}
+            className={`rounded-full px-8 py-3 text-sm font-semibold text-white transition-all duration-200 ${
+              loading
+                ? "bg-orange/60 cursor-wait"
+                : "bg-orange hover:bg-orange/90 hover:scale-[1.03]"
+            }`}
           >
-            Enviar mensagem
+            {loading ? "A enviar..." : "Enviar mensagem"}
           </button>
         )}
       </div>
