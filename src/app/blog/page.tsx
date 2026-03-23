@@ -28,13 +28,13 @@ export default function BlogPage() {
 
         {/* Grid */}
         <section className="mx-auto max-w-[1440px] px-6 pb-20 md:px-10 lg:px-[60px]">
-          <div className="grid grid-cols-1 gap-8 md:grid-cols-2 lg:grid-cols-3">
+          <div className="scrollbar-hide flex snap-x snap-mandatory gap-5 overflow-x-auto md:grid md:grid-cols-2 md:gap-8 md:overflow-visible lg:grid-cols-3">
             {BLOG_POSTS.map((post) => (
               <Link
                 key={post.slug}
                 href={`/blog/${post.slug}`}
                 data-cursor="hover-link"
-                className="group block"
+                className="group block w-[85vw] flex-shrink-0 snap-center md:w-auto md:flex-shrink md:snap-align-none"
               >
                 <div className="relative aspect-video overflow-hidden rounded-xl">
                   <Image

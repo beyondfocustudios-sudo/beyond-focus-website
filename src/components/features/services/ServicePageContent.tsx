@@ -60,7 +60,7 @@ export function ServicePageContent({
           transition={{ duration: 0.8, delay: 0.3 }}
           className="mx-auto max-w-[1400px] px-6 md:px-10 lg:px-[60px]"
         >
-          <div className="relative overflow-hidden rounded-t-xl" style={{ aspectRatio: "21/9" }}>
+          <div className="relative overflow-hidden rounded-t-xl" style={{ aspectRatio: "16/9" }}>
             <Image
               src={service.image}
               alt={service.title}

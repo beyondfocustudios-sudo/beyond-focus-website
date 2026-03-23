@@ -1,14 +1,23 @@
 "use client";
 
-import { useRef, useEffect } from "react";
+import { useRef, useEffect, useState } from "react";
+import Image from "next/image";
 import type { Project } from "@/lib/portfolio-data";
 
 export function CaseStudyHorizontalGallery({ project }: { project: Project }) {
   const sectionRef = useRef<HTMLDivElement>(null);
   const trackRef = useRef<HTMLDivElement>(null);
+  const [isDesktop, setIsDesktop] = useState(false);
 
   useEffect(() => {
-    if (typeof window === "undefined" || window.innerWidth < 1024) return;
+    const check = () => setIsDesktop(window.innerWidth >= 1024);
+    check();
+    window.addEventListener("resize", check);
+    return () => window.removeEventListener("resize", check);
+  }, []);
+
+  useEffect(() => {
+    if (!isDesktop) return;
 
     let trigger: { kill: () => void } | null = null;
 
@@ -38,13 +47,40 @@ export function CaseStudyHorizontalGallery({ project }: { project: Project }) {
 
     init();
     return () => { if (trigger) trigger.kill(); };
-  }, []);
+  }, [isDesktop]);
 
-  // Use real gallery images, alternate portrait/landscape
   const images = project.gallery.length > 0 ? project.gallery : [project.thumbnail];
-
   if (images.length < 2) return null;
 
+  // Mobile: horizontal scroll carousel
+  if (!isDesktop) {
+    return (
+      <section className="mt-[40px] bg-bg-light py-10" data-cursor="gallery">
+        <div className="px-6 md:px-10">
+          <p className="font-mono text-[11px] uppercase tracking-[3px] text-orange">Galeria</p>
+          <h3 className="mt-2 text-2xl font-bold text-petrol">{project.title}</h3>
+        </div>
+        <div className="scrollbar-hide mt-6 flex snap-x snap-mandatory gap-4 overflow-x-auto px-6 md:px-10">
+          {images.map((src, i) => (
+            <div
+              key={i}
+              className="relative h-[280px] w-[85vw] flex-shrink-0 snap-center overflow-hidden rounded-xl md:h-[350px] md:w-[70vw]"
+            >
+              <Image
+                src={src}
+                alt={`${project.title} — ${i + 1}`}
+                fill
+                className="object-cover"
+                sizes="85vw"
+              />
+            </div>
+          ))}
+        </div>
+      </section>
+    );
+  }
+
+  // Desktop: GSAP horizontal scroll
   return (
     <section
       ref={sectionRef}
@@ -53,15 +89,13 @@ export function CaseStudyHorizontalGallery({ project }: { project: Project }) {
     >
       <div
         ref={trackRef}
-        className="flex items-center gap-5 p-5 lg:p-[60px]"
+        className="flex items-center gap-5 p-[60px]"
         style={{ width: "fit-content" }}
       >
         {/* Title card */}
-        <div className="flex h-[500px] w-[350px] flex-shrink-0 items-end p-10 lg:h-[600px] lg:w-[400px]">
+        <div className="flex h-[600px] w-[400px] flex-shrink-0 items-end p-10">
           <div>
-            <p className="font-mono text-[11px] uppercase tracking-[3px] text-orange">
-              Galeria
-            </p>
+            <p className="font-mono text-[11px] uppercase tracking-[3px] text-orange">Galeria</p>
             <h3 className="mt-2 text-[clamp(28px,3vw,40px)] font-bold leading-tight text-petrol">
               {project.title}
             </h3>
@@ -74,14 +108,16 @@ export function CaseStudyHorizontalGallery({ project }: { project: Project }) {
             key={i}
             className={`relative flex-shrink-0 overflow-hidden rounded-xl ${
               i % 3 === 1
-                ? "h-[500px] w-[700px] lg:h-[600px] lg:w-[900px]"
-                : "h-[500px] w-[350px] lg:h-[600px] lg:w-[420px]"
+                ? "h-[600px] w-[900px]"
+                : "h-[600px] w-[420px]"
             }`}
           >
-            <img
+            <Image
               src={src}
               alt={`${project.title} — ${i + 1}`}
-              className="h-full w-full object-cover"
+              fill
+              className="object-cover"
+              sizes="50vw"
             />
           </div>
         ))}

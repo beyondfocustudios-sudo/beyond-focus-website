@@ -180,7 +180,7 @@ export function ContactForm() {
                 <button
                   key={s}
                   onClick={() => toggleService(s)}
-                  className={`rounded-full border px-5 py-2.5 text-sm font-medium transition-all duration-200 ${
+                  className={`rounded-full border px-3 py-2 text-xs md:px-5 md:py-2.5 md:text-sm font-medium transition-all duration-200 ${
                     form.services.includes(s)
                       ? "border-orange bg-orange/10 text-petrol"
                       : "border-petrol/15 text-petrol/50 hover:border-petrol/30"
@@ -227,7 +227,7 @@ export function ContactForm() {
                   <button
                     key={b}
                     onClick={() => updateField("budget", b)}
-                    className={`rounded-full border px-5 py-2.5 text-sm font-medium transition-all duration-200 ${
+                    className={`rounded-full border px-3 py-2 text-xs md:px-5 md:py-2.5 md:text-sm font-medium transition-all duration-200 ${
                       form.budget === b
                         ? "border-orange bg-orange/10 text-petrol"
                         : "border-petrol/15 text-petrol/50 hover:border-petrol/30"

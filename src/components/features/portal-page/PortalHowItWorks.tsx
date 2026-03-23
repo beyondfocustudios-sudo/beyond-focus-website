@@ -66,7 +66,7 @@ export function PortalHowItWorks() {
         </motion.div>
 
         {/* Steps */}
-        <div className="mx-auto mt-20 grid max-w-[1100px] grid-cols-1 gap-6 md:grid-cols-3">
+        <div className="mx-auto mt-20 grid max-w-[1100px] grid-cols-1 gap-6 md:grid-cols-2 lg:grid-cols-3">
           {STEPS.map((step, i) => {
             const isActive = hovered === null || hovered === i;
             return (

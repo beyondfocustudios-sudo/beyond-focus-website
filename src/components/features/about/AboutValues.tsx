@@ -20,7 +20,7 @@ export function AboutValues() {
           No que acreditamos.
         </h2>
 
-        <div className="mt-14 grid grid-cols-1 gap-8 md:grid-cols-2 lg:grid-cols-4">
+        <div className="mt-14 grid grid-cols-1 gap-6 md:grid-cols-2 md:gap-8 lg:grid-cols-4">
           {VALUES.map((value, i) => (
             <motion.div
               key={value.title}

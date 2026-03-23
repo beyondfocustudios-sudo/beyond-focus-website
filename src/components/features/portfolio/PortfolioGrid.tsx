@@ -107,7 +107,7 @@ export function PortfolioGrid() {
     <>
       {/* Filters */}
       <div className="mx-auto max-w-[1800px] border-b border-petrol/8 px-6 pb-4 md:px-10 lg:px-12">
-        <div className="flex flex-wrap gap-x-8 gap-y-2">
+        <div className="scrollbar-hide flex gap-x-6 overflow-x-auto whitespace-nowrap md:flex-wrap md:gap-x-8 md:gap-y-2 md:overflow-visible">
           {CATEGORIES.map((cat) => (
             <button
               key={cat}
@@ -124,10 +124,10 @@ export function PortfolioGrid() {
         </div>
       </div>
 
-      {/* Grid */}
+      {/* Grid — horizontal scroll on mobile, grid on tablet+ */}
       <motion.div
         layout
-        className="mx-auto mt-10 grid max-w-[1800px] grid-cols-1 gap-x-5 gap-y-12 px-6 md:grid-cols-2 md:px-10 lg:grid-cols-3 lg:px-12"
+        className="scrollbar-hide mx-auto mt-10 flex max-w-[1800px] snap-x snap-mandatory gap-5 overflow-x-auto px-6 md:grid md:grid-cols-2 md:gap-x-5 md:gap-y-12 md:overflow-visible md:px-10 lg:grid-cols-3 lg:px-12"
       >
         <AnimatePresence mode="popLayout">
           {filtered.map((project) => (
@@ -138,6 +138,7 @@ export function PortfolioGrid() {
               animate={{ opacity: 1, y: 0 }}
               exit={{ opacity: 0, y: -10 }}
               transition={{ duration: 0.35 }}
+              className="w-[85vw] flex-shrink-0 snap-center md:w-auto md:flex-shrink md:snap-align-none"
             >
               <PortfolioCard project={project} />
             </motion.div>
