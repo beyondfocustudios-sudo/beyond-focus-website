@@ -51,7 +51,7 @@ function PortfolioCard({ project }: { project: (typeof PROJECTS)[0] }) {
               muted
               loop
               playsInline
-              preload="metadata"
+              preload="none"
               className={`absolute inset-0 h-full w-full object-cover transition-opacity duration-500 ${
                 hovered ? "opacity-100" : "opacity-0"
               }`}

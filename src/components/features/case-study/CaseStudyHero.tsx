@@ -38,6 +38,7 @@ export function CaseStudyHero({ project }: { project: Project }) {
           <div className="overflow-hidden rounded-xl" style={{ aspectRatio: "16/9" }}>
             <video
               src={project.heroVideo}
+              poster={project.thumbnail}
               controls
               controlsList="nodownload noremoteplayback noplaybackrate"
               disablePictureInPicture

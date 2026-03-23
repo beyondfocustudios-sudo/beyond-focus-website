@@ -2,22 +2,17 @@
 
 import { motion } from "framer-motion";
 import Link from "next/link";
+import { LazyVideo } from "@/components/shared/LazyVideo";
 
 export function CTAFinal() {
   return (
     <section className="relative flex min-h-[80vh] items-center justify-center overflow-hidden">
-      {/* Showreel video background */}
+      {/* Showreel video background — lazy loaded (below fold) */}
       <div className="absolute inset-0">
-        <video
+        <LazyVideo
           src="/videos/showreel.mp4"
           poster="/images/showreel-poster.jpg"
-          autoPlay
-          muted
-          loop
-          playsInline
-          preload="metadata"
-          aria-hidden="true"
-          className="absolute inset-0 h-full w-full object-cover"
+          className="absolute inset-0 h-full w-full"
         />
         <div className="absolute inset-0 bg-black/65" />
       </div>

@@ -68,11 +68,10 @@ function PortfolioCard({
   const [isHovered, setIsHovered] = useState(false);
   const [videoReady, setVideoReady] = useState(false);
 
-  // Preload video when component mounts
+  // Mark video ready on canplay (loads on hover, not on mount)
   useEffect(() => {
     if (!video || !videoRef.current) return;
     const v = videoRef.current;
-    v.load();
     const onCanPlay = () => setVideoReady(true);
     v.addEventListener("canplaythrough", onCanPlay);
     return () => v.removeEventListener("canplaythrough", onCanPlay);
@@ -124,7 +123,7 @@ function PortfolioCard({
           muted
           loop
           playsInline
-          preload="metadata"
+          preload="none"
           className={`absolute inset-0 h-full w-full object-cover object-center transition-opacity duration-500 ${
             showVideo ? "opacity-100" : "opacity-0"
           }`}
