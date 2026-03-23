@@ -38,9 +38,9 @@ export const TESTIMONIALS = [
     type: "Filme Institucional",
   },
   {
-    score: "10/10",
+    score: "9/10",
     company: "Once Upon a House",
-    quote: "A Beyond Focus interpretou o briefing com precisão. O trabalho em equipa funcionou na perfeição.",
+    quote: "Profissionalismo, disponibilidade e transparência em todo o processo. Perante um imprevisto, a equipa respondeu com rapidez e compromisso. O resultado correspondeu às expectativas.",
     type: "Filme Comercial",
   },
   {
