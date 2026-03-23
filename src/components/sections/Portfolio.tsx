@@ -10,7 +10,7 @@ import { SectionHeading } from "@/components/shared/SectionHeading";
 const PORTFOLIO_ITEMS = [
   {
     title: "Hotel Casa Palmela",
-    category: "FILME COMERCIAL",
+    category: "FILME COMERCIAL · REDES SOCIAIS",
     thumbnail: "/images/portfolio/hcp-thumb.jpg",
     video: "/videos/portfolio/hcp-final.mp4",
   },
@@ -34,7 +34,7 @@ const PORTFOLIO_ITEMS = [
   },
   {
     title: "Soce by Mauro Loureiro",
-    category: "REDES SOCIAIS",
+    category: "FILME COMERCIAL · REDES SOCIAIS",
     thumbnail: "/images/portfolio/soce-mauro-thumb.jpg",
     video: "/videos/portfolio/soce-mauro.mp4",
   },
