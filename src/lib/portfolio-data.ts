@@ -135,7 +135,7 @@ export const PROJECTS: Project[] = [
     slug: "soce-mauro-loureiro",
     title: "Sóçe by Mauro Loureiro",
     client: "Sóçe",
-    category: "Filmes Comerciais",
+    category: "Redes Sociais",
     thumbnail: "/images/portfolio/gallery/soce/soce-fotos-02.jpg",
     video: "/videos/portfolio/soce-mauro.mp4",
     services: ["Direcção criativa", "Produção", "Fotografia"],
@@ -195,6 +195,25 @@ export const PROJECTS: Project[] = [
       "/images/portfolio/gallery/once-upon-a-house/oul-v3-010b.jpg",
     ],
   },
+  {
+    slug: "lobsters",
+    title: "Lobsters",
+    client: "Lobsters",
+    category: "Redes Sociais",
+    thumbnail: "/images/portfolio/lobsters-thumb.jpg",
+    video: "/videos/portfolio/lobsters.mp4",
+    services: ["Captação", "Edição", "Redes Sociais"],
+    briefText:
+      "O Lobsters precisava de conteúdo dinâmico para redes sociais que capturasse a energia dos seus eventos e a experiência do espaço.",
+    bodyCopy1Title: "Conteúdo que pára o scroll.",
+    bodyCopy1Text:
+      "Criámos peças curtas e impactantes, pensadas para o formato vertical e para captar a atenção nos primeiros segundos — o essencial no mundo das redes sociais.",
+    bodyCopy2Title: "Um evento. Meses de conteúdo.",
+    bodyCopy2Text:
+      "De cada produção, extraímos múltiplas peças para diferentes plataformas — Instagram, TikTok, stories — maximizando o investimento do cliente.",
+    heroVideo: "/videos/portfolio/lobsters.mp4",
+    gallery: [],
+  },
 ];
 
 export const CATEGORIES = [
@@ -203,6 +222,7 @@ export const CATEGORIES = [
   "Vídeos Institucionais",
   "Fotografia",
   "Eventos",
+  "Redes Sociais",
 ];
 
 export function getProject(slug: string): Project | undefined {

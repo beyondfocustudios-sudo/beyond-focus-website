@@ -32,6 +32,18 @@ const PORTFOLIO_ITEMS = [
     thumbnail: "/images/portfolio/amoretti-thumb.jpg",
     video: null,
   },
+  {
+    title: "Sóçe by Mauro Loureiro",
+    category: "REDES SOCIAIS",
+    thumbnail: "/images/portfolio/soce-mauro-thumb.jpg",
+    video: "/videos/portfolio/soce-mauro.mp4",
+  },
+  {
+    title: "Lobsters",
+    category: "REDES SOCIAIS · EVENTOS",
+    thumbnail: "/images/portfolio/lobsters-thumb.jpg",
+    video: "/videos/portfolio/lobsters.mp4",
+  },
 ];
 
 const containerVariants = {
