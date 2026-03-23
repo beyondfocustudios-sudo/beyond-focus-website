@@ -77,7 +77,7 @@ export const PROJECTS: Project[] = [
   {
     slug: "highgate",
     title: "Christmas Party",
-    client: "Highgate",
+    client: "Highgate Portugal",
     category: "Eventos",
     thumbnail: "/images/portfolio/highgate-thumb.jpg",
     video: "/videos/portfolio/highgate-sesimbra.mp4",

@@ -21,7 +21,7 @@ const PORTFOLIO_ITEMS = [
     video: "/videos/portfolio/zeiss-bts.mp4",
   },
   {
-    title: "Highgate",
+    title: "Highgate Portugal",
     category: "EVENTOS",
     thumbnail: "/images/portfolio/highgate-thumb.jpg",
     video: "/videos/portfolio/highgate-sesimbra.mp4",
