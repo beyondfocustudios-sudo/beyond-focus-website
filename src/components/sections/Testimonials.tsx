@@ -11,6 +11,7 @@ const COMPANY_LOGOS: Record<string, string> = {
   "Carl Zeiss Portugal": "/images/partners/carl-zeiss.png",
   "Once Upon a House": "/images/partners/once-upon-a-house.png",
   "Amoretti Lux": "/images/partners/amoretti-lux.png",
+  "Once Upon Lisboa": "/images/partners/once-upon-a-house.png",
 };
 
 const containerVariants = {
@@ -64,7 +65,7 @@ export function Testimonials() {
           initial="hidden"
           whileInView="show"
           viewport={{ once: true, margin: "-60px" }}
-          className="mt-10 grid grid-cols-1 gap-5 md:grid-cols-2 lg:grid-cols-3"
+          className="mt-10 grid grid-cols-1 gap-5 md:grid-cols-2"
         >
           {TESTIMONIALS.map((t, i) => (
             <motion.div
