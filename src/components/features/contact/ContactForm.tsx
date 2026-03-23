@@ -49,7 +49,7 @@ export function ContactForm() {
     }));
 
   const canProceed =
-    step === 1 ? form.name && form.email :
+    step === 1 ? form.name && form.email && form.phone :
     step === 2 ? form.services.length > 0 :
     true;
 
@@ -127,7 +127,7 @@ export function ContactForm() {
             </div>
             <div className="grid grid-cols-1 gap-5 md:grid-cols-2">
               <div>
-                <label className="mb-1 block font-mono text-[11px] uppercase tracking-[2px] text-petrol/40">Telefone</label>
+                <label className="mb-1 block font-mono text-[11px] uppercase tracking-[2px] text-petrol/40">Telefone *</label>
                 <input
                   name="phone"
                   type="tel"
