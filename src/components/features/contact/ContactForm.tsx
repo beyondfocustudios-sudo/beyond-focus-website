@@ -3,6 +3,13 @@
 import { useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 
+declare global {
+  interface Window {
+    gtag?: (...args: unknown[]) => void;
+    fbq?: (...args: unknown[]) => void;
+  }
+}
+
 const SERVICES_OPTIONS = [
   "Filmes Comerciais",
   "Vídeos Institucionais",
@@ -65,6 +72,18 @@ export function ContactForm() {
         body: JSON.stringify(form),
       });
       if (response.ok) {
+        if (typeof window.gtag === "function") {
+          window.gtag("event", "contact_form_submit", {
+            event_category: "engagement",
+            event_label: form.services?.join(", ") || "general",
+          });
+        }
+        if (typeof window.fbq === "function") {
+          window.fbq("track", "Lead", {
+            content_name: "Contact Form",
+            content_category: form.services?.join(", ") || "general",
+          });
+        }
         setSubmitted(true);
       } else {
         const data = await response.json().catch(() => ({}));
