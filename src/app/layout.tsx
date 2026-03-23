@@ -28,9 +28,10 @@ const jetbrainsMono = JetBrains_Mono({
 });
 
 export const metadata: Metadata = {
+  metadataBase: new URL("https://beyondfocus.pt"),
   title: {
     default: "Beyond Focus — Produtora Audiovisual em Lisboa | Vídeo, Fotografia e Estratégia",
-    template: "%s — Beyond Focus | Produtora Audiovisual",
+    template: "%s — Beyond Focus",
   },
   description:
     "Produtora audiovisual em Lisboa, Portugal. Filmes comerciais, vídeos institucionais, documentários, fotografia e estratégia criativa para marcas em todo o país. O teu departamento criativo externo.",
@@ -48,24 +49,31 @@ export const metadata: Metadata = {
     "produtora audiovisual Portugal",
     "Beyond Focus",
   ],
+  authors: [{ name: "Beyond Focus", url: "https://beyondfocus.pt" }],
+  creator: "Beyond Focus",
+  publisher: "Beyond Focus",
   icons: {
     icon: "/favicon.ico",
     apple: "/apple-touch-icon.png",
   },
   openGraph: {
+    type: "website",
+    locale: "pt_PT",
+    url: "https://beyondfocus.pt",
+    siteName: "Beyond Focus",
     title: "Beyond Focus — Produtora Audiovisual em Lisboa",
     description: "Filmes comerciais, vídeos institucionais, documentários, fotografia e estratégia criativa. Produtora audiovisual para marcas em Lisboa e todo o Portugal.",
-    locale: "pt_PT",
-    type: "website",
-    siteName: "Beyond Focus",
+    images: [{ url: "/og-image.jpg", width: 1200, height: 630, alt: "Beyond Focus — Produtora Audiovisual" }],
   },
   twitter: {
     card: "summary_large_image",
     title: "Beyond Focus — Produtora Audiovisual em Lisboa",
     description: "Filmes comerciais, vídeos institucionais, documentários e fotografia para marcas em Portugal.",
+    images: ["/og-image.jpg"],
   },
   alternates: {
     canonical: "https://beyondfocus.pt",
+    languages: { "pt-PT": "https://beyondfocus.pt" },
   },
   robots: {
     index: true,
