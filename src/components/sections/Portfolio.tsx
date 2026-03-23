@@ -43,7 +43,6 @@ const PORTFOLIO_ITEMS = [
     category: "REDES SOCIAIS · EVENTOS",
     thumbnail: "/images/portfolio/lobsters-thumb.jpg",
     video: "/videos/portfolio/lobsters.mp4",
-    videoFit: "contain" as const,
   },
 ];
 
@@ -63,13 +62,11 @@ function PortfolioCard({
   category,
   thumbnail,
   video,
-  videoFit = "cover",
 }: {
   title: string;
   category: string;
   thumbnail: string;
   video: string | null;
-  videoFit?: "cover" | "contain";
 }) {
   const videoRef = useRef<HTMLVideoElement>(null);
   const [isHovered, setIsHovered] = useState(false);
@@ -132,9 +129,9 @@ function PortfolioCard({
           loop
           playsInline
           preload="metadata"
-          className={`absolute inset-0 h-full w-full transition-opacity duration-500 ${
-            videoFit === "contain" ? "object-contain bg-black" : "object-cover"
-          } ${showVideo ? "opacity-100" : "opacity-0"}`}
+          className={`absolute inset-0 h-full w-full object-cover object-center transition-opacity duration-500 ${
+            showVideo ? "opacity-100" : "opacity-0"
+          }`}
         />
       )}
 
@@ -231,7 +228,6 @@ export function Portfolio() {
             category={item.category}
             thumbnail={item.thumbnail}
             video={item.video}
-            videoFit={"videoFit" in item ? (item.videoFit as "cover" | "contain") : "cover"}
           />
         ))}
       </motion.div>
