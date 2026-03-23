@@ -8,6 +8,9 @@ import { Footer } from "@/components/sections/Footer";
 export default function NotFound() {
   return (
     <>
+      <head>
+        <meta name="robots" content="noindex, nofollow" />
+      </head>
       <Navbar variant="light" />
       <main className="relative flex min-h-[70vh] flex-col items-center justify-center overflow-hidden bg-bg-light px-6">
         <motion.span
