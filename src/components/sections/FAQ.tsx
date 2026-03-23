@@ -46,7 +46,7 @@ function AccordionItem({
             initial={{ opacity: 0, height: 0 }}
             animate={{ opacity: 1, height: "auto" }}
             exit={{ opacity: 0, height: 0 }}
-            transition={{ duration: 0.3 }}
+            transition={{ type: "spring", stiffness: 300, damping: 25 }}
             className="overflow-hidden"
           >
             <p className="pb-5 text-sm leading-relaxed text-petrol/50 lg:text-base">{answer}</p>
@@ -87,7 +87,7 @@ export function FAQ() {
           >
             <Link
               href="/contacto"
-              className="inline-flex items-center gap-2 rounded-full bg-orange px-6 py-3 text-sm font-semibold text-white transition-all duration-200 hover:bg-orange/90 hover:scale-[1.03]"
+              className="inline-flex items-center gap-2 rounded-full bg-orange px-6 py-3 text-sm font-semibold text-white transition-all duration-200 hover:bg-orange/90 hover:scale-[1.03] active:scale-[0.97]"
             >
               Fala Connosco <span>→</span>
             </Link>

@@ -7,6 +7,12 @@ import { BreadcrumbSchema } from "@/components/seo/BreadcrumbSchema";
 export const metadata: Metadata = {
   title: "About | Our Story",
   description: "Founded in 2023 by Daniel Lopes. Video production studio in Lisbon for brands that want more than content — they want results.",
+  openGraph: {
+    title: "About — Beyond Focus",
+    description: "Founded in 2023 by Daniel Lopes. Video production studio in Lisbon for brands that want results.",
+    url: "https://beyondfocus.pt/en/about",
+    images: [{ url: "/og-image.jpg", width: 1200, height: 630, alt: "Beyond Focus — About Us" }],
+  },
   alternates: { canonical: "https://beyondfocus.pt/en/about", languages: { "pt-PT": "https://beyondfocus.pt/sobre", en: "https://beyondfocus.pt/en/about" } },
 };
 
@@ -57,7 +63,7 @@ export default function EnAboutPage() {
         <section className="bg-bg-light py-28 text-center">
           <h2 className="text-[clamp(28px,3vw,40px)] font-bold text-petrol">Want to know us better?</h2>
           <p className="mx-auto mt-3 max-w-md text-base text-petrol/50">The first conversation is on us.</p>
-          <Link href="/en/contact" className="mt-8 inline-flex items-center gap-2 rounded-full bg-petrol px-8 py-4 text-base font-semibold text-white hover:bg-petrol/90">
+          <Link href="/en/contact" className="mt-8 inline-flex items-center gap-2 rounded-full bg-petrol px-8 py-4 text-base font-semibold text-white hover:bg-petrol/90 active:scale-[0.97]">
             Get in touch <span>→</span>
           </Link>
         </section>

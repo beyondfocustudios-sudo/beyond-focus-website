@@ -6,6 +6,8 @@ import Image from "next/image";
 import { Eyebrow } from "@/components/shared/Eyebrow";
 import { SectionHeading } from "@/components/shared/SectionHeading";
 
+const BLUR_DATA = "data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wBDAAYEBQYFBAYGBQYHBwYIChAKCgkJChQODwwQFxQYGBcUFhYaHSUfGhsjHBYWICwgIyYnKSopGR8tMC0oMCUoKSj/2wBDAQcHBwoIChMKChMoGhYaKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCj/wAARCAAIAAoDASIAAhEBAxEB/8QAFQABAQAAAAAAAAAAAAAAAAAAAAn/xAAhEAACAQMDBQAAAAAAAAAAAAABAgMABAUGIWEREiMxUf/EABUBAQEAAAAAAAAAAAAAAAAAAAMF/8QAGhEAAgIDAAAAAAAAAAAAAAAAAAECEgMRkf/aAAwDAQACEQMRAD8AltJagyeH0AthI5xdrLcNM91BF5pX2HaH9bcfaSXWGaRmknyJckliyjqTzSlT54teledu/9k=";
+
 const services = [
   { num: "01", name: "Filmes Comerciais", tagline: "Spots que ninguém salta.", image: "/images/services/filmes-comerciais.jpg", gradient: "from-[#1a3a4a] to-[#0a2029]" },
   { num: "02", name: "Vídeos Institucionais", tagline: "A história da tua marca, contada a sério.", image: "/images/services/institucionais.jpg", gradient: "from-[#2a1a2a] to-[#1a0a1a]" },
@@ -84,6 +86,8 @@ export function Services() {
                   fill
                   className="object-cover"
                   sizes="85vw"
+                  placeholder="blur"
+                  blurDataURL={BLUR_DATA}
                 />
                 <div className="absolute inset-x-0 bottom-0 bg-gradient-to-t from-black/60 to-transparent p-5">
                   <span className="font-mono text-[10px] tracking-[2px] uppercase text-orange">
@@ -184,6 +188,8 @@ export function Services() {
                       fill
                       className="object-cover"
                       sizes="50vw"
+                      placeholder="blur"
+                      blurDataURL={BLUR_DATA}
                     />
                   ) : (
                     <div className={`h-full w-full bg-gradient-to-br ${services[active].gradient}`} />

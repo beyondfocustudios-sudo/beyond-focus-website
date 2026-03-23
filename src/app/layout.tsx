@@ -3,6 +3,7 @@ import { DM_Sans, DM_Serif_Display, JetBrains_Mono } from "next/font/google";
 import { LoadingScreen } from "@/components/layout/LoadingScreen";
 import { CustomCursor } from "@/components/ui/CustomCursor";
 import { SmoothScroll } from "@/components/layout/SmoothScroll";
+import { ScrollProgress } from "@/components/ui/ScrollProgress";
 import { GoogleAnalytics } from "@/components/analytics/GoogleAnalytics";
 import { MetaPixel } from "@/components/analytics/MetaPixel";
 import "./globals.css";
@@ -171,6 +172,7 @@ export default function RootLayout({
         <MetaPixel />
         <LoadingScreen />
         <CustomCursor />
+        <ScrollProgress />
         <SmoothScroll>{children}</SmoothScroll>
       </body>
     </html>

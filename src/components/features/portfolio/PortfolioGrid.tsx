@@ -7,6 +7,8 @@ import Image from "next/image";
 import Link from "next/link";
 import { PROJECTS, CATEGORIES } from "@/lib/portfolio-data";
 
+const BLUR_DATA = "data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wBDAAYEBQYFBAYGBQYHBwYIChAKCgkJChQODwwQFxQYGBcUFhYaHSUfGhsjHBYWICwgIyYnKSopGR8tMC0oMCUoKSj/2wBDAQcHBwoIChMKChMoGhYaKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCj/wAARCAAIAAoDASIAAhEBAxEB/8QAFQABAQAAAAAAAAAAAAAAAAAAAAn/xAAhEAACAQMDBQAAAAAAAAAAAAABAgMABAUGIWEREiMxUf/EABUBAQEAAAAAAAAAAAAAAAAAAAMF/8QAGhEAAgIDAAAAAAAAAAAAAAAAAAECEgMRkf/aAAwDAQACEQMRAD8AltJagyeH0AthI5xdrLcNM91BF5pX2HaH9bcfaSXWGaRmknyJckliyjqTzSlT54teledu/9k=";
+
 function PortfolioCard({ project }: { project: (typeof PROJECTS)[0] }) {
   const videoRef = useRef<HTMLVideoElement>(null);
   const [hovered, setHovered] = useState(false);
@@ -42,6 +44,8 @@ function PortfolioCard({ project }: { project: (typeof PROJECTS)[0] }) {
               hovered && project.video ? "opacity-0" : "opacity-100"
             } ${hovered ? "scale-[1.03]" : "scale-100"}`}
             sizes="(max-width: 768px) 100vw, (max-width: 1024px) 50vw, 33vw"
+            placeholder="blur"
+            blurDataURL={BLUR_DATA}
           />
 
           {project.video && (

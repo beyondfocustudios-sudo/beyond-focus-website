@@ -18,6 +18,12 @@ const SERVICES_EN = [
 export const metadata: Metadata = {
   title: "Services | Audiovisual Production",
   description: "Commercial films, corporate videos, documentaries, photography, events and content strategy. Audiovisual production in Portugal.",
+  openGraph: {
+    title: "Services — Beyond Focus",
+    description: "Commercial films, corporate videos, documentaries, photography, events and content strategy.",
+    url: "https://beyondfocus.pt/en/services",
+    images: [{ url: "/og-image.jpg", width: 1200, height: 630, alt: "Beyond Focus Services" }],
+  },
   alternates: { canonical: "https://beyondfocus.pt/en/services", languages: { "pt-PT": "https://beyondfocus.pt/servicos", en: "https://beyondfocus.pt/en/services" } },
 };
 
@@ -52,7 +58,7 @@ export default function EnServicesPage() {
         </section>
         <section className="bg-white py-28 text-center">
           <h2 className="text-[clamp(28px,3vw,40px)] font-bold text-petrol">Ready to start?</h2>
-          <Link href="/en/contact" className="mt-8 inline-flex items-center gap-2 rounded-full bg-petrol px-8 py-4 text-base font-semibold text-white hover:bg-petrol/90">
+          <Link href="/en/contact" className="mt-8 inline-flex items-center gap-2 rounded-full bg-petrol px-8 py-4 text-base font-semibold text-white hover:bg-petrol/90 active:scale-[0.97]">
             Let&apos;s Talk <span>→</span>
           </Link>
         </section>

@@ -39,9 +39,9 @@ export function ServiceBlock({ service, reversed }: ServiceBlockProps) {
       {/* Text */}
       <div className={reversed ? "lg:[direction:ltr]" : ""}>
         <span className="font-mono text-[13px] text-orange">{service.num}</span>
-        <h3 className="mt-2 text-[clamp(24px,2.5vw,36px)] font-bold leading-tight text-petrol">
+        <h2 className="mt-2 text-[clamp(24px,2.5vw,36px)] font-bold leading-tight text-petrol">
           {service.title}
-        </h3>
+        </h2>
         <p className="mt-2 text-base font-medium italic text-petrol/50">{service.tagline}</p>
         <p className="mt-4 text-base leading-relaxed text-petrol/60">{service.description}</p>
         <Link

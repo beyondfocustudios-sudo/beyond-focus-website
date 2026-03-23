@@ -39,7 +39,7 @@ export async function generateMetadata({
       title: `${project.title} — Beyond Focus`,
       description: project.briefText.slice(0, 155) + "...",
       url: `https://beyondfocus.pt/portfolio/${slug}`,
-      images: [{ url: project.thumbnail, width: 1200, height: 630, alt: project.title }],
+      images: [{ url: "/og-image.jpg", width: 1200, height: 630, alt: project.title }],
     },
     alternates: {
       canonical: `https://beyondfocus.pt/portfolio/${slug}`,
@@ -101,7 +101,7 @@ export default async function CaseStudyPage({
           <Link
             href="/contacto"
             data-cursor="hover-link"
-            className="mt-8 inline-flex items-center gap-2 rounded-full bg-petrol px-8 py-4 text-base font-semibold text-white transition-all duration-200 hover:bg-petrol/90 hover:scale-[1.03]"
+            className="mt-8 inline-flex items-center gap-2 rounded-full bg-petrol px-8 py-4 text-base font-semibold text-white transition-all duration-200 hover:bg-petrol/90 hover:scale-[1.03] active:scale-[0.97]"
           >
             Fala Connosco <span>→</span>
           </Link>

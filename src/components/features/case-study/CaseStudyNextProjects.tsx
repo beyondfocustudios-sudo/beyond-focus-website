@@ -10,9 +10,9 @@ export function CaseStudyNextProjects({ projects }: { projects: Project[] }) {
     <section className="mx-auto mt-[250px] max-w-[1800px] px-6 pb-20 md:px-10 lg:px-[60px] max-lg:mt-[100px]">
       {/* Header row */}
       <div className="mb-8 flex items-baseline justify-between">
-        <h3 className="text-[clamp(24px,3vw,40px)] font-bold text-petrol">
+        <h2 className="text-[clamp(24px,3vw,40px)] font-bold text-petrol">
           Outros projectos
-        </h3>
+        </h2>
         <Link
           href="/portfolio"
           data-cursor="hover-link"

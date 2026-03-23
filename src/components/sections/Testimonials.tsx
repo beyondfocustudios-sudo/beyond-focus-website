@@ -27,7 +27,7 @@ const cardVariants = {
 function TestimonialCard({ t, highlight }: { t: typeof TESTIMONIALS[number]; highlight?: boolean }) {
   return (
     <div
-      className={`rounded-2xl bg-white p-6 lg:p-8 transition-all duration-300 ${
+      className={`rounded-2xl bg-white p-6 lg:p-8 transition-all duration-300 hover:-translate-y-1 hover:shadow-lg ${
         highlight ? "ring-2 ring-orange/30" : ""
       }`}
     >

@@ -6,6 +6,12 @@ import { BreadcrumbSchema } from "@/components/seo/BreadcrumbSchema";
 export const metadata: Metadata = {
   title: "Política de Privacidade",
   description: "Política de privacidade da Beyond Focus — produtora audiovisual em Lisboa.",
+  openGraph: {
+    title: "Política de Privacidade — Beyond Focus",
+    description: "Política de privacidade da Beyond Focus — produtora audiovisual em Lisboa.",
+    url: "https://beyondfocus.pt/privacidade",
+    images: [{ url: "/og-image.jpg", width: 1200, height: 630, alt: "Beyond Focus — Privacidade" }],
+  },
   alternates: {
     canonical: "https://beyondfocus.pt/privacidade",
   },

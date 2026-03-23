@@ -9,6 +9,12 @@ import { BreadcrumbSchema } from "@/components/seo/BreadcrumbSchema";
 export const metadata: Metadata = {
   title: "Portfolio | Audiovisual Production Projects",
   description: "Commercial films, corporate videos, documentaries and photography. See the projects we have created for brands in Portugal.",
+  openGraph: {
+    title: "Portfolio — Beyond Focus",
+    description: "Commercial films, corporate videos, documentaries and photography for brands in Portugal.",
+    url: "https://beyondfocus.pt/en/portfolio",
+    images: [{ url: "/og-image.jpg", width: 1200, height: 630, alt: "Beyond Focus Portfolio" }],
+  },
   alternates: { canonical: "https://beyondfocus.pt/en/portfolio", languages: { "pt-PT": "https://beyondfocus.pt/portfolio", en: "https://beyondfocus.pt/en/portfolio" } },
 };
 
@@ -44,7 +50,7 @@ export default function EnPortfolioPage() {
         </section>
         <section className="mx-auto max-w-[1800px] px-6 py-28 text-center md:px-10 lg:px-12">
           <h2 className="text-[clamp(28px,3vw,40px)] font-bold text-petrol">Have a project in mind?</h2>
-          <Link href="/en/contact" className="mt-8 inline-flex items-center gap-2 rounded-full bg-petrol px-8 py-4 text-base font-semibold text-white hover:bg-petrol/90">
+          <Link href="/en/contact" className="mt-8 inline-flex items-center gap-2 rounded-full bg-petrol px-8 py-4 text-base font-semibold text-white hover:bg-petrol/90 active:scale-[0.97]">
             Let&apos;s Talk <span>→</span>
           </Link>
         </section>

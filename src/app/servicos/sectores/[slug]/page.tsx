@@ -28,6 +28,7 @@ export async function generateMetadata({
       title: sector.metaTitle,
       description: sector.metaDescription,
       url: `https://beyondfocus.pt/servicos/sectores/${slug}`,
+      images: [{ url: "/og-image.jpg", width: 1200, height: 630, alt: sector.title }],
     },
     alternates: {
       canonical: `https://beyondfocus.pt/servicos/sectores/${slug}`,

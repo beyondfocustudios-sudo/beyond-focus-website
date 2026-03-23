@@ -54,7 +54,7 @@ export default function ServicosPage() {
         <section className="bg-white py-28 text-center">
           <h2 className="text-[clamp(28px,3vw,40px)] font-bold text-petrol">Vamos trabalhar juntos?</h2>
           <p className="mx-auto mt-3 max-w-md text-base text-petrol/50">Conta-nos o teu projecto. A primeira conversa é por nossa conta.</p>
-          <Link href="/contacto" className="mt-8 inline-flex items-center gap-2 rounded-full bg-petrol px-8 py-4 text-base font-semibold text-white transition-all duration-200 hover:bg-petrol/90 hover:scale-[1.03]">
+          <Link href="/contacto" className="mt-8 inline-flex items-center gap-2 rounded-full bg-petrol px-8 py-4 text-base font-semibold text-white transition-all duration-200 hover:bg-petrol/90 hover:scale-[1.03] active:scale-[0.97]">
             Fala Connosco <span>→</span>
           </Link>
           <p className="mt-6 text-sm text-petrol/40">

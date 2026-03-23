@@ -10,24 +10,28 @@ export default function sitemap(): MetadataRoute.Sitemap {
   const projectUrls = PROJECTS.map((p) => ({
     url: `${baseUrl}/portfolio/${p.slug}`,
     lastModified: new Date(),
+    changeFrequency: "monthly" as const,
     priority: 0.8 as const,
   }));
 
   const serviceUrls = SERVICE_PAGES.map((s) => ({
     url: `${baseUrl}/servicos/${s.slug}`,
     lastModified: new Date(),
+    changeFrequency: "monthly" as const,
     priority: 0.7 as const,
   }));
 
   const sectorUrls = SECTOR_PAGES.map((s) => ({
     url: `${baseUrl}/servicos/sectores/${s.slug}`,
     lastModified: new Date(),
+    changeFrequency: "monthly" as const,
     priority: 0.7 as const,
   }));
 
   const blogUrls = BLOG_POSTS.map((b) => ({
     url: `${baseUrl}/blog/${b.slug}`,
     lastModified: new Date(),
+    changeFrequency: "monthly" as const,
     priority: 0.6 as const,
   }));
 

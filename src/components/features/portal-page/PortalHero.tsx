@@ -39,7 +39,7 @@ export function PortalHero() {
         >
           <Link
             href="/contacto"
-            className="inline-flex items-center gap-2 rounded-full bg-petrol px-8 py-4 text-base font-semibold text-white transition-all duration-200 hover:bg-petrol/90 hover:scale-[1.03]"
+            className="inline-flex items-center gap-2 rounded-full bg-petrol px-8 py-4 text-base font-semibold text-white transition-all duration-200 hover:bg-petrol/90 hover:scale-[1.03] active:scale-[0.97]"
           >
             Fala Connosco <span>→</span>
           </Link>
@@ -48,7 +48,7 @@ export function PortalHero() {
               const el = document.getElementById("features");
               if (el) el.scrollIntoView({ behavior: "smooth" });
             }}
-            className="inline-flex items-center gap-2 rounded-full border-2 border-petrol/20 px-8 py-4 text-base font-semibold text-petrol transition-all duration-200 hover:border-petrol/40 hover:scale-[1.03]"
+            className="inline-flex items-center gap-2 rounded-full border-2 border-petrol/20 px-8 py-4 text-base font-semibold text-petrol transition-all duration-200 hover:border-petrol/40 hover:scale-[1.03] active:scale-[0.97]"
           >
             Descobre como funciona <span>↓</span>
           </button>

@@ -106,7 +106,7 @@ export function Navbar({ variant = "dark", locale = "pt" }: { variant?: "dark" |
                 scrolled
                   ? "bg-[#0E3A45] text-white hover:bg-[#0E3A45]/90"
                   : "bg-white text-[#0E3A45] hover:bg-white/90"
-              }`}
+              } active:scale-[0.97]`}
             >
               {ctaText}
             </Link>

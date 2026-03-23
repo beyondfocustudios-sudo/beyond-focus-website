@@ -110,7 +110,7 @@ function AccordionItem({ question, answer, isOpen, onToggle }: { question: strin
       </button>
       <AnimatePresence>
         {isOpen && (
-          <motion.div initial={{ opacity: 0, height: 0 }} animate={{ opacity: 1, height: "auto" }} exit={{ opacity: 0, height: 0 }} transition={{ duration: 0.3 }} className="overflow-hidden">
+          <motion.div initial={{ opacity: 0, height: 0 }} animate={{ opacity: 1, height: "auto" }} exit={{ opacity: 0, height: 0 }} transition={{ type: "spring", stiffness: 300, damping: 25 }} className="overflow-hidden">
             <p className="pb-5 text-sm leading-relaxed text-petrol/50 lg:text-base">{answer}</p>
           </motion.div>
         )}
@@ -339,7 +339,7 @@ export function EnglishHomePage() {
           <div className="scrollbar-hide mt-10 flex snap-x snap-mandatory gap-5 overflow-x-auto pb-4">
             {TESTIMONIALS.map((t) => (
               <motion.div key={t.company} initial={{ opacity: 0, y: 25 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ duration: 0.5 }} className="w-[85vw] flex-shrink-0 snap-center md:w-[45vw] lg:w-[400px]">
-                <div className="rounded-2xl bg-white p-6 lg:p-8">
+                <div className="rounded-2xl bg-white p-6 lg:p-8 transition-all duration-300 hover:-translate-y-1 hover:shadow-lg">
                   <div className="mb-5"><span className="rounded-full bg-petrol px-3 py-1 text-xs font-bold text-white">{t.score}</span></div>
                   <span className="mb-3 block text-6xl font-serif leading-none text-orange/15">&ldquo;</span>
                   <p className="text-[15px] leading-relaxed text-petrol/80">{t.quote}</p>
@@ -396,7 +396,7 @@ export function EnglishHomePage() {
               If you cannot find the answer you are looking for, we are just a message away.
             </motion.p>
             <motion.div initial={{ opacity: 0 }} whileInView={{ opacity: 1 }} viewport={{ once: true }} transition={{ duration: 0.5, delay: 0.3 }} className="mt-6">
-              <Link href="/en/contact" className="inline-flex items-center gap-2 rounded-full bg-orange px-6 py-3 text-sm font-semibold text-white transition-all duration-200 hover:bg-orange/90 hover:scale-[1.03]">
+              <Link href="/en/contact" className="inline-flex items-center gap-2 rounded-full bg-orange px-6 py-3 text-sm font-semibold text-white transition-all duration-200 hover:bg-orange/90 hover:scale-[1.03] active:scale-[0.97]">
                 Let&apos;s Talk <span>→</span>
               </Link>
             </motion.div>
@@ -423,7 +423,7 @@ export function EnglishHomePage() {
             The first conversation is on us.
           </motion.p>
           <motion.div initial={{ opacity: 0, y: 15 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ duration: 0.6, delay: 0.3 }} className="mt-8">
-            <Link href="/en/contact" className="inline-flex items-center gap-2 rounded-full border-2 border-white/80 px-8 py-4 text-base font-semibold text-white transition-all duration-200 hover:bg-white hover:text-petrol-deep hover:scale-[1.03]">
+            <Link href="/en/contact" className="inline-flex items-center gap-2 rounded-full border-2 border-white/80 px-8 py-4 text-base font-semibold text-white transition-all duration-200 hover:bg-white hover:text-petrol-deep hover:scale-[1.03] active:scale-[0.97]">
               Let&apos;s Talk <span className="text-lg">→</span>
             </Link>
           </motion.div>

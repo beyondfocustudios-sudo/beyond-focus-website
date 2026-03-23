@@ -6,6 +6,12 @@ import { BreadcrumbSchema } from "@/components/seo/BreadcrumbSchema";
 export const metadata: Metadata = {
   title: "Termos e Condições",
   description: "Termos e condições de utilização do website da Beyond Focus.",
+  openGraph: {
+    title: "Termos e Condições — Beyond Focus",
+    description: "Termos e condições de utilização do website da Beyond Focus.",
+    url: "https://beyondfocus.pt/termos",
+    images: [{ url: "/og-image.jpg", width: 1200, height: 630, alt: "Beyond Focus — Termos" }],
+  },
   alternates: {
     canonical: "https://beyondfocus.pt/termos",
   },

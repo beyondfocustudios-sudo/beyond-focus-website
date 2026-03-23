@@ -47,7 +47,7 @@ export function CTAFinal() {
         >
           <Link
             href="/contacto"
-            className="inline-flex items-center gap-2 rounded-full border-2 border-white/80 px-8 py-4 text-base font-semibold text-white transition-all duration-200 hover:bg-white hover:text-petrol-deep hover:scale-[1.03]"
+            className="inline-flex items-center gap-2 rounded-full border-2 border-white/80 px-8 py-4 text-base font-semibold text-white transition-all duration-200 hover:bg-white hover:text-petrol-deep hover:scale-[1.03] active:scale-[0.97]"
           >
             Fala Connosco
             <span className="text-lg">→</span>
