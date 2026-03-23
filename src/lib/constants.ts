@@ -87,8 +87,8 @@ export const FAQ_ITEMS = [
     answer: "Depende da complexidade, mas a maioria dos projectos demora entre 2 a 6 semanas desde o briefing até à entrega final. Damos sempre um timeline claro antes de começar.",
   },
   {
-    question: "Trabalham só em Setúbal ou em todo o país?",
-    answer: "Trabalhamos em todo o país e também internacionalmente. A nossa base é em Setúbal mas já produzimos em Lisboa, Porto, Algarve e fora de Portugal.",
+    question: "Trabalham só em Lisboa ou em todo o país?",
+    answer: "Trabalhamos em todo o país e também internacionalmente. A nossa base é em Lisboa mas já produzimos no Porto, Algarve e fora de Portugal.",
   },
   {
     question: "Preciso de ter um guião antes de contactar?",

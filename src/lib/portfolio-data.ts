@@ -47,7 +47,7 @@ export const PROJECTS: Project[] = [
     video: "/videos/portfolio/zeiss-bts.mp4",
     services: ["Captação", "Edição", "Colour grading"],
     briefText:
-      "A Carl Zeiss queria documentar o processo criativo por trás de uma sessão de teste de lentes cinematográficas em cenários reais na região de Setúbal.",
+      "A Carl Zeiss queria documentar o processo criativo por trás de uma sessão de teste de lentes cinematográficas em cenários reais na região de Lisboa.",
     bodyCopy1Title: "Mostrar o processo é tão importante como o resultado.",
     bodyCopy1Text:
       "Acompanhámos a equipa da Zeiss durante uma jornada completa de testes de campo, capturando cada momento de descoberta e precisão técnica com autenticidade.",

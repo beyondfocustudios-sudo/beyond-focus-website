@@ -31,13 +31,13 @@ export default function ContactoPage() {
               <div className="mt-12 space-y-6">
                 <div>
                   <h4 className="font-mono text-[11px] uppercase tracking-[2px] text-petrol/30">Email</h4>
-                  <a href="mailto:hello@beyondfocus.pt" className="mt-1 block text-base font-medium text-petrol transition-colors hover:text-orange">
-                    hello@beyondfocus.pt
+                  <a href="mailto:geral@beyondfocus.pt" className="mt-1 block text-base font-medium text-petrol transition-colors hover:text-orange">
+                    geral@beyondfocus.pt
                   </a>
                 </div>
                 <div>
                   <h4 className="font-mono text-[11px] uppercase tracking-[2px] text-petrol/30">Localização</h4>
-                  <p className="mt-1 text-base text-petrol">Setúbal, Portugal</p>
+                  <p className="mt-1 text-base text-petrol">Lisboa, Portugal</p>
                 </div>
                 <div>
                   <h4 className="font-mono text-[11px] uppercase tracking-[2px] text-petrol/30">Redes sociais</h4>

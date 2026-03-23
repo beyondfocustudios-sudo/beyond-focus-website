@@ -46,7 +46,7 @@ export function AboutFounder() {
               A Beyond Focus nasceu da convicção de que as marcas portuguesas merecem produção audiovisual ao nível das melhores do mundo — sem precisar de ir a Lisboa ou ao estrangeiro.
             </p>
             <p>
-              Baseados em Setúbal, trabalhamos com marcas em todo o país e internacionalmente. Desde filmes comerciais a cobertura de eventos, o nosso foco é sempre o mesmo: contar histórias que geram resultados reais.
+              Baseados em Lisboa, trabalhamos com marcas em todo o país e internacionalmente. Desde filmes comerciais a cobertura de eventos, o nosso foco é sempre o mesmo: contar histórias que geram resultados reais.
             </p>
             <p>
               Acreditamos que um bom vídeo não é apenas bonito — é estratégico. Cada projecto começa com um objectivo de negócio claro e termina com conteúdo que o cumpre.

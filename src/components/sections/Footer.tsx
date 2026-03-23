@@ -57,7 +57,7 @@ export function Footer() {
           <div>
             <h3 className="text-lg font-bold tracking-tight">Beyond Focus</h3>
             <p className="mt-3 text-sm leading-relaxed text-white/40">
-              Produtora audiovisual em Setúbal. Estratégia, direcção criativa e produção para marcas que querem resultados.
+              Produtora audiovisual em Lisboa. Estratégia, direcção criativa e produção para marcas que querem resultados.
             </p>
             <div className="mt-5 flex gap-4">
               <a
@@ -125,14 +125,22 @@ export function Footer() {
             <ul className="space-y-2.5">
               <li>
                 <a
-                  href="mailto:hello@beyondfocus.pt"
+                  href="mailto:geral@beyondfocus.pt"
                   className="text-sm text-white/50 transition-colors hover:text-orange"
                 >
-                  hello@beyondfocus.pt
+                  geral@beyondfocus.pt
                 </a>
               </li>
               <li>
-                <span className="text-sm text-white/50">Setúbal, Portugal</span>
+                <a
+                  href="tel:+351937350178"
+                  className="text-sm text-white/50 transition-colors hover:text-orange"
+                >
+                  +351 937 350 178
+                </a>
+              </li>
+              <li>
+                <span className="text-sm text-white/50">Lisboa, Portugal</span>
               </li>
             </ul>
           </div>

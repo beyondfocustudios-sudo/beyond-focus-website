@@ -360,7 +360,7 @@ function InboxView() {
           </div>
           {[
             { name: "Campanha Porto 2025", preview: "André: Teaser V3 está pronto", time: "2h", unread: true },
-            { name: "Documentário Setúbal", preview: "Maria: Guião final aprovado", time: "1d", unread: true },
+            { name: "Documentário Lisboa", preview: "Maria: Guião final aprovado", time: "1d", unread: true },
             { name: "Evento Gala Zeiss", preview: "Tu: Envio as fotos amanhã", time: "3d", unread: false },
             { name: "Website Beyond Focus", preview: "Sofia: Homepage aprovada", time: "5d", unread: false },
           ].map((c, i) => (

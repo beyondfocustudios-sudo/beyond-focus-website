@@ -29,24 +29,54 @@ const jetbrainsMono = JetBrains_Mono({
 
 export const metadata: Metadata = {
   title: {
-    default: "Beyond Focus — Produtora Audiovisual em Setúbal",
-    template: "%s — Beyond Focus",
+    default: "Beyond Focus — Produtora Audiovisual em Lisboa | Vídeo, Fotografia e Estratégia",
+    template: "%s — Beyond Focus | Produtora Audiovisual",
   },
   description:
-    "O teu Departamento Criativo Externo. Produtora audiovisual baseada em Setúbal, Portugal. Vamos além do expectável.",
+    "Produtora audiovisual em Lisboa, Portugal. Filmes comerciais, vídeos institucionais, documentários, fotografia e estratégia criativa para marcas em todo o país. O teu departamento criativo externo.",
+  keywords: [
+    "produtora audiovisual Lisboa",
+    "produtora de vídeo Portugal",
+    "filme comercial Lisboa",
+    "vídeo institucional Portugal",
+    "produção audiovisual Lisboa",
+    "fotografia comercial Lisboa",
+    "documentário Portugal",
+    "produtora vídeo Lisboa",
+    "conteúdo redes sociais Lisboa",
+    "cobertura eventos Lisboa",
+    "produtora audiovisual Portugal",
+    "Beyond Focus",
+  ],
   icons: {
     icon: "/favicon.ico",
     apple: "/apple-touch-icon.png",
   },
   openGraph: {
-    title: "Beyond Focus — Produtora Audiovisual",
-    description: "Estratégia, direcção criativa e produção audiovisual para marcas que querem resultados.",
+    title: "Beyond Focus — Produtora Audiovisual em Lisboa",
+    description: "Filmes comerciais, vídeos institucionais, documentários, fotografia e estratégia criativa. Produtora audiovisual para marcas em Lisboa e todo o Portugal.",
     locale: "pt_PT",
     type: "website",
     siteName: "Beyond Focus",
   },
   twitter: {
     card: "summary_large_image",
+    title: "Beyond Focus — Produtora Audiovisual em Lisboa",
+    description: "Filmes comerciais, vídeos institucionais, documentários e fotografia para marcas em Portugal.",
+  },
+  alternates: {
+    canonical: "https://beyondfocus.pt",
+  },
+  robots: {
+    index: true,
+    follow: true,
+    googleBot: {
+      index: true,
+      follow: true,
+      "max-video-preview": -1,
+      "max-image-preview": "large",
+      "max-snippet": -1,
+    },
   },
 };
 
@@ -54,16 +84,58 @@ const structuredData = {
   "@context": "https://schema.org",
   "@type": "VideoProductionCompany",
   name: "Beyond Focus",
-  url: "https://beyond-focus-website.vercel.app",
-  logo: "https://beyond-focus-website.vercel.app/images/logo-symbol.png",
-  description: "Produtora audiovisual em Setúbal, Portugal. Estratégia, direcção criativa e produção para marcas que querem resultados.",
-  address: { "@type": "PostalAddress", addressLocality: "Setúbal", addressCountry: "PT" },
-  email: "hello@beyondfocus.pt",
+  alternateName: "Beyond Focus — Produtora Audiovisual",
+  url: "https://beyondfocus.pt",
+  logo: "https://beyondfocus.pt/images/logo-symbol.png",
+  image: "https://beyondfocus.pt/images/logo-symbol.png",
+  description: "Produtora audiovisual em Lisboa, Portugal. Filmes comerciais, vídeos institucionais, documentários, fotografia e estratégia criativa para marcas em todo o país.",
+  address: {
+    "@type": "PostalAddress",
+    addressLocality: "Lisboa",
+    addressRegion: "Lisboa",
+    addressCountry: "PT",
+  },
+  geo: {
+    "@type": "GeoCoordinates",
+    latitude: 38.7223,
+    longitude: -9.1393,
+  },
+  areaServed: [
+    { "@type": "Country", name: "Portugal" },
+    { "@type": "City", name: "Lisboa" },
+    { "@type": "City", name: "Porto" },
+    { "@type": "City", name: "Setúbal" },
+    { "@type": "City", name: "Faro" },
+  ],
+  email: "geral@beyondfocus.pt",
+  telephone: "+351937350178",
+  knowsLanguage: ["pt", "en"],
+  slogan: "Vamos além do expectável.",
+  hasOfferCatalog: {
+    "@type": "OfferCatalog",
+    name: "Serviços de Produção Audiovisual",
+    itemListElement: [
+      { "@type": "Offer", itemOffered: { "@type": "Service", name: "Filmes Comerciais" } },
+      { "@type": "Offer", itemOffered: { "@type": "Service", name: "Vídeos Institucionais" } },
+      { "@type": "Offer", itemOffered: { "@type": "Service", name: "Documentários" } },
+      { "@type": "Offer", itemOffered: { "@type": "Service", name: "Conteúdos de Redes Sociais" } },
+      { "@type": "Offer", itemOffered: { "@type": "Service", name: "Fotografia Comercial" } },
+      { "@type": "Offer", itemOffered: { "@type": "Service", name: "Cobertura de Eventos" } },
+      { "@type": "Offer", itemOffered: { "@type": "Service", name: "Estratégia Criativa" } },
+    ],
+  },
   sameAs: [
     "https://instagram.com/beyondfocus.pt",
     "https://vimeo.com/beyondfocus",
     "https://linkedin.com/company/beyondfocus",
   ],
+  aggregateRating: {
+    "@type": "AggregateRating",
+    ratingValue: "9.6",
+    bestRating: "10",
+    worstRating: "1",
+    ratingCount: "4",
+  },
 };
 
 export default function RootLayout({

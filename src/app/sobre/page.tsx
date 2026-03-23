@@ -9,7 +9,7 @@ import { AboutPortal } from "@/components/features/about/AboutPortal";
 
 export const metadata: Metadata = {
   title: "Sobre | Quem Somos",
-  description: "Produtora audiovisual fundada em Setúbal. Conheça a equipa e a história por trás da Beyond Focus.",
+  description: "Produtora audiovisual em Lisboa. Conheça a equipa e a história por trás da Beyond Focus.",
 };
 
 export default function SobrePage() {

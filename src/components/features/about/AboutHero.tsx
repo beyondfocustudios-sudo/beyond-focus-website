@@ -28,7 +28,7 @@ export function AboutHero() {
           transition={{ duration: 0.5, delay: 0.35 }}
           className="mt-6 max-w-xl text-lg leading-relaxed text-white/50"
         >
-          Somos uma produtora audiovisual baseada em Setúbal com um objectivo simples: criar conteúdo que transforma marcas e gera resultados.
+          Somos uma produtora audiovisual baseada em Lisboa com um objectivo simples: criar conteúdo que transforma marcas e gera resultados.
         </motion.p>
       </div>
     </section>
