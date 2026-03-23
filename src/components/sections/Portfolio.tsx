@@ -43,6 +43,7 @@ const PORTFOLIO_ITEMS = [
     category: "REDES SOCIAIS · EVENTOS",
     thumbnail: "/images/portfolio/lobsters-thumb.jpg",
     video: "/videos/portfolio/lobsters.mp4",
+    aspect: "16/9",
   },
 ];
 
@@ -62,11 +63,13 @@ function PortfolioCard({
   category,
   thumbnail,
   video,
+  aspect = "3/4",
 }: {
   title: string;
   category: string;
   thumbnail: string;
   video: string | null;
+  aspect?: string;
 }) {
   const videoRef = useRef<HTMLVideoElement>(null);
   const [isHovered, setIsHovered] = useState(false);
@@ -107,7 +110,7 @@ function PortfolioCard({
       onMouseEnter={handleMouseEnter}
       onMouseLeave={handleMouseLeave}
       className="group relative min-w-[clamp(280px,40vw,520px)] flex-shrink-0 overflow-hidden rounded-xl md:min-w-[clamp(320px,35vw,480px)]"
-      style={{ scrollSnapAlign: "start", aspectRatio: "3/4" }}
+      style={{ scrollSnapAlign: "start", aspectRatio: aspect }}
     >
       {/* Thumbnail — always rendered as base layer */}
       <Image
@@ -228,6 +231,7 @@ export function Portfolio() {
             category={item.category}
             thumbnail={item.thumbnail}
             video={item.video}
+            aspect={"aspect" in item ? (item as { aspect: string }).aspect : "3/4"}
           />
         ))}
       </motion.div>
