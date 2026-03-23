@@ -7,7 +7,7 @@ import { PROCESS_STEPS } from "@/lib/constants";
 
 export function Process() {
   return (
-    <section className="bg-bg-light py-20 lg:py-28">
+    <section className="bg-white py-20 lg:py-28">
       <div className="mx-auto max-w-[1200px] px-6 md:px-10 lg:px-10">
         <div className="text-center">
           <Eyebrow>COMO TRABALHAMOS</Eyebrow>
