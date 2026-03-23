@@ -43,14 +43,16 @@ export function ServicePageContent({
           >
             {service.tagline}
           </motion.h1>
-          <motion.p
+          <motion.div
             initial={{ opacity: 0, y: 15 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.5, delay: 0.2 }}
-            className="mt-5 max-w-xl text-base leading-relaxed text-white/50"
+            className="mt-5 max-w-xl space-y-3 text-base leading-relaxed text-white/50"
           >
-            {service.description}
-          </motion.p>
+            {service.description.split("\n\n").map((p, i) => (
+              <p key={i}>{p}</p>
+            ))}
+          </motion.div>
         </div>
 
         {/* Hero image — cinematic 21:9 */}
@@ -89,9 +91,26 @@ export function ServicePageContent({
             <h2 className="text-[clamp(28px,3vw,40px)] font-bold leading-tight text-petrol">
               {service.tagline}
             </h2>
-            <p className="mt-5 text-base leading-relaxed text-petrol/60">
-              {service.description}
-            </p>
+            <div className="mt-5 space-y-3 text-base leading-relaxed text-petrol/60">
+              {service.description.split("\n\n").map((p, i) => (
+                <p key={i}>{p}</p>
+              ))}
+            </div>
+            {service.timeline && (
+              <p className="mt-4 font-mono text-xs uppercase tracking-[2px] text-orange">
+                {service.timeline}
+              </p>
+            )}
+            {service.model && (
+              <p className="mt-4 rounded-lg bg-orange/5 px-4 py-3 text-sm font-medium text-petrol/70 border border-orange/10">
+                {service.model}
+              </p>
+            )}
+            {service.note && (
+              <p className="mt-4 rounded-lg bg-petrol/5 px-4 py-3 text-sm text-petrol/60 border-l-2 border-orange">
+                {service.note}
+              </p>
+            )}
           </motion.div>
 
           {/* Right — what's included */}
@@ -140,7 +159,7 @@ export function ServicePageContent({
             initial="hidden"
             whileInView="show"
             viewport={{ once: true }}
-            className="grid grid-cols-1 gap-8 md:grid-cols-2 lg:grid-cols-4"
+            className="grid grid-cols-1 gap-8 md:grid-cols-2 lg:grid-cols-5"
           >
             {service.process.map((step) => (
               <motion.div key={step.step} variants={fadeUp} className="relative">
