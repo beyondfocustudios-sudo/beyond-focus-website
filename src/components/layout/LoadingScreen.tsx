@@ -16,19 +16,24 @@ export function LoadingScreen() {
       return;
     }
 
-    // Safety timeout — max 4s
+    // Speed up video 2x
+    if (videoRef.current) {
+      videoRef.current.playbackRate = 2;
+    }
+
+    // Safety timeout — max 2s
     const safetyTimeout = setTimeout(() => {
       setShow(false);
       sessionStorage.setItem("bf-loaded", "true");
-    }, 4000);
+    }, 2000);
 
-    // Video load check — if not playing after 2s, skip
+    // Video load check — if not playing after 1s, skip
     const videoCheck = setTimeout(() => {
       if (videoRef.current && videoRef.current.readyState < 2) {
         setShow(false);
         sessionStorage.setItem("bf-loaded", "true");
       }
-    }, 2000);
+    }, 1000);
 
     return () => {
       clearTimeout(safetyTimeout);
