@@ -1,11 +1,73 @@
 "use client";
 
-import { motion } from "framer-motion";
+import { useState } from "react";
+import { motion, AnimatePresence } from "framer-motion";
 import Image from "next/image";
 import Link from "next/link";
 import type { ServicePage } from "@/lib/services-data";
 import type { Project } from "@/lib/portfolio-data";
 import { BLOG_POSTS } from "@/lib/blog-data";
+
+function ServiceFAQ({ items }: { items: ServicePage["faq"] }) {
+  const [open, setOpen] = useState<number | null>(null);
+  return (
+    <section className="bg-white py-20 lg:py-28">
+      <div className="mx-auto max-w-[1400px] px-6 md:px-10 lg:px-[60px]">
+        <motion.div
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          transition={{ duration: 0.5 }}
+          className="mb-10"
+        >
+          <span className="mb-3 inline-block font-mono text-[11px] font-medium uppercase tracking-[3px] text-orange">
+            PERGUNTAS FREQUENTES
+          </span>
+          <h2 className="text-[clamp(28px,3vw,40px)] font-bold text-petrol">
+            Tudo o que precisas de saber.
+          </h2>
+        </motion.div>
+        <div className="mx-auto max-w-3xl divide-y divide-petrol/8">
+          {items.map((item, i) => (
+            <motion.div
+              key={i}
+              initial={{ opacity: 0, y: 10 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.4, delay: i * 0.05 }}
+            >
+              <button
+                onClick={() => setOpen(open === i ? null : i)}
+                aria-expanded={open === i}
+                className="flex w-full items-center justify-between py-5 text-left"
+              >
+                <span className="pr-8 text-base font-semibold text-petrol">{item.question}</span>
+                <span
+                  className={`flex-shrink-0 text-orange transition-transform duration-300 ${open === i ? "rotate-45" : "rotate-0"}`}
+                >
+                  +
+                </span>
+              </button>
+              <AnimatePresence initial={false}>
+                {open === i && (
+                  <motion.div
+                    initial={{ height: 0, opacity: 0 }}
+                    animate={{ height: "auto", opacity: 1 }}
+                    exit={{ height: 0, opacity: 0 }}
+                    transition={{ type: "spring", stiffness: 300, damping: 25 }}
+                    className="overflow-hidden"
+                  >
+                    <p className="pb-5 text-[15px] leading-relaxed text-petrol/60">{item.answer}</p>
+                  </motion.div>
+                )}
+              </AnimatePresence>
+            </motion.div>
+          ))}
+        </div>
+      </div>
+    </section>
+  );
+}
 
 const SERVICE_BLOG_MAP: Record<string, string[]> = {
   "filmes-comerciais": ["quanto-custa-video-institucional-portugal", "video-institucional-vs-filme-comercial", "como-preparar-empresa-filmagem"],
@@ -308,6 +370,11 @@ export function ServicePageContent({
           </section>
         );
       })()}
+
+      {/* ── FAQ ── */}
+      {service.faq && service.faq.length > 0 && (
+        <ServiceFAQ items={service.faq} />
+      )}
 
       {/* ── CTA ── */}
       <section className="bg-bg-light py-28 text-center">

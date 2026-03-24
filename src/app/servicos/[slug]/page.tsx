@@ -7,6 +7,7 @@ import { getServicePage, SERVICE_PAGES } from "@/lib/services-data";
 import { PROJECTS } from "@/lib/portfolio-data";
 import { BreadcrumbSchema } from "@/components/seo/BreadcrumbSchema";
 import { ServiceSchema } from "@/components/seo/ServiceSchema";
+import { FAQSchema } from "@/components/seo/FAQSchema";
 
 export function generateStaticParams() {
   return SERVICE_PAGES.map((s) => ({ slug: s.slug }));
@@ -63,6 +64,9 @@ export default async function ServiceDetailPage({
         slug={slug}
         image={service.image}
       />
+      {service.faq && service.faq.length > 0 && (
+        <FAQSchema items={service.faq} />
+      )}
       <Navbar />
       <main>
         <ServicePageContent service={service} relatedProjects={relatedProjects} />

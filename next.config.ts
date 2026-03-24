@@ -10,6 +10,15 @@ const nextConfig: NextConfig = {
   compiler: {
     removeConsole: process.env.NODE_ENV === "production",
   },
+  async redirects() {
+    return [
+      { source: "/pgina-de-blog/:path*", destination: "/blog", permanent: true },
+      { source: "/pgina-de-blog", destination: "/blog", permanent: true },
+      { source: "/pagina-de-blog", destination: "/blog", permanent: true },
+      { source: "/stbshisha-stickers-parte-2", destination: "/", permanent: true },
+      { source: "/portal", destination: "/portal-cliente", permanent: true },
+    ];
+  },
   async headers() {
     return [
       {

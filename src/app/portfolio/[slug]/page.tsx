@@ -10,6 +10,7 @@ import { CaseStudyHorizontalGallery } from "@/components/features/case-study/Cas
 import { CaseStudyNextProjects } from "@/components/features/case-study/CaseStudyNextProjects";
 import { getProject, getNextProjects, PROJECTS } from "@/lib/portfolio-data";
 import { BreadcrumbSchema } from "@/components/seo/BreadcrumbSchema";
+import { VideoObjectSchema } from "@/components/seo/VideoObjectSchema";
 
 const PROJECT_SERVICE_MAP: Record<string, { label: string; href: string }> = {
   "hotel-casa-palmela": { label: "Filmes Comerciais", href: "/servicos/filmes-comerciais" },
@@ -67,6 +68,14 @@ export default async function CaseStudyPage({
           { name: project.title, href: `/portfolio/${slug}` },
         ]}
       />
+      {project.video && (
+        <VideoObjectSchema
+          name={project.title}
+          description={project.briefText.slice(0, 250)}
+          thumbnailUrl={project.thumbnail}
+          contentUrl={project.video}
+        />
+      )}
       <Navbar variant="light" />
       <main className="bg-white">
         <CaseStudyHero project={project} />

@@ -1,3 +1,8 @@
+export interface FAQItem {
+  question: string;
+  answer: string;
+}
+
 export interface ServicePage {
   slug: string;
   num: string;
@@ -7,6 +12,7 @@ export interface ServicePage {
   image: string;
   includes: string[];
   process: { step: string; title: string; description: string }[];
+  faq: FAQItem[];
   relatedSlugs: string[];
   metaTitle: string;
   metaDescription: string;
@@ -40,6 +46,13 @@ export const SERVICE_PAGES: ServicePage[] = [
       { step: "05", title: "Pós-produção & Entrega", description: "Edição, revisões no portal com comentários ao segundo, entrega em todos os formatos." },
     ],
     timeline: "~15 dias do briefing à entrega final.",
+    faq: [
+      { question: "Quanto tempo demora a produzir um filme comercial?", answer: "Em média 15 dias do briefing à entrega final: 2-3 dias de pré-produção, 1-2 dias de filmagem e 5-7 dias de pós-produção. Projectos mais complexos podem demorar mais." },
+      { question: "Precisamos de ter um guião antes de vos contactar?", answer: "Não. Uma das nossas principais diferenças é apresentarmos o tratamento criativo completo — a visão do filme cena a cena — antes de produzir qualquer coisa. Só precisamos de perceber o vosso objectivo." },
+      { question: "Que formatos de entrega estão incluídos?", answer: "Entregamos sempre múltiplos formatos: horizontal (16:9) para YouTube e websites, vertical (9:16) para Instagram Reels e TikTok, e quadrado (1:1) para feed — tudo produzido na mesma sessão de filmagem." },
+      { question: "Trabalham directamente com marcas ou só com agências?", answer: "Trabalhamos com ambos. Colaboramos com agências de comunicação que precisam de parceiro de produção, e também directamente com marcas que preferem uma relação directa com a produtora." },
+      { question: "Como funciona o acompanhamento durante o projecto?", answer: "Todos os clientes têm acesso ao Beyond Focus Portal: uma plataforma exclusiva onde podem acompanhar cada fase, enviar referências, comunicar com a equipa e rever o material com comentários ao segundo." },
+    ],
     relatedSlugs: ["hotel-casa-palmela"],
     metaTitle: "Filmes Comerciais — Beyond Focus | Produtora Audiovisual em Lisboa",
     metaDescription:
@@ -67,6 +80,12 @@ export const SERVICE_PAGES: ServicePage[] = [
       { step: "03", title: "Filmagem", description: "Captação completa das instalações, processos e equipa." },
       { step: "04", title: "Pós-produção", description: "Edição narrativa, legendagem, versões múltiplas." },
       { step: "05", title: "Entrega", description: "Revisão no portal, ajustes e entrega final." },
+    ],
+    faq: [
+      { question: "Qual a duração ideal de um vídeo institucional?", answer: "A versão principal tem tipicamente entre 3 e 10 minutos. Mas entregamos sempre versões curtas (45s, 1 min, 2 min) para diferentes contextos: apresentações, website, redes sociais e eventos." },
+      { question: "Precisamos de preparar alguma coisa antes das filmagens?", answer: "Depois do briefing inicial, enviamos um guia de preparação com os pontos a agendar, as pessoas a envolver e o que preparar. O nosso objectivo é minimizar a disrupção no vosso dia-a-dia." },
+      { question: "É possível incluir entrevistas com a equipa?", answer: "Sim, as entrevistas com equipa e liderança são um elemento central de qualquer vídeo institucional. Criamos um ambiente confortável e preparamos as perguntas em conjunto." },
+      { question: "Com que frequência devemos actualizar o vídeo institucional?", answer: "Recomendamos actualizar a cada 2-3 anos, ou sempre que houver mudanças significativas na empresa (nova sede, novos produtos, novo posicionamento). Um bom institucional é um activo de longa duração." },
     ],
     relatedSlugs: ["carl-zeiss-portugal"],
     metaTitle: "Vídeos Institucionais — Beyond Focus | Produtora Audiovisual em Lisboa",
@@ -98,6 +117,12 @@ export const SERVICE_PAGES: ServicePage[] = [
       { step: "04", title: "Montagem", description: "Edição focada na narrativa e no ritmo emocional." },
       { step: "05", title: "Finalização", description: "Colour grading, sound design, entrega." },
     ],
+    faq: [
+      { question: "Quanto tempo demora a produzir um documentário?", answer: "Depende muito da história e da sua complexidade: pode ir de 3-4 semanas para um documentário de marca mais focado, a vários meses para um projecto com múltiplas personagens e locais de filmagem." },
+      { question: "Que tipo de histórias documentais produzem?", answer: "Histórias de marca, fundadores, comunidades, processos artesanais, projectos de impacto social e personagens com histórias que merecem ser contadas. Se a história é genuína, temos interesse." },
+      { question: "O documentário inclui música?", answer: "Sim. Dependendo do projecto, trabalhamos com música original composta especificamente ou com licenciamento de música existente. O som é tão importante quanto a imagem." },
+      { question: "Podem filmar fora de Lisboa?", answer: "Sim. A nossa equipa desloca-se a todo o território nacional e, para projectos especiais, internacionalmente." },
+    ],
     relatedSlugs: [],
     metaTitle: "Documentários — Beyond Focus | Produtora Audiovisual em Lisboa",
     metaDescription:
@@ -127,6 +152,13 @@ export const SERVICE_PAGES: ServicePage[] = [
       { step: "05", title: "Entrega & Suporte", description: "Ficheiros prontos a publicar com sugestões de copy e timing." },
     ],
     model: "Produção contínua mensal. Entregamos conteúdo pronto a publicar — a tua equipa ou gestor de redes sociais trata do resto.",
+    faq: [
+      { question: "Fazem também gestão das redes sociais?", answer: "Não. Focamo-nos em produzir conteúdo de alta qualidade. A publicação e gestão das redes fica a cargo da tua equipa interna ou do teu gestor de comunidade. Isso permite-nos manter foco na qualidade de produção." },
+      { question: "Quantas peças de conteúdo produzem por mês?", answer: "Depende do pacote escolhido, mas tipicamente entregamos entre 8 a 20 peças de conteúdo por mês — entre reels, stories, conteúdo estático e vídeos curtos." },
+      { question: "Para que plataformas trabalham?", answer: "Instagram, TikTok e LinkedIn são as nossas plataformas principais. Entregamos sempre conteúdo optimizado para cada formato específico de cada plataforma." },
+      { question: "Como funciona o processo mensal?", answer: "No início de cada mês fazemos um briefing de planeamento. Depois temos um ou mais dias de produção. No final, entregamos todos os ficheiros prontos com sugestões de copy e timing." },
+      { question: "Precisamos de estar presentes nas filmagens?", answer: "Não é obrigatório, mas é recomendável para os primeiros meses enquanto estabelecemos a linha criativa. Com o tempo, trabalhamos de forma cada vez mais autónoma." },
+    ],
     relatedSlugs: ["soce-mauro-loureiro"],
     metaTitle: "Conteúdos de Redes Sociais — Beyond Focus | Produtora Audiovisual em Lisboa",
     metaDescription:
@@ -153,6 +185,12 @@ export const SERVICE_PAGES: ServicePage[] = [
       { step: "03", title: "Sessão fotográfica", description: "Captação com atenção a cada detalhe." },
       { step: "04", title: "Tratamento", description: "Retoque, colour grading e selecção final." },
       { step: "05", title: "Entrega", description: "Ficheiros optimizados para cada utilização." },
+    ],
+    faq: [
+      { question: "Fazem fotografia de produto?", answer: "Sim. Fazemos fotografia de produto, corporativa e editorial. Cada tipo de sessão tem uma abordagem e planeamento específicos, sempre com direcção de arte." },
+      { question: "As sessões são feitas nas nossas instalações ou em estúdio?", answer: "Ambos, dependendo do que faz mais sentido para o projecto. Sessões de produto e fashion tendem a ser em estúdio; fotografias corporativas e de gastronomia são sempre on-location." },
+      { question: "Quantas imagens finais entregam?", answer: "O número varia com a sessão, mas garantimos sempre uma selecção curada de alta qualidade — não entregamos centenas de imagens mediocres, mas sim as imagens que realmente comunicam." },
+      { question: "Os ficheiros são entregues em alta resolução?", answer: "Sim. Entregamos em alta resolução para impressão e em versões optimizadas para web e redes sociais, prontas a usar em todos os contextos." },
     ],
     relatedSlugs: ["amoretti-lux", "hotel-casa-palmela", "once-upon-a-house"],
     metaTitle: "Fotografia Comercial — Beyond Focus | Produtora Audiovisual em Lisboa",
@@ -181,6 +219,12 @@ export const SERVICE_PAGES: ServicePage[] = [
       { step: "03", title: "Dia do evento", description: "Cobertura total, discreta e profissional." },
       { step: "04", title: "Edição", description: "Selecção, tratamento e edição de todo o material." },
       { step: "05", title: "Entrega faseada", description: "Conteúdo rápido para redes + pacote completo." },
+    ],
+    faq: [
+      { question: "Com quanto tempo de antecedência devemos contratar?", answer: "Recomendamos pelo menos 2 semanas de antecedência para garantir disponibilidade e um bom planeamento de cobertura. Para eventos de grande dimensão, 4-6 semanas é ideal." },
+      { question: "Cobrem eventos de que dimensão?", answer: "De pequenos eventos corporativos com 20 pessoas a grandes conferências e gala-jantares. A equipa é escalada consoante as necessidades de cada evento." },
+      { question: "Quanto tempo demora a entrega do conteúdo?", answer: "Entregamos conteúdo rápido para redes sociais (reels, stories) no dia seguinte ao evento. O pacote completo com todas as fotografias e vídeos editados fica pronto em 5-7 dias." },
+      { question: "Fazem transmissão em directo?", answer: "Não. O nosso foco é na captação de qualidade para utilização posterior. Para livestreaming, recomendamos especialistas nessa área." },
     ],
     relatedSlugs: ["highgate"],
     metaTitle: "Cobertura de Eventos — Beyond Focus | Produtora Audiovisual em Lisboa",
@@ -212,6 +256,12 @@ export const SERVICE_PAGES: ServicePage[] = [
       { step: "05", title: "Plano de acção", description: "Entregamos um roadmap claro do que fazer e quando." },
     ],
     note: "A estratégia vem incluída em todos os nossos projectos. Não cobramos estratégia como serviço isolado — é parte integrante do nosso processo porque acreditamos que sem estratégia, produção é apenas conteúdo sem direcção.",
+    faq: [
+      { question: "A estratégia é cobrada como serviço separado?", answer: "Não. A estratégia está incluída em todos os nossos projectos. É parte integrante do nosso processo — sem estratégia, produção é apenas conteúdo sem direcção." },
+      { question: "Precisamos de saber exactamente o que queremos antes de vos contactar?", answer: "Não, é exactamente para isso que serve a fase de estratégia. Muitos dos nossos clientes chegam com um problema a resolver, não com uma solução definida. Isso é o estado ideal para começar." },
+      { question: "Quanto tempo demora a fase de estratégia?", answer: "Para projectos pontuais, 3-5 dias são suficientes para um diagnóstico completo. Para estratégia de conteúdo contínua, fazemos revisões mensais integradas no processo de produção." },
+      { question: "A estratégia inclui análise de redes sociais?", answer: "Sim. Analisamos o que está a resultar para a concorrência, as tendências do sector e as oportunidades específicas para a tua marca antes de definir qualquer direcção criativa." },
+    ],
     relatedSlugs: [],
     metaTitle: "Estratégia de Conteúdo — Beyond Focus | Produtora Audiovisual em Lisboa",
     metaDescription:

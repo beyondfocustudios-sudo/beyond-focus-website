@@ -3,7 +3,7 @@
 # Beyond Focus Website
 
 ## Sobre
-Website oficial da Beyond Focus, produtora audiovisual baseada em Setúbal, Portugal.
+Website oficial da Beyond Focus, produtora audiovisual baseada em Lisboa, Portugal.
 Posicionamento: "O teu Departamento Criativo Externo"
 Motto: "Vamos além do expectável."
 

@@ -116,7 +116,7 @@ const structuredData = {
     { "@type": "Country", name: "Portugal" },
     { "@type": "City", name: "Lisboa" },
     { "@type": "City", name: "Porto" },
-    { "@type": "City", name: "Setúbal" },
+    { "@type": "City", name: "Cascais" },
     { "@type": "City", name: "Faro" },
   ],
   email: "geral@beyondfocus.pt",
