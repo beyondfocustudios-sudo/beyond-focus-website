@@ -10,6 +10,8 @@ export const metadata: Metadata = {
   title: "Portfolio | Audiovisual Production Projects",
   description: "Commercial films, corporate videos, documentaries and photography. See the projects we have created for brands in Portugal.",
   openGraph: {
+    locale: "en_GB",
+    type: "website",
     title: "Portfolio — Beyond Focus",
     description: "Commercial films, corporate videos, documentaries and photography for brands in Portugal.",
     url: "https://beyondfocus.pt/en/portfolio",

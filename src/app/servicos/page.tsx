@@ -12,6 +12,8 @@ export const metadata: Metadata = {
   description:
     "Filmes comerciais, vídeos institucionais, documentários, fotografia, eventos e estratégia de conteúdo. Produção audiovisual em Portugal.",
   openGraph: {
+    locale: "pt_PT",
+    type: "website",
     title: "Serviços — Beyond Focus",
     description: "Filmes comerciais, vídeos institucionais, documentários, fotografia, eventos e estratégia de conteúdo.",
     url: "https://beyondfocus.pt/servicos",

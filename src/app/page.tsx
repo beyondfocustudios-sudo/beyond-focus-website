@@ -18,6 +18,8 @@ export const metadata: Metadata = {
   description:
     "Produtora audiovisual em Lisboa, Portugal. Filmes comerciais, vídeos institucionais, documentários, fotografia e estratégia criativa para marcas em todo o país.",
   openGraph: {
+    locale: "pt_PT",
+    type: "website",
     title: "Beyond Focus — Produtora Audiovisual em Lisboa",
     description:
       "Filmes comerciais, vídeos institucionais, documentários, fotografia e estratégia criativa. Produtora audiovisual para marcas em Lisboa e todo o Portugal.",

@@ -8,6 +8,8 @@ export const metadata: Metadata = {
   title: "About | Our Story",
   description: "Founded in 2023 by Daniel Lopes. Video production studio in Lisbon for brands that want more than content — they want results.",
   openGraph: {
+    locale: "en_GB",
+    type: "website",
     title: "About — Beyond Focus",
     description: "Founded in 2023 by Daniel Lopes. Video production studio in Lisbon for brands that want results.",
     url: "https://beyondfocus.pt/en/about",

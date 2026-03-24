@@ -8,6 +8,8 @@ export const metadata: Metadata = {
   title: "Contact | Let\u2019s Talk",
   description: "Have a project in mind? Get in touch. Video production in Lisbon and across Portugal.",
   openGraph: {
+    locale: "en_GB",
+    type: "website",
     title: "Contact — Beyond Focus",
     description: "Have a project in mind? Get in touch. Video production in Lisbon and across Portugal.",
     url: "https://beyondfocus.pt/en/contact",

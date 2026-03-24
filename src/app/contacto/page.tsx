@@ -8,6 +8,8 @@ export const metadata: Metadata = {
   title: "Contacto | Fala Connosco",
   description: "Tens um projecto em mente? Fala connosco — respondemos em 24 horas. Produção audiovisual, fotografia e estratégia de conteúdo para marcas em Lisboa e todo o Portugal.",
   openGraph: {
+    locale: "pt_PT",
+    type: "website",
     title: "Contacto — Beyond Focus",
     description: "Tens um projecto em mente? Fala connosco — respondemos em 24 horas. Produção audiovisual em Lisboa e todo o Portugal.",
     url: "https://beyondfocus.pt/contacto",

@@ -13,6 +13,8 @@ export const metadata: Metadata = {
   description:
     "Uma plataforma exclusiva onde acompanhas cada fase do projecto, aprovas entregas com timecode, comunicas com a equipa e acedes a todos os documentos.",
   openGraph: {
+    locale: "pt_PT",
+    type: "website",
     title: "Portal do Cliente — Beyond Focus",
     description: "Plataforma exclusiva para acompanhar o teu projecto audiovisual em tempo real.",
     url: "https://beyondfocus.pt/portal-cliente",

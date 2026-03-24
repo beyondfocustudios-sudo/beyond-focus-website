@@ -10,6 +10,8 @@ export const metadata: Metadata = {
   title: "Blog | Produção Audiovisual e Estratégia",
   description: "Ideias, bastidores e reflexões sobre comunicação audiovisual e estratégia de conteúdo para marcas em Portugal.",
   openGraph: {
+    locale: "pt_PT",
+    type: "website",
     title: "Blog — Beyond Focus",
     description: "Ideias, bastidores e reflexões sobre comunicação audiovisual e estratégia de conteúdo.",
     url: "https://beyondfocus.pt/blog",

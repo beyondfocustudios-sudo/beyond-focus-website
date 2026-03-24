@@ -12,6 +12,8 @@ export const metadata: Metadata = {
   title: "Sobre | A Nossa História",
   description: "Fundada em 2023 por Daniel Lopes. Produtora audiovisual em Lisboa para marcas que querem mais do que conteúdo — querem resultados.",
   openGraph: {
+    locale: "pt_PT",
+    type: "website",
     title: "Sobre — Beyond Focus",
     description: "Fundada em 2023 por Daniel Lopes. Produtora audiovisual em Lisboa para marcas que querem resultados.",
     url: "https://beyondfocus.pt/sobre",
