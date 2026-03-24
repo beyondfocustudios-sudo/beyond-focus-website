@@ -1,7 +1,27 @@
 "use client";
 
-import { motion } from "framer-motion";
+import { motion, type Variants } from "framer-motion";
 import Link from "next/link";
+
+const wordVariants: Variants = {
+  hidden: { opacity: 0, y: 24, filter: "blur(4px)" },
+  show: (i: number) => ({
+    opacity: 1,
+    y: 0,
+    filter: "blur(0px)",
+    transition: {
+      duration: 0.55,
+      delay: i * 0.07,
+      ease: "easeOut",
+    },
+  }),
+};
+
+const HEADLINE_PARTS = [
+  { text: "A tua marca merece", italic: false },
+  { text: " mais do que um", italic: false },
+  { text: " vídeo bonito.", italic: true },
+];
 
 export function Hero() {
   return (
@@ -24,22 +44,36 @@ export function Hero() {
 
       <div className="relative z-10 mx-auto w-full max-w-[1400px] px-6 py-32 md:px-10 lg:px-12">
         <div className="max-w-3xl">
-          {/* Headline */}
-          <motion.h1
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.7, delay: 0.35 }}
-            className="text-[clamp(36px,5.5vw,72px)] font-bold leading-[1.05] tracking-[-0.03em] text-white"
-          >
-            A tua marca merece mais do que um{" "}
-            <em className="italic text-white/80">vídeo bonito.</em>
-          </motion.h1>
+          {/* Headline — word-by-word reveal */}
+          <h1 className="text-[clamp(36px,5.5vw,72px)] font-bold leading-[1.05] tracking-[-0.03em] text-white">
+            {["A", "tua", "marca", "merece", "mais", "do", "que", "um"].map((word, i) => (
+              <motion.span
+                key={i}
+                custom={i}
+                variants={wordVariants}
+                initial="hidden"
+                animate="show"
+                className="inline-block mr-[0.25em]"
+              >
+                {word}
+              </motion.span>
+            ))}
+            <motion.em
+              custom={8}
+              variants={wordVariants}
+              initial="hidden"
+              animate="show"
+              className="inline-block italic text-white/80"
+            >
+              vídeo bonito.
+            </motion.em>
+          </h1>
 
           {/* Subtitle */}
           <motion.p
-            initial={{ opacity: 0, y: 20 }}
+            initial={{ opacity: 0, y: 16 }}
             animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.7, delay: 0.5 }}
+            transition={{ duration: 0.6, delay: 0.8, ease: [0.22, 1, 0.36, 1] }}
             className="mt-6 max-w-xl text-[clamp(16px,1.4vw,20px)] leading-relaxed text-white/50"
           >
             Estratégia, direcção criativa e produção audiovisual para marcas que querem resultados.
@@ -47,9 +81,9 @@ export function Hero() {
 
           {/* CTA — White pill, NOT orange */}
           <motion.div
-            initial={{ opacity: 0, y: 20 }}
+            initial={{ opacity: 0, y: 16 }}
             animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.7, delay: 0.65 }}
+            transition={{ duration: 0.6, delay: 0.95, ease: [0.22, 1, 0.36, 1] }}
             className="mt-10"
           >
             <Link
@@ -66,7 +100,7 @@ export function Hero() {
         <motion.div
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
-          transition={{ delay: 1.2, duration: 0.8 }}
+          transition={{ delay: 1.4, duration: 0.8 }}
           className="absolute bottom-10 left-1/2 -translate-x-1/2"
         >
           <motion.div
