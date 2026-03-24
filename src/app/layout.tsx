@@ -6,6 +6,7 @@ import { SmoothScroll } from "@/components/layout/SmoothScroll";
 import { ScrollProgress } from "@/components/ui/ScrollProgress";
 import { GoogleAnalytics } from "@/components/analytics/GoogleAnalytics";
 import { MetaPixel } from "@/components/analytics/MetaPixel";
+import { Analytics } from "@vercel/analytics/next";
 import "./globals.css";
 
 const dmSans = DM_Sans({
@@ -168,6 +169,7 @@ export default function RootLayout({
         />
       </head>
       <body className="min-h-screen font-body">
+        <Analytics />
         <GoogleAnalytics />
         <MetaPixel />
         <LoadingScreen />
