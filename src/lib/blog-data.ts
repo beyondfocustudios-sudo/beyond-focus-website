@@ -728,6 +728,247 @@ Se o teu website não tem vídeo, está a perder conversões. [Fala connosco](/c
 
 Na Beyond Focus, o showreel é actualizado a cada trimestre com os melhores projectos. Se queres criar o teu, vê os nossos [serviços de filmes comerciais](/servicos/filmes-comerciais) ou [fala connosco](/contacto).`,
   },
+  {
+    slug: "o-que-publicar-redes-sociais-empresa",
+    title: "O que publicar nas redes sociais da tua empresa (com exemplos)",
+    excerpt: "Guia prático com ideias de conteúdo para Instagram, LinkedIn e TikTok empresarial.",
+    category: "Estratégia",
+    date: "11 Abr 2026",
+    readTime: "7 min",
+    thumbnail: "/images/services/redes-sociais.jpg",
+    metaTitle: "O que publicar nas redes sociais da tua empresa (com exemplos)",
+    metaDescription: "Guia prático com ideias de conteúdo para Instagram, LinkedIn e TikTok empresarial. O que funciona, o que evitar e como manter consistência.",
+    keywords: ["conteúdo redes sociais empresa", "o que publicar instagram empresa", "redes sociais marketing"],
+    content: `O conteúdo que gera mais engagement para empresas em 2026 é aquele que mostra o lado humano do negócio: bastidores, processos, equipa e resultados reais.
+
+## Os 5 tipos de conteúdo que funcionam
+
+### 1. Bastidores (Behind the Scenes)
+
+Mostra como as coisas são feitas. Um reel de 30 segundos a mostrar os bastidores de uma filmagem gera mais engagement do que um post polido com copy perfeito.
+
+### 2. Resultados e casos reais
+
+Antes e depois. Números concretos. "Filmámos o [Hotel Casa Palmela](/portfolio/hotel-casa-palmela) num dia. O resultado é usado há meses nas plataformas de booking."
+
+### 3. Educativo (dicas e how-to)
+
+Ensina algo útil ao teu público. Conteúdo educativo posiciona-te como autoridade e é o tipo que mais se guarda e partilha.
+
+### 4. Equipa e cultura
+
+Apresenta as pessoas por trás da marca. Empresas com rostos reais têm muito mais confiança.
+
+### 5. Conteúdo do sector
+
+Comenta tendências. Posiciona-te como voz activa na indústria.
+
+## O que publicar em cada plataforma
+
+**Instagram:** Reels, carrosséis, stories. **LinkedIn:** Posts longos, carrosséis educativos. **TikTok:** Vídeos curtos, bastidores rápidos.
+
+## O erro mais comum
+
+Publicar só quando há "novidades." As redes premiam consistência.
+
+Na Beyond Focus, produzimos todo o conteúdo audiovisual que precisas. Vê os nossos [serviços de redes sociais](/servicos/redes-sociais) ou descobre [por que a tua empresa precisa de vídeo](/blog/porque-empresa-precisa-video-2026). [Fala connosco](/contacto).`,
+  },
+  {
+    slug: "video-hotelaria-portugal",
+    title: "Como um vídeo de 60 segundos pode transformar a comunicação do teu hotel",
+    excerpt: "O vídeo é a ferramenta mais eficaz para hotéis atraírem hóspedes.",
+    category: "Estratégia",
+    date: "14 Abr 2026",
+    readTime: "6 min",
+    thumbnail: "/images/portfolio/hcp-thumb.jpg",
+    metaTitle: "Como um vídeo de 60 segundos pode transformar a comunicação do teu hotel",
+    metaDescription: "O vídeo é a ferramenta mais eficaz para hotéis atraírem hóspedes. Descobre como um filme curto pode aumentar reservas.",
+    keywords: ["vídeo hotel portugal", "produtora vídeo hotelaria", "filme hotel"],
+    content: `Um vídeo de 60 segundos bem produzido pode ser a diferença entre um hóspede escolher o teu hotel ou o da concorrência.
+
+## Porquê vídeo para hotéis?
+
+As plataformas de reserva favorecem listagens com vídeo. Um hóspede precisa de se imaginar no espaço — vídeo cria ligação emocional que fotos não conseguem.
+
+## O que filmámos para o Hotel Casa Palmela
+
+O [Hotel Casa Palmela](/portfolio/hotel-casa-palmela) é um cinco estrelas na Serra da Arrábida. Filmámos num dia. O resultado é usado nas plataformas de booking há meses.
+
+## O que incluir num vídeo de hotel
+
+Exterior, recepção, quartos, áreas comuns, detalhes e o factor humano. Tom aspiracional mas acessível.
+
+## Quanto custa?
+
+Entre €3.000 e €8.000. 1-2 dias de filmagem. Vê os nossos [serviços de filmes comerciais](/servicos/filmes-comerciais) ou lê sobre [quanto custa um vídeo institucional](/blog/quanto-custa-video-institucional-portugal). [Fala connosco](/contacto).`,
+  },
+  {
+    slug: "processo-producao-filme-comercial",
+    title: "O processo por trás de um filme comercial: do briefing à entrega",
+    excerpt: "As 5 fases do processo — desde a primeira reunião até à entrega dos ficheiros finais.",
+    category: "Produção",
+    date: "16 Abr 2026",
+    readTime: "7 min",
+    thumbnail: "/images/services/filmes-comerciais.jpg",
+    metaTitle: "O processo por trás de um filme comercial: do briefing à entrega",
+    metaDescription: "Como funciona uma produção de filme comercial por dentro. As 5 fases do processo.",
+    keywords: ["processo produção filme", "como fazer filme comercial", "fases produção vídeo"],
+    content: `Um filme comercial passa por 5 fases: briefing, tratamento criativo, pré-produção, produção e pós-produção. Tipicamente 15 dias do início à entrega.
+
+## Fase 1 — Briefing e estratégia (Dias 1-3)
+
+Percebemos objectivo, público-alvo, mensagem principal e orçamento. Pesquisa de mercado e concorrência.
+
+## Fase 2 — Tratamento criativo (Dias 3-5)
+
+Conceito visual, referências, storyboard e tom. O cliente sabe exactamente o que vai receber.
+
+## Fase 3 — Pré-produção (Dias 5-8)
+
+Localizações, equipa, equipamento, horários. Acesso ao [Beyond Focus Portal](/portal-cliente).
+
+## Fase 4 — Produção (Dias 8-10)
+
+1 a 2 dias de filmagem com equipa dedicada.
+
+## Fase 5 — Pós-produção e entrega (Dias 10-15)
+
+Edição, colour grading, sound design. Revisão no portal com comentários ao segundo. Entrega em todos os formatos.
+
+Vê os nossos [serviços de filmes comerciais](/servicos/filmes-comerciais) ou lê sobre [como preparar a empresa para filmagem](/blog/como-preparar-empresa-filmagem). [Fala connosco](/contacto).`,
+  },
+  {
+    slug: "fotografia-corporativa-guia",
+    title: "Fotografia corporativa: como preparar uma sessão que resulta",
+    excerpt: "Guia prático para sessões de fotografia corporativa. O que preparar e como garantir bons resultados.",
+    category: "Produção",
+    date: "18 Abr 2026",
+    readTime: "5 min",
+    thumbnail: "/images/portfolio/amoretti-thumb.jpg",
+    metaTitle: "Fotografia corporativa: como preparar uma sessão que resulta",
+    metaDescription: "Guia prático para sessões de fotografia corporativa. O que preparar e como garantir bons resultados.",
+    keywords: ["fotografia corporativa", "sessão fotográfica empresa", "fotografia comercial"],
+    content: `Uma sessão de fotografia corporativa bem preparada resulta em imagens que representam a tua marca durante meses ou anos.
+
+## Define o objectivo
+
+Retratos para o website. Fotografia de espaço. Produto para e-commerce. Editorial para comunicação. Cada tipo tem necessidades diferentes.
+
+## Prepara os espaços
+
+Limpa, organiza, verifica iluminação. Um detalhe simples faz diferença enorme.
+
+## Comunica com a equipa
+
+Avisa com antecedência. Explica o propósito. Pessoas descontraídas resultam em fotos melhores.
+
+## Direcção de arte faz a diferença
+
+Na Beyond Focus, cada sessão tem planeamento visual prévio. Vê o que fizemos para a [Amoretti Lux](/portfolio/amoretti-lux).
+
+## Resultados que duram
+
+Uma boa sessão gera um banco de imagens que a empresa usa durante 1 a 2 anos.
+
+Vê os nossos [serviços de fotografia](/servicos/fotografia) ou lê sobre [como escolher a produtora certa](/blog/como-escolher-produtora-audiovisual). [Fala connosco](/contacto).`,
+  },
+  {
+    slug: "tendencias-video-marketing-2026",
+    title: "Tendências de vídeo marketing para 2026",
+    excerpt: "Short-form, autenticidade, AI e vídeo como motor de SEO — as forças que definem 2026.",
+    category: "Tendências",
+    date: "21 Abr 2026",
+    readTime: "6 min",
+    thumbnail: "/images/services/estrategia.jpg",
+    metaTitle: "Tendências de vídeo marketing para 2026",
+    metaDescription: "As tendências que estão a definir o vídeo marketing em 2026: short-form, AI, autenticidade e vídeo como motor de SEO.",
+    keywords: ["tendências vídeo marketing 2026", "vídeo marketing tendências", "futuro vídeo empresas"],
+    content: `Em 2026, o vídeo marketing é dominado por três forças: short-form vertical, autenticidade, e vídeo como ferramenta de SEO.
+
+## 1. Short-form vertical domina tudo
+
+Reels, TikToks e Shorts. Conteúdo vertical de 15 a 60 segundos tem o maior alcance orgânico.
+
+## 2. Autenticidade bate produção perfeita
+
+O público prefere conteúdo real. Um BTS com telemóvel pode ter mais engagement do que um spot de €10.000.
+
+## 3. Vídeo como ferramenta de SEO
+
+O Google favorece páginas com vídeo. As AIs citam conteúdo de vídeo.
+
+## 4. AI na produção
+
+AI torna a pós-produção mais rápida. Direcção criativa e filmagem continuam humanas.
+
+## 5. Conteúdo serializado
+
+Marcas criam séries que fidelizam a audiência.
+
+Descobre [por que a tua empresa precisa de vídeo](/blog/porque-empresa-precisa-video-2026) ou vê os nossos [serviços de redes sociais](/servicos/redes-sociais). [Fala connosco](/contacto).`,
+  },
+  {
+    slug: "roi-video-marketing-dados",
+    title: "O retorno real do vídeo marketing: dados e exemplos",
+    excerpt: "Métricas, dados e exemplos reais que provam o ROI do investimento em vídeo.",
+    category: "Estratégia",
+    date: "23 Abr 2026",
+    readTime: "6 min",
+    thumbnail: "/images/services/videos-eventos.jpg",
+    metaTitle: "O retorno real do vídeo marketing: dados e exemplos",
+    metaDescription: "O vídeo marketing gera retorno mensurável. Dados, métricas e exemplos reais que provam o ROI.",
+    keywords: ["ROI vídeo marketing", "retorno vídeo marketing", "métricas vídeo empresa"],
+    content: `O retorno do vídeo marketing mede-se em métricas concretas: conversão, engagement, tempo na página, leads e vendas.
+
+## Como medir o ROI
+
+**Taxa de conversão.** Página com vídeo vs sem vídeo. **Tempo na página.** Vídeo retém visitantes — melhora SEO. **Leads.** Formulários preenchidos após ver o vídeo. **Engagement.** Saves e shares importam mais que likes.
+
+## Exemplo: Hotel Casa Palmela
+
+O [filme do Hotel Casa Palmela](/portfolio/hotel-casa-palmela) é usado nas plataformas de booking. Um dia de filmagem, meses de retorno.
+
+## Exemplo: Carl Zeiss Portugal
+
+O [vídeo da Carl Zeiss](/portfolio/carl-zeiss-portugal) continua em uso. Avaliação: 9.5/10. Activo com vida útil de anos.
+
+## O vídeo mais caro é o que não se faz
+
+O verdadeiro custo é a oportunidade perdida.
+
+Descobre [quanto custa um vídeo institucional](/blog/quanto-custa-video-institucional-portugal) ou vê o [portfolio](/portfolio). [Fala connosco](/contacto).`,
+  },
+  {
+    slug: "departamento-criativo-externo",
+    title: "O que é um departamento criativo externo (e porquê ter um)",
+    excerpt: "Uma equipa de produção que funciona como extensão da tua empresa — sem contratares equipa interna.",
+    category: "Estratégia",
+    date: "25 Abr 2026",
+    readTime: "5 min",
+    thumbnail: "/images/services/estrategia.jpg",
+    metaTitle: "O que é um departamento criativo externo (e porquê ter um)",
+    metaDescription: "Um departamento criativo externo trata de toda a comunicação visual da tua empresa sem contratares equipa interna.",
+    keywords: ["departamento criativo externo", "outsource criativo", "produtora parceira"],
+    content: `Um departamento criativo externo é uma equipa de produção audiovisual que funciona como extensão da tua empresa.
+
+## Como funciona
+
+Reunião mensal, dias de filmagem recorrentes, entrega de conteúdo pronto a publicar. Tu publicas — nós garantimos material de qualidade.
+
+## Porquê externo?
+
+**Custo.** Equipa interna custa €3.000-€5.000/mês. Produtora externa custa uma fracção. **Diversidade.** Filmagem, edição, colour grading, estratégia — tudo num parceiro. **Flexibilidade.** Escala conforme necessidades. **Perspectiva fresca.** Olho novo e ideias de outros sectores.
+
+## Para quem?
+
+Hotéis, restaurantes, imobiliárias, software — qualquer negócio que beneficie de comunicação visual profissional.
+
+## É isto que fazemos
+
+Na Beyond Focus, somos o teu departamento criativo externo. Parceiros que conhecem o teu negócio.
+
+Vê os nossos [serviços de redes sociais](/servicos/redes-sociais), a [abordagem estratégica](/servicos/estrategia), ou [quem somos](/sobre). [Fala connosco](/contacto).`,
+  },
 ];
 
 export const BLOG_CATEGORIES = ["Todos", "Estratégia", "Produção", "Tendências"];
