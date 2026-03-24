@@ -54,7 +54,7 @@ export const SERVICE_PAGES: ServicePage[] = [
       { question: "Como funciona o acompanhamento durante o projecto?", answer: "Todos os clientes têm acesso ao Beyond Focus Portal: uma plataforma exclusiva onde podem acompanhar cada fase, enviar referências, comunicar com a equipa e rever o material com comentários ao segundo." },
     ],
     relatedSlugs: ["hotel-casa-palmela"],
-    metaTitle: "Filmes Comerciais — Beyond Focus | Produtora Audiovisual em Lisboa",
+    metaTitle: "Filmes Comerciais | Produtora Audiovisual em Lisboa",
     metaDescription:
       "Filmes publicitários que captam atenção e geram resultados. Tratamento criativo completo, portal exclusivo de acompanhamento. Produtora audiovisual em Lisboa.",
   },
@@ -88,7 +88,7 @@ export const SERVICE_PAGES: ServicePage[] = [
       { question: "Com que frequência devemos actualizar o vídeo institucional?", answer: "Recomendamos actualizar a cada 2-3 anos, ou sempre que houver mudanças significativas na empresa (nova sede, novos produtos, novo posicionamento). Um bom institucional é um activo de longa duração." },
     ],
     relatedSlugs: ["carl-zeiss-portugal"],
-    metaTitle: "Vídeos Institucionais — Beyond Focus | Produtora Audiovisual em Lisboa",
+    metaTitle: "Vídeos Institucionais | Produtora Audiovisual em Lisboa",
     metaDescription:
       "Vídeos institucionais com narrativa cinematográfica. A história da tua marca contada com rigor e profissionalismo. Produtora audiovisual em Lisboa.",
   },
@@ -124,7 +124,7 @@ export const SERVICE_PAGES: ServicePage[] = [
       { question: "Podem filmar fora de Lisboa?", answer: "Sim. A nossa equipa desloca-se a todo o território nacional e, para projectos especiais, internacionalmente." },
     ],
     relatedSlugs: [],
-    metaTitle: "Documentários — Beyond Focus | Produtora Audiovisual em Lisboa",
+    metaTitle: "Documentários | Produtora Audiovisual em Lisboa",
     metaDescription:
       "Produção de documentários com profundidade e sensibilidade. Histórias reais que informam e emocionam. Produtora audiovisual em Lisboa.",
   },
@@ -160,7 +160,7 @@ export const SERVICE_PAGES: ServicePage[] = [
       { question: "Precisamos de estar presentes nas filmagens?", answer: "Não é obrigatório, mas é recomendável para os primeiros meses enquanto estabelecemos a linha criativa. Com o tempo, trabalhamos de forma cada vez mais autónoma." },
     ],
     relatedSlugs: ["soce-mauro-loureiro"],
-    metaTitle: "Conteúdos de Redes Sociais — Beyond Focus | Produtora Audiovisual em Lisboa",
+    metaTitle: "Conteúdos de Redes Sociais | Produção de Conteúdo em Lisboa",
     metaDescription:
       "Departamento criativo externo: estratégia, planeamento e produção de conteúdo mensal para Instagram, TikTok e LinkedIn. Produtora audiovisual em Lisboa.",
   },
@@ -193,7 +193,7 @@ export const SERVICE_PAGES: ServicePage[] = [
       { question: "Os ficheiros são entregues em alta resolução?", answer: "Sim. Entregamos em alta resolução para impressão e em versões optimizadas para web e redes sociais, prontas a usar em todos os contextos." },
     ],
     relatedSlugs: ["amoretti-lux", "hotel-casa-palmela", "once-upon-a-house"],
-    metaTitle: "Fotografia Comercial — Beyond Focus | Produtora Audiovisual em Lisboa",
+    metaTitle: "Fotografia Comercial | Direcção de Arte em Lisboa",
     metaDescription:
       "Fotografia com direcção criativa: corporativa, produto e editorial. Cada imagem comunica a essência da tua marca. Produtora audiovisual em Lisboa.",
   },
@@ -227,7 +227,7 @@ export const SERVICE_PAGES: ServicePage[] = [
       { question: "Fazem transmissão em directo?", answer: "Não. O nosso foco é na captação de qualidade para utilização posterior. Para livestreaming, recomendamos especialistas nessa área." },
     ],
     relatedSlugs: ["highgate"],
-    metaTitle: "Cobertura de Eventos — Beyond Focus | Produtora Audiovisual em Lisboa",
+    metaTitle: "Cobertura de Eventos | Vídeo e Fotografia em Lisboa",
     metaDescription:
       "Cobertura completa de eventos: vídeo multi-câmara, fotografia e conteúdo para redes sociais. Um dia de evento, meses de conteúdo. Lisboa.",
   },
@@ -263,7 +263,7 @@ export const SERVICE_PAGES: ServicePage[] = [
       { question: "A estratégia inclui análise de redes sociais?", answer: "Sim. Analisamos o que está a resultar para a concorrência, as tendências do sector e as oportunidades específicas para a tua marca antes de definir qualquer direcção criativa." },
     ],
     relatedSlugs: [],
-    metaTitle: "Estratégia de Conteúdo — Beyond Focus | Produtora Audiovisual em Lisboa",
+    metaTitle: "Estratégia de Conteúdo Audiovisual | Produtora em Lisboa",
     metaDescription:
       "Estratégia de conteúdo audiovisual: análise de mercado, direcção criativa e planeamento. Incluída em todos os projectos. Produtora audiovisual em Lisboa.",
   },

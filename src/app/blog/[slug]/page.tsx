@@ -54,20 +54,24 @@ export default async function BlogPostPage({
 
   const otherPosts = BLOG_POSTS.filter((p) => p.slug !== slug).slice(0, 2);
 
+  const publishedDate = (() => {
+    const months: Record<string, string> = { Jan: "Jan", Fev: "Feb", Mar: "Mar", Abr: "Apr", Mai: "May", Jun: "Jun", Jul: "Jul", Ago: "Aug", Set: "Sep", Out: "Oct", Nov: "Nov", Dez: "Dec" };
+    const [d, m, y] = post.date.split(" ");
+    return new Date(`${d} ${months[m] || m} ${y}`).toISOString();
+  })();
+
   const articleSchema = {
     "@context": "https://schema.org",
-    "@type": "Article",
+    "@type": "BlogPosting",
     headline: post.metaTitle || post.title,
     description: post.metaDescription || post.excerpt,
     image: `https://beyondfocus.pt${post.thumbnail}`,
-    datePublished: (() => {
-      const months: Record<string, string> = { Jan: "Jan", Fev: "Feb", Mar: "Mar", Abr: "Apr", Mai: "May", Jun: "Jun", Jul: "Jul", Ago: "Aug", Set: "Sep", Out: "Oct", Nov: "Nov", Dez: "Dec" };
-      const [d, m, y] = post.date.split(" ");
-      return new Date(`${d} ${months[m] || m} ${y}`).toISOString();
-    })(),
+    datePublished: publishedDate,
+    dateModified: publishedDate,
     author: { "@type": "Person", name: "Daniel Lopes", url: "https://beyondfocus.pt/sobre" },
-    publisher: { "@type": "Organization", name: "Beyond Focus", url: "https://beyondfocus.pt", logo: "https://beyondfocus.pt/images/logo-symbol.png" },
+    publisher: { "@type": "Organization", name: "Beyond Focus", url: "https://beyondfocus.pt", logo: { "@type": "ImageObject", url: "https://beyondfocus.pt/images/logo-symbol.png" } },
     mainEntityOfPage: `https://beyondfocus.pt/blog/${slug}`,
+    inLanguage: "pt-PT",
   };
 
   return (

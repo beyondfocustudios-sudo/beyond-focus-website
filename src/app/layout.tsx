@@ -94,7 +94,7 @@ export const metadata: Metadata = {
 
 const structuredData = {
   "@context": "https://schema.org",
-  "@type": "VideoProductionCompany",
+  "@type": ["LocalBusiness", "ProfessionalService"],
   name: "Beyond Focus",
   alternateName: "Beyond Focus — Produtora Audiovisual",
   url: "https://beyondfocus.pt",

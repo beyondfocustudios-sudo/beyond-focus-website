@@ -6,10 +6,10 @@ import { BreadcrumbSchema } from "@/components/seo/BreadcrumbSchema";
 
 export const metadata: Metadata = {
   title: "Contacto | Fala Connosco",
-  description: "Tens um projecto em mente? Fala connosco. Produção audiovisual em Lisboa e todo o Portugal.",
+  description: "Tens um projecto em mente? Fala connosco — respondemos em 24 horas. Produção audiovisual, fotografia e estratégia de conteúdo para marcas em Lisboa e todo o Portugal.",
   openGraph: {
     title: "Contacto — Beyond Focus",
-    description: "Tens um projecto em mente? Fala connosco. Produção audiovisual em Lisboa e todo o Portugal.",
+    description: "Tens um projecto em mente? Fala connosco — respondemos em 24 horas. Produção audiovisual em Lisboa e todo o Portugal.",
     url: "https://beyondfocus.pt/contacto",
     images: [{ url: "/og-image.jpg", width: 1200, height: 630, alt: "Beyond Focus — Contacto" }],
   },

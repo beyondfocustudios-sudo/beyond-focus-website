@@ -23,9 +23,25 @@ export const metadata: Metadata = {
   },
 };
 
+const personSchema = {
+  "@context": "https://schema.org",
+  "@type": "Person",
+  name: "Daniel Lopes",
+  jobTitle: "Founder & Creative Director",
+  url: "https://beyondfocus.pt/sobre",
+  worksFor: { "@type": "Organization", name: "Beyond Focus", url: "https://beyondfocus.pt" },
+  alumniOf: { "@type": "EducationalOrganization", name: "ISEC Lisboa" },
+  knowsAbout: ["Audiovisual Production", "Creative Direction", "Video Marketing", "Photography"],
+  sameAs: [
+    "https://instagram.com/beyondfocus.pt",
+    "https://linkedin.com/company/beyondfocus",
+  ],
+};
+
 export default function SobrePage() {
   return (
     <>
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(personSchema) }} />
       <BreadcrumbSchema
         items={[
           { name: "Inicio", href: "/" },

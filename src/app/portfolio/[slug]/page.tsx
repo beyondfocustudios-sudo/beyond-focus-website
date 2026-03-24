@@ -34,7 +34,7 @@ export async function generateMetadata({
   const project = getProject(slug);
   if (!project) return {};
   return {
-    title: `${project.title} — ${project.client}`,
+    title: project.title,
     description: project.briefText.slice(0, 155) + "...",
     openGraph: {
       title: `${project.title} — Beyond Focus`,

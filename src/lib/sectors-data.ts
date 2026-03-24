@@ -16,7 +16,7 @@ export const SECTOR_PAGES: SectorPage[] = [
   {
     slug: "hotelaria",
     title: "Produção audiovisual para hotelaria",
-    metaTitle: "Vídeo para Hotéis em Portugal — Beyond Focus",
+    metaTitle: "Vídeo para Hotéis em Portugal — Produtora Audiovisual",
     metaDescription:
       "Produzimos filmes e fotografia para hotéis que querem mais reservas. Experiência com Hotel Casa Palmela e Once Upon Lisboa.",
     keywords: ["vídeo hotel portugal", "produtora vídeo hotelaria", "fotografia hotel"],
@@ -55,7 +55,7 @@ export const SECTOR_PAGES: SectorPage[] = [
   {
     slug: "restauracao",
     title: "Produção audiovisual para restauração",
-    metaTitle: "Vídeo para Restaurantes em Portugal — Beyond Focus",
+    metaTitle: "Vídeo para Restaurantes em Portugal — Produtora Audiovisual",
     metaDescription:
       "Conteúdo audiovisual para restaurantes que querem mais clientes. Filmagem gastronómica, reels e vídeos de apresentação.",
     keywords: ["vídeo restaurante portugal", "filmagem gastronómica", "produtora vídeo restauração"],
@@ -94,7 +94,7 @@ export const SECTOR_PAGES: SectorPage[] = [
   {
     slug: "imobiliario",
     title: "Produção audiovisual para imobiliário",
-    metaTitle: "Vídeo para Imobiliário em Portugal — Beyond Focus",
+    metaTitle: "Vídeo para Imobiliário em Portugal — Produtora Audiovisual",
     metaDescription:
       "Vídeos e fotografia profissional para imóveis e promotoras imobiliárias. Vende mais rápido com conteúdo visual de qualidade.",
     keywords: ["vídeo imobiliário portugal", "fotografia imóveis", "tour virtual imóvel"],
@@ -132,7 +132,7 @@ export const SECTOR_PAGES: SectorPage[] = [
   {
     slug: "corporate",
     title: "Produção audiovisual para empresas",
-    metaTitle: "Vídeo Corporativo em Portugal — Beyond Focus",
+    metaTitle: "Vídeo Corporativo em Portugal — Produtora Audiovisual",
     metaDescription:
       "Produção de vídeo corporativo para empresas em Lisboa. Institucionais, eventos, formação e conteúdo para comunicação interna e externa.",
     keywords: ["vídeo corporativo Portugal", "produtora vídeo empresas Lisboa", "vídeo institucional empresa"],

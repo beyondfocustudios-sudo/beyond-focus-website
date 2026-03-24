@@ -14,9 +14,10 @@ const FAQ_ITEMS_EN = [
 ];
 
 export const metadata: Metadata = {
-  title: "Beyond Focus — Video Production Studio in Lisbon, Portugal",
+  title: { absolute: "Beyond Focus — Video Production Studio in Lisbon, Portugal" },
   description: "Video production studio in Lisbon, Portugal. Commercial films, corporate videos, photography and events for brands that want results.",
   openGraph: {
+    locale: "en_GB",
     title: "Beyond Focus — Video Production Studio in Lisbon, Portugal",
     description: "Commercial films, corporate videos, photography and events for brands that want results.",
     url: "https://beyondfocus.pt/en",
