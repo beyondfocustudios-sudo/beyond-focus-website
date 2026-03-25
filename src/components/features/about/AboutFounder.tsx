@@ -1,29 +1,29 @@
 "use client";
 
 import { motion } from "framer-motion";
+import Image from "next/image";
 
 export function AboutFounder() {
   return (
     <section className="mx-auto max-w-[1440px] px-6 py-20 md:px-10 lg:px-[60px]">
       <div className="grid grid-cols-1 items-center gap-10 lg:grid-cols-2 lg:gap-20">
-        {/* Photo placeholder */}
+        {/* Photo */}
         <motion.div
           initial={{ opacity: 0, y: 30 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.6 }}
-          className="relative overflow-hidden rounded-xl bg-petrol/5"
+          className="relative overflow-hidden rounded-xl"
           style={{ aspectRatio: "3/4" }}
         >
-          <div className="absolute inset-0 flex items-center justify-center">
-            <div className="text-center">
-              <div className="mx-auto flex h-20 w-20 items-center justify-center rounded-full bg-petrol/10">
-                <span className="text-2xl font-bold text-petrol/30">DL</span>
-              </div>
-              <p className="mt-4 text-sm font-medium text-petrol/30">Daniel Lopes</p>
-              <p className="text-xs text-petrol/20">Fundador & Director Criativo</p>
-            </div>
-          </div>
+          <Image
+            src="/images/daniel-lopes-fundador.jpg"
+            alt="Daniel Lopes — Fundador & Director Criativo da Beyond Focus"
+            fill
+            className="object-cover object-top"
+            sizes="(max-width: 1024px) 100vw, 50vw"
+            priority
+          />
         </motion.div>
 
         {/* Story */}
@@ -72,6 +72,54 @@ export function AboutFounder() {
         <p className="mt-4 max-w-2xl text-base leading-relaxed text-white/60">
           Se soubesses que precisavas de ouvir 99 &ldquo;nãos&rdquo; para chegar ao teu primeiro &ldquo;sim&rdquo; — não ias querer ouvir cada &ldquo;não&rdquo; o mais rápido possível? Esta forma de pensar define como encaramos cada desafio. Cada recusa é um passo. Cada obstáculo é progresso. E quando o &ldquo;sim&rdquo; chega, sabemos exactamente quanto vale.
         </p>
+      </motion.div>
+
+      {/* Collaborators */}
+      <motion.div
+        initial={{ opacity: 0, y: 25 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        viewport={{ once: true }}
+        transition={{ duration: 0.6 }}
+        className="mt-20"
+      >
+        <p className="font-mono text-[13px] uppercase tracking-[3px] text-orange">
+          A nossa rede
+        </p>
+        <h3 className="mt-3 text-[clamp(24px,2.5vw,36px)] font-bold text-petrol">
+          Colaboramos com mais de 30+ profissionais
+        </h3>
+        <p className="mt-4 max-w-2xl text-base leading-relaxed text-petrol/60">
+          Para garantir o melhor resultado em cada projecto, trabalhamos com uma rede de mais de 30 profissionais especializados de diversas áreas — desde directores de fotografia e actores, a músicos, motion designers, copy writers e especialistas em marketing digital. Cada equipa é construída à medida do projecto.
+        </p>
+
+        <div className="mt-10 grid grid-cols-2 gap-4 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-6">
+          {[
+            "Directores de Fotografia",
+            "Operadores de Câmara",
+            "Pilotos de Drone",
+            "Motion Designers",
+            "Actores & Casting",
+            "Músicos & Sound Design",
+            "Copywriters",
+            "Fotógrafos",
+            "Coloristas",
+            "Especialistas em Marketing",
+            "Produtores de Eventos",
+            "Designers Gráficos",
+          ].map((area, i) => (
+            <motion.div
+              key={area}
+              initial={{ opacity: 0, y: 15 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.4, delay: i * 0.05 }}
+              className="flex items-center gap-2 rounded-xl border border-petrol/10 bg-petrol/[0.03] px-4 py-3"
+            >
+              <span className="h-1.5 w-1.5 shrink-0 rounded-full bg-orange" />
+              <span className="text-[13px] font-medium text-petrol/70">{area}</span>
+            </motion.div>
+          ))}
+        </div>
       </motion.div>
     </section>
   );
