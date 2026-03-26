@@ -38,7 +38,7 @@ function PortfolioCard({ project }: { project: (typeof PROJECTS)[0] }) {
         <div className="relative overflow-hidden rounded-xl" style={{ aspectRatio: "4/3" }}>
           <Image
             src={project.thumbnail}
-            alt={project.title}
+            alt={`${project.category} — ${project.title} | Beyond Focus`}
             fill
             className={`object-cover transition-all duration-700 ${
               hovered && project.video ? "opacity-0" : "opacity-100"

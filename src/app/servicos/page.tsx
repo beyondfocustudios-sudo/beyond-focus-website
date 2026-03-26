@@ -10,7 +10,7 @@ import { BreadcrumbSchema } from "@/components/seo/BreadcrumbSchema";
 export const metadata: Metadata = {
   title: "Serviços | Produtora Audiovisual",
   description:
-    "Filmes comerciais, vídeos institucionais, documentários, fotografia, eventos e estratégia de conteúdo. Produção audiovisual em Portugal.",
+    "Filmes comerciais, vídeos institucionais, fotografia e estratégia criativa — com processo em 5 fases e portal de cliente dedicado. Produtora audiovisual em Lisboa.",
   openGraph: {
     locale: "pt_PT",
     type: "website",

@@ -45,7 +45,10 @@ export function Hero() {
       <div className="relative z-10 mx-auto w-full max-w-[1400px] px-6 py-32 md:px-10 lg:px-12">
         <div className="max-w-3xl">
           {/* Headline — word-by-word reveal */}
-          <h1 className="text-[clamp(36px,5.5vw,72px)] font-bold leading-[1.05] tracking-[-0.03em] text-white">
+          <h1
+            aria-label="Produtora Audiovisual em Lisboa — A tua marca merece mais do que um vídeo bonito"
+            className="text-[clamp(36px,5.5vw,72px)] font-bold leading-[1.05] tracking-[-0.03em] text-white"
+          >
             {["A", "tua", "marca", "merece", "mais", "do", "que", "um"].map((word, i) => (
               <motion.span
                 key={i}

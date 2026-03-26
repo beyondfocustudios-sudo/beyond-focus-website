@@ -109,6 +109,7 @@ export function ServicePageContent({
             {service.title}
           </motion.span>
           <motion.h1
+            aria-label={service.metaTitle}
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6, delay: 0.1 }}
@@ -162,7 +163,7 @@ export function ServicePageContent({
               O QUE FAZEMOS
             </span>
             <h2 className="text-[clamp(28px,3vw,40px)] font-bold leading-tight text-petrol">
-              {service.tagline}
+              {service.title}
             </h2>
             <div className="mt-5 space-y-3 text-base leading-relaxed text-petrol/60">
               {service.description.split("\n\n").map((p, i) => (
