@@ -6,6 +6,7 @@ import { Navbar } from "@/components/layout/Navbar";
 import { Footer } from "@/components/sections/Footer";
 import { getBlogPost, BLOG_POSTS } from "@/lib/blog-data";
 import { BreadcrumbSchema } from "@/components/seo/BreadcrumbSchema";
+import { BlogEmailCapture } from "@/components/features/blog/BlogEmailCapture";
 
 /** Render inline markdown: **bold**, [link](url) */
 function renderInline(text: string): string {
@@ -134,6 +135,15 @@ export default async function BlogPostPage({
             );
           })}
         </article>
+
+        {/* Email capture */}
+        <div className="mx-auto max-w-[720px] px-6 md:px-10">
+          <BlogEmailCapture
+            variant="banner"
+            source={`blog-${slug}`}
+            magnet="guia-precos-video"
+          />
+        </div>
 
         {/* CTA + Service link */}
         <section className="bg-white py-16 text-center">
