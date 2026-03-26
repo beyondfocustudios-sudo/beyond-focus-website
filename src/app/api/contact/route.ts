@@ -1,11 +1,72 @@
 import { NextResponse } from "next/server";
 
+async function notifyTelegram(name: string, email: string, company?: string, services?: string[], phone?: string) {
+  const botToken = process.env.TELEGRAM_BOT_TOKEN;
+  const chatId = process.env.TELEGRAM_CHAT_ID;
+  if (!botToken || !chatId) return;
+
+  const servicesText = services?.length ? `\n🎯 Serviços: ${services.join(", ")}` : "";
+  const companyText = company ? `\n🏢 Empresa: ${company}` : "";
+  const phoneText = phone ? `\n📞 ${phone}` : "";
+
+  const text = `🔔 *Novo lead — beyondfocus.pt*\n\n👤 *${name}*\n📧 ${email}${phoneText}${companyText}${servicesText}\n\n_Guardado no CRM_`;
+
+  try {
+    await fetch(`https://api.telegram.org/bot${botToken}/sendMessage`, {
+      method: "POST",
+      headers: { "Content-Type": "application/json" },
+      body: JSON.stringify({ chat_id: chatId, text, parse_mode: "Markdown" }),
+    });
+  } catch {
+    // non-critical
+  }
+}
+
+async function saveLeadToSupabase(data: {
+  name: string;
+  email: string;
+  phone?: string;
+  company?: string;
+  website?: string;
+  services?: string[];
+  message?: string;
+  budget?: string;
+  start_date?: string;
+  source?: string;
+  utm_source?: string;
+  utm_medium?: string;
+  utm_campaign?: string;
+}) {
+  const supabaseUrl = process.env.SUPABASE_URL;
+  const serviceKey = process.env.SUPABASE_SERVICE_ROLE_KEY;
+  if (!supabaseUrl || !serviceKey) return null;
+
+  try {
+    const res = await fetch(`${supabaseUrl}/rest/v1/website_leads`, {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json",
+        apikey: serviceKey,
+        Authorization: `Bearer ${serviceKey}`,
+        Prefer: "return=representation",
+      },
+      body: JSON.stringify({ ...data, source: data.source || "contact_form" }),
+    });
+    if (res.ok) {
+      const rows = await res.json();
+      return rows[0] || null;
+    }
+    return null;
+  } catch {
+    return null;
+  }
+}
+
 export async function POST(request: Request) {
   try {
     const body = await request.json();
-    const { name, email, phone, company, website, services, message, budget, startDate } = body;
+    const { name, email, phone, company, website, services, message, budget, startDate, source, utmSource, utmMedium, utmCampaign } = body;
 
-    // Validation
     if (!name || !email || !phone) {
       return NextResponse.json(
         { error: "Nome, email e telefone são obrigatórios." },
@@ -13,16 +74,33 @@ export async function POST(request: Request) {
       );
     }
 
-    const apiKey = process.env.RESEND_API_KEY;
+    // Save to Supabase CRM (non-blocking)
+    saveLeadToSupabase({
+      name,
+      email,
+      phone,
+      company,
+      website,
+      services,
+      message,
+      budget,
+      start_date: startDate,
+      source: source || "contact_form",
+      utm_source: utmSource,
+      utm_medium: utmMedium,
+      utm_campaign: utmCampaign,
+    }).catch(() => {});
 
+    // Notify JARVIS via Telegram (non-blocking)
+    notifyTelegram(name, email, company, services, phone).catch(() => {});
+
+    const apiKey = process.env.RESEND_API_KEY;
     if (!apiKey) {
-      // Fallback: log to server if no API key configured
       console.log("=== NEW CONTACT (no Resend key) ===");
       console.log(JSON.stringify(body, null, 2));
       return NextResponse.json({ success: true });
     }
 
-    // Dynamic import to avoid build errors when resend isn't configured
     const { Resend } = await import("resend");
     const resend = new Resend(apiKey);
 
@@ -41,10 +119,10 @@ export async function POST(request: Request) {
          <table style="width:100%;border-collapse:collapse">
            <tr><td style="padding:8px 0;color:#888;font-size:13px;width:120px">Orçamento</td><td style="padding:8px 0;color:#0E3A45;font-size:14px">${budget}</td></tr>
            ${startDate ? `<tr><td style="padding:8px 0;color:#888;font-size:13px">Data início</td><td style="padding:8px 0;color:#0E3A45;font-size:14px">${startDate}</td></tr>` : ""}
+           ${source ? `<tr><td style="padding:8px 0;color:#888;font-size:13px">Origem</td><td style="padding:8px 0;color:#0E3A45;font-size:14px">${source}</td></tr>` : ""}
          </table>`
       : "";
 
-    // Email to Beyond Focus
     await resend.emails.send({
       from: "Beyond Focus Website <website@beyondfocus.pt>",
       to: ["geral@beyondfocus.pt"],
@@ -76,7 +154,6 @@ export async function POST(request: Request) {
       `,
     });
 
-    // Confirmation email to client
     await resend.emails.send({
       from: "Beyond Focus <website@beyondfocus.pt>",
       to: [email],
