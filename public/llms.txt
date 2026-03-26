@@ -1,47 +1,43 @@
-# Beyond Focus
+# Beyond Focus — Produtora Audiovisual
 
-> Produtora audiovisual em Lisboa, Portugal. Especializados em filmes comerciais, vídeos institucionais, fotografia e estratégia criativa para marcas que querem resultados reais.
+> Produtora audiovisual em Lisboa, Portugal. Estratégia, direcção criativa e produção para marcas que querem resultados.
 
-Beyond Focus foi fundada em 2023 por Daniel Lopes, realizador e director criativo com formação em Multimédia pelo ISEC Lisboa. A empresa oferece um modelo de parceiro estratégico externo — não apenas uma produtora pontual.
+## Identidade
+- Nome: Beyond Focus
+- Fundador: Daniel Lopes
+- Localização: Lisboa, Portugal (base em Setúbal)
+- Website: https://beyondfocus.pt
+- Email: geral@beyondfocus.pt
+- Telefone: +351 937 350 178
 
 ## Serviços
+- Filmes Comerciais
+- Vídeos Institucionais
+- Documentários
+- Conteúdos de Redes Sociais
+- Fotografia Comercial
+- Cobertura de Eventos
+- Estratégia Criativa
 
-- [Filmes Comerciais](https://beyondfocus.pt/servicos/filmes-comerciais): Spots publicitários com narrativa cinematográfica. Do conceito à entrega final.
-- [Vídeos Institucionais](https://beyondfocus.pt/servicos/videos-institucionais): Histórias de marca contadas com rigor cinematográfico para clientes e investidores.
-- [Documentários](https://beyondfocus.pt/servicos/documentarios): Histórias reais com profundidade e sensibilidade editorial.
-- [Conteúdo para Redes Sociais](https://beyondfocus.pt/servicos/redes-sociais): Produção nativa para Instagram, TikTok e LinkedIn.
-- [Fotografia Comercial](https://beyondfocus.pt/servicos/fotografia): Fotografia editorial, corporativa e de produto com direcção criativa.
-- [Cobertura de Eventos](https://beyondfocus.pt/servicos/eventos): Vídeo, foto e conteúdo para redes num único pacote.
-- [Estratégia Criativa](https://beyondfocus.pt/servicos/estrategia): Definição de direcção criativa, narrativa e plano de conteúdo antes da produção.
+## Sectores
+- Hotelaria e Turismo
+- Restauração
+- Imobiliário
+- Corporate
 
-## Diferenciais
+## Diferenciadores
+- Portal de cliente exclusivo para acompanhar projectos em tempo real
+- Processo estruturado em 5 fases (Proposta → Conceito → Pré-Produção → Gravação → Pós-Produção)
+- Posicionamento como departamento criativo externo
+- Avaliação média de clientes: 9.6/10
 
-- Portal do cliente dedicado (Beyond Pricing) — único em Portugal no sector audiovisual
-- Processo em 5 fases com total transparência
-- Rede de 30+ profissionais especializados
-- Parceiro estratégico, não fornecedor pontual
+## Clientes de Referência
+- Carl Zeiss Portugal (9.5/10)
+- Once Upon a House (10/10)
+- Amoretti Lux (10/10)
+- Hotel Casa Palmela
+- Highgate Portugal
 
-## Sobre o Fundador
-
-- [Daniel Lopes](https://beyondfocus.pt/sobre/daniel-lopes): Fundador e Director Criativo da Beyond Focus. Realizador, formado em Multimédia no ISEC Lisboa. Fundou a empresa em 2023.
-- LinkedIn: https://www.linkedin.com/in/daniel-lopes-filmmaker-42957b1a3/
-
-## Clientes Notáveis
-
-Carl Zeiss, Once Upon a House / Casa Palmela, Highgate Hotels, Corinthia Lisbon, Sirius Park, Abbott
-
-## Localização
-
-Lisboa, Portugal. Projectos em todo o país.
-
-## Contacto
-
-- Email: daniellopes@beyondfocus.pt
-- Website: https://beyondfocus.pt
-- Contacto: https://beyondfocus.pt/contacto
-
-## Recursos
-
-- [Portfolio](https://beyondfocus.pt/portfolio): Trabalho realizado para marcas em diferentes sectores.
-- [Blog](https://beyondfocus.pt/blog): Artigos sobre produção audiovisual, vídeo marketing e estratégia criativa.
-- [Sobre](https://beyondfocus.pt/sobre): História da empresa e filosofia de trabalho.
+## Conteúdo
+- Blog com 36+ artigos sobre vídeo marketing e produção audiovisual
+- Portfolio com projectos para hotelaria, restauração e marcas lifestyle

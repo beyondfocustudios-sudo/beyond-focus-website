@@ -35,6 +35,13 @@ export default function sitemap(): MetadataRoute.Sitemap {
     priority: 0.6 as const,
   }));
 
+  const regionalUrls = [
+    { url: `${baseUrl}/servicos/brand-film`, lastModified: new Date(), changeFrequency: "monthly" as const, priority: 0.8 as const },
+    { url: `${baseUrl}/servicos/regioes/setubal`, lastModified: new Date(), changeFrequency: "monthly" as const, priority: 0.7 as const },
+    { url: `${baseUrl}/servicos/regioes/alentejo`, lastModified: new Date(), changeFrequency: "monthly" as const, priority: 0.7 as const },
+    { url: `${baseUrl}/servicos/regioes/algarve`, lastModified: new Date(), changeFrequency: "monthly" as const, priority: 0.7 as const },
+  ];
+
   return [
     { url: baseUrl, lastModified: new Date(), changeFrequency: "weekly", priority: 1 },
     { url: `${baseUrl}/portfolio`, lastModified: new Date(), changeFrequency: "weekly", priority: 0.9 },
@@ -42,6 +49,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
     { url: `${baseUrl}/servicos`, lastModified: new Date(), changeFrequency: "monthly", priority: 0.8 },
     ...serviceUrls,
     ...sectorUrls,
+    ...regionalUrls,
     { url: `${baseUrl}/portal-cliente`, lastModified: new Date(), changeFrequency: "monthly", priority: 0.7 },
     { url: `${baseUrl}/sobre`, lastModified: new Date(), changeFrequency: "monthly", priority: 0.7 },
     { url: `${baseUrl}/contacto`, lastModified: new Date(), changeFrequency: "monthly", priority: 0.8 },

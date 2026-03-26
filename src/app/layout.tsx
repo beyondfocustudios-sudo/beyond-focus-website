@@ -14,6 +14,7 @@ const dmSans = DM_Sans({
   subsets: ["latin"],
   display: "swap",
   weight: ["400", "500", "600", "700"],
+  adjustFontFallback: false,
 });
 
 const dmSerif = DM_Serif_Display({
@@ -21,12 +22,14 @@ const dmSerif = DM_Serif_Display({
   weight: "400",
   subsets: ["latin"],
   display: "swap",
+  adjustFontFallback: false,
 });
 
 const jetbrainsMono = JetBrains_Mono({
   variable: "--font-mono",
   subsets: ["latin"],
   display: "swap",
+  weight: ["400", "500"],
 });
 
 export const metadata: Metadata = {
@@ -162,7 +165,7 @@ export default function RootLayout({
       className={`${dmSans.variable} ${dmSerif.variable} ${jetbrainsMono.variable} antialiased`}
     >
       <head>
-        <link rel="preload" href="/videos/loading.mp4" as="video" type="video/mp4" />
+        <link rel="preload" href="/images/showreel-poster.jpg" as="image" fetchPriority="high" />
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{ __html: JSON.stringify(structuredData) }}

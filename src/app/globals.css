@@ -23,9 +23,9 @@
   --color-petrol: #0E3A45;
   --color-petrol-deep: #070f13;
   --color-orange: #FA8334;
-  --font-body: 'DM Sans', sans-serif;
+  --font-body: var(--font-body, 'DM Sans', sans-serif);
   --font-serif: var(--font-serif, 'DM Serif Display', serif);
-  --font-mono: 'JetBrains Mono', monospace;
+  --font-mono: var(--font-mono, 'JetBrains Mono', monospace);
 }
 
 /* Headings use DM Serif Display */
@@ -66,6 +66,7 @@ body {
 }
 .animate-marquee {
   animation: marquee 30s linear infinite;
+  will-change: transform;
 }
 
 /* Custom cursor — hide native on desktop */

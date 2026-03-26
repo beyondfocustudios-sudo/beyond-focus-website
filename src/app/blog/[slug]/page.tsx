@@ -166,38 +166,37 @@ export default async function BlogPostPage({
           />
         </div>
 
-        {/* CTA + Service link */}
-        <section className="bg-white py-16 text-center">
-          <p className="text-base text-petrol/50">Gostaste deste artigo?</p>
-          <Link
-            href="/contacto"
-            className="mt-4 inline-flex items-center gap-2 rounded-full bg-petrol px-6 py-3 text-sm font-semibold text-white transition-all hover:bg-petrol/90 active:scale-[0.97]"
-          >
-            Fala connosco <span>→</span>
-          </Link>
-          <p className="mt-6 text-sm text-petrol/40">
-            Descobre os nossos{" "}
-            <Link href="/servicos" className="text-orange underline underline-offset-2 hover:text-orange/80">
-              serviços de produção audiovisual
-            </Link>
-          </p>
-        </section>
-
         {/* Related posts */}
-        <section className="mx-auto max-w-[1200px] px-6 py-16 md:px-10">
-          <h2 className="mb-8 text-xl font-bold text-petrol">Artigos relacionados</h2>
-          <div className="grid grid-cols-1 gap-8 md:grid-cols-2">
-            {otherPosts.map((p) => (
-              <Link key={p.slug} href={`/blog/${p.slug}`} className="group block transition-all duration-300 hover:-translate-y-1 hover:shadow-lg rounded-xl" data-cursor="hover-link">
-                <div className="relative overflow-hidden rounded-xl" style={{ aspectRatio: "16/9" }}>
-                  <Image src={p.thumbnail} alt={p.title} fill className="object-cover transition-transform duration-500 group-hover:scale-105" sizes="50vw" />
-                </div>
-                <div className="mt-3">
-                  <span className="font-mono text-[10px] uppercase tracking-[2px] text-orange">{p.category}</span>
-                  <h3 className="mt-1 text-base font-semibold text-petrol group-hover:text-orange transition-colors">{p.title}</h3>
-                </div>
-              </Link>
-            ))}
+        {otherPosts.length > 0 && (
+          <section className="mx-auto max-w-[1200px] px-6 py-16 md:px-10">
+            <h2 className="mb-8 text-xl font-bold text-petrol">Artigos relacionados</h2>
+            <div className="grid grid-cols-1 gap-8 md:grid-cols-2">
+              {otherPosts.map((p) => (
+                <Link key={p.slug} href={`/blog/${p.slug}`} className="group block transition-all duration-300 hover:-translate-y-1 hover:shadow-lg rounded-xl" data-cursor="hover-link">
+                  <div className="relative overflow-hidden rounded-xl" style={{ aspectRatio: "16/9" }}>
+                    <Image src={p.thumbnail} alt={p.title} fill className="object-cover transition-transform duration-500 group-hover:scale-105" sizes="50vw" />
+                  </div>
+                  <div className="mt-3">
+                    <span className="font-mono text-[10px] uppercase tracking-[2px] text-orange">{p.category}</span>
+                    <h3 className="mt-1 text-base font-semibold text-petrol group-hover:text-orange transition-colors">{p.title}</h3>
+                  </div>
+                </Link>
+              ))}
+            </div>
+          </section>
+        )}
+
+        {/* CTA */}
+        <section className="mx-auto max-w-[720px] px-6 pb-24 md:px-10">
+          <div className="mt-8 rounded-2xl bg-[#0E3A45] p-8 text-center text-white">
+            <h3 className="mb-4 font-serif text-2xl">Tens um projecto em mente?</h3>
+            <p className="mb-6 text-white/80">A primeira conversa é por nossa conta. Sem compromisso.</p>
+            <Link
+              href="/contacto"
+              className="inline-block rounded-full bg-[#FA8334] px-8 py-3 font-medium text-white transition-colors hover:bg-[#e5732e]"
+            >
+              Falar com a Beyond Focus
+            </Link>
           </div>
         </section>
       </main>
