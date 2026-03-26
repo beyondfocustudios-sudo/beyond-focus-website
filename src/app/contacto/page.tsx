@@ -3,10 +3,18 @@ import { Navbar } from "@/components/layout/Navbar";
 import { Footer } from "@/components/sections/Footer";
 import { ContactForm } from "@/components/features/contact/ContactForm";
 import { BreadcrumbSchema } from "@/components/seo/BreadcrumbSchema";
+import { FAQSchema } from "@/components/seo/FAQSchema";
+
+const CONTACT_FAQS = [
+  { question: "Em quanto tempo respondem após contacto?", answer: "Respondemos em 24 horas úteis. Na maioria dos casos, a resposta chega no mesmo dia." },
+  { question: "A consulta inicial tem custos?", answer: "Não. A primeira conversa é totalmente gratuita e sem compromisso. Serve para perceber o vosso projecto e ver se faz sentido trabalharmos juntos." },
+  { question: "Trabalham em todo o Portugal ou apenas em Lisboa?", answer: "Trabalhamos em todo o Portugal. Temos projectos em Lisboa, Porto, Algarve, Alentejo e ilhas. Para projectos internacionais, avaliaremos caso a caso." },
+  { question: "Como funciona o processo de produção?", answer: "O nosso processo tem 5 fases: briefing e estratégia, pré-produção (guião, localizações, casting), filmagem, pós-produção (edição, colour grading, sound design) e entrega final com múltiplos formatos. Os clientes têm acesso ao Portal do Cliente para acompanhar cada fase." },
+];
 
 export const metadata: Metadata = {
-  title: "Contacto | Fala Connosco",
-  description: "Tens um projecto em mente? Fala connosco — respondemos em 24 horas. Produção audiovisual, fotografia e estratégia de conteúdo para marcas em Lisboa e todo o Portugal.",
+  title: "Contacto | Fala Connosco — Resposta em 24h",
+  description: "Tens um projecto em mente? Fala com a Beyond Focus — respondemos em 24 horas, sem compromisso. Produtora audiovisual em Lisboa para marcas em todo o Portugal.",
   openGraph: {
     locale: "pt_PT",
     type: "website",
@@ -24,6 +32,7 @@ export const metadata: Metadata = {
 export default function ContactoPage() {
   return (
     <>
+      <FAQSchema items={CONTACT_FAQS} />
       <BreadcrumbSchema
         items={[
           { name: "Inicio", href: "/" },

@@ -68,7 +68,7 @@ export function CaseStudyHorizontalGallery({ project }: { project: Project }) {
             >
               <Image
                 src={src}
-                alt={`${project.title} — ${i + 1}`}
+                alt={`${project.client} — ${project.category} — produção Beyond Focus, imagem ${i + 1}`}
                 fill
                 className="object-cover"
                 sizes="85vw"
@@ -114,7 +114,7 @@ export function CaseStudyHorizontalGallery({ project }: { project: Project }) {
           >
             <Image
               src={src}
-              alt={`${project.title} — ${i + 1}`}
+              alt={`${project.client} — ${project.category} — produção Beyond Focus, imagem ${i + 1}`}
               fill
               className="object-cover"
               sizes="50vw"

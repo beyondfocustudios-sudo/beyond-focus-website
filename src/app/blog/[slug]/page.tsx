@@ -6,7 +6,23 @@ import { Navbar } from "@/components/layout/Navbar";
 import { Footer } from "@/components/sections/Footer";
 import { getBlogPost, BLOG_POSTS } from "@/lib/blog-data";
 import { BreadcrumbSchema } from "@/components/seo/BreadcrumbSchema";
+import { FAQSchema } from "@/components/seo/FAQSchema";
 import { BlogEmailCapture } from "@/components/features/blog/BlogEmailCapture";
+
+const POST_FAQS: Record<string, { question: string; answer: string }[]> = {
+  "quanto-custa-video-institucional-portugal": [
+    { question: "Quanto custa um vídeo institucional em Portugal?", answer: "Um vídeo institucional em Portugal custa entre €1.500 e €15.000+, dependendo da complexidade, duração e nível de produção. A maioria das empresas médias investe entre €3.000 e €7.000 para um vídeo de 2 a 3 minutos com qualidade profissional." },
+    { question: "O que influencia o preço de um vídeo institucional?", answer: "Os principais factores são: complexidade do guião e narrativa, número de dias de filmagem, dimensão da equipa, extensão da pós-produção (colour grading, motion graphics, sound design) e número de versões entregues para diferentes plataformas." },
+    { question: "Qual é o prazo típico para produzir um vídeo institucional?", answer: "O prazo típico é de 3 a 6 semanas: 1-2 semanas de pré-produção (guião, localizações, casting), 1-2 dias de filmagem, e 2-4 semanas de pós-produção. Projectos mais complexos podem levar até 8 semanas." },
+    { question: "Vale a pena investir num vídeo institucional?", answer: "Sim. Um vídeo institucional bem feito é um activo de comunicação com vida útil de 2 a 5 anos. Fica no website, nas redes sociais, em apresentações comerciais. O retorno é medível em tempo poupado em reuniões de apresentação e em credibilidade junto de clientes e investidores." },
+  ],
+  "como-escolher-produtora-audiovisual": [
+    { question: "Como escolher a produtora audiovisual certa?", answer: "Avalia o portfolio com espírito crítico (não apenas os trabalhos mais vistosos), verifica se fazem perguntas sobre o teu negócio antes de apresentar soluções, pede referências de clientes anteriores e compara propostas com o mesmo nível de detalhe." },
+    { question: "O que devo pedir numa proposta de produção audiovisual?", answer: "Pede: tratamento criativo detalhado, cronograma de produção, equipa envolvida, número de revisões incluídas, formatos de entrega e condições de pagamento. Propostas genéricas sem detalhe criativo são sinal de alerta." },
+    { question: "Qual a diferença entre uma produtora cara e uma barata?", answer: "A diferença raramente está apenas na qualidade da imagem. Está na profundidade estratégica, no processo de aprovação, na qualidade da pós-produção (colour grading, sound design) e no compromisso com o resultado final — não apenas com a entrega técnica." },
+  ],
+};
+
 
 /** Render inline markdown: **bold**, [link](url) */
 function renderInline(text: string): string {
@@ -53,7 +69,9 @@ export default async function BlogPostPage({
   const post = getBlogPost(slug);
   if (!post) notFound();
 
-  const otherPosts = BLOG_POSTS.filter((p) => p.slug !== slug).slice(0, 2);
+  const sameCategory = BLOG_POSTS.filter((p) => p.slug !== slug && p.category === post.category);
+  const otherCategory = BLOG_POSTS.filter((p) => p.slug !== slug && p.category !== post.category);
+  const otherPosts = [...sameCategory, ...otherCategory].slice(0, 2);
 
   const publishedDate = (() => {
     const months: Record<string, string> = { Jan: "Jan", Fev: "Feb", Mar: "Mar", Abr: "Apr", Mai: "May", Jun: "Jun", Jul: "Jul", Ago: "Aug", Set: "Sep", Out: "Oct", Nov: "Nov", Dez: "Dec" };
@@ -75,9 +93,12 @@ export default async function BlogPostPage({
     inLanguage: "pt-PT",
   };
 
+  const postFaqs = POST_FAQS[slug];
+
   return (
     <>
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(articleSchema) }} />
+      {postFaqs && <FAQSchema items={postFaqs} />}
       <BreadcrumbSchema
         items={[
           { name: "Inicio", href: "/" },
@@ -104,7 +125,7 @@ export default async function BlogPostPage({
         {/* Image */}
         <div className="mx-auto mt-10 max-w-[1200px] px-6 md:px-10">
           <div className="relative overflow-hidden rounded-xl" style={{ aspectRatio: "16/9" }}>
-            <Image src={post.thumbnail} alt={post.title} fill className="object-cover" sizes="100vw" />
+            <Image src={post.thumbnail} alt={post.title} fill className="object-cover" sizes="100vw" priority />
           </div>
         </div>
 
