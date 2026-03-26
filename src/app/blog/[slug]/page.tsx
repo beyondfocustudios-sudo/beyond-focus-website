@@ -8,6 +8,7 @@ import { getBlogPost, BLOG_POSTS } from "@/lib/blog-data";
 import { BreadcrumbSchema } from "@/components/seo/BreadcrumbSchema";
 import { FAQSchema } from "@/components/seo/FAQSchema";
 import { BlogEmailCapture } from "@/components/features/blog/BlogEmailCapture";
+import { BlogInlineCapture } from "@/components/features/leads/BlogInlineCapture";
 
 const POST_FAQS: Record<string, { question: string; answer: string }[]> = {
   "quanto-custa-video-institucional-portugal": [
@@ -185,6 +186,11 @@ export default async function BlogPostPage({
             </div>
           </section>
         )}
+
+        {/* Inline email capture */}
+        <div className="mx-auto max-w-[720px] px-6 md:px-10">
+          <BlogInlineCapture source={`blog-cta-${slug}`} />
+        </div>
 
         {/* CTA */}
         <section className="mx-auto max-w-[720px] px-6 pb-24 md:px-10">

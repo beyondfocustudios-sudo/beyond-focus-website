@@ -7,6 +7,7 @@ import { ScrollProgress } from "@/components/ui/ScrollProgress";
 import { GoogleAnalytics } from "@/components/analytics/GoogleAnalytics";
 import { MetaPixel } from "@/components/analytics/MetaPixel";
 import { Analytics } from "@vercel/analytics/next";
+import { ExitIntentPopup } from "@/components/lead-capture/ExitIntentPopup";
 import "./globals.css";
 
 const dmSans = DM_Sans({
@@ -178,6 +179,7 @@ export default function RootLayout({
         <LoadingScreen />
         <CustomCursor />
         <ScrollProgress />
+        <ExitIntentPopup />
         <SmoothScroll>{children}</SmoothScroll>
       </body>
     </html>
