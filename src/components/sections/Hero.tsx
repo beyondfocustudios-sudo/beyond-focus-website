@@ -46,27 +46,32 @@ export function Hero() {
         <div className="max-w-3xl">
           {/* Headline — word-by-word reveal */}
           <h1 className="text-[clamp(36px,5.5vw,72px)] font-bold leading-[1.05] tracking-[-0.03em] text-white">
-            {["A", "tua", "marca", "merece", "mais", "do", "que", "um"].map((word, i) => (
-              <motion.span
-                key={i}
-                custom={i}
+            {/* SEO-readable text for crawlers */}
+            <span className="sr-only">A tua marca merece mais do que um vídeo bonito.</span>
+            {/* Animated word-by-word reveal — hidden from crawlers */}
+            <span aria-hidden="true">
+              {["A", "tua", "marca", "merece", "mais", "do", "que", "um"].map((word, i) => (
+                <motion.span
+                  key={i}
+                  custom={i}
+                  variants={wordVariants}
+                  initial="hidden"
+                  animate="show"
+                  className="inline"
+                >
+                  {word}{" "}
+                </motion.span>
+              ))}
+              <motion.em
+                custom={8}
                 variants={wordVariants}
                 initial="hidden"
                 animate="show"
-                className="inline"
+                className="inline italic text-white/80"
               >
-                {word}{" "}
-              </motion.span>
-            ))}
-            <motion.em
-              custom={8}
-              variants={wordVariants}
-              initial="hidden"
-              animate="show"
-              className="inline italic text-white/80"
-            >
-              vídeo bonito.
-            </motion.em>
+                vídeo bonito.
+              </motion.em>
+            </span>
           </h1>
 
           {/* Subtitle */}
