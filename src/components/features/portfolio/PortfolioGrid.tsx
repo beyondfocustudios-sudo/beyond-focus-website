@@ -9,7 +9,7 @@ import { PROJECTS, CATEGORIES } from "@/lib/portfolio-data";
 
 const BLUR_DATA = "data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wBDAAYEBQYFBAYGBQYHBwYIChAKCgkJChQODwwQFxQYGBcUFhYaHSUfGhsjHBYWICwgIyYnKSopGR8tMC0oMCUoKSj/2wBDAQcHBwoIChMKChMoGhYaKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCj/wAARCAAIAAoDASIAAhEBAxEB/8QAFQABAQAAAAAAAAAAAAAAAAAAAAn/xAAhEAACAQMDBQAAAAAAAAAAAAABAgMABAUGIWEREiMxUf/EABUBAQEAAAAAAAAAAAAAAAAAAAMF/8QAGhEAAgIDAAAAAAAAAAAAAAAAAAECEgMRkf/aAAwDAQACEQMRAD8AltJagyeH0AthI5xdrLcNM91BF5pX2HaH9bcfaSXWGaRmknyJckliyjqTzSlT54teledu/9k=";
 
-function PortfolioCard({ project }: { project: (typeof PROJECTS)[0] }) {
+function PortfolioCard({ project, priority = false }: { project: (typeof PROJECTS)[0]; priority?: boolean }) {
   const videoRef = useRef<HTMLVideoElement>(null);
   const [hovered, setHovered] = useState(false);
 
@@ -46,6 +46,7 @@ function PortfolioCard({ project }: { project: (typeof PROJECTS)[0] }) {
             sizes="(max-width: 768px) 100vw, (max-width: 1024px) 50vw, 33vw"
             placeholder="blur"
             blurDataURL={BLUR_DATA}
+            priority={priority}
           />
 
           {project.video && (
@@ -134,7 +135,7 @@ export function PortfolioGrid() {
         className="scrollbar-hide mx-auto mt-10 flex max-w-[1800px] snap-x snap-mandatory gap-5 overflow-x-auto px-6 md:grid md:grid-cols-2 md:gap-x-5 md:gap-y-12 md:overflow-visible md:px-10 lg:grid-cols-3 lg:px-12"
       >
         <AnimatePresence mode="popLayout">
-          {filtered.map((project) => (
+          {filtered.map((project, i) => (
             <motion.div
               key={project.slug}
               layout
@@ -144,7 +145,7 @@ export function PortfolioGrid() {
               transition={{ duration: 0.35 }}
               className="w-[85vw] flex-shrink-0 snap-center md:w-auto md:flex-shrink md:snap-align-none"
             >
-              <PortfolioCard project={project} />
+              <PortfolioCard project={project} priority={i === 0} />
             </motion.div>
           ))}
         </AnimatePresence>

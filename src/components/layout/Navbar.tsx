@@ -65,6 +65,7 @@ export function Navbar({ variant = "dark", locale = "pt" }: { variant?: "dark" |
               alt="Beyond Focus"
               width={30}
               height={30}
+              priority
               className={`h-[36px] w-auto transition-all duration-300 ${
                 scrolled ? "brightness-0" : "brightness-0 invert"
               }`}

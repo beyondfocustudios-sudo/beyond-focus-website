@@ -59,12 +59,14 @@ function PortfolioCard({
   thumbnail,
   video,
   aspect = "3/4",
+  priority = false,
 }: {
   title: string;
   category: string;
   thumbnail: string;
   video: string | null;
   aspect?: string;
+  priority?: boolean;
 }) {
   const videoRef = useRef<HTMLVideoElement>(null);
   const [isHovered, setIsHovered] = useState(false);
@@ -117,6 +119,7 @@ function PortfolioCard({
         sizes="(max-width: 768px) 85vw, 40vw"
         placeholder="blur"
         blurDataURL={BLUR_DATA}
+        priority={priority}
       />
 
       {/* Video — preloaded, fills card with crop */}
@@ -220,7 +223,7 @@ export function Portfolio() {
         }`}
         style={{ scrollSnapType: dragging ? "none" : "x mandatory" }}
       >
-        {PORTFOLIO_ITEMS.map((item) => (
+        {PORTFOLIO_ITEMS.map((item, i) => (
           <PortfolioCard
             key={item.title}
             title={item.title}
@@ -228,6 +231,7 @@ export function Portfolio() {
             thumbnail={item.thumbnail}
             video={item.video}
             aspect={"aspect" in item ? (item as { aspect: string }).aspect : "3/4"}
+            priority={i === 0}
           />
         ))}
       </motion.div>
