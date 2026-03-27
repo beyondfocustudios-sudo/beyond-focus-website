@@ -18,7 +18,7 @@ export const BLOG_POSTS: BlogPost[] = [
     title: "Quanto custa um vídeo institucional em Portugal? Guia completo para 2026",
     excerpt: "De €1.500 a €15.000+ — descobre os preços reais, o que influencia o custo e como investir com inteligência.",
     category: "Estratégia",
-    date: "23 Mar 2026",
+    date: "15 Mai 2025",
     readTime: "8 min",
     thumbnail: "/images/blog/quanto-custa-video-institucional-portugal.jpg",
     metaTitle: "Quanto custa um vídeo institucional em Portugal? Guia 2026",
@@ -87,7 +87,7 @@ Vê os nossos [serviços de vídeo institucional](/servicos/videos-institucionai
     title: "Como escolher a produtora audiovisual certa para o teu projecto",
     excerpt: "Guia prático: o que avaliar, que perguntas fazer e como evitar erros comuns ao contratar uma produtora.",
     category: "Estratégia",
-    date: "22 Mar 2026",
+    date: "29 Jun 2025",
     readTime: "7 min",
     thumbnail: "/images/blog/como-escolher-produtora-audiovisual.jpg",
     metaTitle: "Como escolher a produtora audiovisual certa para o teu projecto",
@@ -158,7 +158,7 @@ Se estás a avaliar produtoras para o teu próximo projecto, vê os [nossos serv
     title: "7 razões para a tua empresa investir em vídeo em 2026",
     excerpt: "O vídeo é a ferramenta de comunicação mais poderosa para empresas. Descobre porquê e como começar.",
     category: "Tendências",
-    date: "21 Mar 2026",
+    date: "11 Jul 2025",
     readTime: "6 min",
     thumbnail: "/images/blog/porque-empresa-precisa-video-2026.jpg",
     metaTitle: "7 razões para a tua empresa investir em vídeo em 2026",
@@ -178,7 +178,7 @@ O [Hotel Casa Palmela](/portfolio/hotel-casa-palmela) usa o filme que produzimos
 
 Instagram, TikTok, LinkedIn — todas as plataformas principais ajustaram os seus algoritmos para favorecerm conteúdo em vídeo sobre texto e imagem estática. Para empresas que querem crescer nas redes sem depender exclusivamente de anúncios pagos, o vídeo é o caminho mais eficiente e sustentável.
 
-Um reel bem produzido tem um alcance orgânico muito superior a um post de texto. Uma story em vídeo gera mais respostas do que uma imagem. Um vídeo no LinkedIn tem 5x mais engagement do que um post equivalente em texto. Vê os nossos [serviços de redes sociais](/servicos/reels-redes-sociais).
+Um reel bem produzido tem um alcance orgânico muito superior a um post de texto. Uma story em vídeo gera mais respostas do que uma imagem. Um vídeo no LinkedIn tem 5x mais engagement do que um post equivalente em texto. Vê os nossos [serviços de redes sociais](/servicos/redes-sociais).
 
 ## 3. O vídeo humaniza a marca de forma que nenhum outro formato consegue
 
@@ -221,7 +221,7 @@ Precisas de ajuda a definir o que faz sentido para a tua empresa? Vê os [nossos
     title: "Vídeo institucional vs filme comercial: qual é que a tua empresa precisa?",
     excerpt: "Não sabes se precisas de um institucional ou de um comercial? Explicamos as diferenças e quando usar cada um.",
     category: "Estratégia",
-    date: "20 Mar 2026",
+    date: "5 Ago 2025",
     readTime: "5 min",
     thumbnail: "/images/blog/video-institucional-vs-filme-comercial.jpg",
     metaTitle: "Vídeo institucional vs filme comercial: qual é que a tua empresa precisa?",
@@ -297,7 +297,7 @@ Não tens a certeza de qual precisas? [Fala connosco](/contacto) — analisamos 
     title: "Como preparar a tua empresa para um dia de filmagem",
     excerpt: "Guia prático: o que fazer, o que evitar e como garantir que o dia de rodagem corre sem problemas.",
     category: "Produção",
-    date: "19 Mar 2026",
+    date: "25 Set 2025",
     readTime: "6 min",
     thumbnail: "/images/blog/como-preparar-empresa-filmagem.jpg",
     metaTitle: "Como preparar a tua empresa para um dia de filmagem",
@@ -366,7 +366,7 @@ Estás a planear um vídeo para a tua empresa? Vê os [nossos serviços](/servic
     title: "O que é storytelling visual e como aplicar à tua marca",
     excerpt: "Storytelling visual é a arte de contar a história da tua marca através de imagem. Descobre como aplicar ao teu negócio.",
     category: "Estratégia",
-    date: "17 Mar 2026",
+    date: "18 Set 2025",
     readTime: "7 min",
     thumbnail: "/images/blog/storytelling-visual-marca.jpg",
     metaTitle: "O que é storytelling visual e como aplicar à tua marca",
@@ -410,14 +410,19 @@ O vídeo de restauração que produzimos para o Chef Mauro Loureiro não é sobr
 
 O primeiro passo não é contratar uma produtora. É definir a história que a tua marca quer contar — e ser honesto sobre se essa história é genuinamente interessante para quem a vai ver. Uma boa produtora pode ajudar-te a encontrar essa história, a estruturá-la e a traduzi-la em imagens que funcionam.
 
-Se queres aplicar storytelling visual à tua marca de forma estratégica, [fala connosco](/contacto). Começamos sempre pela história — antes de qualquer câmara ou equipamento entrar em cena.`,
+Se queres aplicar storytelling visual à tua marca de forma estratégica, vê os nossos [filmes comerciais](/servicos/filmes-comerciais) ou [vídeos institucionais](/servicos/videos-institucionais) — ou [fala connosco](/contacto). Começamos sempre pela história — antes de qualquer câmara ou equipamento entrar em cena.
+
+**Artigos relacionados:**
+- [Brand Film vs. Vídeo Institucional: qual escolher?](/blog/brand-film-vs-video-institucional) — a diferença entre os formatos e qual serve melhor cada tipo de narrativa
+- [5 erros comuns ao filmar o primeiro vídeo da empresa](/blog/erros-comuns-primeiro-video-empresa) — evita os erros mais frequentes antes de começar
+- [Porquê a tua empresa precisa de vídeo em 2026](/blog/porque-empresa-precisa-video-2026) — o contexto estratégico por trás da decisão`,
   },
   {
     slug: "erros-comuns-primeiro-video-empresa",
     title: "5 erros comuns ao filmar o primeiro vídeo da empresa",
     excerpt: "Vai filmar o primeiro vídeo da tua empresa? Evita estes 5 erros que a maioria das marcas comete.",
     category: "Produção",
-    date: "13 Mar 2026",
+    date: "14 Ago 2025",
     readTime: "6 min",
     thumbnail: "/images/blog/erros-comuns-primeiro-video-empresa.jpg",
     metaTitle: "5 erros comuns ao filmar o primeiro vídeo da empresa",
@@ -474,7 +479,7 @@ Se estás a planear o primeiro vídeo da tua empresa e queres evitar estes erros
     title: "Cobertura de eventos: como transformar um dia em meses de conteúdo",
     excerpt: "Um evento de empresa dura horas. O conteúdo que produzimos dura meses. Descobre como maximizar o ROI.",
     category: "Produção",
-    date: "10 Mar 2026",
+    date: "20 Nov 2025",
     readTime: "6 min",
     thumbnail: "/images/blog/cobertura-eventos-conteudo.jpg",
     metaTitle: "Cobertura de eventos: como transformar um dia em meses de conteúdo",
@@ -531,7 +536,12 @@ A diferença de custo entre uma cobertura reactiva de última hora e uma cobertu
 
 Cobrimos todo o tipo de eventos corporativos: festas de empresa e datas comemorativas, lançamentos de produto e serviço, conferências e painéis, acções de formação e workshops, eventos de cliente e fidelização, feiras sectoriais e apresentações públicas.
 
-Vê os nossos [serviços de fotografia de eventos](/servicos/fotografias-eventos) ou [fala connosco](/contacto) sobre o teu próximo evento. Quanto mais cedo começarmos a planear, melhor será o resultado.`,
+Vê os nossos [serviços de eventos](/servicos/eventos) ou [fala connosco](/contacto) sobre o teu próximo evento. Quanto mais cedo começarmos a planear, melhor será o resultado.
+
+**Artigos relacionados:**
+- [Fotografia corporativa: como preparar uma sessão que resulta](/blog/fotografia-corporativa-guia) — como tirar o máximo partido de uma sessão fotográfica para a empresa
+- [O que publicar nas redes sociais da tua empresa](/blog/o-que-publicar-redes-sociais-empresa) — como transformar o material de evento em conteúdo para semanas
+- [Porquê a tua empresa precisa de vídeo em 2026](/blog/porque-empresa-precisa-video-2026) — o contexto estratégico para investir em conteúdo audiovisual`,
   },
   {
     slug: "video-linkedin-leads-b2b",
@@ -582,14 +592,19 @@ O erro mais comum das empresas no LinkedIn é publicar esporadicamente — um v�
 
 Uma cadência de 2 a 3 posts por semana, alternando entre vídeo, texto e carrossel, com pelo menos 1 vídeo por semana, é o padrão que gera crescimento sustentado de visibilidade e de leads.
 
-Na Beyond Focus, produzimos [conteúdo para redes sociais](/servicos/reels-redes-sociais) optimizado por plataforma, incluindo vídeos específicos para LinkedIn B2B. [Fala connosco](/contacto) sobre a tua estratégia de vídeo para LinkedIn e como podemos ajudar a criar um pipeline de conteúdo consistente.`,
+Na Beyond Focus, produzimos [conteúdo para redes sociais](/servicos/redes-sociais) optimizado por plataforma, incluindo vídeos específicos para LinkedIn B2B. [Fala connosco](/contacto) sobre a tua estratégia de vídeo para LinkedIn e como podemos ajudar a criar um pipeline de conteúdo consistente.
+
+**Artigos relacionados:**
+- [Guia: formatos de vídeo para cada rede social em 2026](/blog/formatos-video-redes-sociais-2026) — especificações técnicas e estratégia por plataforma
+- [O que publicar nas redes sociais da tua empresa](/blog/o-que-publicar-redes-sociais-empresa) — ideias e formatos para manter uma presença consistente
+- [O retorno real do vídeo marketing: dados e exemplos](/blog/roi-video-marketing-dados) — como medir o impacto do conteúdo em leads e conversões`,
   },
   {
     slug: "video-restaurante-portugal",
     title: "Porquê investir em conteúdo de vídeo para restauração",
     excerpt: "As redes sociais são o novo cartão de visita de um restaurante. Descobre como o vídeo pode trazer mais clientes.",
     category: "Estratégia",
-    date: "3 Mar 2026",
+    date: "11 Dez 2025",
     readTime: "6 min",
     thumbnail: "/images/blog/video-restaurante-portugal.jpg",
     metaTitle: "Porquê investir em conteúdo de vídeo para restauração",
@@ -635,14 +650,19 @@ Não é necessário produzir um vídeo enorme para começar. Um pacote de conte�
 
 O investimento varia conforme o tipo e o volume de conteúdo: um pacote de reels mensais começa em €800 a €1.500 por sessão, dependendo do número de peças. Um vídeo de apresentação mais elaborado para website e plataformas de reserva situa-se entre €2.500 e €5.000.
 
-Vê os nossos [serviços de reels e redes sociais](/servicos/reels-redes-sociais) ou [contacta-nos](/contacto) para discutirmos o que faz sentido para o teu restaurante.`,
+Vê os nossos [serviços de redes sociais](/servicos/redes-sociais) ou [contacta-nos](/contacto) para discutirmos o que faz sentido para o teu restaurante.
+
+**Artigos relacionados:**
+- [O que é storytelling visual e como aplicar à tua marca](/blog/storytelling-visual-marca) — como construir narrativa que transforma visitantes em clientes
+- [Conteúdo para Redes Sociais: Vídeo ou Foto?](/blog/conteudo-redes-sociais-video-ou-fotografia) — como combinar os dois formatos para máximo impacto
+- [Pacote de Conteúdo Mensal vs Projectos Pontuais](/blog/pacote-conteudo-mensal-vs-projetos-pontuais) — qual o modelo mais vantajoso para produção recorrente`,
   },
   {
     slug: "video-imobiliario-vender-rapido",
     title: "Como o vídeo ajuda a vender imóveis mais rápido",
     excerpt: "Imóveis com vídeo profissional vendem mais rápido. Descobre porquê e que tipo de conteúdo funciona.",
     category: "Estratégia",
-    date: "27 Fev 2026",
+    date: "22 Jan 2026",
     readTime: "5 min",
     thumbnail: "/images/blog/video-imobiliario-vender-rapido.jpg",
     metaTitle: "Como o vídeo ajuda a vender imóveis mais rápido",
@@ -680,14 +700,19 @@ A questão relevante não é "vale a pena investir em vídeo?" — é "quanto cu
 
 Uma sessão fotográfica profissional mais um vídeo walkthrough de qualidade começa em €800 a €1.500 para imóveis residenciais. Produções mais elaboradas com drone e storytelling situam-se entre €2.000 e €5.000 dependendo da dimensão e do nível do imóvel.
 
-Vê os nossos [serviços de filmagem](/servicos/filmes-comerciais) ou [fala connosco](/contacto) para discutir as necessidades do teu projecto imobiliário.`,
+Vê os nossos [serviços de filmagem](/servicos/filmes-comerciais) ou [fala connosco](/contacto) para discutir as necessidades do teu projecto imobiliário.
+
+**Artigos relacionados:**
+- [Quanto custa um vídeo institucional em Portugal?](/blog/quanto-custa-video-institucional-portugal) — referências de preço para planear o investimento em produção audiovisual
+- [O que é storytelling visual e como aplicar à tua marca](/blog/storytelling-visual-marca) — como criar narrativa visual que vende antes da visita física
+- [O impacto do vídeo na taxa de conversão do website](/blog/video-conversao-website) — dados sobre como o vídeo influencia directamente as decisões de compra`,
   },
   {
     slug: "primeira-vez-produtora",
     title: "O que esperar quando contratas uma produtora pela primeira vez",
     excerpt: "Nunca trabalhaste com uma produtora? Eis o que esperar do processo, do briefing à entrega final.",
     category: "Estratégia",
-    date: "24 Fev 2026",
+    date: "30 Out 2025",
     readTime: "7 min",
     thumbnail: "/images/blog/primeira-vez-produtora.jpg",
     metaTitle: "O que esperar quando contratas uma produtora pela primeira vez",
@@ -822,7 +847,7 @@ O YouTube tem lógicas completamente diferentes das redes sociais — é um moto
 
 ## A regra da adaptação por plataforma
 
-Na Beyond Focus, todos os projectos de [conteúdo para redes sociais](/servicos/reels-redes-sociais) incluem versões adaptadas para cada plataforma relevante — não apenas uma versão exportada em vários tamanhos, mas versões verdadeiramente pensadas para o contexto e o público de cada canal.
+Na Beyond Focus, todos os projectos de [conteúdo para redes sociais](/servicos/redes-sociais) incluem versões adaptadas para cada plataforma relevante — não apenas uma versão exportada em vários tamanhos, mas versões verdadeiramente pensadas para o contexto e o público de cada canal.
 
 Se precisas de ajuda a criar uma estratégia de conteúdo em vídeo adaptada às plataformas que fazem mais sentido para o teu negócio, [fala connosco](/contacto).`,
   },
@@ -831,7 +856,7 @@ Se precisas de ajuda a criar uma estratégia de conteúdo em vídeo adaptada às
     title: "Colour grading: o que é e porquê importa no vídeo profissional",
     excerpt: "O colour grading é o que transforma um vídeo bom num vídeo cinematográfico. Descobre o que é e como funciona.",
     category: "Produção",
-    date: "17 Fev 2026",
+    date: "29 Jan 2026",
     readTime: "5 min",
     thumbnail: "/images/blog/colour-grading-video-profissional.jpg",
     metaTitle: "Colour grading: o que é e porquê importa no vídeo profissional",
@@ -879,14 +904,19 @@ A característica principal de um bom colour grading é que não se nota — ou 
 
 Quando o grading está mal feito ou ausente, notam-se: inconsistência de cores entre planos consecutivos, pele com tons estranhos (demasiado laranja, demasiado verde), imagens planas sem contraste ou drama visual, e uma sensação geral de que o vídeo parece "amador" mesmo quando foi filmado com equipamento de qualidade.
 
-Queres saber mais sobre o nosso processo de pós-produção? Vê os [nossos serviços de vídeo](/servicos/filmes-comerciais) ou [fala connosco](/contacto).`,
+Queres saber mais sobre o nosso processo de pós-produção? Vê os [nossos serviços de vídeo](/servicos/filmes-comerciais) ou [fala connosco](/contacto).
+
+**Artigos relacionados:**
+- [O processo por trás de um filme comercial](/blog/processo-producao-filme-comercial) — como funciona cada fase da produção, da pré à pós
+- [5 erros comuns ao filmar o primeiro vídeo da empresa](/blog/erros-comuns-primeiro-video-empresa) — os erros que o colour grading não consegue corrigir
+- [O que é storytelling visual e como aplicar à tua marca](/blog/storytelling-visual-marca) — como a identidade visual e a cor se articulam com a narrativa`,
   },
   {
     slug: "briefing-eficaz-produtora-video",
     title: "Como criar um briefing eficaz para uma produtora de vídeo",
     excerpt: "Um bom briefing é metade do trabalho. Eis o que incluir para garantir que a produtora entende o teu projecto.",
     category: "Produção",
-    date: "13 Fev 2026",
+    date: "2 Set 2025",
     readTime: "6 min",
     thumbnail: "/images/blog/briefing-eficaz-produtora-video.jpg",
     metaTitle: "Como criar um briefing eficaz para uma produtora de vídeo",
@@ -944,14 +974,19 @@ Há uma data de entrega obrigatória (feira, evento, lançamento de produto) ou 
 
 Website, Instagram, LinkedIn, TikTok, YouTube, apresentações PowerPoint, ecrãs em loja, feiras? Cada canal tem requisitos técnicos diferentes (formato, proporção, duração). Saber onde o vídeo vai viver permite à produtora planear todas as versões necessárias desde o início, em vez de as criar como adaptações posteriores.
 
-Não precisas de ter um briefing perfeito para nos contactar. Na Beyond Focus, o processo de briefing é guiado — fazemos as perguntas certas para extrair a informação que precisamos. [Fala connosco](/contacto) e começamos do início juntos.`,
+Não precisas de ter um briefing perfeito para nos contactar. Na Beyond Focus, o processo de briefing é guiado — fazemos as perguntas certas para extrair a informação que precisamos. [Fala connosco](/contacto) e começamos do início juntos.
+
+**Artigos relacionados:**
+- [Como escolher a produtora audiovisual certa](/blog/como-escolher-produtora-audiovisual) — o que avaliar para além do portfólio e do preço
+- [O que esperar quando contratas uma produtora pela primeira vez](/blog/primeira-vez-produtora) — o processo completo do briefing à entrega
+- [Quanto custa um vídeo institucional em Portugal?](/blog/quanto-custa-video-institucional-portugal) — para chegar ao orçamento com uma perspectiva realista`,
   },
   {
     slug: "brand-film-vs-video-institucional",
     title: "Brand Film vs. Vídeo Institucional: Qual Escolher?",
     excerpt: "Perceba a diferença entre brand film e vídeo institucional, quando usar cada formato e qual se adequa melhor à estratégia de comunicação da sua empres",
     category: "Estratégia",
-    date: "24 Mar 2026",
+    date: "23 Out 2025",
     readTime: "10 min",
     thumbnail: "/images/blog/brand-film-vs-video-institucional.jpg",
     metaTitle: "Brand Film vs. Vídeo Institucional: Qual Escolher?",
@@ -1118,7 +1153,7 @@ Na Beyond Focus trabalhamos com ambos os formatos. Se quer perceber qual se adeq
 ## Leitura relacionada
 
 - [Quanto custa um vídeo institucional em Portugal?](/blog/quanto-custa-video-institucional-portugal) — Referências de preço por nível de produção e o que está incluído em cada proposta.
-- [Como escolher uma produtora audiovisual para a sua empresa](/blog/como-escolher-produtora-audiovisual-empresa) — Os critérios que fazem a diferença na escolha de uma equipa de produção.
+- [Como escolher uma produtora audiovisual para a sua empresa](/blog/como-escolher-produtora-audiovisual) — Os critérios que fazem a diferença na escolha de uma equipa de produção.
 - [Conteúdo para redes sociais: fotografia ou vídeo?](/blog/conteudo-redes-sociais-video-ou-fotografia) — Como complementar o brand film com conteúdo consistente nas plataformas sociais.
 
 ---
@@ -1149,7 +1184,7 @@ Sim, desde que a decisão seja estratégica. Uma empresa pequena com uma histór
     title: "Conteúdo para Redes Sociais: Vídeo ou Foto?",
     excerpt: "Perceba quando usar vídeo e quando usar fotografia nas redes sociais da sua empresa. Análise por plataforma, objectivo e orçamento disponível.",
     category: "Estratégia",
-    date: "24 Mar 2026",
+    date: "6 Nov 2025",
     readTime: "12 min",
     thumbnail: "/images/blog/conteudo-redes-sociais-video-ou-fotografia.jpg",
     metaTitle: "Conteúdo para Redes Sociais: Vídeo ou Foto?",
@@ -1353,7 +1388,7 @@ Se quer perceber qual o pacote mais adequado à sua empresa, [fale connosco](/co
 
 - [Brand Film vs. Vídeo Institucional: qual escolher?](/blog/brand-film-vs-video-institucional) — Para projectos de maior envergadura que vão além do conteúdo recorrente.
 - [Quanto custa um vídeo institucional em Portugal?](/blog/quanto-custa-video-institucional-portugal) — Referências de preço para perceber o que está ao alcance do seu orçamento.
-- [Como escolher uma produtora audiovisual para a sua empresa](/blog/como-escolher-produtora-audiovisual-empresa) — Os critérios que distinguem uma parceria sólida de uma relação transacional.
+- [Como escolher uma produtora audiovisual para a sua empresa](/blog/como-escolher-produtora-audiovisual) — Os critérios que distinguem uma parceria sólida de uma relação transacional.
 
 ---
 
@@ -1383,7 +1418,7 @@ As métricas mais relevantes dependem do objetivo: para crescimento de audiênci
     title: "Hotelaria e Vídeo: Como os Hotéis Portugueses Usam o Conteúdo Visual para Vender Mais",
     excerpt: "Como os hotéis portugueses estão a usar vídeo marketing e brand films para aumentar reservas directas, reduzir dependência de OTAs e construir uma ide",
     category: "Estratégia",
-    date: "24 Mar 2026",
+    date: "13 Nov 2025",
     readTime: "13 min",
     thumbnail: "/images/blog/hotelaria-video-hoteis-portugueses-conteudo-visual.jpg",
     metaTitle: "Hotelaria e Vídeo: Como os Hotéis Portugueses Usam o Conteúd",
@@ -1582,7 +1617,7 @@ Para um hotel com orçamento limitado que está a começar a investir em conteú
     title: "Pacote de Conteúdo Mensal vs Projectos Pontuais: Qual É Mais Vantajoso para a Sua Empresa?",
     excerpt: "Compare o modelo de produção de conteúdo por retainer mensal com projectos pontuais de vídeo. Descubra qual se adequa melhor à sua estratégia e orçame",
     category: "Estratégia",
-    date: "24 Mar 2026",
+    date: "4 Dez 2025",
     readTime: "7 min",
     thumbnail: "/images/blog/pacote-conteudo-mensal-vs-projetos-pontuais.jpg",
     metaTitle: "Pacote de Conteúdo Mensal vs Projectos Pontuais: Qual É Mais",
@@ -1743,7 +1778,7 @@ Em ambos os casos, utilizamos o [Portal do Cliente](/blog/portal-cliente-beyond-
     title: "O impacto do vídeo na taxa de conversão do website",
     excerpt: "Páginas com vídeo convertem significativamente mais. Descobre os dados e como aplicar ao teu site.",
     category: "Tendências",
-    date: "10 Fev 2026",
+    date: "15 Jan 2026",
     readTime: "5 min",
     thumbnail: "/images/blog/video-conversao-website.jpg",
     metaTitle: "O impacto do vídeo na taxa de conversão do website",
@@ -1798,7 +1833,7 @@ Se o teu website não tem vídeo, está a perder conversões diariamente. [Fala 
     title: "Porquê ter um showreel e como o usar para vender mais",
     excerpt: "Um showreel é o cartão de visita audiovisual da tua empresa. Descobre como criar e usar estrategicamente.",
     category: "Estratégia",
-    date: "6 Fev 2026",
+    date: "22 Jan 2026",
     readTime: "5 min",
     thumbnail: "/images/blog/showreel-empresa-como-usar.jpg",
     metaTitle: "Porquê ter um showreel e como o usar para vender mais",
@@ -1840,14 +1875,19 @@ Um showreel tem uma vida útil limitada. A regra geral é actualizar quando: ten
 - **Apresentações comerciais** — como primeiro elemento de qualquer apresentação a novos clientes
 - **Prospecção directa** — enviado como parte do primeiro contacto com potenciais clientes
 
-Na Beyond Focus, actualizamos o showreel regularmente com os melhores projectos recentes. Se queres criar o teu ou actualizar um que já existe, vê os nossos [serviços de filmes comerciais](/servicos/filmes-comerciais) ou [fala connosco](/contacto).`,
+Na Beyond Focus, actualizamos o showreel regularmente com os melhores projectos recentes. Se queres criar o teu ou actualizar um que já existe, vê os nossos [serviços de filmes comerciais](/servicos/filmes-comerciais) ou [fala connosco](/contacto).
+
+**Artigos relacionados:**
+- [Brand Film vs. Vídeo Institucional: qual escolher?](/blog/brand-film-vs-video-institucional) — os formatos que alimentam o showreel e como cada um posiciona a marca
+- [O impacto do vídeo na taxa de conversão do website](/blog/video-conversao-website) — como usar o showreel no website para aumentar os pedidos de orçamento
+- [Como escolher a produtora audiovisual certa](/blog/como-escolher-produtora-audiovisual) — o que avaliar ao escolher o parceiro para criar o teu showreel`,
   },
   {
     slug: "o-que-publicar-redes-sociais-empresa",
     title: "O que publicar nas redes sociais da tua empresa (com exemplos)",
     excerpt: "Guia prático com ideias de conteúdo para Instagram, LinkedIn e TikTok empresarial.",
     category: "Estratégia",
-    date: "3 Fev 2026",
+    date: "5 Fev 2026",
     readTime: "7 min",
     thumbnail: "/images/blog/o-que-publicar-redes-sociais-empresa.jpg",
     metaTitle: "O que publicar nas redes sociais da tua empresa (com exemplos)",
@@ -1917,14 +1957,14 @@ Comentar tendências, partilhar opiniões fundamentadas sobre o sector e posicio
 
 O erro mais comum não é publicar conteúdo fraco — é não publicar nada durante semanas e tentar compensar depois com um burst de conteúdo. Os algoritmos de todas as plataformas recompensam a consistência acima de tudo. Um post mediano publicado todas as semanas supera um post excelente publicado uma vez por mês.
 
-Na Beyond Focus, produzimos todo o conteúdo audiovisual que a tua empresa precisa para manter uma presença consistente e profissional nas redes. Vê os nossos [serviços de redes sociais](/servicos/reels-redes-sociais) ou descobre [porquê a tua empresa precisa de vídeo em 2026](/blog/porque-empresa-precisa-video-2026). [Fala connosco](/contacto).`,
+Na Beyond Focus, produzimos todo o conteúdo audiovisual que a tua empresa precisa para manter uma presença consistente e profissional nas redes. Vê os nossos [serviços de redes sociais](/servicos/redes-sociais) ou descobre [porquê a tua empresa precisa de vídeo em 2026](/blog/porque-empresa-precisa-video-2026). [Fala connosco](/contacto).`,
   },
   {
     slug: "video-hotelaria-portugal",
     title: "Como um vídeo de 60 segundos pode transformar a comunicação do teu hotel",
     excerpt: "O vídeo é a ferramenta mais eficaz para hotéis atraírem hóspedes.",
     category: "Estratégia",
-    date: "30 Jan 2026",
+    date: "6 Nov 2025",
     readTime: "6 min",
     thumbnail: "/images/blog/video-hotelaria-portugal.jpg",
     metaTitle: "Como um vídeo de 60 segundos pode transformar a comunicação do teu hotel",
@@ -1971,7 +2011,7 @@ O investimento num vídeo de hotel de qualidade situa-se tipicamente entre €3.
     title: "O processo por trás de um filme comercial: do briefing à entrega",
     excerpt: "As 5 fases do processo — desde a primeira reunião até à entrega dos ficheiros finais.",
     category: "Produção",
-    date: "27 Jan 2026",
+    date: "8 Abr 2025",
     readTime: "7 min",
     thumbnail: "/images/blog/processo-producao-filme-comercial.jpg",
     metaTitle: "O processo por trás de um filme comercial: do briefing à entrega",
@@ -2022,7 +2062,7 @@ Vê os nossos [serviços de filmes comerciais](/servicos/filmes-comerciais) ou l
     title: "Fotografia corporativa: como preparar uma sessão que resulta",
     excerpt: "Guia prático para sessões de fotografia corporativa. O que preparar e como garantir bons resultados.",
     category: "Produção",
-    date: "23 Jan 2026",
+    date: "9 Out 2025",
     readTime: "5 min",
     thumbnail: "/images/blog/fotografia-corporativa-guia.jpg",
     metaTitle: "Fotografia corporativa: como preparar uma sessão que resulta",
@@ -2073,7 +2113,7 @@ O resultado é um banco de imagens coerente e utilizável — não apenas uma co
 
 Uma boa sessão de fotografia corporativa resulta tipicamente numa selecção tratada de 50 a 150 imagens, em alta resolução para impressão e versões optimizadas para web e redes sociais. Um banco de imagens de qualidade dura em média 1 a 2 anos antes de precisar de actualização.
 
-Vê os nossos [serviços de fotografia de eventos](/servicos/fotografias-eventos) ou lê sobre [como escolher a produtora certa](/blog/como-escolher-produtora-audiovisual). [Fala connosco](/contacto) para planear a tua próxima sessão.`,
+Vê os nossos [serviços de fotografia de eventos](/servicos/eventos) ou lê sobre [como escolher a produtora certa](/blog/como-escolher-produtora-audiovisual). [Fala connosco](/contacto) para planear a tua próxima sessão.`,
   },
   {
     slug: "tendencias-video-marketing-2026",
@@ -2120,14 +2160,14 @@ O que a AI não substitui é a direcção criativa, o storytelling estratégico 
 
 As marcas que constroem audiências mais leais são as que tratam o conteúdo de vídeo como uma narrativa continuada — uma série com temas recorrentes e evolução ao longo do tempo — em vez de peças isoladas sem conexão entre si. Esta audiência é muito mais valiosa em engagement, conversão e lealdade do que seguidores que chegam de forma aleatória.
 
-Descobre [porquê a tua empresa precisa de vídeo em 2026](/blog/porque-empresa-precisa-video-2026) ou vê os nossos [serviços de redes sociais](/servicos/reels-redes-sociais). [Fala connosco](/contacto) para definir a tua estratégia de vídeo para este ano.`,
+Descobre [porquê a tua empresa precisa de vídeo em 2026](/blog/porque-empresa-precisa-video-2026) ou vê os nossos [serviços de redes sociais](/servicos/redes-sociais). [Fala connosco](/contacto) para definir a tua estratégia de vídeo para este ano.`,
   },
   {
     slug: "roi-video-marketing-dados",
     title: "O retorno real do vídeo marketing: dados e exemplos",
     excerpt: "Métricas, dados e exemplos reais que provam o ROI do investimento em vídeo.",
     category: "Estratégia",
-    date: "16 Jan 2026",
+    date: "22 Jul 2025",
     readTime: "6 min",
     thumbnail: "/images/blog/roi-video-marketing-dados.jpg",
     metaTitle: "O retorno real do vídeo marketing: dados e exemplos",
@@ -2176,7 +2216,7 @@ Descobre [quanto custa um vídeo institucional](/blog/quanto-custa-video-institu
     title: "O que é um departamento criativo externo (e porquê ter um)",
     excerpt: "Uma equipa de produção que funciona como extensão da tua empresa — sem contratares equipa interna.",
     category: "Estratégia",
-    date: "13 Jan 2026",
+    date: "3 Ago 2025",
     readTime: "5 min",
     thumbnail: "/images/blog/departamento-criativo-externo.jpg",
     metaTitle: "O que é um departamento criativo externo (e porquê ter um)",
@@ -2222,14 +2262,14 @@ O modelo é especialmente adequado para: hotéis e grupos hoteleiros que precisa
 
 Na Beyond Focus, somos o departamento criativo externo para empresas que percebem o valor da comunicação visual consistente. Parceiros que conhecem o negócio, a marca e os objectivos — e que entregam conteúdo de qualidade de forma recorrente e sem fricção.
 
-Vê os nossos [serviços de redes sociais](/servicos/reels-redes-sociais), a [nossa abordagem a vídeos institucionais](/servicos/videos-institucionais), ou [quem somos](/sobre). [Fala connosco](/contacto) para explorar como este modelo pode funcionar para a tua empresa.`,
+Vê os nossos [serviços de redes sociais](/servicos/redes-sociais), a [nossa abordagem a vídeos institucionais](/servicos/videos-institucionais), ou [quem somos](/sobre). [Fala connosco](/contacto) para explorar como este modelo pode funcionar para a tua empresa.`,
   },
   {
     slug: "portal-cliente-beyond-focus-producao-audiovisual",
     title: "Portal do Cliente: Como a Beyond Focus Transforma a Experiência de Produção",
     excerpt: "Descubra como o Portal do Cliente da Beyond Focus transforma a experiência de produção audiovisual — da aprovação de entregas à comunicação em tempo real.",
     category: "Estratégia",
-    date: "21 Mar 2026",
+    date: "12 Mar 2026",
     readTime: "10 min",
     thumbnail: "/images/blog/portal-cliente-beyond-focus.jpg",
     metaTitle: "Portal do Cliente: Como a Beyond Focus Transforma a Experiência de Produção",
@@ -2425,7 +2465,7 @@ O Portal do Cliente está disponível em todos os projectos da Beyond Focus. Par
     title: "O que é o Portal do Cliente e Porque Muda Tudo na Produção Audiovisual",
     excerpt: "Descubra o que é um portal do cliente numa produtora audiovisual, porque nenhuma produtora portuguesa tem um, e como esta ferramenta transforma a gestão de projectos de vídeo.",
     category: "Estratégia",
-    date: "20 Mar 2026",
+    date: "19 Mar 2026",
     readTime: "9 min",
     thumbnail: "/images/blog/portal-cliente-o-que-e.jpg",
     metaTitle: "O que é o Portal do Cliente e Porque Muda Tudo na Produção Audiovisual",
