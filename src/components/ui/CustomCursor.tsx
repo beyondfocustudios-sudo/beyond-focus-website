@@ -101,7 +101,7 @@ export function CustomCursor() {
         height: { duration: 0.3, ease: "easeInOut" },
         opacity: { duration: 0.1 },
       }}
-      className={`fixed top-0 left-0 rounded-full pointer-events-none z-[9999] flex items-center justify-center mix-blend-difference ${
+      className={`fixed top-0 left-0 rounded-full pointer-events-none z-[99999] flex items-center justify-center mix-blend-difference ${
         showBg ? "bg-white" : "border border-white"
       }`}
     >
