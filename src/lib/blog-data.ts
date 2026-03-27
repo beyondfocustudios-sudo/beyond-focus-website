@@ -151,7 +151,7 @@ Não necessariamente, e muitas vezes o contrário é verdade. Uma equipa pequena
 
 O que importa é a dedicação, a experiência relevante e o alinhamento criativo. Na Beyond Focus, cada projecto é tratado como se fosse o único — porque enquanto está em produção, é o que mais importa.
 
-Se estás a avaliar produtoras para o teu próximo projecto, vê os [nossos serviços](/servicos), explora o [nosso portfolio](/portfolio) ou [fala connosco directamente](/contacto). A primeira conversa não tem compromisso — é para perceber se somos a equipa certa para o teu projecto.`,
+Se estás a avaliar produtoras para o teu próximo projecto, vê o nosso [serviço de filmes comerciais](/servicos/filmes-comerciais) ou de [vídeos institucionais](/servicos/videos-institucionais), explora o [nosso portfolio](/portfolio) ou [fala connosco directamente](/contacto). A primeira conversa não tem compromisso — é para perceber se somos a equipa certa para o teu projecto.`,
   },
   {
     slug: "porque-empresa-precisa-video-2026",
@@ -974,7 +974,7 @@ Há uma data de entrega obrigatória (feira, evento, lançamento de produto) ou 
 
 Website, Instagram, LinkedIn, TikTok, YouTube, apresentações PowerPoint, ecrãs em loja, feiras? Cada canal tem requisitos técnicos diferentes (formato, proporção, duração). Saber onde o vídeo vai viver permite à produtora planear todas as versões necessárias desde o início, em vez de as criar como adaptações posteriores.
 
-Não precisas de ter um briefing perfeito para nos contactar. Na Beyond Focus, o processo de briefing é guiado — fazemos as perguntas certas para extrair a informação que precisamos. [Fala connosco](/contacto) e começamos do início juntos.
+Não precisas de ter um briefing perfeito para nos contactar. Na Beyond Focus, o processo de briefing é guiado — fazemos as perguntas certas para extrair a informação que precisamos. Vê os nossos [filmes comerciais](/servicos/filmes-comerciais) ou [vídeos institucionais](/servicos/videos-institucionais), e [fala connosco](/contacto) para começarmos do início juntos.
 
 **Artigos relacionados:**
 - [Como escolher a produtora audiovisual certa](/blog/como-escolher-produtora-audiovisual) — o que avaliar para além do portfólio e do preço
@@ -1146,7 +1146,7 @@ Para decidir entre um vídeo institucional e um brand film, responda a estas tr�
 
 Se as respostas apontam para direções diferentes, o caminho mais inteligente pode ser produzir os dois — com um orçamento global que permita fazer bem o que cada formato exige.
 
-Na Beyond Focus trabalhamos com ambos os formatos. Se quer perceber qual se adequa melhor ao seu projecto, [fale connosco](/contacto) — a conversa não tem custos e normalmente clarifica tudo.
+Na Beyond Focus trabalhamos com ambos os formatos. Veja o nosso [serviço de brand film](/servicos/brand-film) ou os [vídeos institucionais](/servicos/videos-institucionais). Se quer perceber qual se adequa melhor ao seu projecto, [fale connosco](/contacto) — a conversa não tem custos e normalmente clarifica tudo.
 
 ---
 
@@ -1380,7 +1380,7 @@ Se o orçamento permitir desde o início — e para a maioria das empresas que l
 
 Na Beyond Focus, os nossos pacotes de conteúdo para redes sociais incluem sempre fotografia e vídeo. Não porque vendemos mais assim — mas porque sabemos que é a abordagem que efectivamente funciona.
 
-Se quer perceber qual o pacote mais adequado à sua empresa, [fale connosco](/contacto). Analisamos a presença actual e propomos uma estratégia com base em objetivos reais.
+Se quer perceber qual o pacote mais adequado à sua empresa, veja os nossos [serviços de redes sociais](/servicos/redes-sociais) e [fotografia](/servicos/fotografia) — ou [fale connosco](/contacto). Analisamos a presença actual e propomos uma estratégia com base em objetivos reais.
 
 ---
 
@@ -1578,7 +1578,7 @@ O que fazemos para hotéis:
 
 Todos os projectos passam pelo Portal do Cliente — a plataforma exclusiva da Beyond Focus onde o hotel acompanha o estado do projecto, revê entregas e aprova cada fase.
 
-Para conhecer o nosso trabalho ou discutir um projecto para a sua propriedade, [fale connosco](/contacto). Não enviamos propostas sem uma conversa prévia.
+Para conhecer o nosso trabalho ou discutir um projecto para a sua propriedade, veja a nossa [página dedicada a hotelaria](/hotelaria) ou os nossos [filmes comerciais](/servicos/filmes-comerciais) — e [fale connosco](/contacto). Não enviamos propostas sem uma conversa prévia.
 
 ---
 
@@ -1757,7 +1757,7 @@ Nos projectos pontuais, cada trabalho começa por uma reunião de discovery onde
 
 Em ambos os casos, utilizamos o [Portal do Cliente](/blog/portal-cliente-beyond-focus-producao-audiovisual) para acompanhamento do projecto, revisões com comentários por timecode e entrega de ficheiros finais — uma experiência que nenhuma produtora portuguesa oferece de forma equivalente.
 
-[Fale connosco para perceber qual o modelo certo para a sua empresa.](/contacto)
+Veja os nossos [serviços de redes sociais](/servicos/redes-sociais) e [vídeos institucionais](/servicos/videos-institucionais) para perceber o que está incluído em cada formato. [Fale connosco para perceber qual o modelo certo para a sua empresa.](/contacto)
 
 ---
 
@@ -2209,7 +2209,7 @@ O cálculo do ROI raramente inclui a variável mais importante: o custo de oport
 
 Estes custos são difíceis de quantificar com precisão — mas são reais e consistentes. E frequentemente superam largamente o custo de produção de um bom vídeo ao longo de meses de uso.
 
-Descobre [quanto custa um vídeo institucional](/blog/quanto-custa-video-institucional-portugal) ou vê o [nosso portfolio](/portfolio). [Fala connosco](/contacto) para perceber o que faz sentido para o teu negócio.`,
+Descobre [quanto custa um vídeo institucional](/blog/quanto-custa-video-institucional-portugal), vê o nosso [serviço de filmes comerciais](/servicos/filmes-comerciais), ou explora o [nosso portfolio](/portfolio). [Fala connosco](/contacto) para perceber o que faz sentido para o teu negócio.`,
   },
   {
     slug: "departamento-criativo-externo",
@@ -2450,7 +2450,7 @@ Até onde sabemos, sim. Nenhuma produtora audiovisual portuguesa oferece uma pla
 
 ## Experimente o Portal no seu próximo projecto
 
-O Portal do Cliente está disponível em todos os projectos da Beyond Focus. Para o ver em acção, [fale connosco](/contacto) e mostramos como funciona na prática — antes de qualquer compromisso.
+O Portal do Cliente está disponível em todos os projectos da Beyond Focus — desde [filmes comerciais](/servicos/filmes-comerciais) a [vídeos institucionais](/servicos/videos-institucionais). Para o ver em acção, [fale connosco](/contacto) e mostramos como funciona na prática — antes de qualquer compromisso.
 
 ## Leitura relacionada
 
@@ -2613,7 +2613,7 @@ Cada cliente da Beyond Focus com um projecto activo tem acesso a um portal próp
 
 É a única plataforma deste tipo disponível no mercado audiovisual português.
 
-Para perceber como funciona na prática, [fale connosco](/contacto) e mostramos uma demonstração — sem qualquer compromisso.
+O portal está disponível em todos os nossos projectos de [filmes comerciais](/servicos/filmes-comerciais), [vídeos institucionais](/servicos/videos-institucionais) e [redes sociais](/servicos/redes-sociais). Para perceber como funciona na prática, [fale connosco](/contacto) e mostramos uma demonstração — sem qualquer compromisso.
 
 ---
 
