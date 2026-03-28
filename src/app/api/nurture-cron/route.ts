@@ -13,7 +13,7 @@ async function fetchPendingLeads(): Promise<LeadRow[]> {
   const now = new Date().toISOString();
   const url =
     `${supabaseUrl}/rest/v1/website_leads` +
-    `?nurture_step=lt.3` +
+    `?nurture_step=lt.7` +
     `&nurture_next_at=lte.${encodeURIComponent(now)}` +
     `&nurture_paused=eq.false` +
     `&select=id,nurture_step` +
@@ -39,7 +39,7 @@ async function triggerNurtureForLead(
   baseUrl: string,
   cronSecret: string
 ): Promise<boolean> {
-  const sequenceStep = (step + 1) as 1 | 2 | 3;
+  const sequenceStep = (step + 1) as 1 | 2 | 3 | 4 | 5 | 6 | 7;
 
   try {
     const res = await fetch(`${baseUrl}/api/nurture`, {

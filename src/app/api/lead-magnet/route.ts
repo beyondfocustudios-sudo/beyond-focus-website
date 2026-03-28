@@ -8,7 +8,7 @@ export async function POST(request: Request) {
 
   try {
     const body = await request.json();
-    const { email, name, company, source, magnet } = body;
+    const { email, name, company, source, magnet, sector } = body;
 
     if (!email) {
       return NextResponse.json({ error: "Email é obrigatório." }, { status: 400 });
@@ -32,7 +32,7 @@ export async function POST(request: Request) {
           name: name || null,
           company: company || null,
           source: source || "lead_magnet",
-          notes: magnet ? `Lead magnet: ${magnet}` : null,
+          notes: magnet ? `Lead magnet: ${magnet}${sector ? ` | sector: ${sector}` : ""}` : null,
           updated_at: new Date().toISOString(),
         }),
       }).catch(() => {});
@@ -63,6 +63,7 @@ export async function POST(request: Request) {
             ${name ? `<tr><td style="padding:8px 0;color:#888;font-size:13px">Nome</td><td style="color:#0E3A45">${name}</td></tr>` : ""}
             ${company ? `<tr><td style="padding:8px 0;color:#888;font-size:13px">Empresa</td><td style="color:#0E3A45">${company}</td></tr>` : ""}
             <tr><td style="padding:8px 0;color:#888;font-size:13px">Origem</td><td style="color:#0E3A45">${source || "website"}</td></tr>
+            ${sector ? `<tr><td style="padding:8px 0;color:#888;font-size:13px">Sector</td><td style="color:#0E3A45">${sector}</td></tr>` : ""}
           </table>
         </div>
       `,

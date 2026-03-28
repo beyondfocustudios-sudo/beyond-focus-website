@@ -1,5 +1,5 @@
 import { NextResponse } from "next/server";
-import { generateEmail1, generateEmail2, generateEmail3 } from "@/lib/email-templates/nurture";
+import { generateEmail1, generateEmail2, generateEmail3, generateEmail4, generateEmail5, generateEmail6, generateEmail7 } from "@/lib/email-templates/nurture";
 import { researchCompany } from "@/lib/company-research";
 import type { Sector } from "@/lib/sector-classifier";
 
@@ -7,7 +7,7 @@ const CRON_SECRET = process.env.CRON_SECRET;
 
 interface NurtureRequestBody {
   lead_id: string;
-  sequence_step: 1 | 2 | 3;
+  sequence_step: 1 | 2 | 3 | 4 | 5 | 6 | 7;
 }
 
 interface LeadRow {
@@ -80,8 +80,8 @@ export async function POST(request: Request) {
   }
 
   const { lead_id, sequence_step } = body;
-  if (!lead_id || ![1, 2, 3].includes(sequence_step)) {
-    return NextResponse.json({ error: "lead_id e sequence_step (1|2|3) são obrigatórios." }, { status: 400 });
+  if (!lead_id || ![1, 2, 3, 4, 5, 6, 7].includes(sequence_step)) {
+    return NextResponse.json({ error: "lead_id e sequence_step (1-7) são obrigatórios." }, { status: 400 });
   }
 
   const lead = await getLeadFromSupabase(lead_id);
@@ -102,8 +102,16 @@ export async function POST(request: Request) {
     emailData = await generateEmail1({ name: lead.name, company: lead.company, services: lead.services, message: lead.message, sector, research });
   } else if (sequence_step === 2) {
     emailData = await generateEmail2({ name: lead.name, company: lead.company, services: lead.services, message: lead.message, sector, research });
-  } else {
+  } else if (sequence_step === 3) {
     emailData = await generateEmail3({ name: lead.name, company: lead.company, sector, research });
+  } else if (sequence_step === 4) {
+    emailData = await generateEmail4({ name: lead.name, company: lead.company, sector, research });
+  } else if (sequence_step === 5) {
+    emailData = await generateEmail5({ name: lead.name, company: lead.company, sector, research });
+  } else if (sequence_step === 6) {
+    emailData = await generateEmail6({ name: lead.name, company: lead.company, sector, research });
+  } else {
+    emailData = await generateEmail7({ name: lead.name, company: lead.company, sector, research });
   }
 
   try {
@@ -117,11 +125,12 @@ export async function POST(request: Request) {
       html: emailData.html,
     });
 
-    const daysMap: Record<number, number> = { 1: 3, 2: 4 };
-    if (sequence_step < 3) {
+    // Days until next step: 1→3d, 2→4d, 3→4d, 4→4d, 5→6d, 6→6d, 7→done
+    const daysMap: Record<number, number> = { 1: 3, 2: 4, 3: 4, 4: 4, 5: 6, 6: 6 };
+    if (sequence_step < 7) {
       await updateNurtureStep(lead_id, sequence_step + 1, daysMap[sequence_step]);
     } else {
-      await updateNurtureStep(lead_id, 3, 9999);
+      await updateNurtureStep(lead_id, 7, 9999);
     }
 
     return NextResponse.json({ success: true, step: sequence_step, email: lead.email });

@@ -10,6 +10,7 @@ import { FAQSchema } from "@/components/seo/FAQSchema";
 import { BlogEmailCapture } from "@/components/features/blog/BlogEmailCapture";
 import { BlogInlineCapture } from "@/components/features/leads/BlogInlineCapture";
 import { BlogStickyBanner } from "@/components/features/blog/BlogStickyBanner";
+import { IndustryLeadMagnet, type Sector } from "@/components/features/leads/IndustryLeadMagnet";
 
 const POST_FAQS: Record<string, { question: string; answer: string }[]> = {
   "quanto-custa-video-institucional-portugal": [
@@ -31,6 +32,15 @@ function renderInline(text: string): string {
   return text
     .replace(/\*\*(.+?)\*\*/g, '<strong class="text-petrol font-semibold">$1</strong>')
     .replace(/\[(.+?)\]\((.+?)\)/g, '<a href="$2" class="text-orange underline underline-offset-2 hover:text-orange/80">$1</a>');
+}
+
+function getSectorForSlug(slug: string): Sector {
+  if (/hotel|hotelaria/.test(slug)) return "hotelaria";
+  if (/restaura/.test(slug)) return "restauracao";
+  if (/imobili/.test(slug)) return "imobiliario";
+  if (/corporate|institucional|empresa/.test(slug)) return "corporate";
+  if (/evento/.test(slug)) return "eventos";
+  return "generic";
 }
 
 export function generateStaticParams() {
@@ -70,6 +80,8 @@ export default async function BlogPostPage({
   const { slug } = await params;
   const post = getBlogPost(slug);
   if (!post) notFound();
+
+  const sector = getSectorForSlug(slug);
 
   const sameCategory = BLOG_POSTS.filter((p) => p.slug !== slug && p.category === post.category);
   const otherCategory = BLOG_POSTS.filter((p) => p.slug !== slug && p.category !== post.category);
@@ -134,30 +146,38 @@ export default async function BlogPostPage({
 
         {/* Content */}
         <article className="prose-bf mx-auto max-w-[720px] px-6 py-16 md:px-10">
-          {post.content.split("\n\n").map((block, i) => {
-            // ## Heading
-            if (block.startsWith("## ")) {
-              return (
-                <h2 key={i} className="mb-4 mt-12 text-[clamp(22px,2.5vw,28px)] font-bold leading-tight text-petrol">
-                  {block.replace("## ", "")}
-                </h2>
-              );
-            }
-            // Bullet list (lines starting with -)
-            if (block.startsWith("- ")) {
-              return (
-                <ul key={i} className="mb-5 space-y-2 pl-5">
-                  {block.split("\n").filter(l => l.startsWith("- ")).map((li, j) => (
-                    <li key={j} className="text-[17px] leading-[1.8] text-petrol/70 list-disc" dangerouslySetInnerHTML={{ __html: renderInline(li.replace("- ", "")) }} />
-                  ))}
-                </ul>
-              );
-            }
-            // Regular paragraph
-            return (
-              <p key={i} className="mb-5 text-[18px] leading-[1.8] text-petrol/70" dangerouslySetInnerHTML={{ __html: renderInline(block) }} />
-            );
-          })}
+          {(() => {
+            const blocks = post.content.split("\n\n");
+            const injectAt = Math.max(1, Math.floor(blocks.length * 0.3));
+            const rendered: React.ReactNode[] = [];
+            blocks.forEach((block, i) => {
+              if (i === injectAt) {
+                rendered.push(
+                  <IndustryLeadMagnet key="industry-magnet" sector={sector} source={`blog-inline-${slug}`} />
+                );
+              }
+              if (block.startsWith("## ")) {
+                rendered.push(
+                  <h2 key={i} className="mb-4 mt-12 text-[clamp(22px,2.5vw,28px)] font-bold leading-tight text-petrol">
+                    {block.replace("## ", "")}
+                  </h2>
+                );
+              } else if (block.startsWith("- ")) {
+                rendered.push(
+                  <ul key={i} className="mb-5 space-y-2 pl-5">
+                    {block.split("\n").filter(l => l.startsWith("- ")).map((li, j) => (
+                      <li key={j} className="text-[17px] leading-[1.8] text-petrol/70 list-disc" dangerouslySetInnerHTML={{ __html: renderInline(li.replace("- ", "")) }} />
+                    ))}
+                  </ul>
+                );
+              } else {
+                rendered.push(
+                  <p key={i} className="mb-5 text-[18px] leading-[1.8] text-petrol/70" dangerouslySetInnerHTML={{ __html: renderInline(block) }} />
+                );
+              }
+            });
+            return rendered;
+          })()}
         </article>
 
         {/* Email capture */}

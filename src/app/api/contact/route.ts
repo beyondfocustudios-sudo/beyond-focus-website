@@ -18,6 +18,7 @@ interface ContactFormData {
   utmSource?: string;
   utmMedium?: string;
   utmCampaign?: string;
+  referralCode?: string;
 }
 
 function scoreLeadNotif(data: ContactFormData): { score: number; label: string; flag: string } {
@@ -50,7 +51,7 @@ const SECTOR_EMOJI: Record<string, string> = {
   generic: "📋",
 };
 
-async function notifyTelegram(name: string, email: string, company?: string, services?: string[], phone?: string, leadScore?: { score: number; label: string; flag: string }, sector?: string) {
+async function notifyTelegram(name: string, email: string, company?: string, services?: string[], phone?: string, leadScore?: { score: number; label: string; flag: string }, sector?: string, referralCode?: string, referrerName?: string) {
   const botToken = process.env.TELEGRAM_BOT_TOKEN;
   const chatId = process.env.TELEGRAM_CHAT_ID;
   if (!botToken || !chatId) return;
@@ -60,8 +61,9 @@ async function notifyTelegram(name: string, email: string, company?: string, ser
   const phoneText = phone ? `\n📞 ${phone}` : "";
   const scoreText = leadScore ? `\n\n${leadScore.flag} *${leadScore.label} LEAD* (score: ${leadScore.score})` : "";
   const sectorText = sector && sector !== "generic" ? `\n${SECTOR_EMOJI[sector] || "📋"} Sector: ${sector}` : "";
+  const referralText = referralCode && referrerName ? `\n🔗 Referido por: ${referrerName} (${referralCode})` : "";
 
-  const text = `🔔 *Novo lead — beyondfocus.pt*${scoreText}\n\n👤 *${name}*\n📧 ${email}${phoneText}${companyText}${sectorText}${servicesText}\n\n_Guardado no CRM_`;
+  const text = `🔔 *Novo lead — beyondfocus.pt*${scoreText}\n\n👤 *${name}*\n📧 ${email}${phoneText}${companyText}${sectorText}${servicesText}${referralText}\n\n_Guardado no CRM_`;
 
   try {
     await fetch(`https://api.telegram.org/bot${botToken}/sendMessage`, {
@@ -120,6 +122,7 @@ async function saveLeadToSupabase(data: {
   utm_medium?: string;
   utm_campaign?: string;
   sector?: string;
+  referral_code?: string;
 }): Promise<{ nurture_step: number } | null> {
   const supabaseUrl = process.env.SUPABASE_URL;
   const serviceKey = process.env.SUPABASE_SERVICE_ROLE_KEY;
@@ -176,7 +179,7 @@ export async function POST(request: Request) {
 
   try {
     const body = await request.json();
-    const { name, email, phone, company, website, services, message, budget, startDate, source, utmSource, utmMedium, utmCampaign } = body;
+    const { name, email, phone, company, website, services, message, budget, startDate, source, utmSource, utmMedium, utmCampaign, referralCode } = body;
 
     const EMAIL_REGEX = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
     if (!name || !email || !phone) {
@@ -195,6 +198,27 @@ export async function POST(request: Request) {
     // Detectar sector automaticamente
     const sector = detectSector({ company, website, message });
 
+    // Resolve referrer name if a referral code was provided
+    let referrerName: string | undefined;
+    const sanitizedReferralCode = referralCode
+      ? String(referralCode).replace(/[^A-Z0-9]/gi, "").toUpperCase().slice(0, 6)
+      : undefined;
+
+    if (sanitizedReferralCode) {
+      const supabaseUrl = process.env.SUPABASE_URL;
+      const serviceKey = process.env.SUPABASE_SERVICE_ROLE_KEY;
+      if (supabaseUrl && serviceKey) {
+        const refRes = await fetch(
+          `${supabaseUrl}/rest/v1/website_leads?referral_code=eq.${encodeURIComponent(sanitizedReferralCode)}&select=name&limit=1`,
+          { headers: { apikey: serviceKey, Authorization: `Bearer ${serviceKey}` } }
+        ).catch(() => null);
+        if (refRes?.ok) {
+          const rows = await refRes.json() as { name: string }[];
+          referrerName = rows[0]?.name?.split(" ")[0];
+        }
+      }
+    }
+
     // Save to Supabase CRM — await to get nurture state before deciding on Email 1
     const savedLead = await saveLeadToSupabase({
       name,
@@ -206,11 +230,12 @@ export async function POST(request: Request) {
       message,
       budget,
       start_date: startDate,
-      source: source || "contact_form",
+      source: sanitizedReferralCode ? "referral" : (source || "contact_form"),
       utm_source: utmSource,
       utm_medium: utmMedium,
       utm_campaign: utmCampaign,
       sector,
+      referral_code: sanitizedReferralCode,
     }).catch(() => null);
 
     const alreadyInSequence = (savedLead?.nurture_step ?? 0) >= 2;
@@ -219,7 +244,7 @@ export async function POST(request: Request) {
     const leadScore = scoreLeadNotif({ name, email, phone, company, website, services, message, budget, startDate, source });
 
     // Notify JARVIS via Telegram (non-blocking)
-    notifyTelegram(name, email, company, services, phone, leadScore, sector).catch(() => {});
+    notifyTelegram(name, email, company, services, phone, leadScore, sector, sanitizedReferralCode, referrerName).catch(() => {});
 
     const apiKey = process.env.RESEND_API_KEY;
     if (!apiKey) {
