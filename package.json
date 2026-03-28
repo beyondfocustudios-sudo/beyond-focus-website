@@ -10,9 +10,6 @@
   },
   "dependencies": {
     "@anthropic-ai/sdk": "^0.80.0",
-    "@fontsource/dm-sans": "^5.2.8",
-    "@fontsource/dm-serif-display": "^5.2.8",
-    "@fontsource/jetbrains-mono": "^5.2.8",
     "@remotion/cli": "^4.0.438",
     "@remotion/player": "^4.0.438",
     "@remotion/renderer": "^4.0.438",

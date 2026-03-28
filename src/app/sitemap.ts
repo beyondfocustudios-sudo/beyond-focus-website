@@ -10,43 +10,44 @@ export default function sitemap(): MetadataRoute.Sitemap {
 
   const projectUrls = PROJECTS.map((p) => ({
     url: `${baseUrl}/portfolio/${p.slug}`,
-    lastModified: new Date(),
+    lastModified: "2025-10-01",
     changeFrequency: "monthly" as const,
     priority: 0.8 as const,
   }));
 
   const serviceUrls = SERVICE_PAGES.map((s) => ({
     url: `${baseUrl}/servicos/${s.slug}`,
-    lastModified: new Date(),
+    lastModified: "2025-10-01",
     changeFrequency: "monthly" as const,
     priority: 0.7 as const,
   }));
 
   const sectorUrls = SECTOR_PAGES.map((s) => ({
     url: `${baseUrl}/servicos/sectores/${s.slug}`,
-    lastModified: new Date(),
+    lastModified: "2025-10-01",
     changeFrequency: "monthly" as const,
     priority: 0.7 as const,
   }));
 
   const blogUrls = BLOG_POSTS.map((b) => ({
     url: `${baseUrl}/blog/${b.slug}`,
-    lastModified: new Date(),
+    lastModified: "2026-03-28",
     changeFrequency: "monthly" as const,
     priority: 0.6 as const,
   }));
 
   const regionalUrls = [
-    { url: `${baseUrl}/servicos/brand-film`, lastModified: new Date(), changeFrequency: "monthly" as const, priority: 0.8 as const },
-    { url: `${baseUrl}/servicos/regioes/setubal`, lastModified: new Date(), changeFrequency: "monthly" as const, priority: 0.7 as const },
-    { url: `${baseUrl}/servicos/regioes/alentejo`, lastModified: new Date(), changeFrequency: "monthly" as const, priority: 0.7 as const },
-    { url: `${baseUrl}/servicos/regioes/algarve`, lastModified: new Date(), changeFrequency: "monthly" as const, priority: 0.7 as const },
+    { url: `${baseUrl}/servicos/brand-film`, lastModified: "2025-10-01", changeFrequency: "monthly" as const, priority: 0.8 as const },
+    { url: `${baseUrl}/servicos/regioes/porto`, lastModified: "2026-03-28", changeFrequency: "monthly" as const, priority: 0.7 as const },
+    { url: `${baseUrl}/servicos/regioes/setubal`, lastModified: "2025-10-01", changeFrequency: "monthly" as const, priority: 0.7 as const },
+    { url: `${baseUrl}/servicos/regioes/alentejo`, lastModified: "2025-10-01", changeFrequency: "monthly" as const, priority: 0.7 as const },
+    { url: `${baseUrl}/servicos/regioes/algarve`, lastModified: "2025-10-01", changeFrequency: "monthly" as const, priority: 0.7 as const },
   ];
 
   const pseoServiceCityUrls = SERVICES_SEO.flatMap((service) =>
     CITIES.map((city) => ({
       url: `${baseUrl}/servicos/pseo/${service.slug}/${city.slug}`,
-      lastModified: new Date(),
+      lastModified: "2025-10-01",
       changeFrequency: "monthly" as const,
       priority: 0.65 as const,
     }))
@@ -54,34 +55,54 @@ export default function sitemap(): MetadataRoute.Sitemap {
 
   const pseoTripleUrls = HIGH_INTENT_COMBINATIONS.map((combo) => ({
     url: `${baseUrl}/servicos/pseo/${combo.service}/${combo.city}/${combo.sector}`,
-    lastModified: new Date(),
+    lastModified: "2025-10-01",
     changeFrequency: "monthly" as const,
     priority: 0.6 as const,
   }));
 
   return [
-    { url: baseUrl, lastModified: new Date(), changeFrequency: "weekly", priority: 1 },
-    { url: `${baseUrl}/portfolio`, lastModified: new Date(), changeFrequency: "weekly", priority: 0.9 },
+    { url: baseUrl, lastModified: "2026-03-28", changeFrequency: "weekly", priority: 1 },
+    { url: `${baseUrl}/portfolio`, lastModified: "2026-03-28", changeFrequency: "weekly", priority: 0.9 },
     ...projectUrls,
-    { url: `${baseUrl}/servicos`, lastModified: new Date(), changeFrequency: "monthly", priority: 0.8 },
+    {
+      url: `${baseUrl}/portfolio/hotel-casa-palmela/case-study`,
+      lastModified: "2025-10-01",
+      changeFrequency: "monthly" as const,
+      priority: 0.7 as const,
+    },
+    {
+      url: `${baseUrl}/portfolio/carl-zeiss-portugal/case-study`,
+      lastModified: "2025-10-01",
+      changeFrequency: "monthly" as const,
+      priority: 0.7 as const,
+    },
+    {
+      url: `${baseUrl}/portfolio/once-upon-a-house/case-study`,
+      lastModified: "2025-10-01",
+      changeFrequency: "monthly" as const,
+      priority: 0.7 as const,
+    },
+    { url: `${baseUrl}/servicos`, lastModified: "2025-10-01", changeFrequency: "monthly", priority: 0.8 },
     ...serviceUrls,
     ...sectorUrls,
     ...regionalUrls,
     ...pseoServiceCityUrls,
     ...pseoTripleUrls,
-    { url: `${baseUrl}/portal-cliente`, lastModified: new Date(), changeFrequency: "monthly", priority: 0.7 },
-    { url: `${baseUrl}/sobre`, lastModified: new Date(), changeFrequency: "monthly", priority: 0.7 },
-    { url: `${baseUrl}/contacto`, lastModified: new Date(), changeFrequency: "monthly", priority: 0.8 },
-    { url: `${baseUrl}/blog`, lastModified: new Date(), changeFrequency: "weekly", priority: 0.7 },
+    { url: `${baseUrl}/hotelaria`, lastModified: "2026-03-28", changeFrequency: "monthly", priority: 0.8 },
+    { url: `${baseUrl}/guia-precos-video`, lastModified: "2026-03-28", changeFrequency: "monthly", priority: 0.8 },
+    { url: `${baseUrl}/portal-cliente`, lastModified: "2025-10-01", changeFrequency: "monthly", priority: 0.7 },
+    { url: `${baseUrl}/sobre`, lastModified: "2025-10-01", changeFrequency: "monthly", priority: 0.7 },
+    { url: `${baseUrl}/sobre/daniel-lopes`, lastModified: "2026-03-28", changeFrequency: "monthly", priority: 0.8 },
+    { url: `${baseUrl}/contacto`, lastModified: "2025-10-01", changeFrequency: "monthly", priority: 0.8 },
+    { url: `${baseUrl}/blog`, lastModified: "2026-03-28", changeFrequency: "weekly", priority: 0.7 },
     ...blogUrls,
-    { url: `${baseUrl}/guia-video-empresas`, lastModified: new Date(), changeFrequency: "monthly", priority: 0.8 },
-    { url: `${baseUrl}/privacidade`, lastModified: new Date(), changeFrequency: "yearly", priority: 0.3 },
-    { url: `${baseUrl}/termos`, lastModified: new Date(), changeFrequency: "yearly", priority: 0.3 },
-    // English pages
-    { url: `${baseUrl}/en`, lastModified: new Date(), changeFrequency: "weekly", priority: 0.7 },
-    { url: `${baseUrl}/en/portfolio`, lastModified: new Date(), changeFrequency: "weekly", priority: 0.7 },
-    { url: `${baseUrl}/en/services`, lastModified: new Date(), changeFrequency: "monthly", priority: 0.7 },
-    { url: `${baseUrl}/en/about`, lastModified: new Date(), changeFrequency: "monthly", priority: 0.7 },
-    { url: `${baseUrl}/en/contact`, lastModified: new Date(), changeFrequency: "monthly", priority: 0.7 },
+    { url: `${baseUrl}/guia-video-empresas`, lastModified: "2025-10-01", changeFrequency: "monthly", priority: 0.8 },
+    { url: `${baseUrl}/privacidade`, lastModified: "2024-01-01", changeFrequency: "yearly", priority: 0.3 },
+    { url: `${baseUrl}/termos`, lastModified: "2024-01-01", changeFrequency: "yearly", priority: 0.3 },
+    { url: `${baseUrl}/en`, lastModified: "2026-03-28", changeFrequency: "weekly", priority: 0.7 },
+    { url: `${baseUrl}/en/portfolio`, lastModified: "2026-03-28", changeFrequency: "weekly", priority: 0.7 },
+    { url: `${baseUrl}/en/services`, lastModified: "2025-10-01", changeFrequency: "monthly", priority: 0.7 },
+    { url: `${baseUrl}/en/about`, lastModified: "2025-10-01", changeFrequency: "monthly", priority: 0.7 },
+    { url: `${baseUrl}/en/contact`, lastModified: "2025-10-01", changeFrequency: "monthly", priority: 0.7 },
   ];
 }

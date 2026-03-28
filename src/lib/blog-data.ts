@@ -80,7 +80,7 @@ O verdadeiro custo de um vídeo institucional não é o que se paga — é o que
 
 Se estás a pensar em fazer um vídeo institucional para a tua empresa, o primeiro passo é simples: uma conversa. Sem compromisso, sem pressão — só para perceber o que precisas e o que faz sentido para o teu negócio.
 
-Vê os nossos [serviços de vídeo institucional](/servicos/videos-institucionais) ou [contacta-nos directamente](/contacto).`,
+Vê o nosso [guia de preços de vídeo](/guia-precos-video) para comparar pacotes e perceber o que é possível dentro do teu orçamento. Ou explora os nossos [serviços de vídeo institucional](/servicos/videos-institucionais) e [contacta-nos directamente](/contacto).`,
   },
   {
     slug: "como-escolher-produtora-audiovisual",

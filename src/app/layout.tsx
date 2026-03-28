@@ -80,7 +80,7 @@ export const metadata: Metadata = {
   },
   alternates: {
     canonical: "https://beyondfocus.pt",
-    languages: { "pt-PT": "https://beyondfocus.pt", en: "https://beyondfocus.pt/en" },
+    languages: { "pt-PT": "https://beyondfocus.pt", en: "https://beyondfocus.pt/en", "x-default": "https://beyondfocus.pt" },
   },
   verification: {
     google: process.env.NEXT_PUBLIC_GSC_VERIFICATION || undefined,
@@ -95,6 +95,18 @@ export const metadata: Metadata = {
       "max-image-preview": "large",
       "max-snippet": -1,
     },
+  },
+};
+
+const websiteSchema = {
+  "@context": "https://schema.org",
+  "@type": "WebSite",
+  name: "Beyond Focus",
+  url: "https://beyondfocus.pt",
+  potentialAction: {
+    "@type": "SearchAction",
+    target: { "@type": "EntryPoint", urlTemplate: "https://beyondfocus.pt/blog?q={search_term_string}" },
+    "query-input": "required name=search_term_string",
   },
 };
 
@@ -168,6 +180,10 @@ export default function RootLayout({
     >
       <head>
         <link rel="preload" href="/images/showreel-poster.jpg" as="image" fetchPriority="high" />
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(websiteSchema) }}
+        />
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{ __html: JSON.stringify(structuredData) }}

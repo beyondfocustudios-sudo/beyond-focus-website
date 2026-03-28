@@ -102,7 +102,7 @@ export default async function BlogPostPage({
     image: `https://beyondfocus.pt${post.thumbnail}`,
     datePublished: publishedDate,
     dateModified: publishedDate,
-    author: { "@type": "Person", name: "Daniel Lopes", url: "https://beyondfocus.pt/sobre" },
+    author: { "@type": "Person", name: "Daniel Lopes", url: "https://beyondfocus.pt/sobre/daniel-lopes" },
     publisher: { "@type": "Organization", name: "Beyond Focus", url: "https://beyondfocus.pt", logo: { "@type": "ImageObject", url: "https://beyondfocus.pt/images/logo-symbol.png" } },
     mainEntityOfPage: `https://beyondfocus.pt/blog/${slug}`,
     inLanguage: "pt-PT",

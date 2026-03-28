@@ -22,7 +22,7 @@ export function LoadingScreen() {
     const safetyTimeout = setTimeout(() => {
       setShow(false);
       sessionStorage.setItem("bf-loaded", "true");
-    }, 5000);
+    }, 2500);
 
     // Video load check — if not playing after 1s, skip
     const videoCheck = setTimeout(() => {

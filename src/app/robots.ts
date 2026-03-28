@@ -3,6 +3,6 @@ import { MetadataRoute } from "next";
 export default function robots(): MetadataRoute.Robots {
   return {
     rules: { userAgent: "*", allow: "/" },
-    sitemap: "https://beyondfocus.pt/sitemap.xml",
+    sitemap: ["https://beyondfocus.pt/sitemap.xml", "https://beyondfocus.pt/api/video-sitemap"],
   };
 }

@@ -1,4 +1,0 @@
-User-agent: *
-Allow: /
-Sitemap: https://beyondfocus.pt/sitemap.xml
-Sitemap: https://beyondfocus.pt/api/video-sitemap

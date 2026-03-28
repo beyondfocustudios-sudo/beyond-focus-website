@@ -325,25 +325,39 @@ export const BLOG_LINKS_BY_SERVICE: Record<string, { title: string; href: string
   "video-institucional": [
     { title: "Quanto custa um vídeo institucional em Portugal?", href: "/blog/quanto-custa-video-institucional-portugal" },
     { title: "7 razões para a tua empresa investir em vídeo em 2026", href: "/blog/porque-empresa-precisa-video-2026" },
+    { title: "Vídeo institucional vs filme comercial: qual é que a tua empresa precisa?", href: "/blog/video-institucional-vs-filme-comercial" },
+    { title: "Como escolher a produtora audiovisual certa", href: "/blog/como-escolher-produtora-audiovisual" },
   ],
   "filme-comercial": [
     { title: "Como escolher a produtora audiovisual certa", href: "/blog/como-escolher-produtora-audiovisual" },
     { title: "7 razões para a tua empresa investir em vídeo em 2026", href: "/blog/porque-empresa-precisa-video-2026" },
+    { title: "Vídeo institucional vs filme comercial: qual é que a tua empresa precisa?", href: "/blog/video-institucional-vs-filme-comercial" },
+    { title: "Quanto custa um vídeo institucional em Portugal?", href: "/blog/quanto-custa-video-institucional-portugal" },
   ],
   "brand-film": [
     { title: "Como escolher a produtora audiovisual certa", href: "/blog/como-escolher-produtora-audiovisual" },
     { title: "Quanto custa um vídeo institucional em Portugal?", href: "/blog/quanto-custa-video-institucional-portugal" },
+    { title: "7 razões para a tua empresa investir em vídeo em 2026", href: "/blog/porque-empresa-precisa-video-2026" },
+    { title: "Vídeo institucional vs filme comercial: qual é que a tua empresa precisa?", href: "/blog/video-institucional-vs-filme-comercial" },
   ],
   "fotografia-profissional": [
     { title: "7 razões para a tua empresa investir em vídeo em 2026", href: "/blog/porque-empresa-precisa-video-2026" },
+    { title: "Como escolher a produtora audiovisual certa", href: "/blog/como-escolher-produtora-audiovisual" },
+    { title: "Quanto custa um vídeo institucional em Portugal?", href: "/blog/quanto-custa-video-institucional-portugal" },
   ],
   "conteudo-redes-sociais": [
     { title: "7 razões para a tua empresa investir em vídeo em 2026", href: "/blog/porque-empresa-precisa-video-2026" },
+    { title: "Como escolher a produtora audiovisual certa", href: "/blog/como-escolher-produtora-audiovisual" },
+    { title: "Vídeo institucional vs filme comercial: qual é que a tua empresa precisa?", href: "/blog/video-institucional-vs-filme-comercial" },
   ],
   "cobertura-eventos": [
     { title: "Como escolher a produtora audiovisual certa", href: "/blog/como-escolher-produtora-audiovisual" },
+    { title: "7 razões para a tua empresa investir em vídeo em 2026", href: "/blog/porque-empresa-precisa-video-2026" },
+    { title: "Quanto custa um vídeo institucional em Portugal?", href: "/blog/quanto-custa-video-institucional-portugal" },
   ],
   "video-drone": [
     { title: "Quanto custa um vídeo institucional em Portugal?", href: "/blog/quanto-custa-video-institucional-portugal" },
+    { title: "7 razões para a tua empresa investir em vídeo em 2026", href: "/blog/porque-empresa-precisa-video-2026" },
+    { title: "Como escolher a produtora audiovisual certa", href: "/blog/como-escolher-produtora-audiovisual" },
   ],
 };

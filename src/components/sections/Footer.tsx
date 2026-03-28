@@ -129,6 +129,13 @@ export function Footer() {
               <li><Link href="/servicos/sectores/imobiliario" className="text-sm text-white/50 transition-colors hover:text-white">Imobiliário</Link></li>
               <li><Link href="/servicos/sectores/corporate" className="text-sm text-white/50 transition-colors hover:text-white">Corporate</Link></li>
             </ul>
+            <h4 className="mb-4 mt-6 text-xs font-semibold tracking-[2px] uppercase text-white/50">Regiões</h4>
+            <ul className="space-y-2.5">
+              <li><Link href="/servicos/regioes/porto" className="text-sm text-white/50 transition-colors hover:text-white">Porto</Link></li>
+              <li><Link href="/servicos/regioes/algarve" className="text-sm text-white/50 transition-colors hover:text-white">Algarve</Link></li>
+              <li><Link href="/servicos/regioes/setubal" className="text-sm text-white/50 transition-colors hover:text-white">Setúbal</Link></li>
+              <li><Link href="/servicos/regioes/alentejo" className="text-sm text-white/50 transition-colors hover:text-white">Alentejo</Link></li>
+            </ul>
           </div>
 
           {/* Col 4 — Contact */}

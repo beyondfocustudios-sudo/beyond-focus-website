@@ -7,7 +7,7 @@ import { BLOG_POSTS } from "@/lib/blog-data";
 import { BreadcrumbSchema } from "@/components/seo/BreadcrumbSchema";
 
 export const metadata: Metadata = {
-  title: "Blog | Produção Audiovisual e Estratégia",
+  title: "Blog de Vídeo Marketing e Produção Audiovisual | Beyond Focus",
   description: "Ideias, bastidores e reflexões sobre comunicação audiovisual e estratégia de conteúdo para marcas em Portugal.",
   openGraph: {
     locale: "pt_PT",
