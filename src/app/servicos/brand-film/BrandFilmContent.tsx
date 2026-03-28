@@ -4,6 +4,7 @@ import { useState } from "react";
 import { motion } from "framer-motion";
 import Link from "next/link";
 import { faqItems } from "./brand-film-data";
+import { ServiceLeadMagnet } from "@/components/features/leads/ServiceLeadMagnet";
 
 const fadeUp = {
   hidden: { opacity: 0, y: 30 },
@@ -261,6 +262,9 @@ export function BrandFilmContent() {
           </motion.div>
         </div>
       </section>
+
+      {/* Lead Magnet */}
+      <ServiceLeadMagnet serviceName="Brand Film" serviceSlug="brand-film" />
 
       {/* CTA */}
       <section className="bg-petrol py-20 text-center text-white">

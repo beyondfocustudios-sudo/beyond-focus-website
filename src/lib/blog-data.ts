@@ -674,7 +674,7 @@ O mercado imobiliário em Portugal — especialmente em Lisboa, Porto e no Algar
 
 ## O problema da apresentação visual no imobiliário português
 
-A qualidade média da apresentação de imóveis em Portugal é muito heterogénea. No topo do mercado — imóveis de luxo, empreendimentos premium, promotoras com marca estabelecida — o investimento em fotografia e vídeo profissional já é norma. No segmento médio e médio-alto, ainda há uma diferença enorme entre os agentes que investem em produção audiovisual e os que não investem.
+A qualidade média da apresentação de imóveis em Portugal é muito heterogénea. No topo do mercado — imóveis de luxo, empreendimentos de alto valor, promotoras com marca estabelecida — o investimento em fotografia e vídeo profissional já é norma. No segmento médio e médio-alto, ainda há uma diferença enorme entre os agentes que investem em produção audiovisual e os que não investem.
 
 Fotografias tiradas com telemóvel em casas com cortinas fechadas, ângulos que minimizam os espaços, imagens escuras que não comunicam a verdadeira qualidade do imóvel — estas são a norma em demasiados anúncios. E o resultado directo é: menos pedidos de visita, visitas menos qualificadas, processo de venda mais longo, e frequentemente um preço de fecho abaixo do valor real.
 
@@ -2271,7 +2271,7 @@ Vê os nossos [serviços de redes sociais](/servicos/redes-sociais), a [nossa ab
     category: "Estratégia",
     date: "12 Mar 2026",
     readTime: "10 min",
-    thumbnail: "/images/blog/portal-cliente-beyond-focus.jpg",
+    thumbnail: "/images/blog/portal-cliente-beyond-focus-producao-audiovisual.jpg",
     metaTitle: "Portal do Cliente: Como a Beyond Focus Transforma a Experiência de Produção",
     metaDescription: "Descubra como o Portal do Cliente da Beyond Focus transforma a experiência de produção audiovisual — da aprovação de entregas à comunicação em tempo real.",
     keywords: ["portal cliente produtora", "gestão projecto audiovisual", "plataforma cliente produção vídeo", "acompanhar produção audiovisual"],
@@ -2467,7 +2467,7 @@ O Portal do Cliente está disponível em todos os projectos da Beyond Focus — 
     category: "Estratégia",
     date: "19 Mar 2026",
     readTime: "9 min",
-    thumbnail: "/images/blog/portal-cliente-o-que-e.jpg",
+    thumbnail: "/images/blog/portal-cliente-o-que-e-porque-muda-tudo-producao-audiovisual.jpg",
     metaTitle: "O que é o Portal do Cliente e Porque Muda Tudo na Produção Audiovisual",
     metaDescription: "Descubra o que é um portal do cliente numa produtora audiovisual, porque nenhuma produtora portuguesa tem um, e como esta ferramenta transforma a gestão de projectos de vídeo.",
     keywords: ["portal cliente produtora", "gestão projecto audiovisual", "plataforma cliente produção", "produção audiovisual transparente"],

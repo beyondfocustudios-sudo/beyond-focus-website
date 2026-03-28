@@ -19,13 +19,19 @@ export function BlogInlineCapture({ source = "blog-cta" }: BlogInlineCaptureProp
     setLoading(true);
     setError("");
     try {
-      const res = await fetch("/api/leads", {
+      const res = await fetch("/api/lead-magnet", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
-        body: JSON.stringify({ name: email.split("@")[0], email, source }),
+        body: JSON.stringify({ name: email.split("@")[0], email, source, magnet: "guia-video-empresas" }),
       });
       if (res.ok) {
         setSubmitted(true);
+        if (typeof window !== "undefined" && typeof (window as { gtag?: (...args: unknown[]) => void }).gtag === "function") {
+          (window as { gtag?: (...args: unknown[]) => void }).gtag!("event", "blog_cta_submit", {
+            event_category: "lead",
+            event_label: "blog_capture",
+          });
+        }
       } else {
         const data = await res.json().catch(() => ({}));
         setError((data as { error?: string }).error || "Ocorreu um erro. Tenta novamente.");

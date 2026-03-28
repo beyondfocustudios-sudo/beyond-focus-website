@@ -9,6 +9,7 @@
     "lint": "eslint"
   },
   "dependencies": {
+    "@anthropic-ai/sdk": "^0.80.0",
     "@fontsource/dm-sans": "^5.2.8",
     "@fontsource/dm-serif-display": "^5.2.8",
     "@fontsource/jetbrains-mono": "^5.2.8",

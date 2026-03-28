@@ -7,6 +7,7 @@ import Link from "next/link";
 import type { ServicePage } from "@/lib/services-data";
 import type { Project } from "@/lib/portfolio-data";
 import { BLOG_POSTS } from "@/lib/blog-data";
+import { ServiceLeadMagnet } from "@/components/features/leads/ServiceLeadMagnet";
 
 function ServiceFAQ({ items }: { items: ServicePage["faq"] }) {
   const [open, setOpen] = useState<number | null>(null);
@@ -376,6 +377,9 @@ export function ServicePageContent({
       {service.faq && service.faq.length > 0 && (
         <ServiceFAQ items={service.faq} />
       )}
+
+      {/* ── LEAD MAGNET ── */}
+      <ServiceLeadMagnet serviceName={service.title} serviceSlug={service.slug} />
 
       {/* ── CTA ── */}
       <section className="bg-bg-light py-28 text-center">

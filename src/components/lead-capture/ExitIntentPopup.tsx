@@ -20,12 +20,17 @@ export function ExitIntentPopup() {
   useEffect(() => {
     if (typeof window === "undefined") return;
     if (sessionStorage.getItem("exit-popup-shown")) return;
+    if (localStorage.getItem("bf_lead_captured")) return;
+    if (window.location.pathname === "/contacto") return;
 
     const handleMouseLeave = (e: MouseEvent) => {
       if (e.clientY <= 0) {
         setVisible(true);
         sessionStorage.setItem("exit-popup-shown", "1");
         document.removeEventListener("mouseleave", handleMouseLeave);
+        if (typeof window !== "undefined" && typeof (window as { gtag?: (...args: unknown[]) => void }).gtag === "function") {
+          (window as { gtag?: (...args: unknown[]) => void }).gtag!("event", "lead_magnet_view", { event_category: "engagement" });
+        }
       }
     };
 
@@ -39,17 +44,27 @@ export function ExitIntentPopup() {
     setLoading(true);
     setError("");
     try {
-      const res = await fetch("/api/leads", {
+      const res = await fetch("/api/lead-magnet", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({
           name: email.split("@")[0],
           email,
           source: "exit-intent",
+          magnet: "guia-video-marketing",
         }),
       });
       if (res.ok) {
         setSubmitted(true);
+        if (typeof window !== "undefined") {
+          localStorage.setItem("bf_lead_captured", "1");
+          if (typeof (window as { gtag?: (...args: unknown[]) => void }).gtag === "function") {
+            (window as { gtag?: (...args: unknown[]) => void }).gtag!("event", "lead_magnet_submit", {
+              event_category: "lead",
+              event_label: "exit_popup",
+            });
+          }
+        }
         setTimeout(dismiss, 3000);
       } else {
         const data = await res.json().catch(() => ({}));

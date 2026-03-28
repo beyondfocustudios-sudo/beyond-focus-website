@@ -1,0 +1,16 @@
+{
+  "crons": [
+    {
+      "path": "/api/nurture-cron",
+      "schedule": "0 9 * * *"
+    },
+    {
+      "path": "/api/calendar-sync",
+      "schedule": "0 8 * * *"
+    },
+    {
+      "path": "/api/post-call-review",
+      "schedule": "0 18 * * *"
+    }
+  ]
+}

@@ -1,4 +1,5 @@
 import { NextResponse } from "next/server";
+import { rateLimit } from "@/lib/rate-limit";
 
 const EMAIL_REGEX = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
 
@@ -12,24 +13,38 @@ async function saveToSupabase(data: {
   const serviceKey = process.env.SUPABASE_SERVICE_ROLE_KEY;
   if (!supabaseUrl || !serviceKey) return;
 
-  const headers = {
+  const baseHeaders = {
     "Content-Type": "application/json",
     apikey: serviceKey,
     Authorization: `Bearer ${serviceKey}`,
-    Prefer: "return=minimal",
   };
 
-  // Save to leads table
-  fetch(`${supabaseUrl}/rest/v1/leads`, {
+  // Upsert to leads table
+  fetch(`${supabaseUrl}/rest/v1/leads?on_conflict=email`, {
     method: "POST",
-    headers,
-    body: JSON.stringify(data),
+    headers: { ...baseHeaders, Prefer: "resolution=merge-duplicates,return=minimal" },
+    body: JSON.stringify({ ...data, updated_at: new Date().toISOString() }),
   }).catch(() => {});
 
-  // Save to CRM contacts table
-  fetch(`${supabaseUrl}/rest/v1/crm_contacts`, {
+  // Also upsert to website_leads so lead enters nurture sequence
+  fetch(`${supabaseUrl}/rest/v1/website_leads?on_conflict=email`, {
     method: "POST",
-    headers,
+    headers: { ...baseHeaders, Prefer: "resolution=merge-duplicates,return=minimal" },
+    body: JSON.stringify({
+      name: data.name,
+      email: data.email,
+      phone: data.phone || null,
+      source: data.source,
+      nurture_step: 0,
+      nurture_paused: false,
+      updated_at: new Date().toISOString(),
+    }),
+  }).catch(() => {});
+
+  // Upsert to CRM contacts table
+  fetch(`${supabaseUrl}/rest/v1/crm_contacts?on_conflict=email`, {
+    method: "POST",
+    headers: { ...baseHeaders, Prefer: "resolution=merge-duplicates,return=minimal" },
     body: JSON.stringify({
       email: data.email,
       name: data.name,
@@ -37,13 +52,15 @@ async function saveToSupabase(data: {
       status: "lead",
       source: data.source,
       notes: "Lead inbound via website",
+      updated_at: new Date().toISOString(),
     }),
   }).catch(() => {});
 }
 
 async function notifyTelegram(name: string, email: string, phone?: string, source?: string) {
   const botToken = process.env.TELEGRAM_BOT_TOKEN;
-  if (!botToken) return;
+  const chatId = process.env.TELEGRAM_CHAT_ID;
+  if (!botToken || !chatId) return;
 
   const phoneText = phone ? `\n📞 ${phone}` : "";
   const sourceText = source ? `\n🔗 Origem: ${source}` : "";
@@ -54,7 +71,7 @@ async function notifyTelegram(name: string, email: string, phone?: string, sourc
       method: "POST",
       headers: { "Content-Type": "application/json" },
       body: JSON.stringify({
-        chat_id: 6114268953,
+        chat_id: process.env.TELEGRAM_CHAT_ID,
         text,
         parse_mode: "Markdown",
       }),
@@ -122,6 +139,10 @@ async function sendGuideEmail(name: string, email: string) {
 }
 
 export async function POST(request: Request) {
+  if (!rateLimit(request, { limit: 5, windowMs: 60_000 })) {
+    return NextResponse.json({ error: "Demasiados pedidos. Tenta novamente em breve." }, { status: 429 });
+  }
+
   try {
     const body = await request.json();
     const { name, email, phone, source } = body as {

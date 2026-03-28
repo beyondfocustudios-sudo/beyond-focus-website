@@ -10,6 +10,7 @@ interface BlogEmailCaptureProps {
   source?: string;
   magnet?: string;
   variant?: "inline" | "banner";
+  onSuccess?: () => void;
 }
 
 export function BlogEmailCapture({
@@ -19,6 +20,7 @@ export function BlogEmailCapture({
   source = "blog",
   magnet = "guia-precos-video",
   variant = "inline",
+  onSuccess,
 }: BlogEmailCaptureProps) {
   const [email, setEmail] = useState("");
   const [name, setName] = useState("");
@@ -39,12 +41,13 @@ export function BlogEmailCapture({
       });
       if (res.ok) {
         setSubmitted(true);
-        if (typeof window !== "undefined" && (window as { gtag?: (...args: unknown[]) => void }).gtag) {
-          (window as { gtag?: (...args: unknown[]) => void }).gtag!("event", "lead_magnet_submit", {
-            event_category: "engagement",
-            event_label: magnet,
+        if (typeof window !== "undefined" && typeof (window as { gtag?: (...args: unknown[]) => void }).gtag === "function") {
+          (window as { gtag?: (...args: unknown[]) => void }).gtag!("event", "blog_cta_submit", {
+            event_category: "lead",
+            event_label: "blog_capture",
           });
         }
+        onSuccess?.();
       } else {
         setError("Ocorreu um erro. Tenta novamente.");
       }

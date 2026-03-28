@@ -9,6 +9,7 @@ import { BreadcrumbSchema } from "@/components/seo/BreadcrumbSchema";
 import { FAQSchema } from "@/components/seo/FAQSchema";
 import { BlogEmailCapture } from "@/components/features/blog/BlogEmailCapture";
 import { BlogInlineCapture } from "@/components/features/leads/BlogInlineCapture";
+import { BlogStickyBanner } from "@/components/features/blog/BlogStickyBanner";
 
 const POST_FAQS: Record<string, { question: string; answer: string }[]> = {
   "quanto-custa-video-institucional-portugal": [
@@ -52,7 +53,7 @@ export async function generateMetadata({
       title: `${post.metaTitle || post.title} — Beyond Focus`,
       description: post.metaDescription || post.excerpt,
       url: `https://beyondfocus.pt/blog/${slug}`,
-      images: [{ url: "/og-image.jpg", width: 1200, height: 630, alt: post.title }],
+      images: [{ url: post.thumbnail.startsWith("/") ? `https://beyondfocus.pt${post.thumbnail}` : post.thumbnail, width: 1200, height: 630, alt: post.title }],
       type: "article",
     },
     alternates: {
@@ -98,6 +99,7 @@ export default async function BlogPostPage({
 
   return (
     <>
+      <BlogStickyBanner />
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(articleSchema) }} />
       {postFaqs && <FAQSchema items={postFaqs} />}
       <BreadcrumbSchema

@@ -34,6 +34,7 @@ export function ContactForm() {
   const [submitted, setSubmitted] = useState(false);
   const [loading, setLoading] = useState(false);
   const [error, setError] = useState("");
+  const [formStarted, setFormStarted] = useState(false);
   const [form, setForm] = useState({
     name: "",
     email: "",
@@ -48,6 +49,14 @@ export function ContactForm() {
 
   const updateField = (field: string, value: string) =>
     setForm((f) => ({ ...f, [field]: value }));
+
+  const handleFormStart = () => {
+    if (formStarted) return;
+    setFormStarted(true);
+    if (typeof window.gtag === "function") {
+      window.gtag("event", "form_start", { event_category: "lead" });
+    }
+  };
 
   const toggleService = (s: string) =>
     setForm((f) => ({
@@ -73,9 +82,9 @@ export function ContactForm() {
       });
       if (response.ok) {
         if (typeof window.gtag === "function") {
-          window.gtag("event", "contact_form_submit", {
-            event_category: "engagement",
-            event_label: form.services?.join(", ") || "general",
+          window.gtag("event", "form_submit", {
+            event_category: "lead",
+            event_label: "contact_form",
           });
         }
         if (typeof window.fbq === "function") {
@@ -156,6 +165,7 @@ export function ContactForm() {
                 type="text"
                 value={form.name}
                 onChange={(e) => updateField("name", e.target.value)}
+                onFocus={handleFormStart}
                 className="w-full border-b-2 border-petrol/10 bg-transparent py-3 text-base text-petrol outline-none transition-colors focus:border-orange"
                 name="name" placeholder="O teu nome"
               />

@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
 import { Navbar } from "@/components/layout/Navbar";
 import { Footer } from "@/components/sections/Footer";
-import { BlogEmailCapture } from "@/components/features/blog/BlogEmailCapture";
+import { GuiaPrecosCapture } from "./GuiaPrecosCapture";
 
 export const metadata: Metadata = {
   title: "Guia de Preços de Vídeo Marketing em Portugal 2026 | Beyond Focus",
@@ -56,7 +56,7 @@ export default function GuiaPrecosVideoPage() {
 
         {/* Email capture */}
         <section className="mx-auto max-w-[680px] px-6 pb-16 md:px-10">
-          <BlogEmailCapture
+          <GuiaPrecosCapture
             variant="banner"
             title="Recebe o guia completo por email"
             description="O link chega imediatamente. Mais o checklist de briefing em PDF."

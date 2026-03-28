@@ -1,6 +1,11 @@
 import { NextResponse } from "next/server";
+import { rateLimit } from "@/lib/rate-limit";
 
 export async function POST(request: Request) {
+  if (!rateLimit(request, { limit: 5, windowMs: 60_000 })) {
+    return NextResponse.json({ error: "Demasiados pedidos. Tenta novamente em breve." }, { status: 429 });
+  }
+
   try {
     const body = await request.json();
     const { email, name, company, source, magnet } = body;
@@ -13,12 +18,14 @@ export async function POST(request: Request) {
     const supabaseUrl = process.env.SUPABASE_URL;
     const serviceKey = process.env.SUPABASE_SERVICE_ROLE_KEY;
     if (supabaseUrl && serviceKey) {
-      fetch(`${supabaseUrl}/rest/v1/website_leads`, {
+      // Upsert — on conflict with email, update source only if null, preserve nurture state
+      fetch(`${supabaseUrl}/rest/v1/website_leads?on_conflict=email`, {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
           apikey: serviceKey,
           Authorization: `Bearer ${serviceKey}`,
+          Prefer: "resolution=merge-duplicates,return=minimal",
         },
         body: JSON.stringify({
           email,
@@ -26,6 +33,7 @@ export async function POST(request: Request) {
           company: company || null,
           source: source || "lead_magnet",
           notes: magnet ? `Lead magnet: ${magnet}` : null,
+          updated_at: new Date().toISOString(),
         }),
       }).catch(() => {});
     }
