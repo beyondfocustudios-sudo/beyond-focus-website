@@ -115,17 +115,42 @@ export async function POST(request: Request) {
   }
 
   try {
-    const { Resend } = await import("resend");
-    const resend = new Resend(resendKey);
-
-    await resend.emails.send({
-      from: "Daniel Lopes — Beyond Focus <website@beyondfocus.pt>",
-      to: [lead.email],
+    // Save as Outlook draft for Daniel's approval — NEVER send directly
+    const { createOutlookDraft } = await import("@/lib/ms-graph");
+    const draft = await createOutlookDraft({
+      to: lead.email,
       subject: emailData.subject,
-      html: emailData.html,
+      htmlBody: emailData.html,
+      replyTo: "daniellopes@beyondfocus.pt",
     });
 
-    // Days until next step: 1→3d, 2→4d, 3→4d, 4→4d, 5→6d, 6→6d, 7→done
+    if (draft) {
+      // Notify Daniel via Telegram about the draft
+      const botToken = process.env.TELEGRAM_BOT_TOKEN;
+      const chatId = process.env.TELEGRAM_CHAT_ID;
+      if (botToken && chatId) {
+        const notifText = `📧 *Rascunho nurture pronto*\n\n👤 ${lead.name} (${lead.email})\n📋 Email ${sequence_step}/7: ${emailData.subject}\n\n_Rascunho no Outlook. Revê e envia quando quiseres._`;
+        await fetch(`https://api.telegram.org/bot${botToken}/sendMessage`, {
+          method: "POST",
+          headers: { "Content-Type": "application/json" },
+          body: JSON.stringify({ chat_id: chatId, text: notifText, parse_mode: "Markdown" }),
+        }).catch(() => {});
+      }
+    } else {
+      // Fallback: if Outlook draft fails, send notification only (don't auto-send)
+      const botToken = process.env.TELEGRAM_BOT_TOKEN;
+      const chatId = process.env.TELEGRAM_CHAT_ID;
+      if (botToken && chatId) {
+        const notifText = `⚠️ *Nurture email pendente* (Outlook draft falhou)\n\n👤 ${lead.name} (${lead.email})\n📋 Email ${sequence_step}/7: ${emailData.subject}\n\n_Envia manualmente via Outlook._`;
+        await fetch(`https://api.telegram.org/bot${botToken}/sendMessage`, {
+          method: "POST",
+          headers: { "Content-Type": "application/json" },
+          body: JSON.stringify({ chat_id: chatId, text: notifText, parse_mode: "Markdown" }),
+        }).catch(() => {});
+      }
+    }
+
+    // Advance nurture step regardless (draft was created, Daniel will send)
     const daysMap: Record<number, number> = { 1: 3, 2: 4, 3: 4, 4: 4, 5: 6, 6: 6 };
     if (sequence_step < 7) {
       await updateNurtureStep(lead_id, sequence_step + 1, daysMap[sequence_step]);
@@ -133,9 +158,9 @@ export async function POST(request: Request) {
       await updateNurtureStep(lead_id, 7, 9999);
     }
 
-    return NextResponse.json({ success: true, step: sequence_step, email: lead.email });
+    return NextResponse.json({ success: true, step: sequence_step, email: lead.email, mode: "draft" });
   } catch (error) {
-    console.error("Nurture email error:", error);
-    return NextResponse.json({ error: "Erro ao enviar email." }, { status: 500 });
+    console.error("Nurture draft error:", error);
+    return NextResponse.json({ error: "Erro ao criar rascunho." }, { status: 500 });
   }
 }

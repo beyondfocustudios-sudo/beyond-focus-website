@@ -101,6 +101,59 @@ export async function getTomorrowMeetingsWithExternals(): Promise<CalendarEvent[
   );
 }
 
+// ─── Rascunhos de Email (Outlook Drafts) ─────────────────────────────────
+
+export async function createOutlookDraft({
+  to,
+  subject,
+  htmlBody,
+  replyTo,
+}: {
+  to: string;
+  subject: string;
+  htmlBody: string;
+  replyTo?: string;
+}): Promise<{ id: string; webLink: string } | null> {
+  try {
+    const token = await getAccessToken();
+
+    const message: Record<string, unknown> = {
+      subject,
+      body: { contentType: "HTML", content: htmlBody },
+      toRecipients: [{ emailAddress: { address: to } }],
+      from: { emailAddress: { address: DANIEL_EMAIL, name: "Daniel Lopes — Beyond Focus" } },
+    };
+
+    if (replyTo) {
+      message.replyTo = [{ emailAddress: { address: replyTo } }];
+    }
+
+    const res = await fetch(
+      `${GRAPH_BASE}/users/${DANIEL_EMAIL}/messages`,
+      {
+        method: "POST",
+        headers: {
+          Authorization: `Bearer ${token}`,
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify(message),
+      }
+    );
+
+    if (!res.ok) {
+      const err = await res.text();
+      console.error(`Draft creation error: ${err}`);
+      return null;
+    }
+
+    const data = await res.json();
+    return { id: data.id, webLink: data.webLink || "" };
+  } catch (e) {
+    console.error("Failed to create Outlook draft:", e);
+    return null;
+  }
+}
+
 export function getExternalAttendees(event: CalendarEvent) {
   return (event.attendees || []).filter(
     (a) =>
