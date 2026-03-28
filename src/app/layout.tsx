@@ -9,6 +9,7 @@ import { MetaPixel } from "@/components/analytics/MetaPixel";
 import { Analytics } from "@vercel/analytics/next";
 import { ExitIntentPopup } from "@/components/lead-capture/ExitIntentPopup";
 import { WhatsAppButton } from "@/components/ui/WhatsAppButton";
+import { ChatWidgetLoader } from "@/components/ui/ChatWidgetLoader";
 import "./globals.css";
 
 const dmSans = DM_Sans({
@@ -197,6 +198,7 @@ export default function RootLayout({
         <CustomCursor />
         <ScrollProgress />
         <ExitIntentPopup />
+        <ChatWidgetLoader />
         <WhatsAppButton />
         <SmoothScroll>{children}</SmoothScroll>
       </body>

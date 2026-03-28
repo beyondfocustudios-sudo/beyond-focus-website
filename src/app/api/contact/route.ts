@@ -248,8 +248,7 @@ export async function POST(request: Request) {
 
     const apiKey = process.env.RESEND_API_KEY;
     if (!apiKey) {
-      console.log("=== NEW CONTACT (no Resend key) ===");
-      console.log(JSON.stringify(body, null, 2));
+      console.warn("Contact form submission received — RESEND_API_KEY not configured.");
       return NextResponse.json({ success: true });
     }
 

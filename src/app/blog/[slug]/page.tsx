@@ -136,6 +136,12 @@ export default async function BlogPostPage({
           <h1 className="mt-4 text-[clamp(28px,3.5vw,44px)] font-bold leading-[1.15] tracking-tight text-petrol">
             {post.title}
           </h1>
+          <p className="mt-3 text-[12px] text-petrol/40">
+            Por{" "}
+            <Link href="/sobre/daniel-lopes" className="underline underline-offset-2 hover:text-petrol/70 transition-colors">
+              Daniel Lopes
+            </Link>
+          </p>
         </section>
 
         {/* Image */}
