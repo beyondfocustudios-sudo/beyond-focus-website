@@ -12,6 +12,16 @@ import { getProject, getNextProjects, PROJECTS } from "@/lib/portfolio-data";
 import { BreadcrumbSchema } from "@/components/seo/BreadcrumbSchema";
 import { VideoObjectSchema } from "@/components/seo/VideoObjectSchema";
 
+const PROJECT_UPLOAD_DATE: Record<string, string> = {
+  "hotel-casa-palmela": "2024-03-01",
+  "carl-zeiss-portugal": "2024-06-01",
+  "highgate": "2024-12-01",
+  "amoretti-lux": "2024-05-01",
+  "soce-mauro-loureiro": "2024-09-01",
+  "once-upon-a-house": "2025-09-01",
+  "lobsters": "2025-01-01",
+};
+
 const PROJECT_SERVICE_MAP: Record<string, { label: string; href: string }> = {
   "hotel-casa-palmela": { label: "Filmes Comerciais", href: "/servicos/filmes-comerciais" },
   "carl-zeiss-portugal": { label: "Vídeos Institucionais", href: "/servicos/videos-institucionais" },
@@ -74,6 +84,7 @@ export default async function CaseStudyPage({
           description={project.briefText.slice(0, 250)}
           thumbnailUrl={project.thumbnail}
           contentUrl={project.video}
+          uploadDate={PROJECT_UPLOAD_DATE[slug] ?? "2024-01-01"}
         />
       )}
       <Navbar variant="light" />

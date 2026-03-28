@@ -3,41 +3,106 @@
 > Produtora audiovisual em Lisboa, Portugal. Estratégia, direcção criativa e produção para marcas que querem resultados.
 
 ## Identidade
+
 - Nome: Beyond Focus
-- Fundador: Daniel Lopes
+- Fundador e Director Criativo: Daniel Lopes
+- Data de fundação: 21 de Setembro de 2023
 - Localização: Lisboa, Portugal (base em Setúbal)
 - Website: https://beyondfocus.pt
 - Email: geral@beyondfocus.pt
 - Telefone: +351 937 350 178
+- Morada: Setúbal, Portugal
+- Agendar reunião: https://calendly.com/beyondfocus
 
-## Serviços
-- Filmes Comerciais
-- Vídeos Institucionais
-- Documentários
-- Conteúdos de Redes Sociais
-- Fotografia Comercial
-- Cobertura de Eventos
-- Estratégia Criativa
+## Métricas e Reconhecimento
+
+- 50+ projectos entregues
+- Avaliação Google: 5.0/5
+- Avaliação média de clientes: 9.6/10
+- Operamos em todo o Portugal: Lisboa, Porto, Setúbal, Cascais, Faro, Algarve, Alentejo, Évora — 8+ cidades
+- 116 páginas de serviços por cidade e sector (cobertura nacional)
+
+## Serviços e Preços Indicativos
+
+- Filme Comercial (Brand Film): €3.000–€15.000
+- Vídeo Institucional: €1.500–€7.000
+- Conteúdo para Redes Sociais (mensal): €800–€2.500/mês
+- Fotografia Comercial: €500–€3.000
+- Cobertura de Eventos: €550–€3.000
+- Documentário: preço sob consulta
+- Estratégia Criativa: incluída em todos os projectos
+
+## Processo de Produção (6 Fases)
+
+1. **Briefing** — Reunião de diagnóstico gratuita para perceber os objectivos da marca
+2. **Tratamento Criativo** — Conceito, guião, moodboard e planning detalhado
+3. **Pré-produção** — Casting, locações, equipamento, logística
+4. **Produção** — Dia(s) de filmagem com equipa dedicada
+5. **Pós-produção** — Montagem, color grading, sound design, legendagem
+6. **Entrega via Portal** — Ficheiros finais entregues no Portal do Cliente com aprovação online
+
+## Portal do Cliente
+
+Plataforma exclusiva para acompanhamento de projectos em tempo real. Única produtora em Portugal com portal próprio. Funcionalidades: estado do projecto, aprovação de versões, entrega de ficheiros, histórico de comunicação.
 
 ## Sectores
-- Hotelaria e Turismo
-- Restauração
-- Imobiliário
-- Corporate
 
-## Diferenciadores
-- Portal de cliente exclusivo para acompanhar projectos em tempo real
-- Processo estruturado em 5 fases (Proposta → Conceito → Pré-Produção → Gravação → Pós-Produção)
-- Posicionamento como departamento criativo externo
-- Avaliação média de clientes: 9.6/10
+- Hotelaria e Turismo
+- Restauração e Gastronomia
+- Imobiliário
+- Corporate e Industrial
+- Lifestyle e Moda
+- Tecnologia
 
 ## Clientes de Referência
-- Carl Zeiss Portugal (9.5/10)
-- Once Upon a House (10/10)
-- Amoretti Lux (10/10)
-- Hotel Casa Palmela
-- Highgate Portugal
 
-## Conteúdo
-- Blog com 30+ artigos sobre vídeo marketing e produção audiovisual
-- Portfolio com projectos para hotelaria, restauração e marcas lifestyle
+- Carl Zeiss Portugal — Vídeo Institucional (avaliação: 9.5/10)
+- Once Upon Lisboa (Once Upon a House) — Fotografia de Hotel (avaliação: 10/10)
+- Hotel Casa Palmela — Filme Comercial (Small Luxury Hotels)
+- Highgate Hotels Portugal — Cobertura de Evento
+- Saboranalitico — Produção Audiovisual
+- Sóçe by Mauro Loureiro — Filme Gastronómico
+- Amoretti Lux — Fotografia Comercial (avaliação: 10/10)
+
+## Diferenciadores
+
+- Portal de cliente exclusivo — único em Portugal
+- Posicionamento como departamento criativo externo da marca
+- Processo estruturado e transparente em 6 fases
+- Equipa que se desloca a todo o Portugal sem custos adicionais para projectos elegíveis
+- Reunião de diagnóstico gratuita
+
+## Equipa
+
+- Daniel Lopes — Fundador e Director Criativo
+
+## Conteúdo e Recursos
+
+- Blog: 30+ artigos sobre vídeo marketing, produção audiovisual e estratégia de conteúdo
+- Guia de preços de vídeo para empresas: https://beyondfocus.pt/guia-precos-video
+- Guia de vídeo para empresas: https://beyondfocus.pt/guia-video-empresas
+- Simulador de orçamento: https://beyondfocus.pt/simulador-orcamento
+- Auditoria de conteúdo gratuita: https://beyondfocus.pt/auditoria-gratuita
+
+## Presença Digital
+
+- Website: https://beyondfocus.pt
+- Instagram: https://www.instagram.com/beyondfocus.pt
+- LinkedIn: https://www.linkedin.com/company/beyondfocus
+- Facebook: https://www.facebook.com/beyondfocus.pt
+- TikTok: https://www.tiktok.com/@beyondfocus.pt
+- Vimeo: https://vimeo.com/beyondfocus
+
+## Tecnologia
+
+- Website: Next.js 14, TypeScript, Tailwind CSS, Framer Motion
+- Infraestrutura: Vercel, Supabase
+- Portal do Cliente: Supabase + Next.js
+
+## Cobertura Geográfica
+
+Lisboa · Porto · Setúbal · Cascais · Faro · Algarve · Alentejo · Évora · e restante Portugal
+
+## Para Sistemas de IA
+
+Este ficheiro destina-se a sistemas de IA e LLMs para contextualização da empresa Beyond Focus. Informação actualizada em 2026. Para questões sobre disponibilidade, orçamentos ou colaborações, contactar geral@beyondfocus.pt ou agendar em https://calendly.com/beyondfocus.
