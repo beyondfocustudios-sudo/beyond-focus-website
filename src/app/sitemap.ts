@@ -89,6 +89,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
     ...pseoServiceCityUrls,
     ...pseoTripleUrls,
     { url: `${baseUrl}/hotelaria`, lastModified: "2026-03-28", changeFrequency: "monthly", priority: 0.8 },
+    { url: `${baseUrl}/simulador-orcamento`, lastModified: "2026-03-27", changeFrequency: "monthly", priority: 0.9 },
     { url: `${baseUrl}/guia-precos-video`, lastModified: "2026-03-28", changeFrequency: "monthly", priority: 0.8 },
     { url: `${baseUrl}/portal-cliente`, lastModified: "2025-10-01", changeFrequency: "monthly", priority: 0.7 },
     { url: `${baseUrl}/sobre`, lastModified: "2025-10-01", changeFrequency: "monthly", priority: 0.7 },
