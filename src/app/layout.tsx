@@ -6,6 +6,8 @@ import { SmoothScroll } from "@/components/layout/SmoothScroll";
 import { ScrollProgress } from "@/components/ui/ScrollProgress";
 import { GoogleAnalytics } from "@/components/analytics/GoogleAnalytics";
 import { MetaPixel } from "@/components/analytics/MetaPixel";
+import { MicrosoftClarity } from "@/components/analytics/MicrosoftClarity";
+import { LinkedInInsight } from "@/components/analytics/LinkedInInsight";
 import { Analytics } from "@vercel/analytics/next";
 import { ExitIntentPopup } from "@/components/lead-capture/ExitIntentPopup";
 import { WhatsAppButton } from "@/components/ui/WhatsAppButton";
@@ -194,6 +196,8 @@ export default function RootLayout({
         <Analytics />
         <GoogleAnalytics />
         <MetaPixel />
+        <MicrosoftClarity />
+        <LinkedInInsight />
         <LoadingScreen />
         <CustomCursor />
         <ScrollProgress />
