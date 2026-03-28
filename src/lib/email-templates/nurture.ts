@@ -275,7 +275,7 @@ Escreve um email sobre transparência de preços:
 - Abre dizendo que a maioria das produtoras não fala de valores — tu falas
 - Apresenta os três níveis de forma natural, sem lista formal — integrado no texto
 - CTA: marcar uma conversa de 15 minutos para perceber qual o melhor investimento para o projecto deles
-- Link para agendar: https://cal.com/beyondfocus/conversa
+- Link para agendar: https://calendly.com/beyondfocus-/discovery_call
 - Máximo 5 frases
 - NÃO uses: "orçamento personalizado", "preço justo", "premium"`;
 
@@ -284,7 +284,7 @@ Escreve um email sobre transparência de preços:
   if (!body) {
     return {
       subject: `O que custa trabalhar connosco`,
-      html: `<div style="${BASE_STYLE}"><p>Olá ${firstName},</p><p>A maioria das produtoras não fala de preços. Nós falamos.</p><p>Os projectos começam entre 1.500€ e 3.000€ para trabalhos mais directos. Projectos com narrativa e múltiplos formatos ficam entre 3.000€ e 7.000€. Projectos estratégicos com vários dias de rodagem a partir de 7.000€.</p><p>Se fizer sentido explorar qual o nível certo para o teu projecto, 15 minutos chegam: <a href="https://cal.com/beyondfocus/conversa" style="color:#FA8334">cal.com/beyondfocus/conversa</a></p><p>Abraço,<br>Daniel</p>${FOOTER}</div>`,
+      html: `<div style="${BASE_STYLE}"><p>Olá ${firstName},</p><p>A maioria das produtoras não fala de preços. Nós falamos.</p><p>Os projectos começam entre 1.500€ e 3.000€ para trabalhos mais directos. Projectos com narrativa e múltiplos formatos ficam entre 3.000€ e 7.000€. Projectos estratégicos com vários dias de rodagem a partir de 7.000€.</p><p>Se fizer sentido explorar qual o nível certo para o teu projecto, 15 minutos chegam: <a href="https://calendly.com/beyondfocus-/discovery_call" style="color:#FA8334">cal.com/beyondfocus/conversa</a></p><p>Abraço,<br>Daniel</p>${FOOTER}</div>`,
     };
   }
 
@@ -323,7 +323,7 @@ As três objecções a responder:
 Escreve o email:
 - Apresenta as objecções de forma natural, sem numeração nem listas
 - Cada resposta em 1 frase directa
-- CTA: uma conversa de 15 minutos não custa nada — link https://cal.com/beyondfocus/conversa
+- CTA: uma conversa de 15 minutos não custa nada — link https://calendly.com/beyondfocus-/discovery_call
 - Máximo 6 frases no total
 - NÃO uses: "entendo a tua preocupação", "é normal sentir", "garanto que"`;
 
@@ -332,7 +332,7 @@ Escreve o email:
   if (!body) {
     return {
       subject: `As três razões para não avançar (e as respostas)`,
-      html: `<div style="${BASE_STYLE}"><p>Olá ${firstName},</p><p>Três coisas que ouço com frequência:</p><p>"Não tenho orçamento" — projectos estruturados começam em 1.500€. O custo de não ter conteúdo diferenciado é maior.</p><p>"Já tentei e não resultou" — o problema costuma ser estratégia, não produção. Vídeo sem distribuição não serve ninguém.</p><p>"Não sei se preciso" — se os teus concorrentes têm vídeo e tu não tens, já sabes a resposta.</p><p>Uma conversa de 15 minutos custa zero: <a href="https://cal.com/beyondfocus/conversa" style="color:#FA8334">cal.com/beyondfocus/conversa</a></p><p>Abraço,<br>Daniel</p>${FOOTER}</div>`,
+      html: `<div style="${BASE_STYLE}"><p>Olá ${firstName},</p><p>Três coisas que ouço com frequência:</p><p>"Não tenho orçamento" — projectos estruturados começam em 1.500€. O custo de não ter conteúdo diferenciado é maior.</p><p>"Já tentei e não resultou" — o problema costuma ser estratégia, não produção. Vídeo sem distribuição não serve ninguém.</p><p>"Não sei se preciso" — se os teus concorrentes têm vídeo e tu não tens, já sabes a resposta.</p><p>Uma conversa de 15 minutos custa zero: <a href="https://calendly.com/beyondfocus-/discovery_call" style="color:#FA8334">cal.com/beyondfocus/conversa</a></p><p>Abraço,<br>Daniel</p>${FOOTER}</div>`,
     };
   }
 
@@ -367,7 +367,7 @@ Escreve o email final:
 - Diz claramente que é a última mensagem que vais enviar sobre isto
 - Recapitula brevemente o que a Beyond Focus faz de diferente: parceiro estratégico (não fornecedor), Portal do Cliente para acompanhamento em tempo real, portfólio desde hotelaria até multinacionais
 - Deixa a porta aberta: se algum dia precisarem, basta responder a este email
-- Link de agendamento para quem quiser avançar agora: https://cal.com/beyondfocus/conversa
+- Link de agendamento para quem quiser avançar agora: https://calendly.com/beyondfocus-/discovery_call
 - Tom: sereno, confiante, sem arrependimento
 - Máximo 5 frases
 - NÃO uses: "última oportunidade", "não perca", "urgente", "oferta limitada"`;
@@ -377,7 +377,7 @@ Escreve o email final:
   if (!body) {
     return {
       subject: `${firstName}, esta é a última mensagem`,
-      html: `<div style="${BASE_STYLE}"><p>Olá ${firstName},</p><p>Esta é a última mensagem que te envio sobre isto.</p><p>A Beyond Focus trabalha como parceiro estratégico — não como fornecedor. Os nossos clientes têm acesso ao Portal do Cliente para acompanhar cada projecto em tempo real, e o portfólio vai desde hotelaria de referência até multinacionais como a Carl Zeiss.</p><p>Se algum dia o momento for certo, responde a este email ou agenda aqui: <a href="https://cal.com/beyondfocus/conversa" style="color:#FA8334">cal.com/beyondfocus/conversa</a></p><p>Abraço,<br>Daniel</p>${FOOTER}</div>`,
+      html: `<div style="${BASE_STYLE}"><p>Olá ${firstName},</p><p>Esta é a última mensagem que te envio sobre isto.</p><p>A Beyond Focus trabalha como parceiro estratégico — não como fornecedor. Os nossos clientes têm acesso ao Portal do Cliente para acompanhar cada projecto em tempo real, e o portfólio vai desde hotelaria de referência até multinacionais como a Carl Zeiss.</p><p>Se algum dia o momento for certo, responde a este email ou agenda aqui: <a href="https://calendly.com/beyondfocus-/discovery_call" style="color:#FA8334">cal.com/beyondfocus/conversa</a></p><p>Abraço,<br>Daniel</p>${FOOTER}</div>`,
     };
   }
 

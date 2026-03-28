@@ -742,7 +742,7 @@ function SubmittedState({ serviceLabel }: { serviceLabel: string }) {
 
       {/* Primary CTA — Book a meeting */}
       <a
-        href="https://cal.com/beyondfocus/conversa"
+        href="https://calendly.com/beyondfocus-/discovery_call"
         target="_blank"
         rel="noopener noreferrer"
         className="mt-8 inline-block rounded-full bg-orange px-8 py-4 text-sm font-semibold text-white transition-all hover:scale-[1.02] hover:bg-orange/90"
