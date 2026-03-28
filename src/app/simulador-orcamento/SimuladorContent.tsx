@@ -737,26 +737,45 @@ function SubmittedState({ serviceLabel }: { serviceLabel: string }) {
         Pedido recebido!
       </h3>
       <p className="mx-auto mt-4 max-w-sm text-base text-petrol/50">
-        Vamos analisar o teu projecto de <strong className="text-petrol">{serviceLabel}</strong> e responder nas próximas 24 horas com uma proposta personalizada.
+        Vamos analisar o teu projecto de <strong className="text-petrol">{serviceLabel}</strong> e responder nas próximas 24 horas.
       </p>
+
+      {/* Primary CTA — Book a meeting */}
       <a
-        href="/"
-        className="mt-8 inline-block rounded-full bg-petrol px-8 py-3.5 text-sm font-semibold text-white transition-all hover:bg-petrol/90"
+        href="https://cal.com/beyondfocus/conversa"
+        target="_blank"
+        rel="noopener noreferrer"
+        className="mt-8 inline-block rounded-full bg-orange px-8 py-4 text-sm font-semibold text-white transition-all hover:scale-[1.02] hover:bg-orange/90"
       >
-        Voltar à homepage →
+        Marcar conversa de 15 min — sem compromisso
       </a>
-      <p className="mt-4 text-xs text-petrol/30">
-        Podes também seguir-nos no{" "}
-        <a
-          href="https://instagram.com/beyondfocus.pt"
-          target="_blank"
-          rel="noopener noreferrer"
-          className="underline underline-offset-2 hover:text-petrol/60"
-        >
-          Instagram
-        </a>
-        {" "}enquanto esperas.
+      <p className="mt-2 text-xs text-petrol/30">
+        Ou aguarda a nossa proposta por email (24h).
       </p>
+
+      {/* Secondary — WhatsApp */}
+      <a
+        href="https://wa.me/351937350178?text=Ol%C3%A1%2C%20acabei%20de%20fazer%20o%20simulador%20e%20gostava%20de%20falar%20sobre%20o%20meu%20projecto."
+        target="_blank"
+        rel="noopener noreferrer"
+        className="mt-4 inline-flex items-center gap-2 text-sm font-medium text-petrol/50 transition-colors hover:text-petrol"
+      >
+        <svg className="h-4 w-4" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+          <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z" />
+          <path d="M12 0C5.373 0 0 5.373 0 12c0 2.123.553 4.116 1.52 5.845L.057 23.57a.75.75 0 0 0 .92.92l5.725-1.463A11.945 11.945 0 0 0 12 24c6.627 0 12-5.373 12-12S18.627 0 12 0zm0 21.818a9.818 9.818 0 0 1-5.01-1.373l-.36-.214-3.727.952.97-3.644-.234-.374A9.818 9.818 0 1 1 12 21.818z" />
+        </svg>
+        Prefiro falar no WhatsApp
+      </a>
+
+      {/* Tertiary — Homepage */}
+      <div className="mt-6">
+        <a
+          href="/"
+          className="text-xs text-petrol/25 transition-colors hover:text-petrol/50"
+        >
+          Voltar à homepage
+        </a>
+      </div>
     </motion.div>
   );
 }
