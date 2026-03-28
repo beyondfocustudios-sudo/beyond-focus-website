@@ -14,6 +14,265 @@ export interface BlogPost {
 
 export const BLOG_POSTS: BlogPost[] = [
   {
+    slug: "quanto-custa-produzir-video-portugal",
+    title: "Quanto Custa Produzir Video em Portugal: O Que 20 Projectos Nos Ensinaram",
+    excerpt: "Analisamos os nossos proprios projectos para dar respostas reais sobre custos de producao audiovisual em Portugal. Sem valores genericos.",
+    category: "Producao",
+    date: "28 Mar 2026",
+    readTime: "6 min",
+    thumbnail: "/images/blog/quanto-custa-video-institucional-portugal.jpg",
+    metaTitle: "Quanto Custa Produzir Video em Portugal | Beyond Focus",
+    metaDescription: "Dados reais de 20+ projectos de producao audiovisual em Portugal. Custos, prazos, formatos mais pedidos e o que influencia o preco final.",
+    keywords: ["custo producao video portugal", "preco video institucional", "quanto custa video empresa", "producao audiovisual precos", "video marketing portugal", "orcamento video corporativo", "video para empresas"],
+    content: `# Quanto Custa Produzir Video em Portugal: O Que 20 Projectos Nos Ensinaram
+
+A pergunta que mais recebemos e, ao mesmo tempo, a que tem a resposta mais frustrante: "Quanto custa um video?" A maioria dos artigos que encontras online responde com intervalos enormes -- de 500 a 50.000 euros -- que nao ajudam ninguem a tomar uma decisao. Nos decidimos fazer diferente. Analisamos mais de 20 projectos que realizamos nos ultimos anos para dar numeros reais, baseados no que empresas portuguesas efectivamente investem quando contratam producao audiovisual.
+
+Nao sao estimativas de mercado nem benchmarks internacionais adaptados. Sao dados dos nossos proprios projectos -- o que foi pedido, quanto demorou, o que influenciou o custo final. Se estas a planear investir em video para a tua empresa, isto e o mais proximo de uma resposta honesta que vais encontrar.
+
+---
+
+## O que as empresas portuguesas realmente investem
+
+A realidade e que a maioria das PMEs portuguesas investe entre mil e tres mil euros por projecto de video. Nao sao valores de producoes televisivas nem de spots para televisao. Sao videos institucionais, conteudo para redes sociais, cobertura de eventos e pecas para comunicacao interna ou externa. Projectos ha desde algumas centenas de euros ate varios milhares, dependendo da complexidade.
+
+O ticket medio que observamos nos nossos projectos situa-se entre mil e mil e quinhentos euros. Isto coloca a producao audiovisual ao alcance de qualquer empresa que leve a serio a sua comunicacao visual. Nao e preciso um orcamento de multinacional para ter conteudo bem feito. E preciso saber onde investir e o que pedir.
+
+---
+
+## Os formatos mais pedidos
+
+Nos mais de 20 projectos que analisamos, dois formatos dominam claramente: conteudo para redes sociais e videos institucionais. Sao os dois pilares da comunicacao audiovisual para a maioria das empresas portuguesas. O conteudo para redes sociais inclui reels, videos curtos para Instagram e TikTok, e pecas adaptadas a multiplas plataformas. Os videos institucionais continuam a ser o cartao de visita audiovisual das empresas -- o equivalente a um website, mas em formato visual.
+
+O que tem mudado e o peso relativo. Ha dois anos, o institucional dominava. Hoje, a procura por conteudo para redes sociais ja iguala ou ultrapassa o institucional. As empresas perceberam que precisam de consistencia nas plataformas, nao apenas de uma peca isolada. Um video institucional e importante. Mas sem conteudo regular nas redes, fica guardado no website a apanhar po.
+
+---
+
+## O que influencia o preco
+
+O custo de um projecto de video nao depende de um unico factor. Sao varias variaveis que, combinadas, definem o investimento final. Baseado nos nossos projectos, estes sao os factores que mais pesam.
+
+**Dias de filmagem.** A diferenca entre um e dois dias de rodagem tem impacto directo no orcamento. Mais dias significa mais logistica, mais equipa, mais deslocacoes. Um projecto de conteudo para redes sociais pode resolver-se num dia. Um video institucional mais ambicioso pode precisar de dois.
+
+**Complexidade da edicao.** Um reel de 30 segundos e um video de 3 minutos com graficos, animacoes e color grading avancado nao exigem o mesmo tempo de pos-producao. A edicao e onde a maior parte do tempo de producao e gasta -- entre tres e quatro dias, em media, nos nossos projectos.
+
+**Numero de entregaveis.** Um projecto que pede um video institucional custa menos do que um que pede o institucional mais cinco adaptacoes para redes sociais mais fotografias. Mais entregaveis, mais tempo, mais investimento. Mas o custo marginal de cada peca adicional e menor quando filmamos tudo de uma vez.
+
+**Preparacao do cliente.** Este e o factor que ninguem menciona mas que faz toda a diferenca. Um cliente que chega ao briefing com ideias claras, referencias visuais e ate musica escolhida permite-nos avancar mais rapido. Menos idas e vindas, menos tempo em conceito, menos revisoes. Isto traduz-se directamente num custo final mais baixo.
+
+---
+
+## O prazo real: do briefing a entrega em cerca de duas semanas
+
+O tempo medio dos nossos projectos, do primeiro briefing a entrega final, ronda as duas semanas. Nao sao dois meses. Nao e uma eternidade. Duas semanas. A distribuicao do tempo e mais ou menos esta, baseada nos nossos dados internos.
+
+O briefing demora em media dois dias. E o momento em que compreendemos o que o cliente precisa, qual o objectivo da comunicacao, que mensagem quer transmitir e a quem. Depois vem o tratamento criativo -- entre um dia e um dia e meio -- onde definimos a abordagem visual, o guiao, a estetica do projecto. A rodagem ocupa entre um e dois dias, dependendo da escala. A edicao, que e a fase mais longa, demora entre tres e quatro dias. E a entrega acontece no proprio dia da conclusao da edicao ou, se houver revisoes, entre dois e tres dias adicionais.
+
+Em media, os nossos projectos passam por duas rondas de revisao. Isto e perfeitamente normal e esta previsto no nosso processo. As fases onde mais atrasos acontecem sao o tratamento criativo e a entrega -- no primeiro caso porque depende de alinhamento entre nos e o cliente, no segundo porque as revisoes finais podem arrastar-se.
+
+---
+
+## O que torna um projecto mais caro (e mais barato)
+
+**Mais caro:** ambiguidade no briefing, falta de preparacao, muitas revisoes alem do previsto, localizacoes multiplas, necessidade de casting ou figurantes, drone, grafismo avancado, e entrega urgente.
+
+**Mais barato:** briefing claro e completo, referencias visuais e musicais ja definidas, uma unica localizacao, equipa reduzida, menos entregaveis, e flexibilidade nas datas. Um cliente que chega preparado poupa tempo. E tempo, em producao, e dinheiro.
+
+Ha uma frase que uso frequentemente: se o cliente ja vem com a musica escolhida, ja temos metade do video feito. Parece exagero. Nao e. A musica define o ritmo da edicao, a energia do video, o tom emocional. Quando essa decisao ja esta tomada, todo o processo se acelera.
+
+---
+
+## Como pensar o orcamento de video
+
+Video nao e uma despesa. E um investimento em comunicacao com retorno mensuravel. O erro mais comum que vejo em empresas portuguesas e pensar em video como um custo unico -- uma peca isolada, feita uma vez, e pronto. A abordagem que funciona e diferente.
+
+Comeca com um objectivo claro. Nao "queremos um video bonito" mas "queremos aumentar reservas no website" ou "queremos que os candidatos percebam a cultura da empresa". Depois, define o formato que serve esse objectivo. E so depois fala de orcamento.
+
+O investimento mais inteligente que uma empresa pode fazer e consistencia. Nao e o grande video de dez mil euros uma vez por ano. E um fluxo regular de conteudo que mantem a marca visivel e relevante. Com mil a mil e quinhentos euros por mes, uma empresa pode ter conteudo audiovisual consistente para as suas plataformas. Isso vale mais do que uma peca cara que ninguem ve.`,
+  },
+  {
+    slug: "video-marketing-hoteis-portugal",
+    title: "Video Marketing para Hoteis em Portugal: O Que Funciona e O Que Nao Funciona",
+    excerpt: "Baseado na nossa experiencia com hoteis portugueses: os erros mais comuns, o que realmente funciona e uma admissao honesta sobre ROI.",
+    category: "Estrategia",
+    date: "28 Mar 2026",
+    readTime: "6 min",
+    thumbnail: "/images/blog/video-hotelaria-portugal.jpg",
+    metaTitle: "Video Marketing para Hoteis em Portugal | Beyond Focus",
+    metaDescription: "Experiencia directa com hoteis portugueses: erros com bancos de imagens, porque reels funcionam melhor que brand films e onde esta a oportunidade.",
+    keywords: ["video marketing hoteis portugal", "conteudo video hotel", "reels hoteis", "marketing hoteleiro portugal", "producao video hotelaria", "video booking hotel", "conteudo redes sociais hoteis"],
+    content: `# Video Marketing para Hoteis em Portugal: O Que Funciona e O Que Nao Funciona
+
+Trabalhamos com hoteis portugueses. Nao tantos como gostariamos -- foram tres a quatro projectos ate a data -- mas o suficiente para identificar padroes que se repetem. Padroes nos erros que cometem e nas oportunidades que desperdicam. Este artigo nao e um estudo de mercado com mil amostras. E uma observacao directa, baseada no que vimos nas nossas producoes e nas conversas que tivemos com equipas de marketing hoteleiro em Portugal. Se geres um hotel e estas a pensar em investir em conteudo audiovisual, aqui esta o que aprendemos.
+
+---
+
+## O erro mais comum: confiar em bancos de imagens
+
+Se ha uma coisa que vimos repetir-se em todos os hoteis com quem falámos, e esta: dependem de bancos de imagens e reutilizam fotografias antigas como se o mundo nao tivesse mudado. Um hotel que usa fotos de stock no seu website e redes sociais esta a comunicar uma mensagem clara ao potencial hospede -- "nao nos demos ao trabalho de mostrar quem realmente somos."
+
+O problema nao e apenas estetico. E estrategico. As fotos de banco sao genericas por definicao. Nao mostram o que aquele hotel tem de especifico -- a luz daquela varanda ao fim da tarde, a maneira como o bartender prepara o cocktail de assinatura, o canto do corredor onde a arquitectura surpreende. Sao exactamente esses detalhes que fazem alguem reservar. E sao exactamente esses detalhes que faltam quando se usa conteudo generico.
+
+As fotos antigas sao outro problema. Um hotel que renovou o spa em 2024 mas continua a usar fotos de 2021 no website esta, na pratica, a mentir. E os hospedes percebem. Chegam com expectativas baseadas em imagens desactualizadas e a experiencia comeca com desapontamento. Isto nao se resolve com mais marketing. Resolve-se com conteudo actualizado e autentico.
+
+---
+
+## Porque e que reels funcionam melhor do que brand films para a maioria dos hoteis
+
+A tentacao e grande: contratar uma producao para fazer o grande brand film -- aquele video cinematico de tres minutos com drone, modelos e musica orquestral. E bonito. E impressionante. E, para a maioria dos hoteis, nao e o que deviam fazer primeiro.
+
+A razao e simples. Um brand film e um investimento significativo que produz uma unica peca de conteudo. Um conjunto de reels e um investimento menor que produz multiplas pecas, cada uma com potencial de alcance organico nas plataformas onde os potenciais hospedes realmente passam tempo. O Instagram e o TikTok sao, cada vez mais, os motores de pesquisa de viagens para gerações mais jovens. E os reels sao o formato nativo dessas plataformas.
+
+Na nossa experiencia, a combinacao que melhor funciona para hoteis e fotografia profissional mais reels regulares. A fotografia actualiza o website e materiais de comunicacao. Os reels mantêm o hotel visivel nas redes sociais. O brand film pode e deve existir -- mas como segundo passo, nao como primeiro. Comecar pelo brand film e como construir o telhado antes das paredes.
+
+---
+
+## A armadilha dos eventos
+
+Os hoteis fazem eventos. Jantares tematicos, wine tastings, festas de Natal, brunchs de domingo, inauguracoes. Fazem-nos com cuidado, investem na decoracao, no catering, na experiencia. E depois? Nao os captam. Ou captam com o telemovel do estagiario.
+
+Isto e uma oportunidade perdida com consequencias a longo prazo. Um evento bem filmado e fotografado produz conteudo para semanas. O aftermovie de uma festa de Natal pode alimentar as redes sociais durante todo o mes de Janeiro. Os bastidores de um wine tasting podem tornar-se tres ou quatro reels individuais. Uma boa fotografia do evento pode ir para o website, para newsletters, para propostas comerciais a empresas que querem organizar eventos no hotel.
+
+O custo de ter uma equipa a captar o evento e residual comparado com o investimento no proprio evento. Mas a maioria dos hoteis nao o faz. Investem cinco ou dez mil euros no evento e zero em conteudo. O evento acontece, os convidados publicam umas stories nos seus perfis pessoais, e em 24 horas nao resta nada. Zero activos de comunicacao. Zero retorno a longo prazo.
+
+---
+
+## O que vimos funcionar: formatos especificos
+
+Dos projectos que fizemos com hoteis, estes sao os tipos de conteudo que geraram mais interesse e melhor recepcao.
+
+**Reels de quartos e espacos com narrativa.** Nao e so abrir a porta e mostrar o quarto. E contar uma micro-historia -- o acordar com a vista, o primeiro cafe na varanda, a transicao da tarde para a noite. Quinze a trinta segundos, com musica que define o tom emocional.
+
+**Combinacao foto e video no mesmo dia de rodagem.** Quando um hotel nos contrata para fotografar os quartos renovados, aproveitamos o mesmo dia para fazer reels. O custo adicional e marginal, o resultado e dobro do conteudo. Esta e a abordagem com melhor relacao investimento-resultado que observamos.
+
+**Conteudo sazonal e momentos especificos.** Um reel do nascer do sol na piscina em Junho. Os preparativos de Natal em Dezembro. O pequeno-almoco de Primavera. Conteudo que so aquele hotel, naquela localizacao, naquela epoca, pode produzir. Impossivel de replicar com banco de imagens.
+
+---
+
+## Uma admissao honesta sobre ROI
+
+Seria facil inventar numeros aqui. Dizer que os nossos videos aumentaram as reservas em 30% ou que os reels geraram dez mil visualizacoes. Nao vamos fazer isso.
+
+A verdade e que ainda nao temos dados mensuráveis de ROI dos nossos projectos com hoteis. Nao porque os resultados nao existam, mas porque ate agora nao implementamos um sistema de medicao robusto com esses clientes. E algo que estamos a construir -- mecanismos de tracking que nos permitam ligar conteudo a reservas efectivas e a metricas de engagement com impacto no negocio.
+
+O que sabemos, por observacao e feedback dos clientes, e que conteudo visual actualizado e consistente muda a percepcao do hotel nas plataformas digitais. Os clientes reportam mais engagement, mais mensagens directas, mais perguntas sobre disponibilidade. Mas "mais" nao e um numero. E nos queremos numeros. Quando os tivermos, actualizaremos este artigo. Ate la, preferimos ser honestos do que inventar metricas que soem bem.
+
+---
+
+## Recomendacoes praticas para hoteis
+
+Se geres um hotel em Portugal e estas a ponderar investir em conteudo audiovisual, aqui esta o que sugerimos, por ordem de prioridade.
+
+**Primeiro: actualiza a fotografia.** Antes de qualquer video, garante que as fotos do website e redes sociais reflectem o hotel como ele e hoje. Nao como era em 2022.
+
+**Segundo: comeca com reels mensais.** Um dia de rodagem por mes pode gerar entre quatro e oito reels. E suficiente para manter uma presenca consistente nas redes sociais e comecar a construir uma biblioteca de conteudo.
+
+**Terceiro: capta todos os eventos.** Sempre. Sem excepcao. E o conteudo com melhor rácio investimento-resultado porque o evento ja esta a acontecer -- so precisas de alguem competente a captar.
+
+**Quarto: so depois, o brand film.** Quando ja tens uma presenca consistente, quando o website esta actualizado, quando as redes estao activas -- ai sim, investe no brand film que conta a historia completa do hotel.
+
+---
+
+## A oportunidade que a maioria nao ve
+
+A maioria dos hoteis portugueses ainda nao faz nada disto de forma estrategica. Alguns fazem reels esporadicos com o telemovel. Outros contratam uma producao uma vez por ano. Poucos tem uma abordagem consistente e pensada. Isto e, simultaneamente, um problema e uma oportunidade.
+
+O hotel que comecar agora a investir em conteudo audiovisual regular tem uma vantagem competitiva real. Nao porque o video seja magico, mas porque a maioria da concorrencia nao o esta a fazer. Num mercado onde quase todos comunicam com fotos antigas e stock images, quem mostra o real -- com cuidado e consistencia -- destaca-se sem esforco. A questao nao e se o video funciona para hoteis. A questao e quanto tempo mais podes esperar sem o fazer.`,
+  },
+  {
+    slug: "processo-producao-audiovisual-briefing-entrega",
+    title: "O Processo de Producao Audiovisual: Do Briefing a Entrega em 2 Semanas",
+    excerpt: "Desmistificamos o processo de producao audiovisual, fase a fase, com duracoes reais e o que esperamos de cada cliente.",
+    category: "Producao",
+    date: "28 Mar 2026",
+    readTime: "6 min",
+    thumbnail: "/images/blog/processo-producao-filme-comercial.jpg",
+    metaTitle: "Processo de Producao Audiovisual em 2 Semanas | Beyond Focus",
+    metaDescription: "Do briefing a entrega em cerca de 2 semanas: as 5 fases da producao audiovisual explicadas com duracoes reais de mais de 20 projectos.",
+    keywords: ["processo producao audiovisual", "briefing video", "fases producao video", "producao audiovisual portugal", "prazo producao video", "edicao video empresa", "entrega video"],
+    content: `# O Processo de Producao Audiovisual: Do Briefing a Entrega em 2 Semanas
+
+A maioria das empresas que nos contactam pela primeira vez nunca contratou uma produtora. Nao sabem o que esperar, quanto tempo demora, o que precisam de preparar ou como funciona o processo. E normal. E por isso este artigo existe -- para desmistificar cada fase, dar duracoes reais e explicar o que acontece entre "precisamos de um video" e o ficheiro final na caixa de entrada.
+
+Nao e teoria. Sao dados de mais de 20 projectos que realizamos. O tempo medio, do primeiro briefing a entrega final, ronda as duas semanas. Duas semanas para transformar uma ideia num video pronto a publicar. Parece rapido? E. Mas tem um preco: cada fase precisa de correr bem. E isso depende tanto de nos como de quem nos contrata.
+
+---
+
+## Fase 1: Briefing -- 2 dias
+
+O briefing e a fundacao de tudo. Se esta fase correr mal, todo o projecto sofre. Nao em qualidade tecnica -- isso e responsabilidade nossa -- mas em alinhamento. Um video tecnicamente impecavel que nao comunica a mensagem certa e um desperdicio de investimento.
+
+Nos primeiros dois dias, o que fazemos e simples mas essencial: ouvir. Queremos perceber o objectivo da comunicacao, a quem se destina, que mensagem deve ficar na cabeca de quem ve, e que accao queremos provocar. Nao queremos que o cliente nos diga como fazer o video. Queremos que nos diga o que o video precisa de resolver.
+
+O que esperamos do cliente nesta fase: ideias, mesmo que vagas. Referencias visuais -- videos que gostou, estilos que admira, tons que quer evitar. E, se possivel, musica. "Se o cliente ja vem com a musica escolhida, ja temos metade do video feito." Nao e forcas de expressao. A musica define o ritmo da edicao, o tom emocional, a energia de toda a peca. Quando essa decisao ja esta tomada no briefing, todo o tratamento criativo se simplifica e o projecto avanca com mais velocidade.
+
+Um bom briefing nao precisa de ser um documento de 20 paginas. Precisa de ser honesto. Dizer "queremos parecer modernos" e vago. Dizer "queremos que alguem com 30 anos, a procurar hotel em Lisboa, pare de fazer scroll e pense 'tenho de ir aqui'" -- isso e um briefing com o qual conseguimos trabalhar.
+
+---
+
+## Fase 2: Tratamento criativo -- 1 a 1,5 dias
+
+O tratamento criativo e a fase onde a maioria dos clientes descobre o que realmente estao a contratar. Nao e so "alguem com uma camara". E alguem que pensa na historia, na sequencia de imagens, na emocao, no ritmo. Alguem que transforma um briefing em linguagem visual.
+
+Nesta fase, definimos a abordagem. O guiao, quando aplicavel. O moodboard visual -- que tipo de luz, que paleta de cores, que tipo de enquadramentos. A estrutura do video -- como comeca, como se desenvolve, como termina. Se ha narracão ou não. Se ha entrevistas, graficos, texto sobreposto. Cada decisao tomada aqui poupa tempo nas fases seguintes.
+
+O tratamento criativo demora entre um dia e um dia e meio. E uma das fases onde mais atrasos acontecem -- nao por culpa de ninguem em particular, mas porque exige alinhamento. Nos propomos, o cliente reage, ajustamos. Quanto mais rapido esse ciclo acontecer, mais rapido avancamos para a producao. O nosso conselho: nao deixar o documento de tratamento criativo na caixa de entrada durante tres dias. Quanto mais fresco o contexto, melhor o feedback.
+
+---
+
+## Fase 3: Rodagem -- 1 a 2 dias
+
+O dia de rodagem e o unico dia em que tudo precisa de acontecer ao mesmo tempo. A luz certa, o espaco preparado, as pessoas nos sitios certos, o equipamento a funcionar. Parece caos. Na pratica, se as fases anteriores correram bem, e apenas execucao.
+
+A maioria dos nossos projectos resolve-se em um a dois dias de filmagem. Um dia para projectos de conteudo social ou pecas curtas. Dois dias para videos institucionais mais complexos, quando ha multiplas localizacoes ou muitos entrevistados.
+
+O que os clientes nao veem e o trabalho invisivel que ja aconteceu antes de chegarmos ao local. As localizacoes foram visitadas ou estudadas. O plano de rodagem define cada take. Os horarios estao calculados em funcao da luz natural. O equipamento esta preparado para o tipo de espaco. Quando chegamos ao local, ja sabemos exactamente o que filmar, em que ordem, e quanto tempo cada cena precisa.
+
+O que pedimos ao cliente no dia de rodagem: disponibilidade. Ter as pessoas certas no local, os espacos limpos e preparados, e alguem com autoridade para tomar decisoes rapidas. "Preciso de perguntar ao chefe" no meio de uma rodagem e o maior inimigo da eficiencia.
+
+---
+
+## Fase 4: Edicao -- 3 a 4 dias
+
+A edicao e a fase mais longa e, paradoxalmente, a mais invisivel para o cliente. Ninguem ve as horas de seleccao de takes, de sincronizacao de audio, de ajustes de cor, de tentativas de ritmo que nao funcionaram e foram descartadas. Mas e aqui que o video realmente nasce.
+
+Entre tres e quatro dias e o que demora, em media, a edicao dos nossos projectos. Isto inclui o primeiro corte, a seleccao musical (quando nao vem do briefing), o color grading, a integracao de graficos ou texto quando aplicavel, e a preparacao de multiplas versoes se o projecto incluir adaptacoes para diferentes plataformas.
+
+Entregamos um primeiro corte para aprovacao do cliente. E aqui que entram as revisoes -- em media, duas por projecto. Duas revisoes e perfeitamente normal e esta previsto no nosso fluxo de trabalho. Nao significa que algo correu mal. Significa que o processo funciona como deve: nos propomos, o cliente ajusta, nos refinamos. O resultado e melhor do que qualquer das partes conseguiria sozinha.
+
+O que torna esta fase mais eficiente: feedback especifico. "Nao gosto" nao e feedback. "O ritmo entre o segundo 15 e o segundo 30 esta demasiado lento, e a musica nesta parte nao transmite a energia que queriamos" -- isso e feedback que nos permite agir em horas, nao em dias.
+
+---
+
+## Fase 5: Entrega -- mesmo dia ou +2 a 3 dias
+
+A entrega acontece de duas formas. Se o primeiro corte e aprovado com ajustes menores, entregamos no proprio dia. Se as revisoes sao mais substanciais, o prazo adicional e de dois a tres dias.
+
+Esta e a outra fase onde atrasos sao frequentes -- e quase sempre do lado da aprovacao, nao da producao. O video esta pronto. Nos enviamos. E fica na caixa de entrada do cliente durante quatro dias porque "ainda nao tive tempo de ver com a equipa". Quatro dias de atraso que nao sao de producao mas que empurram o prazo total do projecto.
+
+O nosso processo inclui entrega de ficheiros finais nos formatos e resolucoes adequados a cada plataforma -- horizontal para YouTube e website, vertical para Instagram Reels e Stories, quadrado para LinkedIn se necessario. Nao entregamos um ficheiro e esperamos que o cliente se desenrasque com redimensionamentos. Cada entregavel esta pronto a publicar.
+
+---
+
+## Onde acontecem os atrasos (e como os evitar)
+
+Se o prazo medio e de duas semanas e o teu projecto demorou quatro, a culpa nao e da edicao. Os nossos dados sao claros: as fases onde mais atrasos acontecem sao o tratamento criativo e a entrega. Ambas dependem de uma coisa: velocidade de feedback.
+
+O tratamento criativo atrasa porque o cliente demora a responder, ou porque o alinhamento exige varias rondas. A entrega atrasa porque as revisoes finais ficam pendentes. Em ambos os casos, o trabalho esta feito do nosso lado. O relogio para porque o documento esta a espera de olhos.
+
+A solucao nao e pressionar. E preparar. Quando o cliente sabe, desde o inicio, que vai precisar de reservar tempo para dar feedback em cada fase, o projecto corre dentro do prazo. Quando descobre isso a meio do processo, as surpresas acumulam-se.
+
+---
+
+## Como o Portal do cliente muda isto
+
+Ha uma razao pela qual construimos um portal dedicado para os nossos clientes -- algo que, tanto quanto sabemos, nenhuma outra produtora em Portugal oferece. O portal permite ao cliente acompanhar o progresso do projecto em tempo real, ver em que fase estamos, e fazer revisoes com comentarios sincronizados ao timestamp do video.
+
+Isto resolve dois problemas. Primeiro, a transparencia: o cliente nunca precisa de perguntar "em que ponto esta o meu video?". Segundo, a eficiencia das revisoes: em vez de emails com "a partir do minuto 1:23, acho que...", o cliente clica no segundo exacto e escreve o comentario. Nos vemos. Nos ajustamos. O ciclo de revisao que demorava tres dias por email, demora um dia pelo portal.
+
+O processo de producao audiovisual nao e misterioso. E metodico. Cada fase tem uma duracao previsivel, entradas claras e saidas definidas. Duas semanas, cinco fases, um resultado que serve o objectivo. A unica variavel que nao controlamos e a velocidade com que cada cliente se envolve no processo. E isso, no fim, faz toda a diferenca.`,
+  },
+  {
     slug: "quanto-custa-video-institucional-portugal",
     title: "Quanto custa um vídeo institucional em Portugal? Guia completo para 2026",
     excerpt: "De €1.500 a €15.000+ — descobre os preços reais, o que influencia o custo e como investir com inteligência.",
