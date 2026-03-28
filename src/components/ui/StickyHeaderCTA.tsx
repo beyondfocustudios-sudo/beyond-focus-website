@@ -10,7 +10,8 @@ export function StickyHeaderCTA() {
   const [dismissed, setDismissed] = useState(false);
   const pathname = usePathname();
 
-  const isContactPage = pathname === "/contacto" || pathname === "/en/contact";
+  const skipPages = ["/contacto", "/en/contact", "/simulador-orcamento", "/auditoria-gratuita"];
+  const isSkipPage = skipPages.some((p) => pathname === p);
 
   useEffect(() => {
     if (typeof window === "undefined") return;
@@ -32,28 +33,28 @@ export function StickyHeaderCTA() {
     sessionStorage.setItem("sticky-cta-dismissed", "1");
   };
 
-  if (isContactPage || dismissed) return null;
+  if (isSkipPage || dismissed) return null;
 
   return (
     <AnimatePresence>
       {visible && (
         <motion.div
-          initial={{ y: -48 }}
+          initial={{ y: 60 }}
           animate={{ y: 0 }}
-          exit={{ y: -48 }}
+          exit={{ y: 60 }}
           transition={{ duration: 0.3, ease: "easeOut" }}
-          className="fixed top-0 left-0 right-0 z-[70] flex h-12 items-center justify-between gap-4 bg-[#0E3A45] px-4 md:px-8"
+          className="fixed bottom-0 left-0 right-0 z-[55] flex h-14 items-center justify-between gap-4 border-t border-white/10 bg-[#0E3A45] px-4 md:px-8"
         >
           <div className="flex flex-1 items-center justify-center gap-3 md:gap-6">
             <span className="hidden text-sm text-white/80 sm:block">
               Precisa de vídeo profissional para a sua empresa?
             </span>
-            <span className="block text-sm text-white/80 sm:hidden">
-              Vídeo profissional para a sua empresa?
+            <span className="block text-xs text-white/80 sm:hidden">
+              Vídeo profissional?
             </span>
             <Link
               href="/contacto"
-              className="flex-shrink-0 rounded-full bg-[#FA8334] px-4 py-1.5 text-xs font-semibold text-white transition-opacity hover:opacity-90"
+              className="flex-shrink-0 rounded-full bg-[#FA8334] px-5 py-2 text-xs font-semibold text-white transition-opacity hover:opacity-90"
             >
               Pedir orçamento →
             </Link>
@@ -61,7 +62,7 @@ export function StickyHeaderCTA() {
           <button
             onClick={handleDismiss}
             aria-label="Fechar barra"
-            className="flex-shrink-0 p-1 text-white/50 transition-colors hover:text-white"
+            className="flex-shrink-0 p-1 text-white/40 transition-colors hover:text-white"
           >
             <svg width="16" height="16" viewBox="0 0 16 16" fill="none">
               <path d="M12 4L4 12M4 4l8 8" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" />
