@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import { Navbar } from "@/components/layout/Navbar";
 import { Footer } from "@/components/sections/Footer";
 import { ContactForm } from "@/components/features/contact/ContactForm";
+import { AvailabilityBadge } from "@/components/ui/AvailabilityBadge";
 import { BreadcrumbSchema } from "@/components/seo/BreadcrumbSchema";
 import { FAQSchema } from "@/components/seo/FAQSchema";
 
@@ -80,6 +81,9 @@ export default function ContactoPage() {
 
             {/* Right — Form */}
             <div className="rounded-2xl bg-white p-8 shadow-sm lg:p-12">
+              <div className="mb-6">
+                <AvailabilityBadge />
+              </div>
               <ContactForm />
             </div>
           </div>

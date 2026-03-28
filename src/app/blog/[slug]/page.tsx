@@ -11,6 +11,7 @@ import { BlogEmailCapture } from "@/components/features/blog/BlogEmailCapture";
 import { BlogInlineCapture } from "@/components/features/leads/BlogInlineCapture";
 import { BlogStickyBanner } from "@/components/features/blog/BlogStickyBanner";
 import { IndustryLeadMagnet, type Sector } from "@/components/features/leads/IndustryLeadMagnet";
+import { SERVICES_SEO, CITIES } from "@/lib/programmatic-seo-data";
 
 const POST_FAQS: Record<string, { question: string; answer: string }[]> = {
   "quanto-custa-video-institucional-portugal": [
@@ -179,6 +180,37 @@ export default async function BlogPostPage({
             return rendered;
           })()}
         </article>
+
+        {/* Related programmatic service pages */}
+        {(() => {
+          const relatedServices = SERVICES_SEO.slice(0, 3);
+          const featuredCities = CITIES.slice(0, 3);
+          return (
+            <section className="mx-auto max-w-[720px] px-6 pb-10 md:px-10">
+              <h2 className="mb-5 text-lg font-bold text-petrol">Serviços relacionados</h2>
+              <div className="grid gap-3 sm:grid-cols-3">
+                {relatedServices.map((service) => (
+                  <div key={service.slug} className="rounded-xl border border-petrol/10 bg-white p-4">
+                    <p className="mb-2 text-[12px] font-semibold uppercase tracking-wider text-orange">
+                      {service.name}
+                    </p>
+                    <div className="space-y-1">
+                      {featuredCities.map((city) => (
+                        <Link
+                          key={city.slug}
+                          href={`/servicos/pseo/${service.slug}/${city.slug}`}
+                          className="block text-[13px] text-petrol/60 hover:text-petrol transition-colors"
+                        >
+                          {service.shortName.charAt(0).toUpperCase() + service.shortName.slice(1)} em {city.name} →
+                        </Link>
+                      ))}
+                    </div>
+                  </div>
+                ))}
+              </div>
+            </section>
+          );
+        })()}
 
         {/* Email capture */}
         <div className="mx-auto max-w-[720px] px-6 md:px-10">

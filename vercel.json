@@ -1,6 +1,10 @@
 {
   "crons": [
     {
+      "path": "/api/inbound-monitor",
+      "schedule": "30 7 * * *"
+    },
+    {
       "path": "/api/nurture-cron",
       "schedule": "0 9 * * *"
     },

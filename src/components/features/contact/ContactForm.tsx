@@ -29,7 +29,11 @@ const BUDGETS = [
   "> €10.000",
 ];
 
-export function ContactForm() {
+interface ContactFormProps {
+  variant?: "full" | "quick";
+}
+
+export function ContactForm({ variant = "full" }: ContactFormProps) {
   const [step, setStep] = useState(1);
   const [submitted, setSubmitted] = useState(false);
   const [loading, setLoading] = useState(false);
@@ -105,29 +109,108 @@ export function ContactForm() {
     }
   };
 
-  if (submitted) {
-    return (
-      <motion.div
-        initial={{ opacity: 0, y: 20 }}
-        animate={{ opacity: 1, y: 0 }}
-        className="py-20 text-center"
+  const submittedState = (
+    <motion.div
+      initial={{ opacity: 0, y: 20 }}
+      animate={{ opacity: 1, y: 0 }}
+      className="py-20 text-center"
+    >
+      <div className="mx-auto mb-6 flex h-16 w-16 items-center justify-center rounded-full bg-petrol">
+        <svg className="h-8 w-8 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
+        </svg>
+      </div>
+      <h3 className="font-serif text-[clamp(28px,3vw,40px)] text-petrol">Mensagem enviada!</h3>
+      <p className="mx-auto mt-4 max-w-md text-base text-petrol/50">
+        Obrigado pelo teu contacto. Vamos responder nas próximas 24 horas.
+      </p>
+      <a
+        href="/"
+        className="mt-8 inline-block text-sm font-medium text-petrol underline underline-offset-4 transition-colors hover:text-orange"
       >
-        <div className="mx-auto mb-6 flex h-16 w-16 items-center justify-center rounded-full bg-petrol">
-          <svg className="h-8 w-8 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
-          </svg>
-        </div>
-        <h3 className="font-serif text-[clamp(28px,3vw,40px)] text-petrol">Mensagem enviada!</h3>
-        <p className="mx-auto mt-4 max-w-md text-base text-petrol/50">
-          Obrigado pelo teu contacto. Vamos responder nas próximas 24 horas.
-        </p>
-        <a
-          href="/"
-          className="mt-8 inline-block text-sm font-medium text-petrol underline underline-offset-4 transition-colors hover:text-orange"
-        >
-          Voltar à homepage →
-        </a>
-      </motion.div>
+        Voltar à homepage →
+      </a>
+    </motion.div>
+  );
+
+  if (submitted) return submittedState;
+
+  if (variant === "quick") {
+    return (
+      <div>
+        {submitted ? submittedState : (
+          <div className="space-y-5">
+            <div>
+              <label htmlFor="q-name" className="mb-1 block font-mono text-[11px] uppercase tracking-[2px] text-petrol/40">Nome *</label>
+              <input
+                id="q-name"
+                type="text"
+                value={form.name}
+                onChange={(e) => updateField("name", e.target.value)}
+                onFocus={handleFormStart}
+                className="w-full border-b-2 border-petrol/10 bg-transparent py-3 text-base text-petrol outline-none transition-colors focus:border-orange"
+                placeholder="O teu nome"
+              />
+            </div>
+            <div>
+              <label htmlFor="q-email" className="mb-1 block font-mono text-[11px] uppercase tracking-[2px] text-petrol/40">Email *</label>
+              <input
+                id="q-email"
+                type="email"
+                value={form.email}
+                onChange={(e) => updateField("email", e.target.value)}
+                className="w-full border-b-2 border-petrol/10 bg-transparent py-3 text-base text-petrol outline-none transition-colors focus:border-orange"
+                placeholder="email@exemplo.com"
+              />
+            </div>
+            <div>
+              <label htmlFor="q-phone" className="mb-1 block font-mono text-[11px] uppercase tracking-[2px] text-petrol/40">Telefone *</label>
+              <input
+                id="q-phone"
+                type="tel"
+                value={form.phone}
+                onChange={(e) => updateField("phone", e.target.value)}
+                className="w-full border-b-2 border-petrol/10 bg-transparent py-3 text-base text-petrol outline-none transition-colors focus:border-orange"
+                placeholder="+351"
+              />
+            </div>
+            <div>
+              <label htmlFor="q-message" className="mb-1 block font-mono text-[11px] uppercase tracking-[2px] text-petrol/40">O que precisa?</label>
+              <textarea
+                id="q-message"
+                value={form.message}
+                onChange={(e) => updateField("message", e.target.value)}
+                rows={3}
+                className="w-full resize-none border-b-2 border-petrol/10 bg-transparent py-3 text-base text-petrol outline-none transition-colors focus:border-orange"
+                placeholder="Descreva brevemente o seu projecto..."
+              />
+            </div>
+            {error && (
+              <motion.p
+                initial={{ opacity: 0, y: -5 }}
+                animate={{ opacity: 1, y: 0 }}
+                className="text-sm text-red-500"
+              >
+                {error}
+              </motion.p>
+            )}
+            <button
+              onClick={handleSubmit}
+              disabled={loading || !form.name || !form.email || !form.phone}
+              className={`w-full rounded-full py-3.5 text-sm font-semibold text-white transition-all duration-200 ${
+                loading || !form.name || !form.email || !form.phone
+                  ? "bg-orange/40 cursor-not-allowed"
+                  : "bg-orange hover:bg-orange/90 hover:scale-[1.02]"
+              }`}
+            >
+              {loading ? "A enviar..." : "Pedir orçamento gratuito — resposta em 24h"}
+            </button>
+            <p className="text-center text-xs text-petrol/30">
+              Sem compromisso. Sem chatice. Só uma conversa honesta sobre o teu projecto.
+            </p>
+          </div>
+        )}
+      </div>
     );
   }
 
@@ -358,10 +441,13 @@ export function ContactForm() {
                 : "bg-orange hover:bg-orange/90 hover:scale-[1.03]"
             }`}
           >
-            {loading ? "A enviar..." : "Enviar mensagem"}
+            {loading ? "A enviar..." : "Pedir orçamento gratuito — resposta em 24h"}
           </button>
         )}
       </div>
+      <p className="mt-4 text-center text-xs text-petrol/30">
+        Sem compromisso. Sem chatice. Só uma conversa honesta sobre o teu projecto.
+      </p>
     </div>
   );
 }

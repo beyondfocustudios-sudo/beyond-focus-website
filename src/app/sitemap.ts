@@ -3,6 +3,7 @@ import { PROJECTS } from "@/lib/portfolio-data";
 import { SERVICE_PAGES } from "@/lib/services-data";
 import { SECTOR_PAGES } from "@/lib/sectors-data";
 import { BLOG_POSTS } from "@/lib/blog-data";
+import { CITIES, SERVICES_SEO, HIGH_INTENT_COMBINATIONS } from "@/lib/programmatic-seo-data";
 
 export default function sitemap(): MetadataRoute.Sitemap {
   const baseUrl = "https://beyondfocus.pt";
@@ -42,6 +43,22 @@ export default function sitemap(): MetadataRoute.Sitemap {
     { url: `${baseUrl}/servicos/regioes/algarve`, lastModified: new Date(), changeFrequency: "monthly" as const, priority: 0.7 as const },
   ];
 
+  const pseoServiceCityUrls = SERVICES_SEO.flatMap((service) =>
+    CITIES.map((city) => ({
+      url: `${baseUrl}/servicos/pseo/${service.slug}/${city.slug}`,
+      lastModified: new Date(),
+      changeFrequency: "monthly" as const,
+      priority: 0.65 as const,
+    }))
+  );
+
+  const pseoTripleUrls = HIGH_INTENT_COMBINATIONS.map((combo) => ({
+    url: `${baseUrl}/servicos/pseo/${combo.service}/${combo.city}/${combo.sector}`,
+    lastModified: new Date(),
+    changeFrequency: "monthly" as const,
+    priority: 0.6 as const,
+  }));
+
   return [
     { url: baseUrl, lastModified: new Date(), changeFrequency: "weekly", priority: 1 },
     { url: `${baseUrl}/portfolio`, lastModified: new Date(), changeFrequency: "weekly", priority: 0.9 },
@@ -50,6 +67,8 @@ export default function sitemap(): MetadataRoute.Sitemap {
     ...serviceUrls,
     ...sectorUrls,
     ...regionalUrls,
+    ...pseoServiceCityUrls,
+    ...pseoTripleUrls,
     { url: `${baseUrl}/portal-cliente`, lastModified: new Date(), changeFrequency: "monthly", priority: 0.7 },
     { url: `${baseUrl}/sobre`, lastModified: new Date(), changeFrequency: "monthly", priority: 0.7 },
     { url: `${baseUrl}/contacto`, lastModified: new Date(), changeFrequency: "monthly", priority: 0.8 },

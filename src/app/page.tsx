@@ -12,6 +12,7 @@ import { Footer } from "@/components/sections/Footer";
 import { Navbar } from "@/components/layout/Navbar";
 import { FAQSchema } from "@/components/seo/FAQSchema";
 import { ReviewsSchema } from "@/components/seo/ReviewsSchema";
+import { SocialProofBar } from "@/components/ui/SocialProofBar";
 import { FAQ_ITEMS } from "@/lib/constants";
 
 export const metadata: Metadata = {
@@ -41,6 +42,7 @@ export default function Home() {
       <Navbar />
       <main>
         <Hero />
+        <SocialProofBar />
         <Statement />
         <Portfolio />
         <Services />

@@ -8,6 +8,7 @@ import type { ServicePage } from "@/lib/services-data";
 import type { Project } from "@/lib/portfolio-data";
 import { BLOG_POSTS } from "@/lib/blog-data";
 import { ServiceLeadMagnet } from "@/components/features/leads/ServiceLeadMagnet";
+import { AvailabilityBadge } from "@/components/ui/AvailabilityBadge";
 
 function ServiceFAQ({ items }: { items: ServicePage["faq"] }) {
   const [open, setOpen] = useState<number | null>(null);
@@ -389,6 +390,9 @@ export function ServicePageContent({
           viewport={{ once: true }}
           transition={{ duration: 0.6 }}
         >
+          <div className="mb-6 flex justify-center">
+            <AvailabilityBadge />
+          </div>
           <h2 className="text-[clamp(28px,3.5vw,48px)] font-bold text-petrol">
             Interessado em {service.title.toLowerCase()}?
           </h2>
@@ -397,10 +401,13 @@ export function ServicePageContent({
           </p>
           <Link
             href="/contacto"
-            className="mt-8 inline-flex items-center gap-2 rounded-full bg-petrol px-8 py-4 text-base font-semibold text-white transition-all duration-200 hover:bg-petrol/90 hover:scale-[1.03] active:scale-[0.97]"
+            className="mt-8 inline-flex items-center gap-2 rounded-full bg-orange px-8 py-4 text-base font-semibold text-white transition-all duration-200 hover:bg-orange/90 hover:scale-[1.03] active:scale-[0.97]"
           >
-            Fala Connosco <span>→</span>
+            Pedir orçamento gratuito <span>→</span>
           </Link>
+          <p className="mt-4 text-sm text-petrol/40">
+            Resposta em 24h. Sem compromisso.
+          </p>
         </motion.div>
       </section>
     </>
