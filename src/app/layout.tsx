@@ -207,6 +207,9 @@ export default function RootLayout({
     >
       <head>
         <link rel="preload" href="/images/showreel-poster.jpg" as="image" fetchPriority="high" />
+        <link rel="preconnect" href="https://www.googletagmanager.com" />
+        <link rel="preconnect" href="https://www.clarity.ms" />
+        <link rel="preconnect" href="https://connect.facebook.net" />
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{ __html: JSON.stringify(websiteSchema) }}

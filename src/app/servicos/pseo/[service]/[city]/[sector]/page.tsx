@@ -1,6 +1,7 @@
 import { notFound } from "next/navigation";
 import type { Metadata } from "next";
 import Link from "next/link";
+import Image from "next/image";
 import { Navbar } from "@/components/layout/Navbar";
 import { Footer } from "@/components/sections/Footer";
 import { BreadcrumbSchema } from "@/components/seo/BreadcrumbSchema";
@@ -12,6 +13,16 @@ import {
   getSectorSeo,
   BLOG_LINKS_BY_SERVICE,
 } from "@/lib/programmatic-seo-data";
+
+const SERVICE_IMAGES: Record<string, string> = {
+  "video-institucional": "/images/services/institucionais.jpg",
+  "filme-comercial": "/images/services/filmes-comerciais.jpg",
+  "conteudo-redes-sociais": "/images/services/redes-sociais.jpg",
+  "fotografia-profissional": "/images/services/fotografia.jpg",
+  "cobertura-eventos": "/images/services/videos-eventos.jpg",
+  "brand-film": "/images/services/filmes-comerciais.jpg",
+  "video-drone": "/images/blog/video-imobiliario-vender-rapido.jpg",
+};
 
 interface PageParams {
   service: string;
@@ -229,6 +240,7 @@ export default async function ServiceCitySectorPage({
   const localSchema = buildTripleLocalSchema(service, city, sector);
   const intro = getSectorServiceIntro(service, city, sector);
   const relatedBlogPosts = BLOG_LINKS_BY_SERVICE[serviceSlug] ?? [];
+  const heroImage = SERVICE_IMAGES[serviceSlug] ?? "/images/services/institucionais.jpg";
 
   return (
     <>
@@ -278,6 +290,20 @@ export default async function ServiceCitySectorPage({
             >
               Pedir orçamento gratuito
             </Link>
+          </div>
+        </section>
+
+        {/* Hero image */}
+        <section className="mx-auto max-w-[900px] px-6 pb-16 md:px-10">
+          <div className="relative w-full overflow-hidden rounded-2xl" style={{ aspectRatio: "16/7" }}>
+            <Image
+              src={heroImage}
+              alt={`${service.name} para ${sector.name} em ${city.name} — Beyond Focus`}
+              fill
+              sizes="(max-width: 768px) 100vw, 900px"
+              className="object-cover"
+              priority
+            />
           </div>
         </section>
 

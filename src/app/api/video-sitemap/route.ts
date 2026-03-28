@@ -16,7 +16,7 @@ export async function GET() {
       <video:title><![CDATA[${p.title} — Beyond Focus]]></video:title>
       <video:description><![CDATA[${p.briefText.slice(0, 200)}]]></video:description>
       <video:content_loc>${BASE}${p.video}</video:content_loc>
-      <video:publication_date>2024-01-01</video:publication_date>
+      <video:publication_date>2025-01-01</video:publication_date>
       <video:family_friendly>yes</video:family_friendly>
     </video:video>
   </url>`

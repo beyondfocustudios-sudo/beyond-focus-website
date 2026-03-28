@@ -42,7 +42,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   return {
     title: `${referrerName} recomenda a Beyond Focus`,
     description: "Produção audiovisual para marcas que querem resultados. Contacta-nos e recebe 10% de desconto no teu primeiro projecto.",
-    robots: { index: false },
+    robots: { index: false, follow: false },
   };
 }
 

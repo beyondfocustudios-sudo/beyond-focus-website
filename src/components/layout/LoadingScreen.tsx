@@ -18,11 +18,10 @@ export function LoadingScreen() {
 
     // Video plays at normal speed (1x) so the logo is fully visible
 
-    // Safety timeout — max 5s
     const safetyTimeout = setTimeout(() => {
       setShow(false);
       sessionStorage.setItem("bf-loaded", "true");
-    }, 2500);
+    }, 1200);
 
     // Video load check — if not playing after 1s, skip
     const videoCheck = setTimeout(() => {
