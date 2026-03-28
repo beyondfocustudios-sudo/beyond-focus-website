@@ -3,7 +3,7 @@
 import { useState, useEffect } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 
-const WHATSAPP_NUMBER = "351912345678"; // Daniel's WhatsApp Business number
+const WHATSAPP_NUMBER = "351937350178";
 const DEFAULT_MESSAGE = "Olá! Gostaria de saber mais sobre os vossos serviços de produção audiovisual.";
 
 export function WhatsAppButton() {
