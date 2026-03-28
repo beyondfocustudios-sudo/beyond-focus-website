@@ -12,6 +12,8 @@ import { Analytics } from "@vercel/analytics/next";
 import { ExitIntentPopup } from "@/components/lead-capture/ExitIntentPopup";
 import { WhatsAppButton } from "@/components/ui/WhatsAppButton";
 import { ChatWidgetLoader } from "@/components/ui/ChatWidgetLoader";
+import { StickyHeaderCTA } from "@/components/ui/StickyHeaderCTA";
+import { SocialProofNotification } from "@/components/ui/SocialProofNotification";
 import "./globals.css";
 
 const dmSans = DM_Sans({
@@ -204,6 +206,8 @@ export default function RootLayout({
         <ExitIntentPopup />
         <ChatWidgetLoader />
         <WhatsAppButton />
+        <StickyHeaderCTA />
+        <SocialProofNotification />
         <SmoothScroll>{children}</SmoothScroll>
       </body>
     </html>

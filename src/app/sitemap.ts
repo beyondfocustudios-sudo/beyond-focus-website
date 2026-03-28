@@ -97,6 +97,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
     { url: `${baseUrl}/contacto`, lastModified: "2025-10-01", changeFrequency: "monthly", priority: 0.8 },
     { url: `${baseUrl}/blog`, lastModified: "2026-03-28", changeFrequency: "weekly", priority: 0.7 },
     ...blogUrls,
+    { url: `${baseUrl}/auditoria-gratuita`, lastModified: "2026-03-27", changeFrequency: "monthly", priority: 0.85 },
     { url: `${baseUrl}/guia-video-empresas`, lastModified: "2025-10-01", changeFrequency: "monthly", priority: 0.8 },
     { url: `${baseUrl}/comparar-produtoras`, lastModified: "2026-03-27", changeFrequency: "monthly", priority: 0.8 },
     { url: `${baseUrl}/privacidade`, lastModified: "2024-01-01", changeFrequency: "yearly", priority: 0.3 },
