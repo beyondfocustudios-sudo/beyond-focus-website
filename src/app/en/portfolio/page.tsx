@@ -57,7 +57,7 @@ export default function EnPortfolioPage() {
           </Link>
         </section>
       </main>
-      <Footer />
+      <Footer locale="en" />
     </>
   );
 }

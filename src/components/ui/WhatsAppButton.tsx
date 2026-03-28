@@ -9,18 +9,24 @@ const DEFAULT_MESSAGE = "Olá! Gostaria de saber mais sobre os vossos serviços 
 export function WhatsAppButton() {
   const [visible, setVisible] = useState(false);
   const [tooltip, setTooltip] = useState(false);
+  const [chatOpen, setChatOpen] = useState(false);
 
   useEffect(() => {
-    // Show after 5 seconds
     const timer = setTimeout(() => setVisible(true), 5000);
-    // Show tooltip after 10 seconds (once)
     const tooltipTimer = setTimeout(() => {
       setTooltip(true);
       setTimeout(() => setTooltip(false), 5000);
     }, 10000);
+
+    const handleChatState = (e: Event) => {
+      setChatOpen((e as CustomEvent<{ open: boolean }>).detail.open);
+    };
+    window.addEventListener("chat-state", handleChatState);
+
     return () => {
       clearTimeout(timer);
       clearTimeout(tooltipTimer);
+      window.removeEventListener("chat-state", handleChatState);
     };
   }, []);
 
@@ -39,7 +45,7 @@ export function WhatsAppButton() {
 
   return (
     <AnimatePresence>
-      {visible && (
+      {visible && !chatOpen && (
         <motion.div
           initial={{ scale: 0, opacity: 0 }}
           animate={{ scale: 1, opacity: 1 }}

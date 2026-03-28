@@ -85,7 +85,7 @@ function buildFAQs(
     },
     {
       question: `Quanto tempo demora a produção?`,
-      answer: `A maioria dos projectos demore entre 2 a 6 semanas do briefing à entrega final, dependendo da complexidade. Projectos em ${cityName} seguem o mesmo processo que projectos em Lisboa — com o mesmo rigor e os mesmos prazos.`,
+      answer: `A maioria dos projectos demora entre 2 a 6 semanas do briefing à entrega final, dependendo da complexidade. Projectos em ${cityName} seguem o mesmo processo que projectos em Lisboa — com o mesmo rigor e os mesmos prazos.`,
     },
     {
       question: `Como funciona o acompanhamento do projecto à distância?`,

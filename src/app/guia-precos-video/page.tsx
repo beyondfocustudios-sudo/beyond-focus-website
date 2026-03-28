@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import { Navbar } from "@/components/layout/Navbar";
 import { Footer } from "@/components/sections/Footer";
+import { BreadcrumbSchema } from "@/components/seo/BreadcrumbSchema";
 import { GuiaPrecosCapture } from "./GuiaPrecosCapture";
 
 export const metadata: Metadata = {
@@ -39,6 +40,12 @@ const CHECKLIST = [
 export default function GuiaPrecosVideoPage() {
   return (
     <>
+      <BreadcrumbSchema
+        items={[
+          { name: "Inicio", href: "/" },
+          { name: "Guia de Preços de Vídeo", href: "/guia-precos-video" },
+        ]}
+      />
       <Navbar variant="light" />
       <main className="bg-bg-light">
         {/* Hero */}

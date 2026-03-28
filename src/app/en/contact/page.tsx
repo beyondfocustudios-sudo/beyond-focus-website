@@ -76,7 +76,7 @@ export default function ContactPageEN() {
           </div>
         </section>
       </main>
-      <Footer />
+      <Footer locale="en" />
     </>
   );
 }

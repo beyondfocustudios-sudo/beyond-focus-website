@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import Link from "next/link";
 import { Navbar } from "@/components/layout/Navbar";
 import { Footer } from "@/components/sections/Footer";
 import { BLOG_POSTS } from "@/lib/blog-data";
@@ -51,6 +52,24 @@ export default function BlogPage() {
           <BlogCategoryFilter posts={BLOG_POSTS} />
         </section>
       </main>
+
+      {/* CTA */}
+      <section className="bg-white py-20 text-center">
+        <p className="font-mono text-[13px] uppercase tracking-[3px] text-orange">Próximo passo</p>
+        <h2 className="mx-auto mt-3 max-w-xl text-[clamp(26px,3vw,38px)] font-bold leading-tight text-petrol">
+          Tem um projecto em mente?
+        </h2>
+        <p className="mx-auto mt-4 max-w-md text-base text-petrol/50">
+          Fala connosco. Respondemos em 24h com uma proposta inicial — sem compromisso.
+        </p>
+        <Link
+          href="/contacto"
+          className="mt-8 inline-flex items-center gap-2 rounded-full bg-petrol px-8 py-4 text-sm font-semibold text-white transition-all hover:bg-petrol/90"
+        >
+          Contactar →
+        </Link>
+      </section>
+
       <Footer />
     </>
   );

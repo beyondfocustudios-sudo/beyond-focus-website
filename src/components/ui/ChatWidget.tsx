@@ -87,6 +87,10 @@ export function ChatWidget() {
     };
   }, [open, resetInactivity]);
 
+  useEffect(() => {
+    window.dispatchEvent(new CustomEvent("chat-state", { detail: { open } }));
+  }, [open]);
+
   const handleOpen = () => {
     setVisible(true);
     setOpen(true);

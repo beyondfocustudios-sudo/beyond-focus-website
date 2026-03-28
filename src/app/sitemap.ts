@@ -47,7 +47,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
   const pseoServiceCityUrls = SERVICES_SEO.flatMap((service) =>
     CITIES.map((city) => ({
       url: `${baseUrl}/servicos/pseo/${service.slug}/${city.slug}`,
-      lastModified: "2025-10-01",
+      lastModified: "2026-03-28",
       changeFrequency: "monthly" as const,
       priority: 0.65 as const,
     }))
@@ -103,8 +103,8 @@ export default function sitemap(): MetadataRoute.Sitemap {
     { url: `${baseUrl}/termos`, lastModified: "2024-01-01", changeFrequency: "yearly", priority: 0.3 },
     { url: `${baseUrl}/en`, lastModified: "2026-03-28", changeFrequency: "weekly", priority: 0.7 },
     { url: `${baseUrl}/en/portfolio`, lastModified: "2026-03-28", changeFrequency: "weekly", priority: 0.7 },
-    { url: `${baseUrl}/en/services`, lastModified: "2025-10-01", changeFrequency: "monthly", priority: 0.7 },
-    { url: `${baseUrl}/en/about`, lastModified: "2025-10-01", changeFrequency: "monthly", priority: 0.7 },
-    { url: `${baseUrl}/en/contact`, lastModified: "2025-10-01", changeFrequency: "monthly", priority: 0.7 },
+    { url: `${baseUrl}/en/services`, lastModified: "2026-03-28", changeFrequency: "monthly", priority: 0.7 },
+    { url: `${baseUrl}/en/about`, lastModified: "2026-03-28", changeFrequency: "monthly", priority: 0.7 },
+    { url: `${baseUrl}/en/contact`, lastModified: "2026-03-28", changeFrequency: "monthly", priority: 0.7 },
   ];
 }

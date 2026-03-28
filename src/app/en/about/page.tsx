@@ -70,7 +70,7 @@ export default function EnAboutPage() {
           </Link>
         </section>
       </main>
-      <Footer />
+      <Footer locale="en" />
     </>
   );
 }

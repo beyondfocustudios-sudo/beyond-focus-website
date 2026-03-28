@@ -17,12 +17,6 @@ const wordVariants: Variants = {
   }),
 };
 
-const HEADLINE_PARTS = [
-  { text: "A tua marca merece", italic: false },
-  { text: " mais do que um", italic: false },
-  { text: " vídeo bonito.", italic: true },
-];
-
 export function Hero() {
   return (
     <section className="relative flex min-h-screen items-center overflow-hidden bg-petrol-deep">

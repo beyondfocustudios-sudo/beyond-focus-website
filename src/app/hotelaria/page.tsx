@@ -4,6 +4,7 @@ import { Navbar } from "@/components/layout/Navbar";
 import { Footer } from "@/components/sections/Footer";
 import { BlogEmailCapture } from "@/components/features/blog/BlogEmailCapture";
 import { BreadcrumbSchema } from "@/components/seo/BreadcrumbSchema";
+import { FAQSchema } from "@/components/seo/FAQSchema";
 
 export const metadata: Metadata = {
   title: "Vídeo Marketing para Hotéis e Hotelaria em Portugal | Beyond Focus",
@@ -80,6 +81,9 @@ export default function HotelariaPage() {
   return (
     <>
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(schema) }} />
+      <FAQSchema
+        items={FAQS.map((faq) => ({ question: faq.q, answer: faq.a }))}
+      />
       <BreadcrumbSchema
         items={[
           { name: "Inicio", href: "/" },

@@ -65,7 +65,7 @@ export default function EnServicesPage() {
           </Link>
         </section>
       </main>
-      <Footer />
+      <Footer locale="en" />
     </>
   );
 }

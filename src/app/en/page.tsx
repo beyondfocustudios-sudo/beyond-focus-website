@@ -37,7 +37,7 @@ export default function EnHomePage() {
       <main>
         <EnglishHomePage />
       </main>
-      <Footer />
+      <Footer locale="en" />
     </>
   );
 }

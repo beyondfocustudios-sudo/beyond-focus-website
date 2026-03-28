@@ -9,6 +9,14 @@ const NAV_LINKS = [
   { label: "Contacto", href: "/contacto" },
 ];
 
+const NAV_LINKS_EN = [
+  { label: "Home", href: "/en" },
+  { label: "Portfolio", href: "/en/portfolio" },
+  { label: "Services", href: "/en/services" },
+  { label: "About", href: "/en/about" },
+  { label: "Contact", href: "/en/contact" },
+];
+
 const SERVICE_LINKS = [
   { label: "Filmes Comerciais", href: "/servicos/filmes-comerciais" },
   { label: "Vídeos Institucionais", href: "/servicos/videos-institucionais" },
@@ -48,7 +56,14 @@ function LinkedInIcon() {
   );
 }
 
-export function Footer() {
+interface FooterProps {
+  locale?: "pt" | "en";
+}
+
+export function Footer({ locale = "pt" }: FooterProps) {
+  const isEn = locale === "en";
+  const navLinks = isEn ? NAV_LINKS_EN : NAV_LINKS;
+
   return (
     <footer className="bg-black text-white">
       <div className="mx-auto max-w-[1400px] px-6 py-16 md:px-10 lg:px-12 lg:py-20">
@@ -57,7 +72,9 @@ export function Footer() {
           <div>
             <h3 className="text-lg font-bold tracking-tight">Beyond Focus</h3>
             <p className="mt-3 text-sm leading-relaxed text-white/60">
-              Produtora audiovisual em Lisboa. Estratégia, direcção criativa e produção para marcas que querem resultados.
+              {isEn
+                ? "Audiovisual production studio in Lisbon. Strategy, creative direction and production for brands that want results."
+                : "Produtora audiovisual em Lisboa. Estratégia, direcção criativa e produção para marcas que querem resultados."}
             </p>
             <div className="mt-5 flex gap-4">
               <a
@@ -92,9 +109,11 @@ export function Footer() {
 
           {/* Col 2 — Navigation */}
           <div>
-            <h4 className="mb-4 text-xs font-semibold tracking-[2px] uppercase text-white/50">Navegação</h4>
+            <h4 className="mb-4 text-xs font-semibold tracking-[2px] uppercase text-white/50">
+              {isEn ? "Navigation" : "Navegação"}
+            </h4>
             <ul className="space-y-2.5">
-              {NAV_LINKS.map((link) => (
+              {navLinks.map((link) => (
                 <li key={link.href}>
                   <Link
                     href={link.href}
@@ -109,7 +128,9 @@ export function Footer() {
 
           {/* Col 3 — Services */}
           <div>
-            <h4 className="mb-4 text-xs font-semibold tracking-[2px] uppercase text-white/50">Serviços</h4>
+            <h4 className="mb-4 text-xs font-semibold tracking-[2px] uppercase text-white/50">
+              {isEn ? "Services" : "Serviços"}
+            </h4>
             <ul className="space-y-2.5">
               {SERVICE_LINKS.map((service) => (
                 <li key={service.href}>
@@ -140,7 +161,9 @@ export function Footer() {
 
           {/* Col 4 — Contact */}
           <div>
-            <h4 className="mb-4 text-xs font-semibold tracking-[2px] uppercase text-white/50">Contacto</h4>
+            <h4 className="mb-4 text-xs font-semibold tracking-[2px] uppercase text-white/50">
+              {isEn ? "Contact" : "Contacto"}
+            </h4>
             <ul className="space-y-2.5">
               <li>
                 <a
@@ -168,14 +191,14 @@ export function Footer() {
         {/* Bottom bar */}
         <div className="mt-14 flex flex-col items-center justify-between gap-4 border-t border-white/10 pt-6 sm:flex-row">
           <p className="text-xs text-white/50">
-            © 2026 Beyond Focus. Todos os direitos reservados.
+            © 2026 Beyond Focus. {isEn ? "All rights reserved." : "Todos os direitos reservados."}
           </p>
           <div className="flex gap-6">
             <Link href="/privacidade" className="text-xs text-white/50 transition-colors hover:text-white/50">
-              Política de Privacidade
+              {isEn ? "Privacy Policy" : "Política de Privacidade"}
             </Link>
             <Link href="/termos" className="text-xs text-white/50 transition-colors hover:text-white/50">
-              Termos
+              {isEn ? "Terms" : "Termos"}
             </Link>
           </div>
         </div>
